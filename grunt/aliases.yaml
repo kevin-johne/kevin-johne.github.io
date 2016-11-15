@@ -1,0 +1,45 @@
+development:
+    description: 'Development build task'
+    tasks:
+        - 'clean:dist'
+        - 'sass:development'
+        - 'postcss:autoprefixer'
+        - 'lint'
+        - 'copy:js'
+        - 'nunjuckr:development'
+
+dev:
+    description: 'Shortcut für development task'
+    tasks:
+        - 'development'
+
+production:
+    description: 'Production build task'
+    tasks:
+        - 'clean:dist'
+        - 'sass:production'
+        - 'postcss:autoprefixer'
+        - 'requirejs:production'
+        - 'nunjuckr:production'
+
+prod:
+    description: 'Shortcut für production task'
+    tasks:
+        - 'production'
+
+lint:
+    description: 'Linting task for development'
+    tasks:
+        - 'jshint:grunt'
+        - 'jscs:grunt'
+        - 'scsslint:scss'
+        - 'csslint:development'
+        - 'jshint:frontend'
+        - 'jscs:frontend'
+
+lint_ci:
+    description: 'Linting task for the CI server'
+    tasks:
+        - 'csslint:production'
+        - 'jshint:ci'
+        - 'jscs:ci'

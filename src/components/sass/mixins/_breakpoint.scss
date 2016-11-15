@@ -1,0 +1,70 @@
+// Responsive media query breakpoint mixin
+
+@mixin breakpoint(
+    $size: default, // Breakpoint size (options: pre defined $map name, size value)
+    $inherit: true, // Inherit styles to next breakpoints (options: true, false, breakpoint name)
+    $selector: min-width, // Media query selector (options: min-width, max-width)
+    $map: $breakpoints, // Sass map with breakpoints (default: $breakpoints)
+    $additional-query: '' // Additional query that is added with 'and' after the size query
+) {
+
+    // Initialize media query string
+    $query: '';
+
+    // If pre defined breakpoints name get size value from $map
+    @if map-has-key($map, $size) {
+
+        // If default breakpoint, media query is not needed
+        @if $size != default {
+            $query: '(#{$selector}: #{map-get($map, $size)})';
+        }
+
+        // If no breakpoint inherit wanted, set max width with next breakpoint
+        @if $inherit != true {
+            $inherit-breakpoint: $size;
+            // If inherit is a breakpoint name, use breakpoint name for inherit
+            @if map-has-key($map, $inherit) {
+                $inherit-breakpoint: $inherit;
+            }
+
+            $next-breakpoint: map-get-next($map, $inherit-breakpoint);
+
+            // If next breakpoint exists
+            @if $next-breakpoint {
+
+                // Only add "and" if a query part is defined
+                // (e.g. if not default breakpoint)
+                @if $query != '' {
+                    $query: $query + 'and ';
+                }
+
+                $query: $query + '(max-width: #{$next-breakpoint - 1})';
+            }
+        }
+    } @else {
+        // Otherwise use size value for individual breakpoints
+        $query: '(#{$selector}: #{$size})';
+    }
+
+    // Add additional query with 'and'
+    @if $additional-query != '' {
+
+        // Set and only if needed
+        @if $query != '' {
+            $additional-query: ' and ' + $additional-query;
+        }
+
+        $query: $query + $additional-query;
+    }
+
+    // If default breakpoint, media query is not needed
+    @if $query == '' or ($size == default and $inherit == true and $additional-query == '') {
+        @content;
+    } @else {
+
+        // Otherwise generate media query
+        @media #{$query} {
+            @content;
+        }
+    }
+}
