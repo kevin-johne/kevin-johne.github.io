@@ -24,9 +24,6 @@ src/components/sass/import
 src/components/app/vendor/lodash.build.js
 src/components/app/vendor/lodash.build.min.js
 
-# Generated distribution files
-dist
-
 # PhpStorm/Webstorm project files
 .idea
 
