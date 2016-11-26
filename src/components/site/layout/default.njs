@@ -1,21 +1,28 @@
+
+
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>denkstrap-structure | {% block pageTitle %}{% endblock %}</title>
+<html lang="en">
+    <head>
+        <title>Web professional Kevin Johne</title>
 
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% block content %}
-    {% endblock %}
+        <link rel="image_src" href="/dist/img/kevin_johne_screenshot.jpg">
+        <link rel="shortcut icon" href="/dist/img/favicon.ico" />
+        <link rel="stylesheet" href="/dist/css/main.css">
+    </head>
+    <body>
+        <div class="site-body">
 
-    <script type="text/javascript" data-main="/js/app/main.js" src="/js/app/vendor/require.js"></script>
 
-{% if not production %}
-    <script type="text/javascript" src="//localhost:{{ liveReloadPort }}/livereload.js"></script>
-{% endif %}
+            {% block content %}
 
-</body>
+            {% endblock %}
+
+            {% include modulesPath + '/header/header.njs' %}
+        </div>
+
+        <script type="text/javascript" data-main="/dist/js/app/main.js" src="/dist/js/app/vendor/require.js"></script>
+    </body>
 </html>

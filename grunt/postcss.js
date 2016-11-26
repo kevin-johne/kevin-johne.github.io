@@ -8,7 +8,7 @@ module.exports = function( grunt, options ) {
             options: {
                 processors: [
                     require( 'autoprefixer' )( {
-                        browsers: [ 'last 2 versions', 'ie >= 8', 'Firefox >= 12', 'ios >= 7', 'android >= 4' ]
+                        browsers: [ 'last 2 versions' ]
                     } )
                 ]
             },

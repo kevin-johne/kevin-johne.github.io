@@ -5,7 +5,7 @@ development:
         - 'sass:development'
         - 'postcss:autoprefixer'
         - 'lint'
-        - 'copy:js'
+        - 'copy'
         - 'nunjuckr:development'
 
 dev:
