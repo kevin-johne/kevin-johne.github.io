@@ -5,6 +5,10 @@
 
 {% block pageTitle %}Homepage{% endblock %}
 
-{% block content %}
+{% block aboveHeader %}
+    {% include modulesPath + 'landing/landing.njs' %}
+{% endblock %}
 
+{% block content %}
+    Hi
 {% endblock %}

@@ -180,6 +180,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -308,6 +309,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -452,10 +455,8 @@ a {
 
 .site-header {
   text-align: center;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   padding-top: 20px;
   height: 200px; }
 
@@ -637,12 +638,9 @@ a {
   white-space: pre-wrap; }
 
 .gallery-overview {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 5em; }
 
 .set {
@@ -702,14 +700,10 @@ a {
 
 .control ul {
   height: 100%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-align: end;
-      align-items: flex-end; }
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end; }
 
 .control li {
   list-style: none;
@@ -859,30 +853,20 @@ label {
   width: 100%;
   height: 100vh;
   text-align: center;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   transition: all 3s ease;
   transform: translate3d(0, 0%, 0); }
   .site-landing .what-i-am-holder {
-    -ms-flex-positive: .2;
-        flex-grow: .2;
-    display: -ms-flexbox;
+    flex-grow: .2;
     display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
   .site-landing .button-holder {
-    -ms-flex-positive: 2;
-        flex-grow: 2; }
+    flex-grow: 2; }
   .site-landing .scroll-down i {
     color: #bfc1c1;
     cursor: pointer;
@@ -890,12 +874,9 @@ label {
   .site-landing .scroll-down i:hover {
     color: #f50; }
   .site-landing .site-logo-holder {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-positive: 2;
-        flex-grow: 2;
-    -ms-flex-align: end;
-        align-items: flex-end; }
+    flex-grow: 2;
+    align-items: flex-end; }
   .site-landing .site-landing.shrink {
     height: 0;
     transform: translate3d(0, 92%, 0); }
@@ -1182,3 +1163,5 @@ body:after {
     width: 0;
     height: 0;
     overflow: hidden; } }
+
+/*# sourceMappingURL=main.css.map */
