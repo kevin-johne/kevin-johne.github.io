@@ -15,6 +15,7 @@ module.exports = function( grunt, options ) {
                 patternsPath: '<%= srcPath %>components/patterns/',
                 appPath: '<%= srcPath %>components/app/',
                 srcPath: '<%= srcPath %>',
+                imgPath: '<%= srcPath %>img/',
                 production: true
             },
             loader: new ComponentsLoader( options.srcPath ),
@@ -40,6 +41,7 @@ module.exports = function( grunt, options ) {
                     patternsPath: '<%= srcPath %>components/patterns/',
                     appPath: '<%= srcPath %>components/app/',
                     srcPath: '<%= srcPath %>',
+                    imgPath: '<%= srcPath %>img/',
                     production: false,
                     liveReloadPort: '<%= liveReloadPort %>'
                 }
