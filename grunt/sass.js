@@ -5,7 +5,9 @@
 
 module.exports = {
     options: {
-        importer: require( 'node-sass-globbing' )
+        importer: require( 'node-sass-globbing' ),
+        style: 'expanded',
+        require: 'susy'
     },
     development: {
         options: {

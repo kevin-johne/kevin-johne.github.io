@@ -1,0 +1,20 @@
+.article-header {
+    margin-top: 20px
+}
+
+.article-sideline {
+    font-family: 'nexa-bold', sans-serif;
+    color: $color-gray-75;
+    font-size: 1.1em
+}
+
+.article-content p, .article-header p {
+    padding: .7em 0
+}
+
+.article-content img, .article-header img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: .75em 0
+}

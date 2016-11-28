@@ -1,0 +1,18 @@
+.contact {
+    padding-top: 40px;
+    margin: 0 auto 40px;
+    border-top: 1px solid #bfc1c1;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    & form {
+        padding-top: 2em;
+    }
+}
+
+.response {
+    font-size: 2em;
+    line-height: 2em;
+    font-weight: 900
+}

@@ -4,7 +4,7 @@
             {% for item in items %}
                 <li class="nav-item">
                     {% if item.text === 'Home' %}
-                        <div class="logo">
+                        <a class="logo" href="{{ item.href }}" title="{{ item.text }}">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                  width="100%"
                                  viewBox="0 0 100 100">
@@ -19,9 +19,9 @@
                                     <line class="letter" x1="14" y1="35" x2="14" y2="65"/>
                                 </g>
                             </svg>
-                        </div>
+                        </a>
                     {% else %}
-                        <a class="nav-link" href="{{ item.href }}">
+                        <a class="nav-link {% if item.current -%} current {%- endif %}" href="{{ item.href }}">
                             {{ item.text }}
                             <span class="stretch stretch-top" data-text="{{ item.text }}"></span>
                             <span class="stretch stretch-bottom" data-text="{{ item.text }}"></span>
@@ -36,20 +36,20 @@
 {% set items = [
     {
         text: 'Projects',
-        href: 'projects/index.html'
+        href: 'projects/index.html',
+        current: true
     }, {
         text: 'Music',
         href: 'music/index.html'
     }, {
         text: 'Home',
-        href: '/index.html',
-        mode: true
+        href: '/index.html'
     }, {
         text: 'Blog',
         href: 'blog/index.html'
     }, {
-        text: 'Blog',
-        href: 'blog/index.html'
+        text: 'CV',
+        href: 'cv/index.html'
     }
 ] %}
 

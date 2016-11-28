@@ -1,0 +1,53 @@
+body {
+    font-family: 'cambo-regular', sans-serif;
+    font-size: 1.1em;
+}
+
+h1, h2 {
+    font-family: 'nexa-bold', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 1.5em 0 .6em
+}
+
+h1::after, h1::before, h2::after, h2::before {
+    content: "";
+    display: inline-block;
+    background-color: #444;
+    height: .7em;
+    width: 0;
+    position: relative
+}
+
+h1::after, h2::after {
+    margin-left: 5px
+}
+
+h1::before, h2::before {
+    margin-right: 5px
+}
+
+h2 {
+    font-size: 1em;
+    margin: 1.5em 0 .6em
+}
+
+.subline {
+    color: $color-gray-75;
+    font-family: 'nexa-bold', sans-serif;
+    font-size: 1em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-gray-75
+}
+
+@include breakpoint( $size:default, $inherit: small) {
+    body {
+        font-size: .8em
+    }
+}

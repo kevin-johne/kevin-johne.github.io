@@ -1,53 +1,60 @@
-.logo:hover svg .flash {
-  stroke-width: 140px;
-  transition: all .3s ease .7s
+.logo {
+    display: inline-block;
+    height: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+
+    &:hover svg .flash {
+        stroke-width: 140px;
+        transition: all .3s ease .7s
+    }
 }
 
 .flash {
-  stroke: #fff;
-  stroke-width: 0
+    stroke: #fff;
+    stroke-width: 0
 }
 
 .hidden {
-  stroke-width: 1px;
-  stroke: #fff5f2
+    stroke-width: 1px;
+    stroke: #fff5f2
 }
 
 .border {
-  stroke-width: 4px;
-  stroke: #444;
-  fill: none
+    stroke-width: 4px;
+    stroke: #444;
+    fill: none
 }
 
 .circle {
-  fill: #444
+    fill: #444
 }
 
 .letter {
-  stroke: #444;
-  stroke-width: 2px
+    stroke: #444;
+    stroke-width: 2px
 }
 
 .letter.thick {
-  stroke-width: 7px
+    stroke-width: 7px
 }
 
 .lines-group1 {
-  stroke: #b8c5ac;
-  stroke-width: 5px
+    stroke: #b8c5ac;
+    stroke-width: 5px
 }
 
 .lines-group2 {
-  stroke: #7c8574;
-  stroke-width: 2px
+    stroke: #7c8574;
+    stroke-width: 2px
 }
 
 .lines-group3 {
-  stroke: #7c8574;
-  stroke-width: 15px
+    stroke: #7c8574;
+    stroke-width: 15px
 }
 
 .lines-group4 {
-  stroke: #fff;
-  stroke-width: 3px
+    stroke: #fff;
+    stroke-width: 3px
 }

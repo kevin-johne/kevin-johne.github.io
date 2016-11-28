@@ -1,6 +1,7 @@
-<div class="site-landing">
+{#
+<div class="site-landing auto-init" data-modules="modules/landing/landing">
     <div class="site-logo-holder">
-        <a class="site-logo landing-logo" href="./Web">
+        <a class="site-logo landing-logo" href="">
             {% include imgPath + 'logo-landing.svg' %}
         </a>
     </div>
@@ -30,5 +31,4 @@
             <i class="fa fa-angle-down fa-4x"></i>
         </p>
     </div>
-
-</div>
+</div>#}

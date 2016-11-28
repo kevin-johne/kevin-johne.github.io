@@ -1,0 +1,37 @@
+.control {
+    top: 0;
+    position: absolute;
+    margin-left: 50%;
+    background: $color-white;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid $color-orange;
+
+    .fa:hover {
+        text-shadow: 0 0 6px $color-gray-75
+    }
+
+    ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    li {
+        list-style: none;
+        padding-right: 15%;
+        cursor: pointer
+    }
+}
+
+@include breakpoint( $size:default, $inherit:small ) {
+    .control button {
+        border: none;
+        font-size: 1em
+    }
+}

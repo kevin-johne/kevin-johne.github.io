@@ -7,9 +7,7 @@ $breakpoints: (
     // key: breakpoint name
     // value: breakpoint size
     default: 0, // mobile portrait
-    xsmall: 370px, // large mobile portrait
-    small: 420px, // mobile landscape
+    small: 580px, // mobile landscape
     medium: 750px, // tablet portrait
     large: 980px, // tablet landscape / desktop
-    xlarge: 1100px // large desktop
 );

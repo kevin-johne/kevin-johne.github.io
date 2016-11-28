@@ -15,8 +15,13 @@
     <body>
         <div class="site-body">
             {% block aboveHeader %}{% endblock %}
+
             {% include modulesPath + '/header/header.njs' %}
-            {% block content %}{% endblock %}
+
+            {% block content %}
+            {% endblock %}
+
+            {% include modulesPath + '/contact/contact.njs' %}
         </div>
 
         <script type="text/javascript" data-main="/dist/js/app/main.js" src="/dist/js/app/vendor/require.js"></script>

@@ -19,6 +19,18 @@ module.exports = {
         }
     },
 
+    js: {
+        files: [
+            '<%= srcPath %>**/*.js'
+        ],
+        tasks: [
+            'copy:js'
+        ],
+        options: {
+            atBegin: true
+        }
+    },
+
     html: {
         files: [
             '<%= srcPath %>components/**/*.njs'
