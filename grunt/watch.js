@@ -41,6 +41,18 @@ module.exports = {
         options: {
             atBegin: true
         }
+    },
+
+    img: {
+        files: [
+            '<%= srcPath %>img/**/*'
+        ],
+        tasks: [
+            'copy:img'
+        ],
+        options: {
+            atBegin: true
+        }
     }
 
 };
