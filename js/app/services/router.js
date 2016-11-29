@@ -6,7 +6,7 @@
                 ready: function() {
                     this.setRoutes();
 
-                    this.contentContainer = document.querySelector('.site-page');
+                    this.contentContainer = document.querySelector( '.site-page' );
                     route.start( true );
                 },
 
@@ -19,6 +19,9 @@
                     } );
 
                     route( '/*', function( id ) {
+                        fetcher.fetch( id + '.html' ).then( function( res ) {
+                            renderer.render( that.contentContainer, res );
+                        } );
                     } );
                 }
             };

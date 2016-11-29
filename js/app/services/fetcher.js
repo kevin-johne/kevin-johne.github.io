@@ -27,7 +27,7 @@
                 },
 
                 error: function( error ) {
-                    console.log( 'this is a error #{error}' );
+                    return this.fetch( 'error.html' );
                 }
             };
         }
