@@ -19,6 +19,7 @@
             {% include modulesPath + '/header/header.njs' %}
 
             {% block content %}
+                <div class="site-page"></div>
             {% endblock %}
 
             {% include modulesPath + '/contact/contact.njs' %}
