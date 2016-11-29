@@ -57,12 +57,12 @@ $( window ).load( function() {
     'use strict';
 
     define( [ 'jquery' ],
-      function($) {
+      function( $ ) {
 
-        return {
+          return {
             ready: function( element, options ) {
                 var link;
-                
+
                 this.link = document.querySelector( '.stretch' );
                 this.realLogo = element.querySelector( '.site-header .logo svg' );
                 this.fakeLogo = element.querySelector( '.site-logo' );
@@ -70,10 +70,10 @@ $( window ).load( function() {
                 this.showLater = element.querySelectorAll( '.show-later' );
                 this.scrollBtn = element.querySelector( '.scroll-down i' );
                 this.sideLanding = element;
-                
+
                 this.fakeLogoSVG.style.opacity = 1;
-                for( link of this.showLater ) {
-                    link.classList.add('deactivate');
+                for ( link of this.showLater ) {
+                    link.classList.add( 'deactivate' );
                 }
             },
 
@@ -89,7 +89,6 @@ $( window ).load( function() {
                 this.fakeLogo.addEventListener( 'click', this.preventClick );
                 this.scrollBtn.addEventListener( 'click', this.preventClick );
                 this.scrollBtn.parentNode.removeChild( this.scrollBtn );
-
 
                 $( 'html,body' ).animate( {
                     scrollTop: document.body.getBoundingClientRect().bottom
@@ -116,6 +115,6 @@ $( window ).load( function() {
                 event.preventDefault();
             }
         };
-    } );
+      } );
 
 }( this, this.define, this.require ) );

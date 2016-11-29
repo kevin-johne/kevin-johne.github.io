@@ -3,15 +3,19 @@
  * https://github.com/gruntjs/grunt-contrib-jshint
  */
 module.exports = {
-    frontend: [
-        '<%= srcPath %>**/*.js'
-    ],
+    frontend: {
+        options: {
+            'esnext': true
+        },
+        files: {
+            src: [
+              '<%= srcPath %>**/*.js'
+            ]
+        }
+    },
     grunt: [
         '<%= gruntPath %>**/*.js',
         'Gruntfile.js'
-    ],
-    karma: [
-        'karma.conf.js'
     ],
     ci: {
         options: {
