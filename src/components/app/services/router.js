@@ -19,6 +19,9 @@
                     } );
 
                     route( '/*', function( id ) {
+                        fetcher.fetch( id + '.html' ).then( function( res ) {
+                            renderer.render( that.contentContainer, res );
+                        } );
                     } );
                 }
             };
