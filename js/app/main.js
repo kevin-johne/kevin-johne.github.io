@@ -13,6 +13,7 @@
             // App
             vendor:             'vendor',
             utils:              'utils',
+            services:           'services',
 
             // Components
             components:         '../',
@@ -26,6 +27,11 @@
 
             // Libraries
             lodash:             'vendor/lodash.build',
+
+            route:              'vendor/amd.route',
+            renderer:           'services/renderer',
+            fetcher:            'services/fetcher',
+            router:             'services/router',
 
             // If it is not necessary to support IE8 its recommended to
             // use jQuery 2.X.X
@@ -62,7 +68,8 @@
 
         require( [
             'config',
-            'load!utils/breakpoints:init'
+            'load!utils/breakpoints:init',
+            'load!services/router:init'
 
             // Extend with global dependencies
         ], function( config ) {
