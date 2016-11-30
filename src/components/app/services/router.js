@@ -11,7 +11,7 @@
         function( fetcher, route, renderer, event ) {
             return {
                 isGlobal: true,
-                
+
                 ready: function() {
                     this.setRoutes();
 
@@ -42,7 +42,7 @@
                 },
 
                 triggerRouteUpdate: function() {
-                    event.trigger( 'route/update', [this.getRoot()] );
+                    event.trigger( 'route/update', [ this.getRoot() ] );
                 },
 
                 getRoot: function() {

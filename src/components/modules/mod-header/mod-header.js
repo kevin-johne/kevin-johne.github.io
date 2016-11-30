@@ -23,25 +23,25 @@
 
             /**
              * Updates the Navigation View
-             * @param event
+             * @param {object} event
              * @param {string} currentRoot - current navigation root (music / projects / blog / .. )
              */
             updateNavigation: function( event, currentRoot ) {
-                if( !this.currentActive ) {
+                if ( !this.currentActive ) {
                     this.currentActive = this.filterActiveNavItem( this.navItems );
                 }
 
-                if( this.currentActive.forEach ) {
+                if ( this.currentActive.forEach ) {
                     this.currentActive.forEach( function( link ) {
                         this.removeActiveClass( link );
-                    }.bind( this ));
+                    }.bind( this ) );
                 } else {
                     this.removeActiveClass( this.currentActive );
                 }
 
                 this.currentActive = this.matchItemWithNewRoot( currentRoot );
 
-                if( this.currentActive ) {
+                if ( this.currentActive ) {
                     this.currentActive.classList.add( this.options.activeClass );
                 }
             },
@@ -57,9 +57,9 @@
              */
             matchItemWithNewRoot: function( currentRoot ) {
                 var item;
-                var reg = new RegExp( '#' + currentRoot, 'g');
-                for( item of this.navItems ) {
-                    if( item.href.match( reg ) ) {
+                var reg = new RegExp( '#' + currentRoot, 'g' );
+                for ( item of this.navItems ) {
+                    if ( item.href.match( reg ) ) {
                         return item;
                     }
                 }
@@ -67,15 +67,15 @@
 
             /**
              * filter all current active navigation Items
-             * @param {Node} element
+             * @param {Node} items
              * @returns {Array}
              */
             filterActiveNavItem: function( items ) {
                 return Array.prototype.filter.call( items, function( element ) {
-                    if( element.classList.contains( this.options.activeClass ) ) {
+                    if ( element.classList.contains( this.options.activeClass ) ) {
                         return true;
                     }
-                }.bind( this ));
+                }.bind( this ) );
             }
         };
     } );
