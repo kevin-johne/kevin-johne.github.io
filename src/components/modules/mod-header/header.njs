@@ -1,5 +1,5 @@
 {% macro header( items ) %}
-    <header class="site-header">
+    <header class="site-header auto-init" data-modules="modules/mod-header/mod-header">
         <ul class="nav-list nav-list-left">
             {% for item in items %}
                 <li class="nav-item">
@@ -36,8 +36,7 @@
 {% set items = [
     {
         text: 'Projects',
-        href: '#projects',
-        current: true
+        href: '#projects'
     }, {
         text: 'Music',
         href: '#music'

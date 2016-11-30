@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,10 +14,11 @@
         <div class="site-body">
             {% block aboveHeader %}{% endblock %}
 
-            {% include modulesPath + '/header/header.njs' %}
+            {% include modulesPath + '/mod-header/header.njs' %}
 
             {% block content %}
-                <div class="site-page"></div>
+                <div class="site-page">
+                </div>
             {% endblock %}
 
             {% include modulesPath + '/contact/contact.njs' %}
