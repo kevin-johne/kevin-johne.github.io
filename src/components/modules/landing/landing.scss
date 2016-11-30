@@ -74,88 +74,13 @@
         height: 20px
     }
 
-    .tiny-crazy-button {
-        font-size: 1em;
-        margin-bottom: -6px
-    }
-
-    .big-crazy-button {
-        font-size: 4em
-    }
-
-    .soundcloud::after {
-        background-color: #f50
-    }
-
-    .soundcloud::before {
-        color: #f50
-    }
-
-    .twitter::after {
-        background-color: #55acee
-    }
-
-    .twitter::before {
-        color: #55acee
-    }
-
-    .neutral::after {
-        background: #f50
-    }
-
-    .neutral::before {
-        color: #444
-    }
-
     .effect-delay::before {
         transition: width .4s .3s
     }
 
     .effect-direct::before {
         transition: width .4s;
-        transition-timing-function: cubic-bezier(.7, 0, .3, 1)
-    }
-
-    .crazy-button {
-        display: inline-block;
-        position: relative;
-        text-decoration: none;
-        overflow: hidden;
-        color: #bfc1c1;
-        font-family: "nexa-bold", sans-serif;
-        text-transform: uppercase
-    }
-
-    .crazy-button::after {
-        content: '';
-        position: absolute;
-        height: 20px;
-        width: 100%;
-        top: 50%;
-        margin-top: -13px;
-        right: 0;
-        transform: translate3d(-100%, 0, 0);
-        transition: transform .4s;
-        transition-timing-function: cubic-bezier(.7, 0, .3, 1);
-    }
-
-    .crazy-button:hover::after {
-        transform: translate3d(100%, 0, 0);
-    }
-
-    .crazy-button::before {
-        position: absolute;
-        font-family: "nexa-bold", sans-serif;
-        overflow: hidden;
-        text-transform: uppercase;
-        content: attr(data-text);
-        z-index: 2;
-        white-space: nowrap;
-        width: 0
-    }
-
-    .crazy-button:hover::before {
-        width: 100%
+        transition-timing-function: $timeFunc-easeIn;
     }
 
     .show-later {
@@ -167,7 +92,6 @@
         opacity: 1
     }
 }
-
 
 .intro {
     font-size: 1.1em;

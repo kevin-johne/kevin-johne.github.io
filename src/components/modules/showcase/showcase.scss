@@ -9,7 +9,7 @@
     }
 
     &:nth-child(even) {
-        text-align: right
+        text-align: right;
     }
 
     &:nth-child(even) .details {
@@ -28,7 +28,8 @@
         background-color: rgba($color-white, 0.97);
         top: 50%;
         transform: translate(0, -51%);
-        right: 0
+        right: 0;
+        text-align: center;
     }
 }
 
