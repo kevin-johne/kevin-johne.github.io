@@ -1,212 +1,98 @@
 (function (window, define, undefined) {
-
     define(
-        ['jquery'],
-        function ($) {
+        [
+            'jquery',
+            'soundcloud',
+            'services/soundcloud-manager',
+            'utils/helper'
+        ],
+        function ( $, sc, scm, helper ) {
+            
             return {
-
-                ready: function (element, options) {
-                    var self = this;
-
-                    this.sm = new SoundcloudManager();
-                    this.sm.init();
-
-                    this._controlElement = $('.control-element');
-                    this._wave = $('.wave');
-                    this._stream = $('.stream');
-                    this._progress = $('.progress');
-
-                    this.trackID = $(this).attr('song_id');
-                    this.sm.createStream(trackID, $(this), function () {
-                        var streamID = sm.getLastStreamID();
-                        $(self).attr('stream_id', streamID);
-                        $(self).bind('click', control);
-                        $(self).unbind('click', init);
-                        $(self).trigger('click');
-                    });
-                    $(this).unbind('click', init);
+                elements: {},
+                classes: {
+                    play: 'play',
+                    wave: 'wave',
+                    stream: 'stream',
+                    progress: 'progress',
+                    tempProgress: 'progress_temp',
+                    coverCopy: 'album-art-copy',
+                    cover: 'album-art'
                 },
 
-                events: function () {
-                    _stream.bind('click', this.changePosition.bind(this));
-                    _stream.bind('mousemove', this.tempChangePosition.bind(this));
-                    _stream.bind('mouseleave', {percent: 0}, this.tempChangePosition.bind(this));
-                    _controlElement.bind('click', init);
-                    $('.album-art').bind('click', toggleAlbumFold);
-                    $('.album-art-copy').bind('click', toggleAlbumFold);
+                defaults: function() {
+                    return {
+                    };
                 },
 
-                control: function (element, options) {
-                    var streamID = $(this).attr('stream_id');
-                    if ($(this).hasClass('play')) {
-                        this.sm.pauseStreams();
-                        this.sm.playStream(streamID);
+                ready: function( element, options ) {
+                    var streamRect;
 
-                        $('.pause').each(function () {
-                            $(this).removeClass('pause');
-                            $(this).removeClass('fa-pause');
-                            $(this).addClass('play');
-                            $(this).addClass('fa-play');
-                        });
-                        $(this).removeClass('play');
-                        $(this).removeClass('fa-play');
-                        $(this).addClass('pause');
-                        $(this).addClass('fa-pause');
-                    } else {
-                        this.sm.pauseStream(streamID);
-                        $(this).removeClass('pause');
-                        $(this).removeClass('fa-pause');
-                        $(this).addClass('play');
-                        $(this).addClass('fa-play');
+                    this.options = helper.extend( this.defaults(), options );
+                    this.elements = helper.mapClassesToElements( this.classes, element );
+
+                    streamRect = this.elements.stream.getBoundingClientRect();
+                    this.streamWidth = streamRect.right - streamRect.left;
+                },
+                
+                events: function( element, options ) {
+                    if( this.options.id ){
+                        scm.createStream( this.options.id, element, this.onStreamCreated.bind( this ) );
                     }
+
+                    this.elements.stream.addEventListener( 'mousemove', this.onHoverProgress.bind( this ) );
+
+                    this.elements.stream.addEventListener( 'mouseleave', this.onLeaveProgress.bind( this ) );
+
+                    this.elements.stream.addEventListener( 'click', this.onClickProgress.bind( this ) );
+
+                    this.elements.play.addEventListener( 'click', this.onClickPlay.bind( this ) );
+                    
+                    this.elements.coverCopy.addEventListener( 'click', this.toggleAlbumFold.bind( this ) );
+
+                    this.elements.cover.addEventListener( 'click', this.toggleAlbumFold.bind( this ) );
                 },
 
-                changePosition: function (event) {
-                    _controlElement = $(this).parent().find('.control-element');
-                    var streamID = _controlElement.attr('stream_id');
-                    if (streamID) {
-                        var xpos;
-                        if (event.offsetX) {
-                            xpos = event.pageX - $(this).offset().left;
-                        } else {
-                            xpos = event.offsetX;
-                        }
-                        var percent = 100 / $(this).width() * xpos;
-                        var duration = $(this).find('.progress').attr('duration');
-                        milliseconds = duration / 100 * percent;
-                        var stream = sm.getStreamByID(streamID);
-                        sm.setPosition(stream, milliseconds);
-                    } else {
-                        _controlElement.trigger('click');
-                    }
+                onClickPlay: function() {
+                    scm.playStream( this.stream );
                 },
 
-                tempChangePosition: function (event) {
-                    var percent;
-                    if (event.data && event.data.percent) {
-                        percent = event.data.percent;
-                    } else {
-                        var xpos;
-                        if (event.offsetX) {
-                            xpos = event.pageX - $(this).offset().left;
-                        } else {
-                            xpos = event.offsetX;
-                        }
-                        percent = 100 / $(this).width() * xpos;
+                onClickProgress: function( event ) {
+                    var percentage = 100 / this.streamWidth * event.layerX;
+                    this.changePosition( this.elements.progress, percentage );
 
-                    }
-                    $(this).find('.progress_temp').css('width', percent + '%');
+                    percentage = event.layerX / this.streamWidth * this.options.duration;
+
+                    scm.playStream( this.stream );
+                    scm.setPosition( this.stream, percentage );
+                },
+
+                onHoverProgress: function(event ) {
+                    var percentage = 100 / this.streamWidth * event.layerX;
+                    this.changePosition( this.elements.tempProgress, percentage );
+                },
+
+                onLeaveProgress: function() {
+                    this.changePosition( this.elements.tempProgress, 0 );
+                },
+
+                onStreamCreated: function( stream ) {
+                    var that = this;
+                    this.stream = stream;
+
+                    this.stream._whileplaying = function (position) {
+                        var percentage = 100 / this.duration * position;
+                        that.changePosition( that.elements.progress, percentage )
+                    };
+                },
+
+                changePosition: function( element, position ) {
+                    element.style.width = position + '%';
                 },
 
                 toggleAlbumFold: function () {
-                    var albumArtCopy;
-                    if ($(this).hasClass('.album-art-copy')) {
-                        albumArtCopy = $(this).parent().find('.album-art-copy');
-                    }
-
-                    if (albumArtCopy && albumArtCopy.hasClass('fold')) {
-                        albumArtCopy.removeClass('fold').addClass('unfold');
-                    } else {
-                        albumArtCopy.removeClass('unfold').addClass('fold');
-                    }
+                    this.elements.coverCopy.classList.toggle( 'fold' );
                 }
             };
         });
 })(this.window, this.define, undefined);
-
-var SoundcloudManager = function () {
-    this.streams = [];
-
-    this.init = function () {
-        SC.initialize({
-            'client_id': 'e74416cc321ec6ef77bccc2fb7b35216'
-        });
-    };
-
-    this.addStream = function (stream) {
-        this.streams.push(stream);
-    };
-
-    this.removeStreamByElement = function (element) {
-        var self = this;
-        this.stream.forEach(function (stream, id) {
-            if (stream.sID !== element.id) {
-                stream.destroy();
-                self.streams.splice(id, 1);
-            }
-        });
-    };
-
-    this.createStream = function (trackID, element, cb) {
-        var self = this;
-        var options = {
-            whileplaying: function () {
-                var progressElement = $('#' + trackID).find('.progress');
-                var percent = ( 100 / progressElement.attr('duration') * this.position );
-                progressElement.css(
-                    'width', percent + '%'
-                );
-            }
-        };
-
-        SC.stream(trackID, options, function (sound) {
-            sound.domElement = element;
-            self.addStream(sound);
-            cb();
-        });
-    };
-
-    this.playStream = function (sID) {
-        this.streams.forEach(function (stream) {
-            if (stream.sID === sID) {
-                SC.whenStreamingReady(function () {
-                    stream.play();
-                });
-            }
-        });
-    };
-
-    this.pauseStream = function (sID) {
-        this.streams.forEach(function (stream) {
-            if (stream.sID === sID) {
-                SC.whenStreamingReady(function () {
-                    stream.pause();
-                });
-            }
-        });
-    };
-
-    this.pauseStreams = function () {
-        this.streams.forEach(function (stream) {
-            stream.pause();
-        });
-    };
-
-    this.stopStreams = function () {
-        this.streams.forEach(function (stream) {
-            stream.stop();
-        });
-    };
-
-    this.setPosition = function (stream, position) {
-        if (position >= 0 && position <= stream.durationEstimate) {
-            stream.setPosition(position);
-        }
-    };
-
-    this.getStreamByID = function (sID) {
-        var _stream = '';
-        this.streams.forEach(function (stream) {
-            if (stream.sID === sID) {
-                _stream = stream;
-            }
-        });
-        return _stream;
-    };
-
-    this.getLastStreamID = function () {
-        if (this.streams.length > 0) {
-            return this.streams[this.streams.length - 1].sID;
-        }
-    };
-};
