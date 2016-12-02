@@ -1,212 +1,98 @@
-( function( window, define, undefined ) {
-
+(function (window, define, undefined) {
     define(
-      [ 'jquery' ],
-      function( $ ) {
-          return {
+        [
+            'jquery',
+            'soundcloud',
+            'services/soundcloud-manager',
+            'utils/helper'
+        ],
+        function ( $, sc, scm, helper ) {
+            
+            return {
+                elements: {},
+                classes: {
+                    play: 'play',
+                    wave: 'wave',
+                    stream: 'stream',
+                    progress: 'progress',
+                    tempProgress: 'progress_temp',
+                    coverCopy: 'album-art-copy',
+                    cover: 'album-art'
+                },
 
-              ready: function( element, options ) {
-                  var self = this;
+                defaults: function() {
+                    return {
+                    };
+                },
 
-                  this.sm = new SoundcloudManager();
-                  this.sm.init();
+                ready: function( element, options ) {
+                    var streamRect;
 
-                  this._controlElement = $( '.control-element' );
-                  this._wave = $( '.wave' );
-                  this._stream = $( '.stream' );
-                  this._progress = $( '.progress' );
+                    this.options = helper.extend( this.defaults(), options );
+                    this.elements = helper.mapClassesToElements( this.classes, element );
 
-                  this.trackID = $( this ).attr( 'song_id' );
-                  this.sm.createStream( trackID, $( this ), function() {
-                      var streamID = sm.getLastStreamID();
-                      $( self ).attr( 'stream_id', streamID );
-                      $( self ).bind( 'click', control );
-                      $( self ).unbind( 'click', init );
-                      $( self ).trigger( 'click' );
-                  } );
-                  $( this ).unbind( 'click', init );
-              },
+                    streamRect = this.elements.stream.getBoundingClientRect();
+                    this.streamWidth = streamRect.right - streamRect.left;
+                },
+                
+                events: function( element, options ) {
+                    if( this.options.id ){
+                        scm.createStream( this.options.id, element, this.onStreamCreated.bind( this ) );
+                    }
 
-              events: function() {
-                  _stream.bind( 'click', this.changePosition.bind( this ) );
-                  _stream.bind( 'mousemove', this.tempChangePosition.bind( this ) );
-                  _stream.bind( 'mouseleave', { percent: 0 }, this.tempChangePosition.bind( this ) );
-                  _controlElement.bind( 'click', init );
-                  $( '.album-art' ).bind( 'click', toggleAlbumFold );
-                  $( '.album-art-copy' ).bind( 'click', toggleAlbumFold );
-              },
+                    this.elements.stream.addEventListener( 'mousemove', this.onHoverProgress.bind( this ) );
 
-              control: function( element, options ) {
-                  var streamID = $( this ).attr( 'stream_id' );
-                  if ( $( this ).hasClass( 'play' ) ) {
-                      this.sm.pauseStreams();
-                      this.sm.playStream( streamID );
+                    this.elements.stream.addEventListener( 'mouseleave', this.onLeaveProgress.bind( this ) );
 
-                      $( '.pause' ).each( function() {
-                          $( this ).removeClass( 'pause' );
-                          $( this ).removeClass( 'fa-pause' );
-                          $( this ).addClass( 'play' );
-                          $( this ).addClass( 'fa-play' );
-                      } );
-                      $( this ).removeClass( 'play' );
-                      $( this ).removeClass( 'fa-play' );
-                      $( this ).addClass( 'pause' );
-                      $( this ).addClass( 'fa-pause' );
-                  } else {
-                      this.sm.pauseStream( streamID );
-                      $( this ).removeClass( 'pause' );
-                      $( this ).removeClass( 'fa-pause' );
-                      $( this ).addClass( 'play' );
-                      $( this ).addClass( 'fa-play' );
-                  }
-              },
+                    this.elements.stream.addEventListener( 'click', this.onClickProgress.bind( this ) );
 
-              changePosition: function( event ) {
-                  _controlElement = $( this ).parent().find( '.control-element' );
-                  var streamID = _controlElement.attr( 'stream_id' );
-                  if ( streamID ) {
-                      var xpos;
-                      if ( event.offsetX ) {
-                          xpos = event.pageX - $( this ).offset().left;
-                      } else {
-                          xpos = event.offsetX;
-                      }
-                      var percent = 100 / $( this ).width() * xpos;
-                      var duration = $( this ).find( '.progress' ).attr( 'duration' );
-                      milliseconds = duration / 100 * percent;
-                      var stream = sm.getStreamByID( streamID );
-                      sm.setPosition( stream, milliseconds );
-                  } else {
-                      _controlElement.trigger( 'click' );
-                  }
-              },
+                    this.elements.play.addEventListener( 'click', this.onClickPlay.bind( this ) );
+                    
+                    this.elements.coverCopy.addEventListener( 'click', this.toggleAlbumFold.bind( this ) );
 
-              tempChangePosition: function( event ) {
-                  var percent;
-                  if ( event.data && event.data.percent ) {
-                      percent = event.data.percent;
-                  } else {
-                      var xpos;
-                      if ( event.offsetX ) {
-                          xpos = event.pageX - $( this ).offset().left;
-                      } else {
-                          xpos = event.offsetX;
-                      }
-                      percent = 100 / $( this ).width() * xpos;
+                    this.elements.cover.addEventListener( 'click', this.toggleAlbumFold.bind( this ) );
+                },
 
-                  }
-                  $( this ).find( '.progress_temp' ).css( 'width', percent + '%' );
-              },
+                onClickPlay: function() {
+                    scm.playStream( this.stream );
+                },
 
-              toggleAlbumFold: function() {
-                  var albumArtCopy;
-                  if ( $( this ).hasClass( '.album-art-copy' ) ) {
-                      albumArtCopy = $( this ).parent().find( '.album-art-copy' );
-                  }
+                onClickProgress: function( event ) {
+                    var percentage = 100 / this.streamWidth * event.layerX;
+                    this.changePosition( this.elements.progress, percentage );
 
-                  if ( albumArtCopy && albumArtCopy.hasClass( 'fold' ) ) {
-                      albumArtCopy.removeClass( 'fold' ).addClass( 'unfold' );
-                  } else {
-                      albumArtCopy.removeClass( 'unfold' ).addClass( 'fold' );
-                  }
-              }
-          };
-      } );
-} )( this.window, this.define, undefined );
+                    percentage = event.layerX / this.streamWidth * this.options.duration;
 
-var SoundcloudManager = function() {
-    this.streams = [];
+                    scm.playStream( this.stream );
+                    scm.setPosition( this.stream, percentage );
+                },
 
-    this.init = function() {
-        SC.initialize( {
-            'client_id': 'e74416cc321ec6ef77bccc2fb7b35216'
-        } );
-    };
+                onHoverProgress: function(event ) {
+                    var percentage = 100 / this.streamWidth * event.layerX;
+                    this.changePosition( this.elements.tempProgress, percentage );
+                },
 
-    this.addStream = function( stream ) {
-        this.streams.push( stream );
-    };
+                onLeaveProgress: function() {
+                    this.changePosition( this.elements.tempProgress, 0 );
+                },
 
-    this.removeStreamByElement = function( element ) {
-        var self = this;
-        this.stream.forEach( function( stream, id ) {
-            if ( stream.sID !== element.id ) {
-                stream.destroy();
-                self.streams.splice( id, 1 );
-            }
-        } );
-    };
+                onStreamCreated: function( stream ) {
+                    var that = this;
+                    this.stream = stream;
 
-    this.createStream = function( trackID, element, cb ) {
-        var self = this;
-        var options = {
-            whileplaying: function() {
-                var progressElement = $( '#' + trackID ).find( '.progress' );
-                var percent = ( 100 / progressElement.attr( 'duration' ) * this.position );
-                progressElement.css(
-                  'width', percent + '%'
-                );
-            }
-        };
+                    this.stream._whileplaying = function (position) {
+                        var percentage = 100 / this.duration * position;
+                        that.changePosition( that.elements.progress, percentage )
+                    };
+                },
 
-        SC.stream( trackID, options, function( sound ) {
-            sound.domElement = element;
-            self.addStream( sound );
-            cb();
-        } );
-    };
+                changePosition: function( element, position ) {
+                    element.style.width = position + '%';
+                },
 
-    this.playStream = function( sID ) {
-        this.streams.forEach( function( stream ) {
-            if ( stream.sID === sID ) {
-                SC.whenStreamingReady( function() {
-                    stream.play();
-                } );
-            }
-        } );
-    };
-
-    this.pauseStream = function( sID ) {
-        this.streams.forEach( function( stream ) {
-            if ( stream.sID === sID ) {
-                SC.whenStreamingReady( function() {
-                    stream.pause();
-                } );
-            }
-        } );
-    };
-
-    this.pauseStreams = function() {
-        this.streams.forEach( function( stream ) {
-            stream.pause();
-        } );
-    };
-
-    this.stopStreams = function() {
-        this.streams.forEach( function( stream ) {
-            stream.stop();
-        } );
-    };
-
-    this.setPosition = function( stream, position ) {
-        if ( position >= 0 && position <= stream.durationEstimate ) {
-            stream.setPosition( position );
-        }
-    };
-
-    this.getStreamByID = function( sID ) {
-        var _stream = '';
-        this.streams.forEach( function( stream ) {
-            if ( stream.sID === sID ) {
-                _stream = stream;
-            }
-        } );
-        return _stream;
-    };
-
-    this.getLastStreamID = function() {
-        if ( this.streams.length > 0 ) {
-            return this.streams[ this.streams.length - 1 ].sID;
-        }
-    };
-};
+                toggleAlbumFold: function () {
+                    this.elements.coverCopy.classList.toggle( 'fold' );
+                }
+            };
+        });
+})(this.window, this.define, undefined);
