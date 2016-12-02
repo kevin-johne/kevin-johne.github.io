@@ -27,6 +27,7 @@
 
             // Libraries
             lodash:             'vendor/lodash.build',
+            soundcloud:         'vendor/soundcloud-sdk',
 
             route:              'vendor/amd.route',
             renderer:           'services/renderer',
@@ -42,6 +43,9 @@
         shim: {
             jquery: {
                 exports:        '$'
+            },
+            soundcloud: {
+                exports:        'SC'
             }
         },
 

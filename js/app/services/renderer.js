@@ -1,6 +1,6 @@
 ( function(  window, define, undefined ) {
-    define( [],
-        function() {
+    define( [ ],
+        function( loader ) {
             return {
                 /**
                  *
@@ -10,6 +10,7 @@
                 render: function( dom, newContent ) {
                     if ( dom && newContent ) {
                         dom.innerHTML = newContent;
+                        window.App.loader.initModules( dom );
                     }
                 }
             };
