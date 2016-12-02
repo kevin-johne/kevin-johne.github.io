@@ -1,4 +1,4 @@
-(function (window, define, undefined) {
+( function( window, define, undefined ) {
     define(
         [
             'jquery',
@@ -6,8 +6,8 @@
             'services/soundcloud-manager',
             'utils/helper'
         ],
-        function ( $, sc, scm, helper ) {
-            
+        function( $, sc, scm, helper ) {
+
             return {
                 elements: {},
                 classes: {
@@ -34,9 +34,9 @@
                     streamRect = this.elements.stream.getBoundingClientRect();
                     this.streamWidth = streamRect.right - streamRect.left;
                 },
-                
+
                 events: function( element, options ) {
-                    if( this.options.id ){
+                    if ( this.options.id ) {
                         scm.createStream( this.options.id, element, this.onStreamCreated.bind( this ) );
                     }
 
@@ -47,7 +47,7 @@
                     this.elements.stream.addEventListener( 'click', this.onClickProgress.bind( this ) );
 
                     this.elements.play.addEventListener( 'click', this.onClickPlay.bind( this ) );
-                    
+
                     this.elements.coverCopy.addEventListener( 'click', this.toggleAlbumFold.bind( this ) );
 
                     this.elements.cover.addEventListener( 'click', this.toggleAlbumFold.bind( this ) );
@@ -67,7 +67,7 @@
                     scm.setPosition( this.stream, percentage );
                 },
 
-                onHoverProgress: function(event ) {
+                onHoverProgress: function( event ) {
                     var percentage = 100 / this.streamWidth * event.layerX;
                     this.changePosition( this.elements.tempProgress, percentage );
                 },
@@ -80,9 +80,9 @@
                     var that = this;
                     this.stream = stream;
 
-                    this.stream._whileplaying = function (position) {
+                    this.stream._whileplaying = function( position ) {
                         var percentage = 100 / this.duration * position;
-                        that.changePosition( that.elements.progress, percentage )
+                        that.changePosition( that.elements.progress, percentage );
                     };
                 },
 
@@ -90,9 +90,9 @@
                     element.style.width = position + '%';
                 },
 
-                toggleAlbumFold: function () {
+                toggleAlbumFold: function() {
                     this.elements.coverCopy.classList.toggle( 'fold' );
                 }
             };
-        });
-})(this.window, this.define, undefined);
+        } );
+} )( this.window, this.define, undefined );

@@ -64,10 +64,10 @@
              */
             mapClassesToElements: function( classes, context ) {
                 var elements = {};
-                for( var _class in classes ) {
-                    elements[_class] = context.querySelectorAll( '.' + classes[_class] );
-                    if( elements[_class].length == 1 ) {
-                        elements[_class] = elements[_class][0];
+                for ( var _class in classes ) {
+                    elements[ _class ] = context.querySelectorAll( '.' + classes[ _class ] );
+                    if ( elements[ _class ].length == 1 ) {
+                        elements[ _class ] = elements[ _class ][ 0 ];
                     }
                 }
                 return elements;
