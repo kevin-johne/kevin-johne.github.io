@@ -10,8 +10,7 @@
 
 {% macro album( id, artwork, title, duration, wave, folded ) %}
     {% set options = {
-        id: id,
-        duration: duration
+        id: id
     } %}
 
     <section class="set">
