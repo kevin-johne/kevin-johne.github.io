@@ -43,9 +43,6 @@
         shim: {
             jquery: {
                 exports:        '$'
-            },
-            soundcloud: {
-                exports:        'SC'
             }
         },
 
