@@ -1,6 +1,6 @@
 .stream {
     position: absolute;
-    bottom: -2em;
+    z-index: -1;
     overflow: hidden;
     background-color: $color-gray-25;
     width: 100%;

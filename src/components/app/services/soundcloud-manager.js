@@ -61,6 +61,7 @@
             };
 
             SoundcloudManager.prototype.setPosition = function( stream, position ) {
+                stream.play();
                 stream.seek( position );
             };
 

@@ -83,6 +83,7 @@
                 },
 
                 timeChanged: function() {
+                    this.openAlbum();
                     var percentage = 100 / this.stream.options.duration * this.stream.currentTime();
                     this.changePosition( this.elements.progress, percentage );
                 },
@@ -93,6 +94,14 @@
 
                 toggleAlbumFold: function() {
                     this.elements.coverCopy.classList.toggle( 'fold' );
+                },
+
+                openAlbum: function() {
+                    this.elements.coverCopy.classList.add( 'fold' );
+                },
+
+                closeAlbum: function() {
+                    this.elements.coverCopy.classList.remove( 'fold' );
                 }
             };
         } );

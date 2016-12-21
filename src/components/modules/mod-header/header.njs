@@ -35,19 +35,19 @@
 
 {% set items = [
     {
-        text: 'Projects',
+        text: 'Web',
         href: '#projects'
     }, {
-        text: 'Music',
+        text: 'Set',
         href: '#music'
     }, {
         text: 'Home',
         href: '#'
     }, {
-        text: 'Blog',
+        text: 'Get',
         href: '#blog'
     }, {
-        text: 'CV',
+        text: 'Me',
         href: '#cv'
     }
 ] %}
