@@ -3,7 +3,7 @@ $susy: (
     gutters: 1/4, // The size of a gutter in relation to a single column
     debug: (
         image: show,
-        color: rgba( yellow, 0.1),
+        color: rgba( $color-orange, 0.1),
         output: background,
         toggle: top right,
     ),

@@ -20,7 +20,7 @@
         id = 205181765
     ) }}
     {{ modules.album.album(
-        title = 'Vinylla',
+        title = 'Just Once Again',
         artwork = 'https://i1.sndcdn.com/artworks-000109996183-z11kq7-t300x300.jpg',
         wave = 'https://w1.sndcdn.com/UfSaMpT2MjBu_m.png',
         folded = false,

@@ -11,8 +11,8 @@
                 window.App.SoundcloudManager = this;
             }
 
-            SoundcloudManager.prototype.addStream = function(stream) {
-                this.streams.push(stream);
+            SoundcloudManager.prototype.addStream = function( stream ) {
+                this.streams.push( stream );
             };
 
             SoundcloudManager.prototype.removeStreamByElement = function( id ) {
@@ -26,10 +26,10 @@
                 return sc.stream( '/tracks/' + trackID ).then( function( player ) {
                     this.addStream( player );
                     return player;
-                }.bind( this ))
+                }.bind( this ) )
                 .catch( function( error ) {
                     console.log( 'ERROR:' + error );
-                });
+                } );
             };
 
             SoundcloudManager.prototype.playStream = function( newStream ) {
@@ -77,7 +77,7 @@
 
             SoundcloudManager.prototype.getLastStreamID = function() {
                 if ( this.streams.length > 0 ) {
-                    return this.getId(this.streams[ this.streams.length - 1 ]);
+                    return this.getId( this.streams[ this.streams.length - 1 ] );
                 }
             };
 

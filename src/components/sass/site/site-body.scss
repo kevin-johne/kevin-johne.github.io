@@ -9,7 +9,6 @@
 
     &:before {
         @include container();
-        @include show-grid(12);
         content: '';
         position: absolute;
         top: 0;
