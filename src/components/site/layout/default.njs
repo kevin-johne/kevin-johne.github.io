@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
-        <div class="site-body">
+        <div class="site-body show-grid">
             {% block aboveHeader %}{% endblock %}
 
             {% include modulesPath + '/mod-header/header.njs' %}

@@ -38,13 +38,13 @@
         text: 'Web',
         href: '#projects'
     }, {
-        text: 'Set',
+        text: 'Music',
         href: '#music'
     }, {
         text: 'Home',
         href: '#'
     }, {
-        text: 'Get',
+        text: 'Blog',
         href: '#blog'
     }, {
         text: 'Me',

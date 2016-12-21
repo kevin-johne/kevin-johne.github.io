@@ -8,7 +8,8 @@
 @import 'mixins/**/*';
 
 // Vendor styles
-@import 'vendor/**/*';
+@import 'vendor/normalize';
+@import 'vendor/susy';
 
 // Site styles
 @import 'site/**/*';

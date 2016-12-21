@@ -1,13 +1,15 @@
 .stream {
     position: absolute;
+    bottom: -17px;
     z-index: -1;
     overflow: hidden;
-    background-color: $color-gray-25;
+    background-color: $color-gray-75;
     width: 100%;
+    transition: background-color 0.3s;
 
-    &:hover .progress_temp {
-        opacity: .6;
-        transition: opacity 1s ease
+    &:hover {
+        background-color: $color-gray-25;
+        transition-duration: 0.6s;
     }
 }
 
@@ -16,8 +18,8 @@
     height: 2em;
     position: absolute;
     z-index: 2;
-    filter: brightness(1) sepia(1) hue-rotate(-62deg);
-    cursor: pointer
+    filter: brightness(1) sepia(0.1) hue-rotate(-62deg);
+    cursor: pointer;
 }
 
 @include breakpoint( $size:default, $inherit:small ) {
