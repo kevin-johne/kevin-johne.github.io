@@ -1,7 +1,7 @@
-(function( window, define ) {
+( function( window, define ) {
     define(
-        ['utils/helper', 'scrollMagic'],
-        function (helper, sMagic) {
+        [ 'utils/helper', 'scrollMagic' ],
+        function( helper, sMagic ) {
             return {
                 classes: {
                     logoHolder: 'site-logo-holder',
@@ -25,19 +25,19 @@
                     this.controller = new sMagic.Controller();
 
                     // create a scene
-                    this.scene = new sMagic.Scene({
+                    this.scene = new sMagic.Scene( {
                         duration: '100%',
                         offset: 0
-                    }).addTo( this.controller );
+                    } ).addTo( this.controller );
                 },
-                
-                events: function( element, options ){
+
+                events: function( element, options ) {
                     var that = this;
-                    this.scene.on('progress', function( event ) {
+                    this.scene.on( 'progress', function( event ) {
                         that.animateLogo( event.progress );
                         that.animateOpacity( event.progress );
                         that.animateHeight( event.progress );
-                    });
+                    } );
                 },
 
                 animateLogo: function( progress ) {
@@ -57,26 +57,30 @@
                 },
 
                 animateOpacity: function( progress ) {
-                    var fadeinOutElements = [ this.elements.aboutHolder, this.elements.buttonHolder, this.elements.scrollDown ];
+                    var fadeinOutElements = [
+                        this.elements.aboutHolder,
+                        this.elements.buttonHolder,
+                        this.elements.scrollDown
+                    ];
                     var opacity = this.linearTransition( 1, -1, progress );
 
                     fadeinOutElements.forEach( function( element ) {
                         element.style.opacity = opacity;
-                    });
+                    } );
                 },
 
-                linearTransition: function(from, to, progress ) {
-                    if( progress < 0 ) {
+                linearTransition: function( from, to, progress ) {
+                    if ( progress < 0 ) {
                         progress = 0;
                     }
 
-                    if( progress > 1 ) {
+                    if ( progress > 1 ) {
                         progress = 1;
                     }
-                    return from + ((to - from) * progress);
+                    return from + ( ( to - from ) * progress );
                 }
 
             };
         }
     );
-})( this.window, this.define );
+} )( this.window, this.define );
