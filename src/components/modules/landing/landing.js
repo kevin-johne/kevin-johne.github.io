@@ -1,120 +1,82 @@
-/*
-$( document ).ready( function() {
-} );
+(function( window, define ) {
+    define(
+        ['utils/helper', 'scrollMagic'],
+        function (helper, sMagic) {
+            return {
+                classes: {
+                    logoHolder: 'site-logo-holder',
+                    logo: 'landing-logo',
+                    aboutHolder: 'what-i-am-holder',
+                    buttonHolder: 'button-holder',
+                    scrollDown: 'scroll-down'
+                },
 
-$( window ).load( function() {
+                default: function() {
+                    return {
 
-    if ( document.querySelector( '.site-landing' ) ) {
-        return;
-    }
+                    };
+                },
 
-    var body = $( 'body' );
-    var link = $( '.stretch[data-text=\'Web\']:first' );
+                ready: function( element, options ) {
+                    this.options = helper.extend( this.default, options );
+                    this.element = element;
+                    this.elements = helper.mapClassesToElements( this.classes, element );
 
-    body.animate( {
-        scrollTop: body.offset().top
-    }, function() {
-        window.addEventListener( 'scroll', animateLanding );
-    } );
+                    this.controller = new sMagic.Controller();
 
-    var animateLanding = function( event ) {
-        fakeLogo.unbind( 'click' );
-        scrollBtn.unbind( 'click' );
-        scrollBtn.parent().empty();
-        window.removeEventListener( 'scroll', animateLanding );
-        $( 'html,body' ).animate( {
-            scrollTop: body.offset().top
-        } );
-        var _url = link.parent().attr( 'href' );
-        event.preventDefault();
-        $( '.site-landing' ).toggleClass( 'shrink' );
-        window.history.pushState(
-          { url: _url },
-          document.title,
-          _url
-        );
-        $( this ).unbind( 'click' );
+                    // create a scene
+                    this.scene = new sMagic.Scene({
+                        duration: '100%',
+                        offset: 0
+                    }).addTo( this.controller );
+                },
+                
+                events: function( element, options ){
+                    var that = this;
+                    this.scene.on('progress', function( event ) {
+                        that.animateLogo( event.progress );
+                        that.animateOpacity( event.progress );
+                        that.animateHeight( event.progress );
+                    });
+                },
 
-        setTimeout( function() {
-              $( realLogo ).css( 'opacity', 1 );
-              $( '.site-landing' ).empty();
-          },
-          3000 );
-    };
+                animateLogo: function( progress ) {
+                    progress = progress * 1.5; // make the animation faster
+                    var holder = this.elements.logoHolder;
+                    var logo = this.elements.logo;
+                    holder.style.height = this.linearTransition( 50, 100, progress ) + 'vh';
+                    holder.style.top = this.linearTransition( 0, 145, progress ) + 'px';
+                    logo.style.width = this.linearTransition( 300, 140, progress ) + 'px';
 
-    var realLogo = $( '.site-header .logo svg' );
-    var fakeLogo = $( '.site-logo' );
-    var scrollBtn = $( '.scroll-down i' );
-    realLogo.css( 'opacity', 0 );
+                },
 
-    link.parent().addClass( 'current' );
+                animateHeight: function( progress ) {
+                    this.elements.aboutHolder.style.height = this.linearTransition( 20, 0, progress ) + 'vh';
+                    this.elements.buttonHolder.style.height = this.linearTransition( 20, 0, progress ) + 'vh';
+                    this.elements.scrollDown.style.height = this.linearTransition( 10, 0, progress ) + 'vh';
+                },
 
-    fakeLogo.bind( 'click', animateLanding );
-    scrollBtn.bind( 'click', animateLanding );
-} );*/
+                animateOpacity: function( progress ) {
+                    var fadeinOutElements = [ this.elements.aboutHolder, this.elements.buttonHolder, this.elements.scrollDown ];
+                    var opacity = this.linearTransition( 1, -1, progress );
 
-( function( window, define, require, undefined ) {
-    'use strict';
+                    fadeinOutElements.forEach( function( element ) {
+                        element.style.opacity = opacity;
+                    });
+                },
 
-    define( [ 'jquery' ],
-      function( $ ) {
+                linearTransition: function(from, to, progress ) {
+                    if( progress < 0 ) {
+                        progress = 0;
+                    }
 
-          return {
-            ready: function( element, options ) {
-                var link;
-
-                this.link = document.querySelector( '.stretch' );
-                this.realLogo = element.querySelector( '.site-header .logo svg' );
-                this.fakeLogo = element.querySelector( '.site-logo' );
-                this.fakeLogoSVG = element.querySelector( '.site-logo svg' );
-                this.showLater = element.querySelectorAll( '.show-later' );
-                this.scrollBtn = element.querySelector( '.scroll-down i' );
-                this.sideLanding = element;
-
-                this.fakeLogoSVG.style.opacity = 1;
-                for ( link of this.showLater ) {
-                    link.classList.add( 'deactivate' );
+                    if( progress > 1 ) {
+                        progress = 1;
+                    }
+                    return from + ((to - from) * progress);
                 }
-            },
 
-            events: function( element, options ) {
-                window.addEventListener( 'scroll', this.animateLanding.bind( this ) );
-            },
-
-            animateLanding: function( event ) {
-                event.preventDefault();
-                window.removeEventListener( 'scroll', this.animateLanding.bind( this ) );
-                var _url = this.link.parentNode.attributes.href.value;
-
-                this.fakeLogo.addEventListener( 'click', this.preventClick );
-                this.scrollBtn.addEventListener( 'click', this.preventClick );
-                this.scrollBtn.parentNode.removeChild( this.scrollBtn );
-
-                $( 'html,body' ).animate( {
-                    scrollTop: document.body.getBoundingClientRect().bottom
-                } );
-
-                this.sideLanding.classList.toggle( 'shrink' );
-                window.history.pushState(
-                  { url: _url },
-                  document.title,
-                  _url
-                );
-                $( this ).unbind( 'click' );
-
-                setTimeout(
-                  function() {
-                      this.realLogo.style.opacity = 1;
-                      this.sideLanding.parentNode.removeChild( this.sideLanding );
-                  }.bind( this ),
-                  3000
-                );
-            },
-
-            preventClick: function( event ) {
-                event.preventDefault();
-            }
-        };
-      } );
-
-}( this, this.define, this.require ) );
+            };
+        }
+    );
+})( this.window, this.define );

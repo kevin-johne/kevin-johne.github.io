@@ -2,15 +2,23 @@
     width: 100%;
     height: 100vh;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: all 3s ease;
-    transform: translate3d(0, 0%, 0);
+
+    .site-logo-holder {
+        position: relative;
+        display: flex;
+        height: 50vh;
+        align-items: flex-end;
+    }
+
+    .site-logo {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+    }
 
     .what-i-am-holder {
-        flex-grow: .2;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -18,78 +26,25 @@
     }
 
     .button-holder {
-        flex-grow: 2;
+        height: 20vh;
     }
 
-    .scroll-down i {
-        color: #bfc1c1;
-        cursor: pointer;
-        transition: color .6s ease
-    }
-
-    .scroll-down i:hover {
-        color: #f50
-    }
-
-    .site-logo-holder {
-        display: flex;
-        flex-grow: 2;
-        align-items: flex-end;
-    }
-
-    &.shrink {
-        height: 0;
-        transform: translate3d(0, 92%, 0);
-    }
-
-    .site-logo {
-        width: 300px;
-        display: block;
-        transform: translate3d(0, 0%, 0);
-        transition: all 3s;
-        transition-timing-function: cubic-bezier(.06, .67, .15, .9);
-    }
-
-    &.shrink .site-logo {
-        width: 140px;
-        transform: translate3d(0, 151px, 0);
-    }
-
-    .button-holder,
-    .what-i-am-holder,
     .scroll-down {
-        opacity: 1;
-        transition: all .5s ease-in
-    }
+        height: 10vh;
+        i {
+            color: #bfc1c1;
+            cursor: pointer;
+            transition: color .6s ease;
 
-    &.shrink .button-holder,
-    &.shrink .what-i-am-holder,
-    &.shrink .scroll-down {
-        opacity: 0;
-        transform: translate3d(0, 400%, 0);
+            &:hover {
+                color: #f50
+            }
+        }
     }
 
     .what-i-am-holder p {
         display: block;
         height: 20px
-    }
-
-    .effect-delay::before {
-        transition: width .4s .3s
-    }
-
-    .effect-direct::before {
-        transition: width .4s;
-        transition-timing-function: $timeFunc-easeIn;
-    }
-
-    .show-later {
-        opacity: 0;
-        transition: 1s ease 3s;
-    }
-
-    .show-later.deactivate {
-        opacity: 1
     }
 }
 
@@ -98,42 +53,28 @@
     color: $color-gray-75;
     text-align: center;
     padding-bottom: 3em;
-}
 
-.intro a {
-    color: $color-gray-25;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-}
+    a {
+        color: $color-gray-25;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
 
-.intro a::after {
-    content: attr(data-text);
-    position: absolute;
-    color: $color-orange;
-    display: block;
-    height: 0;
-}
+        &:after {
+            content: attr(data-text);
+            position: absolute;
+            color: $color-orange;
+            display: block;
+            height: 0;
+        }
 
-.intro a:hover::after {
-    height: 100%;
-}
-
-.intro p {
-    padding: 10px 0;
-}
-
-@include breakpoint( $size:default, $inherit:small ) {
-    .site-landing.shrink .site-logo {
-        width: 76px;
-        transform: translate3d(0, 92%, 0)
+        &:hover:after {
+            height: 100%;
+        }
     }
-}
 
-@include breakpoint( $size:default, $inherit:medium ) {
-    .site-landing.shrink .site-logo {
-        width: 111px;
-        transform: translate3d(0, 92%, 0)
+    p {
+        padding: 10px 0;
     }
 }

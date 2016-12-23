@@ -7,7 +7,7 @@ a {
     position: relative;
     text-decoration: none;
     overflow: hidden;
-    color: #bfc1c1;
+    color: $color-gray-75;
     font-family: "nexa-bold", sans-serif;
     text-transform: uppercase;
 
@@ -19,13 +19,13 @@ a {
         top: 50%;
         margin-top: -13px;
         right: 0;
-        transform: translate3d(-100%, 0, 0);
+        transform: translateX(-100%);
         transition: transform .4s;
         transition-timing-function: $timeFunc-easeIn;
     }
 
     &:hover:after {
-        transform: translate3d(100%, 0, 0);
+        transform: translateX(100%);
     }
 
     &:before {
@@ -52,7 +52,11 @@ a {
 }
 
 .link--cta--big {
-    font-size: 4em
+    font-size: 4em;
+
+    &:before {
+        transition: width .4s .3s
+    }
 }
 
 .soundcloud::after {

@@ -1,24 +1,23 @@
-{#
 <div class="site-landing auto-init" data-modules="modules/landing/landing">
     <div class="site-logo-holder">
-        <a class="site-logo landing-logo" href="">
+        <a class="site-logo landing-logo" href="#projects">
             {% include imgPath + 'logo-landing.svg' %}
         </a>
     </div>
     <div class="what-i-am-holder">
         <p class="show-later">
-            I am a developer
+            writing code
         </p>
         <p class="show-later">
-            sometimes designer
+            interested in art
         </p>
         <p class="show-later">
-            and on weekends deejay
+            playing music
         </p>
     </div>
     <div class="button-holder">
         <p class="show-later">
-            <a class="crazy-button big-crazy-button neutral effect-delay"
+            <a class="link--cta link--cta--big neutral"
                href="mailto:info@kevin-johne.de"
                data-text="Hire me"
                title="send email">
@@ -31,4 +30,4 @@
             <i class="fa fa-angle-down fa-4x"></i>
         </p>
     </div>
-</div>#}
+</div>
