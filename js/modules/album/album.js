@@ -29,6 +29,7 @@
                     var streamRect;
 
                     this.options = helper.extend( this.defaults(), options );
+                    this.options = helper.extend( this.defaults(), options );
                     this.elements = helper.mapClassesToElements( this.classes, element );
 
                     streamRect = this.elements.stream.getBoundingClientRect();
@@ -37,7 +38,7 @@
 
                 events: function( element, options ) {
                     if ( this.options.id ) {
-                        scm.createStream( this.options.id, element, this.onStreamCreated.bind( this ) );
+                        scm.createStream( this.options.id ).then( this.onStreamCreated.bind( this ) );
                     }
 
                     this.elements.stream.addEventListener( 'mousemove', this.onHoverProgress.bind( this ) );
@@ -61,9 +62,7 @@
                     var percentage = 100 / this.streamWidth * event.layerX;
                     this.changePosition( this.elements.progress, percentage );
 
-                    percentage = event.layerX / this.streamWidth * this.options.duration;
-
-                    scm.playStream( this.stream );
+                    percentage = event.layerX / this.streamWidth * this.stream.options.duration;
                     scm.setPosition( this.stream, percentage );
                 },
 
@@ -77,13 +76,16 @@
                 },
 
                 onStreamCreated: function( stream ) {
-                    var that = this;
+                    console.log( stream );
                     this.stream = stream;
 
-                    this.stream._whileplaying = function( position ) {
-                        var percentage = 100 / this.duration * position;
-                        that.changePosition( that.elements.progress, percentage );
-                    };
+                    this.stream.on( 'time', this.timeChanged.bind( this ) );
+                },
+
+                timeChanged: function() {
+                    this.openAlbum();
+                    var percentage = 100 / this.stream.options.duration * this.stream.currentTime();
+                    this.changePosition( this.elements.progress, percentage );
                 },
 
                 changePosition: function( element, position ) {
@@ -92,6 +94,14 @@
 
                 toggleAlbumFold: function() {
                     this.elements.coverCopy.classList.toggle( 'fold' );
+                },
+
+                openAlbum: function() {
+                    this.elements.coverCopy.classList.add( 'fold' );
+                },
+
+                closeAlbum: function() {
+                    this.elements.coverCopy.classList.remove( 'fold' );
                 }
             };
         } );

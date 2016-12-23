@@ -28,6 +28,7 @@
             // Libraries
             lodash:             'vendor/lodash.build',
             soundcloud:         'vendor/soundcloud-sdk',
+            scrollMagic:        'vendor/scrollMagic',
 
             route:              'vendor/amd.route',
             renderer:           'services/renderer',
@@ -43,9 +44,6 @@
         shim: {
             jquery: {
                 exports:        '$'
-            },
-            soundcloud: {
-                exports:        'SC'
             }
         },
 
