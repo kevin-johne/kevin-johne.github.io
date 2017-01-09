@@ -20,7 +20,8 @@ a {
         margin-top: -13px;
         right: 0;
         transform: translateX(-100%);
-        transition: transform .4s;
+        transition-property: transform;
+        transition-duration: .3s;
         transition-timing-function: $timeFunc-easeIn;
     }
 
@@ -37,7 +38,8 @@ a {
         text-transform: uppercase;
         overflow: hidden;
         white-space: nowrap;
-        transition: width .4s;
+        transition-property: width;
+        transition-duration: .4s;
         transition-timing-function: $timeFunc-easeIn;
     }
 
@@ -55,7 +57,12 @@ a {
     font-size: 4em;
 
     &:before {
-        transition: width .4s .3s
+        transition-property: width;
+    }
+
+    //buggie in chrome
+    &:after {
+        content: none;
     }
 }
 

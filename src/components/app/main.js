@@ -24,39 +24,19 @@
             // Plugins
             load:               'vendor/plugins/load',
             text:               'vendor/plugins/text',
+            ScrollTo:           'vendor/plugins/ScrollToPlugin.min',
 
             // Libraries
             lodash:             'vendor/lodash.build',
             soundcloud:         'vendor/soundcloud-sdk',
             scrollMagic:        'vendor/scrollMagic',
+            TweenLite:          'vendor/TweenLite.min',
 
             route:              'vendor/amd.route',
             renderer:           'services/renderer',
             fetcher:            'services/fetcher',
-            router:             'services/router',
-
-            // If it is not necessary to support IE8 its recommended to
-            // use jQuery 2.X.X
-            jquery:         'vendor/jquery-2.1.3'
-
-        },
-
-        shim: {
-            jquery: {
-                exports:        '$'
-            }
-        },
-
-        // Example for a module package
-        packages: [
-            {
-
-                // This module can now be required by "modules/test-module"
-                // instead of "modules/test-module/test-module"
-                name: 'modules/test-module',
-                main: 'test-module'
-            }
-        ]
+            router:             'services/router'
+        }
     } );
 
     define( [

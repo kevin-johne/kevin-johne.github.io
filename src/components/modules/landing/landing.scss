@@ -31,14 +31,15 @@
 
     .scroll-down {
         height: 10vh;
-        i {
-            color: #bfc1c1;
-            cursor: pointer;
-            transition: color .6s ease;
 
-            &:hover {
-                color: #f50
-            }
+        i {
+            color: $color-gray-75;
+            cursor: pointer;
+            transition: color .4s ease;
+        }
+
+        &:hover i {
+            color: $color-orange;
         }
     }
 
@@ -46,35 +47,9 @@
         display: block;
         height: 20px
     }
-}
 
-.intro {
-    font-size: 1.1em;
-    color: $color-gray-75;
-    text-align: center;
-    padding-bottom: 3em;
-
-    a {
-        color: $color-gray-25;
-        text-decoration: none;
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-
-        &:after {
-            content: attr(data-text);
-            position: absolute;
-            color: $color-orange;
-            display: block;
-            height: 0;
-        }
-
-        &:hover:after {
-            height: 100%;
-        }
-    }
-
-    p {
-        padding: 10px 0;
+    .show-later {
+        opacity: 0;
+        transition: opacity .4s $timeFunc-easeIn;
     }
 }
