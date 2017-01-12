@@ -35,7 +35,18 @@
             route:              'vendor/amd.route',
             renderer:           'services/renderer',
             fetcher:            'services/fetcher',
-            router:             'services/router'
+            router:             'services/router',
+
+            // If it is not necessary to support IE8 its recommended to
+            // use jQuery 2.X.X
+            jquery:         'vendor/jquery-2.1.3'
+
+        },
+
+        shim: {
+            jquery: {
+                exports:        '$'
+            }
         }
     } );
 

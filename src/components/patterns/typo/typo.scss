@@ -1,10 +1,5 @@
-body {
-    font-family: 'cambo-regular', sans-serif;
-    font-size: 1.1em;
-}
-
 h1, h2 {
-    font-family: 'nexa-bold', sans-serif;
+    font-family: $font-header;
     font-weight: normal;
     text-transform: uppercase;
     position: relative;
@@ -44,6 +39,11 @@ h2 {
     font-size: 1em;
     padding-bottom: 10px;
     border-bottom: 1px solid $color-gray-75
+}
+
+p {
+    line-height: 1.5em;
+    margin: 1.5em 0;
 }
 
 @include breakpoint( $size:default, $inherit: small) {

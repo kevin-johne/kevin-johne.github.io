@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     background-color: #f7f7f7;
     color: $color-gray-25;
     margin: 0 auto;
+    font-size: 1.6rem;
+    font-family: $font-copy;
 }
 
 fieldset {
