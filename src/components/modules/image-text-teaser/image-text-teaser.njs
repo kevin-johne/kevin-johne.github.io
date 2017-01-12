@@ -8,7 +8,7 @@
     <img class="mod-image-text-teaser__image" src="{{ src }}" alt="{{ title }}" title="{{ title }}"/>
 {% endmacro %}
 
-{% macro text( title ) %}
+{% macro text( title, subline ) %}
     <div class="mod-image-text-teaser__text">
         <h2>{{ title }}</h2>
         {{ caller() }}

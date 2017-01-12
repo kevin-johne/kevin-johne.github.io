@@ -18,32 +18,20 @@
     &__text {
         position: absolute;
         z-index: 2;
-        width: span(6);
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 20px;
+        width: span(4.5);
+        padding: 0 span(0.8) 20px;
         border-top: 1px solid $color-gray-75;
         border-bottom: 1px solid $color-gray-75;
-        background-color: rgba($color-white, 0.97);
+        background-color: rgba($color-white, 0.8);
         top: 50%;
         transform: translate(0, -51%);
         right: 0;
-        text-align: center;
     }
 
     &__image {
         width: span(8);
     }
 }
-
-.cover-holder {
-    position: relative;
-    overflow: hidden;
-    width: 800px;
-    height: 600px;
-    background-color: $color-gray-25
-}
-
 
 
 @include breakpoint( $size:default, $inherit:medium ) {

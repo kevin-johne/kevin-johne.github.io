@@ -19,14 +19,15 @@ a {
         top: 50%;
         margin-top: -13px;
         right: 0;
-        transform: translateX(-100%);
+        transform: translateX(-110%);
         transition-property: transform;
         transition-duration: .3s;
         transition-timing-function: $timeFunc-easeIn;
+        background: $color-orange;
     }
 
     &:hover:after {
-        transform: translateX(100%);
+        transform: translateX(110%);
     }
 
     &:before {
@@ -41,6 +42,7 @@ a {
         transition-property: width;
         transition-duration: .4s;
         transition-timing-function: $timeFunc-easeIn;
+        color: $color-orange;
     }
 
     &:hover:before {
@@ -66,26 +68,24 @@ a {
     }
 }
 
-.soundcloud::after {
-    background-color: $color-orange;
-}
+$linkColors: (
+    lisa-hantke: #177B15,
+    twitter: #{$color-twitter},
+    soundcloud: #{$color-orange},
+    zwilling: #F01114,
+    carolus: #A30024,
+    gedore: #004C95,
+    gedore-shop: #2484E3,
+    jacques: #AF1E2D,
+    baraka: #0017FF,
+    condor: #F8AC00
+);
 
-.soundcloud::before {
-    color: $color-orange;
-}
-
-.twitter::after {
-    background-color: $color-twitter;
-}
-
-.twitter::before {
-    color: $color-twitter;
-}
-
-.neutral::after {
-    background: $color-orange;
-}
-
-.neutral::before {
-    color: $color-orange;
+@each $profile, $color in $linkColors {
+    .link--cta.#{$profile}:after {
+        background-color: $color;
+    }
+    .link--cta.#{$profile}:before {
+        color: $color;
+    }
 }
