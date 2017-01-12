@@ -8,7 +8,7 @@ a {
     text-decoration: none;
     overflow: hidden;
     color: $color-gray-75;
-    font-family: "nexa-bold", sans-serif;
+    font-family: $font-header;
     text-transform: uppercase;
 
     &:after {
@@ -34,7 +34,7 @@ a {
         position: absolute;
         z-index: 2;
         width: 0;
-        font-family: "nexa-bold", sans-serif;
+        font-family: $font-header;
         text-transform: uppercase;
         overflow: hidden;
         white-space: nowrap;

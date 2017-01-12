@@ -1,6 +1,15 @@
 {% import 'modules' as modules %}
 {% import 'patterns' as patterns %}
 
+{% call modules.content.default() %}
+    <h1>Welcome to Kevin Johne's personal site</h1>
+    <p>
+        I am a young guy who is seeking for new techniques and trends in web development and design.
+        Since 2008 I developing web sites and mobile applications. My attitude to software is, that it has to be a high qualitative product,
+        doesn't matter how big the project is. When I code, the way is just as important as the result itself.
+    </p>
+{% endcall %}
+
 {# STRÖER ONLINE MANAGEMENT SYSTEM #}
 {% set title = 'Ströer — Online Management System' %}
 {% set src = 'img/content/stroeer.jpg' %}

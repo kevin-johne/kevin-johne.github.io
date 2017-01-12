@@ -1,23 +1,13 @@
 h1, h2 {
     font-family: $font-header;
-    font-weight: normal;
     text-transform: uppercase;
-    position: relative;
     text-align: center
 }
 
 h1 {
+    font-weight: 300;
     font-size: 1.5em;
     margin: 1.5em 0 .6em
-}
-
-h1::after, h1::before, h2::after, h2::before {
-    content: "";
-    display: inline-block;
-    background-color: #444;
-    height: .7em;
-    width: 0;
-    position: relative
 }
 
 h1::after, h2::after {
@@ -29,13 +19,14 @@ h1::before, h2::before {
 }
 
 h2 {
+    font-weight: normal;
     font-size: 1em;
     margin: 1.5em 0 .6em
 }
 
 .subline {
     color: $color-gray-75;
-    font-family: 'nexa-bold', sans-serif;
+    font-family: $font-header;
     font-size: 1em;
     padding-bottom: 10px;
     border-bottom: 1px solid $color-gray-75
