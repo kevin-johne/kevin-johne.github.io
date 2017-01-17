@@ -1,14 +1,15 @@
 ( function( window, define ) {
     define(
-        [ 'utils/helper', 'scrollMagic' ],
-        function( helper, sMagic ) {
+        [ 'utils/helper', 'scrollMagic', 'TweenLite', 'ScrollTo' ],
+        function( helper, sMagic, TweenLite ) {
             return {
                 classes: {
                     logoHolder: 'site-logo-holder',
                     logo: 'landing-logo',
                     aboutHolder: 'what-i-am-holder',
                     buttonHolder: 'button-holder',
-                    scrollDown: 'scroll-down'
+                    scrollDown: 'scroll-down',
+                    showLater: 'show-later'
                 },
 
                 default: function() {
@@ -33,11 +34,33 @@
 
                 events: function( element, options ) {
                     var that = this;
+
+                    that.activateOpacity = false;
+
+                    //fixed number of animation
+                    //@TODO add class to svg an animate with css instead SMIL
+                    setTimeout( function() {
+                        that.activateOpacity = true;
+                        that.animateOpacity( that.scene.progress() );
+                        that.elements.showLater.forEach( function( element ) {
+                            //remove showLater class after animation is finished
+                            setTimeout( function() {
+                                element.classList.remove( that.classes.showLater );
+                            }, 1000 );
+                            //console.log( element.style.transitionDuration );
+                        } );
+                    }, 1800 );
+
                     this.scene.on( 'progress', function( event ) {
                         that.animateLogo( event.progress );
-                        that.animateOpacity( event.progress );
+                        if ( that.activateOpacity ) {
+                            that.animateOpacity( event.progress );
+                        }
                         that.animateHeight( event.progress );
                     } );
+
+                    this.elements.scrollDown.addEventListener( 'click', this.scrollToHeader );
+                    this.elements.logo.addEventListener( 'click', this.scrollToHeader );
                 },
 
                 animateLogo: function( progress ) {
@@ -47,7 +70,6 @@
                     holder.style.height = this.linearTransition( 50, 100, progress ) + 'vh';
                     holder.style.top = this.linearTransition( 0, 145, progress ) + 'px';
                     logo.style.width = this.linearTransition( 300, 140, progress ) + 'px';
-
                 },
 
                 animateHeight: function( progress ) {
@@ -57,6 +79,8 @@
                 },
 
                 animateOpacity: function( progress ) {
+                    var that = this;
+
                     var fadeinOutElements = [
                         this.elements.aboutHolder,
                         this.elements.buttonHolder,
@@ -78,6 +102,10 @@
                         progress = 1;
                     }
                     return from + ( ( to - from ) * progress );
+                },
+
+                scrollToHeader: function() {
+                    TweenLite.to( window, 0.5, { scrollTo: window.innerHeight } );
                 }
 
             };
