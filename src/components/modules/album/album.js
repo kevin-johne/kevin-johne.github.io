@@ -12,6 +12,7 @@
                 elements: {},
                 classes: {
                     play: 'play',
+                    pause: 'pause',
                     wave: 'wave',
                     stream: 'stream',
                     progress: 'progress',
@@ -48,6 +49,7 @@
                     this.elements.stream.addEventListener( 'click', this.onClickProgress.bind( this ) );
 
                     this.elements.play.addEventListener( 'click', this.onClickPlay.bind( this ) );
+                    this.elements.pause.addEventListener( 'click', this.onClickPause.bind( this ) );
 
                     this.elements.coverCopy.addEventListener( 'click', this.toggleAlbumFold.bind( this ) );
 
@@ -56,6 +58,10 @@
 
                 onClickPlay: function() {
                     scm.playStream( this.stream );
+                },
+
+                onClickPause: function() {
+                    scm.pauseStream( this.stream );
                 },
 
                 onClickProgress: function( event ) {
