@@ -39,7 +39,7 @@
 
                     //fixed number of animation
                     //@TODO add class to svg an animate with css instead SMIL
-                    setTimeout(function() {
+                    setTimeout( function() {
                         that.activateOpacity = true;
                         that.animateOpacity( that.scene.progress() );
                         that.elements.showLater.forEach( function( element ) {
@@ -48,19 +48,19 @@
                                 element.classList.remove( that.classes.showLater );
                             }, 1000 );
                             //console.log( element.style.transitionDuration );
-                        });
-                    },1800);
+                        } );
+                    }, 1800 );
 
                     this.scene.on( 'progress', function( event ) {
                         that.animateLogo( event.progress );
-                        if( that.activateOpacity ) {
+                        if ( that.activateOpacity ) {
                             that.animateOpacity( event.progress );
                         }
                         that.animateHeight( event.progress );
                     } );
 
-                    this.elements.scrollDown.addEventListener( 'click', this.scrollToHeader);
-                    this.elements.logo.addEventListener( 'click', this.scrollToHeader);
+                    this.elements.scrollDown.addEventListener( 'click', this.scrollToHeader );
+                    this.elements.logo.addEventListener( 'click', this.scrollToHeader );
                 },
 
                 animateLogo: function( progress ) {
@@ -90,7 +90,7 @@
 
                     fadeinOutElements.forEach( function( element ) {
                         element.style.opacity = opacity;
-                    });
+                    } );
                 },
 
                 linearTransition: function( from, to, progress ) {
@@ -105,7 +105,7 @@
                 },
 
                 scrollToHeader: function() {
-                    TweenLite.to(window, .5, {scrollTo: window.innerHeight});
+                    TweenLite.to( window, 0.5, { scrollTo: window.innerHeight } );
                 }
 
             };
