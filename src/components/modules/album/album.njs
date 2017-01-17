@@ -3,7 +3,7 @@
 {#</section>#}
 
 {% macro set() %}
-    <div class="gallery-overview">
+    <div class="gallery-overview" >
         {{ caller() }}
     </div>
 {% endmacro %}
@@ -22,9 +22,7 @@
             <div class="control">
                 <ul>
                     <li><span class="fa fa-play fa-w play"></span></li>
-                    <li><span class="fa fa-heart fa-w like"></span></li>
-                    <li><span class="fa fa-share-alt fa-lw share"></span></li>
-                    <li><span class="fa fa-download fa-w download"></span></li>
+                    <li><span class="fa fa-pause fa-w pause"></span></li>
                 </ul>
             </div>
         </div>

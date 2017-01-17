@@ -5,3 +5,7 @@
     width: span(8);
     text-align: center;
 }
+
+.mod-content + .gallery-overview {
+    margin-top: -70px;
+}

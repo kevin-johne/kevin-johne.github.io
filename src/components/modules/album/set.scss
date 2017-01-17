@@ -1,20 +1,3 @@
-
-.set-details {
-    width: 560px;
-    margin: 0 auto
-}
-
-.set-details p {
-    margin-top: 10px;
-    line-height: 1.3em;
-    white-space: pre-wrap
-}
-
-.gallery-overview {
-    @include container();
-    margin-bottom: 5em;
-}
-
 .set {
     @include span(6);
     margin-bottom: 20px;
@@ -34,7 +17,7 @@
         margin-right: gutter();
     }
 
-    .set:nth-child(3n) {
+    .set:nth-child(4n) {
         margin-right: 0;
     }
 }
