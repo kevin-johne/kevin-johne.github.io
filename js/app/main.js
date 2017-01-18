@@ -27,7 +27,7 @@
             ScrollTo:           'vendor/plugins/ScrollToPlugin.min',
 
             // Libraries
-            lodash:             'vendor/lodash.build',
+            lodash:             'vendor/lodash',
             soundcloud:         'vendor/soundcloud-sdk',
             scrollMagic:        'vendor/scrollMagic',
             TweenLite:          'vendor/TweenLite.min',
