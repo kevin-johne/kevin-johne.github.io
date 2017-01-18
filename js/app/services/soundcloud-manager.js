@@ -5,8 +5,11 @@
             function SoundcloudManager() {
                 this.streams = [];
                 sc.initialize( {
-                    'client_id': 'e74416cc321ec6ef77bccc2fb7b35216'
+                    'client_id': 'e74416cc321ec6ef77bccc2fb7b35216',
+                    'redirect_uri': 'http://example.com/callback'
                 } );
+
+                //console.log( sc.get('/users/877972/favorites'));
 
                 window.App.SoundcloudManager = this;
             }

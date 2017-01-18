@@ -24,11 +24,13 @@
             // Plugins
             load:               'vendor/plugins/load',
             text:               'vendor/plugins/text',
+            ScrollTo:           'vendor/plugins/ScrollToPlugin.min',
 
             // Libraries
             lodash:             'vendor/lodash.build',
             soundcloud:         'vendor/soundcloud-sdk',
             scrollMagic:        'vendor/scrollMagic',
+            TweenLite:          'vendor/TweenLite.min',
 
             route:              'vendor/amd.route',
             renderer:           'services/renderer',
@@ -45,18 +47,7 @@
             jquery: {
                 exports:        '$'
             }
-        },
-
-        // Example for a module package
-        packages: [
-            {
-
-                // This module can now be required by "modules/test-module"
-                // instead of "modules/test-module/test-module"
-                name: 'modules/test-module',
-                main: 'test-module'
-            }
-        ]
+        }
     } );
 
     define( [
