@@ -4,8 +4,8 @@
             return {
                 fetch: function( url ) {
                     var headers = new Headers();
-                    headers.append('cache-control', ' no-cache, no-store, must-revalidate');
-                    headers.append('pragma', 'no-cache, no-store, must-revalidate');
+                    headers.append( 'cache-control', ' no-cache, no-store, must-revalidate' );
+                    headers.append( 'pragma', 'no-cache, no-store, must-revalidate' );
 
                     return fetch( url, {
                         method: 'get',
