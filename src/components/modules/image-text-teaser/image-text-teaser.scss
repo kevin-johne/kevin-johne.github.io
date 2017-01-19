@@ -1,4 +1,5 @@
 .mod-image-text-teaser {
+    $corner-width: 30px;
     position: relative;
     width: auto;
     margin: 40px auto 80px;
@@ -12,20 +13,39 @@
     }
 
     &:nth-of-type(even) &__text {
-        left: 0
+        left: 0;
+
+        &:before {
+            border-left-color: $color-gray-90;
+            border-right-width: 0;
+            right: -$corner-width + 1px;
+        }
+    }
+
+    &:nth-of-type(odd) &__text {
+        &:before {
+            border-right-color: $color-gray-90;
+            border-left-width: 0;
+            left: -$corner-width + 1px;
+        }
     }
 
     &__text {
         position: absolute;
         z-index: 2;
-        width: span(4.5);
-        padding: 0 span(0.8) 20px;
-        border-top: 1px solid $color-gray-75;
-        border-bottom: 1px solid $color-gray-75;
-        background-color: rgba($color-white, 0.8);
+        width: span(4) + gutter();
+        padding: 0 (2 * gutter()) (2 * gutter());
         top: 50%;
-        transform: translate(0, -51%);
+        transform: translateY( -50% );
         right: 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            border: $corner-width solid transparent;
+            top: 50%;
+            transform: translateY( -50% );
+        }
     }
 
     &__image {
