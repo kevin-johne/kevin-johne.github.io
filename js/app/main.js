@@ -29,7 +29,7 @@
             // Libraries
             lodash:             'vendor/lodash',
             soundcloud:         'vendor/soundcloud-sdk',
-            scrollMagic:        'vendor/scrollMagic',
+            scrollMagic:        'vendor/ScrollMagic',
             TweenLite:          'vendor/TweenLite.min',
 
             route:              'vendor/amd.route',
