@@ -2,6 +2,19 @@ a {
     text-decoration: none;
 }
 
+.link {
+    color: $color-orange;
+
+    &:visited {
+        color: $color-orange;
+    }
+
+    &:hover {
+        color: $color-gray-25;
+        text-decoration: underline $color-orange;
+    }
+}
+
 .link--cta {
     display: inline-block;
     position: relative;

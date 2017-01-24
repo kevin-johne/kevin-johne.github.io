@@ -30,8 +30,8 @@
         text: 'Blog',
         href: '#blog'
     }, {
-        text: 'Me',
-        href: '#cv'
+        text: 'Story',
+        href: '#story'
     }
 ] %}
 
