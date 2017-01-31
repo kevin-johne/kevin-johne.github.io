@@ -1,1 +1,19 @@
-!function(n,i,e){i([],function(i){return{render:function(i,e){i&&e&&(i.innerHTML=e,n.App.loader.initModules(i))}}})}(this,this.define);
+( function(  window, define, undefined ) {
+    define( [ ],
+        function( loader ) {
+            return {
+                /**
+                 *
+                 * @param {Node} dom
+                 * @param {string} newContent
+                 */
+                render: function( dom, newContent ) {
+                    if ( dom && newContent ) {
+                        dom.innerHTML = newContent;
+                        window.App.loader.initModules( dom );
+                    }
+                }
+            };
+        }
+    );
+} )( this, this.define );

@@ -1,1 +1,187 @@
-!function(e,t,n,s,i){"use strict";t([],function(){function e(e,t,n,s){this.type=e,this.namespace=t,this.callback=n,this.once=s||!1}function t(){this._events={}}return e.prototype.trigger=function(e,t,n){if(!e.length||this.hasNamespace(e)){var s=[this];Array.isArray(n)&&n.length>0&&n.forEach(function(e){s.push(e)}),this.callback.apply(t||this,s)}},e.prototype.hasNamespace=function(e,t){var n=e.slice(0),s=t||this.namespace.slice(0);return n[0]===s[0]?(n.splice(0,1),s.splice(0,1),n.length&&s.length?this.hasNamespace(n,s):n.length===s.length||s.length>n.length):!1},t.prototype.splitName=function(e){var t=e.split(".");return{name:t.splice(0,1).toString(),namespace:t}},t.prototype.subscribeEvent=function(t,n,s){var i=this.splitName(t),a=this._events[i.name]||(this._events[i.name]=[]);a.push(new e(i.name,i.namespace,n,s))},t.prototype.on=function(e,t){this.subscribeEvent(e,t)},t.prototype.one=function(e,t){this.subscribeEvent(e,t,!0)},t.prototype.off=function(e){var t=this.splitName(e),n=this._events[t.name];n!==i&&(t.namespace.length?(n.forEach(function(e,s){e.hasNamespace(t.namespace)&&(n[s]=null)}),n=n.filter(function(e){return!!e}),this._events[t.name]=n):delete this._events[t.name])},t.prototype.trigger=function(e,t,n){var s=this.splitName(e),a=this._events[s.name];a!==i&&(a.forEach(function(e,i){null!==e&&(e.trigger(s.namespace,n,t),e.once&&(a[i]=null))}),a=a.filter(function(e){return!!e}))},new t})}(this,this.define,this.require,this.requirejs);
+( function( window, define, require, requirejs, undefined ) {
+    'use strict';
+
+    define( [], function() {
+
+        /**
+         * Event
+         * @param {String} name Event name
+         * @param {Array} namespace Event namespaces
+         * @param {Function} callback Event callback function
+         * @param {Boolean} once When 'true' event will be destroyed after the first time
+         * triggered
+         * @constructor
+         */
+
+        function Event( name, namespace, callback, once ) {
+            this.type       = name;
+            this.namespace  = namespace;
+            this.callback   = callback;
+            this.once       = once || false;
+        }
+
+        /**
+         * Trigger Event
+         * @param {Array} namespace Event namespaces
+         * @param {Object} context Context will be applied to callback function. If undefined the
+         *                         context is the event itself
+         * @param {Array} args Arguments will be passed in callback function
+         */
+        Event.prototype.trigger = function( namespace, context, args ) {
+            if ( !namespace.length || this.hasNamespace( namespace ) ) {
+                var eventArgs = [ this ];
+                if ( Array.isArray( args ) && args.length > 0 ) {
+                    args.forEach( function( arg ) {
+                        eventArgs.push( arg );
+                    } );
+                }
+
+                this.callback.apply( context || this, eventArgs );
+            }
+        };
+
+        /**
+         * Checks if event has given namespace
+         * @param {String} namespace
+         * @param {String} [subscribedNamespace] Only for function recursion!
+         * @returns {boolean}
+         */
+        Event.prototype.hasNamespace = function( namespace, subscribedNamespace ) {
+            var pNS = namespace.slice( 0 );
+            var sNS = subscribedNamespace || this.namespace.slice( 0 );
+
+            if ( pNS[ 0 ] === sNS[ 0 ] ) {
+
+                pNS.splice( 0, 1 );
+                sNS.splice( 0, 1 );
+
+                if ( pNS.length && sNS.length ) {
+                    return this.hasNamespace( pNS, sNS );
+                } else {
+                    return ( pNS.length === sNS.length ) || ( sNS.length > pNS.length );
+                }
+            } else {
+                return false;
+            }
+        };
+
+        /**
+         * Dispatcher
+         * @constructor
+         */
+        function Dispatcher() {
+            this._events = {};
+        }
+
+        /**
+         * Splits event name in name and namespaces
+         * @param {String} eventName
+         * @returns {{name: String, namespace: Array}}
+         */
+        Dispatcher.prototype.splitName = function( eventName ) {
+            var namespace   = eventName.split( '.' );
+
+            return {
+                name: namespace.splice( 0, 1 ).toString(),
+                namespace: namespace
+            };
+        };
+
+        /**
+         * Subscribes an Event
+         * @param {String} eventName Event name including namespace
+         * @param {Function} callback Callback function
+         * @param {Boolean} [once] When 'true' event will be destroyed after the first time
+         * triggered
+         */
+        Dispatcher.prototype.subscribeEvent = function( eventName, callback, once ) {
+            var name   = this.splitName( eventName );
+            var target = this._events[ name.name ] || ( this._events[ name.name ] = [] );
+
+            target.push( new Event( name.name, name.namespace, callback, once ) );
+        };
+
+        /**
+         * Subscribes an Event
+         * @param {String} name Event name including namespace
+         * @param {Function} callback Callback function
+         */
+        Dispatcher.prototype.on = function( name, callback ) {
+            this.subscribeEvent( name, callback );
+        };
+
+        /**
+         * Subscribes an Event which will be destroyed after first time triggered
+         * @param {String} name Event name including namespace
+         * @param {Function} callback Callback function
+         */
+        Dispatcher.prototype.one = function( name, callback ) {
+            this.subscribeEvent( name, callback, true );
+        };
+
+        /**
+         * Unsubscribes an event
+         * @param {String} eventName Event name including namespace
+         */
+        Dispatcher.prototype.off = function( eventName ) {
+            var name   = this.splitName( eventName );
+            var events = this._events[ name.name ];
+
+            if ( events === undefined ) {
+                return;
+            }
+
+            if ( name.namespace.length ) {
+                events.forEach( function( event, index ) {
+                    if ( event.hasNamespace( name.namespace ) ) {
+                        events[ index ] = null;
+                    }
+                } );
+
+                events = events.filter( function( event ) {
+                    return !!event;
+                } );
+
+                this._events[ name.name ] = events;
+            } else {
+                delete this._events[ name.name ];
+            }
+        };
+
+        /**
+         * Triggers an event
+         * @param {String} eventName Event name including namespace
+         * @param {Array} [args] Arguments wich will be passed in the event callback
+         * @param {Object} [context] Context will be applied to event callback
+         */
+        Dispatcher.prototype.trigger = function( eventName, args, context ) {
+            var name   = this.splitName( eventName );
+            var events = this._events[ name.name ];
+
+            if ( events === undefined ) {
+                return;
+            }
+
+            events.forEach( function( event, index ) {
+
+                if ( event === null ) {
+                    return;
+                }
+
+                event.trigger( name.namespace, context, args );
+
+                if ( event.once ) {
+                    events[ index ] = null;
+                }
+
+            } );
+
+            events = events.filter( function( event ) {
+                return !!event;
+            } );
+        };
+
+        return new Dispatcher();
+    } );
+
+}( this, this.define, this.require, this.requirejs ) );

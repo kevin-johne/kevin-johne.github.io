@@ -1,1 +1,388 @@
-!function(t,e,o,i,n){"use strict";var s=t.document;e(["require","utils/module","utils/helper","utils/conditions","vendor/polyfills/promise"],function(t,e,o,i){function n(e,o){return this.elementScope=e.elementScope&&e.elementScope.jquery?e.elementScope.get(0):e.elementScope||s,this.globalScope="object"==typeof e.globalScope?e.globalScope:{},this.options=e,this.requireContext=o||t,this.promise=new Promise(function(t,e){this.resolve=t,this.reject=e}.bind(this)),this.pendingModules={major:0,minor:0},this.moduleLoaded=function(t){t&&this.pendingModules.hasOwnProperty(t)&&this.pendingModules[t]--,this.pendingModules.major||this.pendingModules.minor||this.resolve()}.bind(this),e.autoInit!==!1&&this.initModules(),this}var l=".auto-init";return n.prototype.initModules=function(t){var e,o,i=t&&t.jquery?t.get(0):t||this.elementScope,n=i.querySelectorAll(this.options.autoInitSelector||l),s={minor:[],major:[]};return Array.prototype.forEach.call(n,function(t,i){e=this.getModule(n.item(i)),o=e.priority?s.major:s.minor,o.push(e)}.bind(this)),s.major.length&&this.loadModules(s.major,"major"),s.minor.length&&this.loadModules(s.minor,"minor"),s.minor.length||s.major.length||this.moduleLoaded(),this.promise},n.prototype.getModule=function(t){var e=t.getAttribute("data-condition");return{element:t,source:t.getAttribute("data-module")?t.getAttribute("data-module").replace(/ /g,"").split(","):t.getAttribute("data-modules")?t.getAttribute("data-modules").replace(/ /g,"").split(","):[],options:JSON.parse(t.getAttribute("data-options")),extensions:t.getAttribute("data-extension")?t.getAttribute("data-extension").replace(/ /g,"").split(","):t.getAttribute("data-extensions")?t.getAttribute("data-extensions").replace(/ /g,"").split(","):[],priority:t.getAttribute("data-priority")?JSON.parse(t.getAttribute("data-priority")):!1,condition:"string"==typeof e&&-1!==e.indexOf("{")?JSON.parse(e):e}},n.prototype.initGlobalModule=function(t){var e=t.module.constructors||["ready","events"],o=t.moduleName.split("/").pop();this.globalScope[o]=t.module,e.forEach(function(e,o){if("function"==typeof t.module[e])try{t.module[e].call(t.module,t.element,t.options)}catch(i){throw i}}),this.moduleLoaded(t.type)},n.prototype.initLocalModule=function(t){var o=e.extend(t.module);t.extensions.length&&t.extensions.forEach(function(t){o=o.extend(t)}),this.initLocalClass({module:o,element:t.element,options:t.options,moduleName:t.moduleName,type:t.type})},n.prototype.initLocalClass=function(t){return new t.module(t.element,t.options,t.moduleName,this.moduleLoaded,t.type)},n.prototype.loadModules=function(t,e){t.forEach(function(t){t.source.forEach(function(n){if(t.condition&&("string"==typeof t.condition||t.condition.hasOwnProperty(n))){var s="string"==typeof t.condition?t.condition:t.condition[n];try{i[s].call(this,o.once(this.loadModule.bind(this,n,t,e)),t.element)}catch(l){console.warn('The condition "'+t.condition[n]+"\" doesn't exist.")}}else this.pendingModules[e]++,this.loadModule.call(this,n,t,e)}.bind(this))}.bind(this))},n.prototype.loadModule=function(t,e,o){this.requireContext([t],function(i){var n=!i.isGlobal,s="function"==typeof i,l=s?this.initLocalClass:n?this.initLocalModule:this.initGlobalModule,r=[],u=new Promise(function(o){n&&e.extensions.length?this.requireContext(e.extensions,function(){Array.prototype.forEach.call(arguments,function(e){~e.extend.indexOf(t)&&r.push(e)}),o()}):o()}.bind(this));u.then(function(){l.call(this,{module:i,element:e.element,options:e.options,moduleName:t,extensions:r,type:o})}.bind(this))}.bind(this))},n})}(this,this.define,this.require,this.requirejs);
+( function( window, define, require, requirejs, undefined ) {
+    'use strict';
+
+    var document = window.document;
+
+    define( [
+        'require',
+        'utils/module',
+        'utils/helper',
+        'utils/conditions',
+        'vendor/polyfills/promise'
+    ], function( require, Module, helper, conditions ) {
+
+        /**
+         * Module Loader
+         *
+         * Initializes local and global modules. To initialize modules automatically
+         * the class 'auto-init' is required on the related DOM Element
+         *
+         * Used lodash methods
+         * (is required for the grunt lodashAutobuild Task which is not able to parse chains)
+         *
+         * @example Example
+         * var loader = new Loader(element);
+         * // returns {Object}
+         *
+         * @class
+         * @classdesc Loader class
+         */
+
+        var autoInitSelector = '.auto-init';
+
+        /**
+         * Constructor
+         *
+         * @constructs Loader
+         * @param {Object} options
+         * @param {Object} [options.globalScope] Scope on which the global modules will be attached
+         * @param {jQuery/HTMLElement} [options.elementScope] DOM element scope
+         * @param {Boolean} [options.autoInit] Unless 'false' the Loader will automatically
+         * initialize all Modules in Scope
+         * @param {Function} requireContext The require.js context for the Loader instance
+         * @returns {this}
+         */
+        function Loader( options, requireContext ) {
+
+            this.elementScope = ( options.elementScope && options.elementScope.jquery ) ?
+                options.elementScope.get( 0 ) :
+                options.elementScope || document;
+
+            this.globalScope   = ( typeof options.globalScope === 'object' ) ?
+                options.globalScope :
+                {};
+
+            this.options = options;
+
+            this.requireContext = requireContext || require;
+
+            this.promise = new Promise( function( resolve, reject ) {
+                this.resolve = resolve;
+                this.reject = reject;
+            }.bind( this ) );
+
+            this.pendingModules = {
+                major: 0,
+                minor: 0
+            };
+
+            this.moduleLoaded = function( type ) {
+                if ( type && this.pendingModules.hasOwnProperty( type ) ) {
+                    this.pendingModules[ type ]--;
+                }
+
+                if ( !this.pendingModules.major && !this.pendingModules.minor ) {
+                    this.resolve();
+                }
+            }.bind( this );
+
+            if ( options.autoInit !== false ) {
+                this.initModules();
+            }
+
+            return this;
+
+        }
+
+        /**
+         * Initializes all Modules in elementScope
+         *
+         * @function initModules
+         * @memberof Loader
+         * @param {jQuery/HTMLElement} [element] Optionally an jQuery element can be
+         *                                             passed wich will be used as scope
+         * @returns {Promise} The returned Promise will be resolved when all local modules
+         *                    are initialized
+         */
+        Loader.prototype.initModules = function( element ) {
+            var elementScope = ( element && element.jquery ) ?
+                element.get( 0 ) :
+                element || this.elementScope;
+
+            var moduleElements = elementScope.querySelectorAll(
+                this.options.autoInitSelector ||
+                autoInitSelector
+            );
+            var module, target;
+
+            var modules = {
+                minor: [],
+                major: []
+            };
+
+            /*
+             * Creates array with module objects
+             */
+            Array.prototype.forEach.call(
+                moduleElements,
+                function( element, index ) {
+                    module = this.getModule( moduleElements.item( index ) );
+                    target = module.priority ? modules.major : modules.minor;
+
+                    target.push( module );
+                }.bind( this )
+            );
+
+            if ( modules.major.length ) {
+                this.loadModules( modules.major, 'major' );
+            }
+
+            if ( modules.minor.length ) {
+                this.loadModules( modules.minor, 'minor' );
+            }
+
+            if ( !modules.minor.length && !modules.major.length ) {
+                this.moduleLoaded();
+            }
+
+            return this.promise;
+        };
+
+        /**
+         * Extracts module data from DOM-Element (jQuery)
+         *
+         * @function getModule
+         * @memberof Loader
+         * @param {jQuery/HTMLElement} element
+         * @returns {{element: HTMLElement, source: Array, options: Object, extensions: Array, condition: Object}}
+         */
+        Loader.prototype.getModule = function( element ) {
+
+            var condition  = element.getAttribute( 'data-condition' );
+
+            return {
+                element: element,
+
+                source: element.getAttribute( 'data-module' ) ?
+                    element.getAttribute( 'data-module' ).replace( / /g, '' ).split( ',' ) :
+                    element.getAttribute( 'data-modules' ) ?
+                    element.getAttribute( 'data-modules' ).replace( / /g, '' ).split( ',' ) :
+                        [],
+
+                options: JSON.parse( element.getAttribute( 'data-options' ) ),
+
+                extensions: element.getAttribute( 'data-extension' ) ?
+                    element.getAttribute( 'data-extension' ).replace( / /g, '' ).split( ',' ) :
+                    element.getAttribute( 'data-extensions' ) ?
+                    element.getAttribute( 'data-extensions' ).replace( / /g, '' ).split( ',' ) :
+                        [],
+
+                priority: element.getAttribute( 'data-priority' ) ?
+                    JSON.parse( element.getAttribute( 'data-priority' ) ) :
+                    false,
+
+                condition: ( typeof condition === 'string' && condition.indexOf( '{' ) !== -1 ) ?
+                    JSON.parse( condition ) :
+                    condition
+            };
+        };
+
+        /**
+         * Initializes the global modules
+         *
+         * @function initGlobalModule
+         * @memberof Loader
+         * @param {Object} options
+         * @param {Object} options.module
+         * @param {jQuery/HTMLElement} options.element
+         * @param {Object} options.options
+         * @param {String} options.moduleName
+         * @param {String} options.type
+         */
+        Loader.prototype.initGlobalModule = function( options ) {
+            var methods = options.module.constructors || [ 'ready', 'events' ];
+            var name    = options.moduleName.split( '/' ).pop();
+
+            this.globalScope[ name ] = options.module;
+
+            methods.forEach( function( method, index ) {
+                if ( typeof options.module[ method ] === 'function' ) {
+                    try {
+                        options.module[ method ].call(
+                            options.module,
+                            options.element,
+                            options.options
+                        );
+                    } catch ( error ) {
+                        throw error;
+                    }
+                }
+            } );
+
+            this.moduleLoaded( options.type );
+        };
+
+        /**
+         * Initializes the locale modules
+         *
+         * @function initLocalModule
+         * @memberof Loader
+         * @param {Object} options
+         * @param {Object} options.module
+         * @param {jQuery/HTMLElement} options.element
+         * @param {Object} options.options
+         * @param {Array} options.extensions
+         * @param {String} options.moduleName
+         * @param {String} options.type
+         */
+        Loader.prototype.initLocalModule = function( options ) {
+            var ModuleClass = Module.extend( options.module );
+
+            if ( options.extensions.length ) {
+                options.extensions.forEach( function( extension ) {
+                    ModuleClass = ModuleClass.extend( extension );
+                } );
+            }
+
+            this.initLocalClass( {
+                module: ModuleClass,
+                element: options.element,
+                options: options.options,
+                moduleName: options.moduleName,
+                type: options.type
+            } );
+        };
+
+        /**
+         * Initializes a Class of an existing Module
+         *
+         * @function initLocalClass
+         * @memberof Loader
+         * @param {Object} options
+         * @param {Function} options.module
+         * @param {jQuery/HTMLElement} options.element
+         * @param {Object} options.options
+         * @param {Array} options.extensions
+         * @param {String} options.moduleName
+         * @return {Module}
+         */
+        Loader.prototype.initLocalClass = function( options ) {
+            return new options.module(
+                options.element,
+                options.options,
+                options.moduleName,
+                this.moduleLoaded, options.type
+            );
+        };
+
+        /**
+         * Iterates through all passed modules and initializes them respectively registers a condition if necessary.
+         *
+         * @function loadModules
+         * @memberof Loader
+         * @param {Array} modules List of module objects
+         * @param {String} type Describes if its a minor or major type module
+         */
+        Loader.prototype.loadModules = function( modules, type ) {
+
+            modules.forEach( function( moduleObject ) {
+
+                moduleObject.source.forEach( function( source ) {
+
+                    if (
+                        moduleObject.condition &&
+                        (
+                            typeof moduleObject.condition === 'string' ||
+                            moduleObject.condition.hasOwnProperty( source )
+                        )
+                    ) {
+
+                        var condition =  ( typeof moduleObject.condition === 'string' ) ?
+                            moduleObject.condition :
+                            moduleObject.condition[ source ];
+
+                        try {
+                            conditions[ condition ].call(
+                                this,
+                                helper.once( this.loadModule.bind( this, source, moduleObject, type ) ),
+                                moduleObject.element
+                            );
+                        } catch ( error ) {
+                            console.warn( 'The condition "' + moduleObject.condition[ source ] + '" doesn\'t exist.' );
+                        }
+
+                    } else {
+                        this.pendingModules[ type ]++;
+                        this.loadModule.call( this, source, moduleObject, type );
+                    }
+
+                }.bind( this ) );
+
+            }.bind( this ) );
+
+        };
+
+        /**
+         * Requires a module and initializes it with all extensions
+         *
+         * @function loadModule
+         * @memberof Loader
+         * @param {String} source Modulename
+         * @param {Object} moduleObject
+         * @param {String} type Describes if its a minor or major type module
+         */
+        Loader.prototype.loadModule = function( source, moduleObject, type ) {
+
+            this.requireContext( [ source ], function( module ) {
+
+                var isLocal = !module.isGlobal;
+                var isFunction = typeof module === 'function';
+                var initFunction = isFunction ?
+                    this.initLocalClass :
+                    isLocal ?
+                    this.initLocalModule :
+                        this.initGlobalModule;
+                var extensions = [];
+                var promise = new Promise( function( resolve ) {
+
+                    /**
+                     * Searchs related extensions and pushes them into an array
+                     */
+                    if ( isLocal && moduleObject.extensions.length ) {
+
+                        this.requireContext( moduleObject.extensions, function() {
+
+                            Array.prototype.forEach.call( arguments, function( extension ) {
+
+                                /* jshint bitwise: false */
+                                if ( !!~extension.extend.indexOf( source ) ) {
+                                    extensions.push( extension );
+                                }
+                                /* jshint bitwise: true */
+
+                            } );
+
+                            resolve();
+
+                        } );
+
+                    } else {
+                        resolve();
+                    }
+
+                }.bind( this ) );
+
+                /**
+                 * Initialize Module
+                 */
+                promise.then( function() {
+
+                    initFunction.call( this, {
+                        module: module,
+                        element: moduleObject.element,
+                        options: moduleObject.options,
+                        moduleName: source,
+                        extensions: extensions,
+                        type: type
+                    } );
+
+                }.bind( this ) );
+
+            }.bind( this ) );
+
+        };
+
+        return Loader;
+    } );
+
+}( this, this.define, this.require, this.requirejs ) );
