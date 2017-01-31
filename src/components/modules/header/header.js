@@ -61,7 +61,7 @@
                 item = Array.prototype.filter.call( this.navItems, function( item ) {
                     return item.href.match( reg );
                 } );
-                return item[0];
+                return item[ 0 ];
             },
 
             /**
