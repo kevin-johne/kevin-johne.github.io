@@ -1,1 +1,3 @@
-!function(i,n){}(this.window,this.define);
+( function( window, define ) {
+
+} )( this.window, this.define );

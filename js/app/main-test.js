@@ -1,1 +1,16 @@
-!function(e,i,n,s){"use strict";n.config({baseUrl:"/base/components/app",deps:["main"],callback:function(){n(["utils/karma-testrunner"])}})}(this,this.define,this.require);
+( function( window, define, require, undefined ) {
+    'use strict';
+
+    require.config( {
+        baseUrl: '/base/components/app',
+
+        deps: [
+            'main'
+        ],
+
+        callback: function() {
+            require( [ 'utils/karma-testrunner' ] );
+        }
+    } );
+
+}( this, this.define, this.require ) );

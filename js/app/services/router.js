@@ -1,1 +1,54 @@
-!function(t,e,n){"use strict";e(["fetcher","route","renderer","utils/event"],function(t,e,n,o){return{isGlobal:!0,ready:function(){this.setRoutes(),this.contentContainer=document.querySelector(".site-page"),e.start(!0)},setRoutes:function(){var o=this;e("/",function(e){o.root="projects",t.fetch("projects.html").then(function(t){n.render(o.contentContainer,t)}),o.triggerRouteUpdate()}),e("/*",function(e){o.root=e,t.fetch(e+".html").then(function(t){n.render(o.contentContainer,t)}),o.triggerRouteUpdate()})},triggerRouteUpdate:function(){o.trigger("route/update",[this.getRoot()])},getRoot:function(){return this.root}}})}(this,this.define);
+( function( window, define, undefined ) {
+    'use strict';
+
+    define(
+        [
+            'fetcher',
+            'route',
+            'renderer',
+            'utils/event'
+        ],
+        function( fetcher, route, renderer, event ) {
+            return {
+                isGlobal: true,
+
+                ready: function() {
+                    this.setRoutes();
+
+                    this.contentContainer = document.querySelector( '.site-page' );
+                    route.start( true );
+                },
+
+                setRoutes: function() {
+                    var that = this;
+                    route( '/', function( collection ) {
+                        that.root = 'projects';
+                        fetcher.fetch( 'projects.html' ).then( function( res ) {
+                            renderer.render( that.contentContainer, res );
+                        } );
+
+                        that.triggerRouteUpdate();
+                    } );
+
+                    route( '/*', function( collection ) {
+                        that.root = collection;
+                        fetcher.fetch( collection + '.html' ).then( function( res ) {
+                            renderer.render( that.contentContainer, res );
+                        } );
+
+                        that.triggerRouteUpdate();
+                    } );
+
+                },
+
+                triggerRouteUpdate: function() {
+                    event.trigger( 'route/update', [ this.getRoot() ] );
+                },
+
+                getRoot: function() {
+                    return this.root;
+                }
+            };
+        }
+    );
+} )( this, this.define );
