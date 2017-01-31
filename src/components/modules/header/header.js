@@ -58,11 +58,10 @@
             matchItemWithNewRoot: function( currentRoot ) {
                 var item;
                 var reg = new RegExp( '#' + currentRoot, 'g' );
-                for ( item of this.navItems ) {
-                    if ( item.href.match( reg ) ) {
-                        return item;
-                    }
-                }
+                item = Array.prototype.filter.call( this.navItems, function( item ) {
+                    return item.href.match( reg );
+                } );
+                return item[0];
             },
 
             /**
