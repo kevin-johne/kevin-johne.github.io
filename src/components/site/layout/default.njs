@@ -14,7 +14,7 @@
         <div class="site-body show-grid">
             {% block aboveHeader %}{% endblock %}
 
-            {% include modulesPath + '/mod-header/header.njs' %}
+            {% include modulesPath + '/header/header.njs' %}
 
             {% block content %}
                 <div class="site-page">

@@ -1,15 +1,19 @@
 ( function( window, define, undefined ) {
-    define( [],
-        function() {
+    define( ['config', 'fetch'],
+        function( config ) {
             return {
                 fetch: function( url ) {
-                    var headers = new Headers();
-                    headers.append( 'cache-control', ' no-cache, no-store, must-revalidate' );
-                    headers.append( 'pragma', 'no-cache, no-store, must-revalidate' );
+                    var header;
+                    if( config.dev ) {
+                        header = {
+                            'cache-control' : 'no-cache, no-store, must-revalidate',
+                            'pragma' : 'no-cache, no-store, must-revalidate'
+                        }
+                    }
 
                     return fetch( url, {
                         method: 'get',
-                        headers: headers
+                        headers: header
                     } ).then( function( res ) {
                         if ( this.validateRequest( res ) ) {
                             return res.text();

@@ -42,7 +42,7 @@
                     setTimeout( function() {
                         that.activateOpacity = true;
                         that.animateOpacity( that.scene.progress() );
-                        that.elements.showLater.forEach( function( element ) {
+                        Array.prototype.forEach.call( that.elements.showLater, function( element ) {
                             //remove showLater class after animation is finished
                             setTimeout( function() {
                                 element.classList.remove( that.classes.showLater );
@@ -79,8 +79,6 @@
                 },
 
                 animateOpacity: function( progress ) {
-                    var that = this;
-
                     var fadeinOutElements = [
                         this.elements.aboutHolder,
                         this.elements.buttonHolder,

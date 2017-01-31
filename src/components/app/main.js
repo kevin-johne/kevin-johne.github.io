@@ -39,7 +39,10 @@
 
             // If it is not necessary to support IE8 its recommended to
             // use jQuery 2.X.X
-            jquery:         'vendor/jquery-2.1.3'
+            jquery:             'vendor/jquery-2.1.3',
+            
+            //Polyfills
+            fetch:              'vendor/polyfills/fetch'
 
         },
 
