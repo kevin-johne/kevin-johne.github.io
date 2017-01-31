@@ -7,7 +7,6 @@
                     logoHolder: 'site-logo-holder',
                     logo: 'landing-logo',
                     aboutHolder: 'what-i-am-holder',
-                    buttonHolder: 'button-holder',
                     scrollDown: 'scroll-down',
                     showLater: 'show-later'
                 },
@@ -74,14 +73,12 @@
 
                 animateHeight: function( progress ) {
                     this.elements.aboutHolder.style.height = this.linearTransition( 20, 0, progress ) + 'vh';
-                    this.elements.buttonHolder.style.height = this.linearTransition( 20, 0, progress ) + 'vh';
                     this.elements.scrollDown.style.height = this.linearTransition( 10, 0, progress ) + 'vh';
                 },
 
                 animateOpacity: function( progress ) {
                     var fadeinOutElements = [
                         this.elements.aboutHolder,
-                        this.elements.buttonHolder,
                         this.elements.scrollDown
                     ];
                     var opacity = this.linearTransition( 1, -1, progress );

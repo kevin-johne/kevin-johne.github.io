@@ -1,7 +1,7 @@
 .nav-item {
     display: table-cell;
 
-    width: 120px;
+    width: 20%;
     height: 100px;
 
     text-align: center;
@@ -24,7 +24,7 @@
 
     font-family: $font-header;
     line-height: 4.85em;
-    font-size: 2.1rem;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -32,11 +32,9 @@
         color: $color-gray-25;
     }
 
-    &:hover .stretch,
-    &.current .stretch,
-    &.section .stretch {
-        height: 40px;
-        opacity: 1;
+    &.current,
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -44,7 +42,7 @@
     display: table;
 
     height: 100px;
-    width: 600px;
+    width: 100%;
 
     margin: 20px auto 120px;
 }
@@ -53,43 +51,3 @@
     text-align: center;
 }
 
-@include breakpoint($size:default, $inherit:small) {
-    .logo svg {
-        width: 80%;
-    }
-
-    .nav-list {
-        width: 100%;
-    }
-
-    .nav-item {
-        height: 50px;
-    }
-
-    .nav-link,
-    .nav-item {
-        width: 20%;
-    }
-
-    .nav-link {
-        font-size: 2rem;
-    }
-}
-
-@include breakpoint($size:default, $inherit:medium) {
-    .site-header {
-        padding-top: 10px;
-        height: auto;
-    }
-
-    .nav-link.current,
-    .nav-link:hover,
-    .nav-link.section {
-        text-decoration: underline;
-    }
-
-    .nav-link {
-        line-height: 3em;
-        display: inline;
-    }
-}

@@ -38,9 +38,3 @@ p {
     line-height: 1.5em;
     margin: 1.5em 0;
 }
-
-@include breakpoint($size:default, $inherit:small) {
-    body {
-        font-size: 0.8em;
-    }
-}
