@@ -1,47 +1,50 @@
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icon/icomoon.eot?7j91co");
-  src: url("../fonts/icon/icomoon.eot?#iefix7j91co") format('embedded-opentype'), url("../fonts/icon/icomoon.ttf?7j91co") format('truetype'), url("../fonts/icon/icomoon.woff?7j91co") format('woff');
-  font-weight: normal;
-  font-style: normal
+    font-family: 'icomoon';
+    src: url('../fonts/icon/icomoon.eot?7j91co');
+    src: url('../fonts/icon/icomoon.eot?#iefix7j91co') format('embedded-opentype'),
+    url('../fonts/icon/icomoon.ttf?7j91co') format('truetype'),
+    url('../fonts/icon/icomoon.woff?7j91co') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-[class^="fa-"], [class*=" fa-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+[class^="fa-"],
+[class*=" fa-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .fa-share-alt:before {
-  content: "\e600"
+    content: '\e600';
 }
 
 .fa-pause:before {
-  content: "\e601"
+    content: '\e601';
 }
 
 .fa-play:before {
-  content: "\e602"
+    content: '\e602';
 }
 
 .fa-download:before {
-  content: "\e603"
+    content: '\e603';
 }
 
 .fa-heart:before {
-  content: "\e604"
+    content: '\e604';
 }
 
 .fa-angle-down:before {
-  content: "\e605"
+    content: '\e605';
 }
 
 .fa-4x {
-  font-size: 4em
+    font-size: 4em;
 }

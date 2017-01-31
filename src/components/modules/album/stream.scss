@@ -21,8 +21,8 @@
     cursor: pointer;
 }
 
-@include breakpoint( $size:default, $inherit:small ) {
+@include breakpoint($size:default, $inherit:small) {
     .stream {
-        width: 100%
+        width: 100%;
     }
 }

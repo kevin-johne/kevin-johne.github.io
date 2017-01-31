@@ -35,7 +35,7 @@
         i {
             color: $color-gray-75;
             cursor: pointer;
-            transition: color .4s ease;
+            transition: color 0.4s ease;
         }
 
         &:hover i {
@@ -45,11 +45,11 @@
 
     .what-i-am-holder p {
         display: block;
-        height: 20px
+        height: 20px;
     }
 
     .show-later {
         opacity: 0;
-        transition: opacity .4s $timeFunc-easeIn;
+        transition: opacity 0.4s $timefunc-ease-in;
     }
 }

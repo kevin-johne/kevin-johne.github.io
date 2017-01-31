@@ -6,7 +6,7 @@
     width: 100%;
     line-height: 1em;
     opacity: 1;
-    transition: height .3s
+    transition: height 0.3s;
 }
 
 .stretch::before {
@@ -17,29 +17,29 @@
     font-family: $font-header;
     left: 0;
     top: 0;
-    transform: scale(1, 700)
+    transform: scale(1, 700);
 }
 
 .stretch-top.stretch::before {
-    padding-top: 15px
+    padding-top: 15px;
 }
 
 .stretch-bottom.stretch::before {
-    padding-bottom: 9px
+    padding-bottom: 9px;
 }
 
 .stretch-top {
     top: 0;
-    left: 0
+    left: 0;
 }
 
 .stretch-bottom {
     bottom: 0;
-    left: 0
+    left: 0;
 }
 
-@include breakpoint( $size:default, $inherit:medium ) {
+@include breakpoint($size:default, $inherit:medium) {
     .stretch {
-        display: none
+        display: none;
     }
 }

@@ -7,7 +7,7 @@
     margin-right: 0;
 }
 
-@include breakpoint( $size:medium ) {
+@include breakpoint($size:medium) {
 
     .set {
         @include span(3);

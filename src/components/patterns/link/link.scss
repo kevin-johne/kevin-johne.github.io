@@ -34,8 +34,8 @@ a {
         right: 0;
         transform: translateX(-110%);
         transition-property: transform;
-        transition-duration: .3s;
-        transition-timing-function: $timeFunc-easeIn;
+        transition-duration: 0.3s;
+        transition-timing-function: $timefunc-ease-in;
         background: $color-orange;
     }
 
@@ -53,8 +53,8 @@ a {
         overflow: hidden;
         white-space: nowrap;
         transition-property: width;
-        transition-duration: .4s;
-        transition-timing-function: $timeFunc-easeIn;
+        transition-duration: 0.4s;
+        transition-timing-function: $timefunc-ease-in;
         color: $color-orange;
     }
 
@@ -65,7 +65,7 @@ a {
 
 .link--cta--small {
     font-size: 1em;
-    margin-bottom: -6px
+    margin-bottom: -6px;
 }
 
 .link--cta--big {
@@ -81,23 +81,24 @@ a {
     }
 }
 
-$linkColors: (
-    lisa-hantke: #177B15,
+$link-colors: (
+    lisa-hantke: #177b15,
     twitter: #{$color-twitter},
     soundcloud: #{$color-orange},
-    zwilling: #F01114,
-    carolus: #A30024,
-    gedore: #004C95,
-    gedore-shop: #2484E3,
-    jacques: #AF1E2D,
-    baraka: #0017FF,
-    condor: #F8AC00
+    zwilling: #f01114,
+    carolus: #a30024,
+    gedore: #004c95,
+    gedore-shop: #2484e3,
+    jacques: #af1e2d,
+    baraka: #0017ff,
+    condor: #f8ac00
 );
 
-@each $profile, $color in $linkColors {
+@each $profile, $color in $link-colors {
     .link--cta.#{$profile}:after {
         background-color: $color;
     }
+
     .link--cta.#{$profile}:before {
         color: $color;
     }

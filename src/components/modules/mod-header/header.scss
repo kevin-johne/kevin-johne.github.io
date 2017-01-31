@@ -29,14 +29,14 @@
     text-transform: uppercase;
 
     &:visited {
-        color: $color-gray-25
+        color: $color-gray-25;
     }
 
     &:hover .stretch,
     &.current .stretch,
     &.section .stretch {
         height: 40px;
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -53,30 +53,30 @@
     text-align: center;
 }
 
-@include breakpoint( $size:default, $inherit:small ) {
+@include breakpoint($size:default, $inherit:small) {
     .logo svg {
-        width: 80%
+        width: 80%;
     }
 
     .nav-list {
-        width: 100%
+        width: 100%;
     }
 
     .nav-item {
-        height: 50px
+        height: 50px;
     }
 
     .nav-link,
     .nav-item {
-        width: 20%
+        width: 20%;
     }
 
     .nav-link {
-        font-size: 2rem
+        font-size: 2rem;
     }
 }
 
-@include breakpoint( $size:default, $inherit:medium ) {
+@include breakpoint($size:default, $inherit:medium) {
     .site-header {
         padding-top: 10px;
         height: auto;

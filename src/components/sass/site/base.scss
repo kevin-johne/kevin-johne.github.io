@@ -17,16 +17,16 @@ body {
 }
 
 fieldset {
-    border: none;
+    border: 0;
 }
 
 .left {
-    float: left
+    float: left;
 }
 
 .right {
     float: right;
-    text-align: right
+    text-align: right;
 }
 
 .left::after,
@@ -40,15 +40,15 @@ fieldset {
 }
 
 .middle-column {
-    width: 560px
+    width: 560px;
 }
 
 .class .field {
-    padding: 9px
+    padding: 9px;
 }
 
 .no-border::before,
 .no-border::after {
     width: 0;
-    margin: 0
+    margin: 0;
 }
