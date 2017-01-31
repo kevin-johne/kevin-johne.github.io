@@ -20,6 +20,8 @@ production:
         - 'sass:production'
         - 'postcss:autoprefixer'
         - 'requirejs:production'
+        - 'copy:img'
+        - 'copy:fonts'
         - 'nunjuckr:production'
 
 prod:
