@@ -79,6 +79,10 @@
         .mod-image-text-teaser__text a {
             text-align: left;
         }
+
+        &:nth-of-type(even) {
+            text-align: left;
+        }
     }
 
     .mod-image-text-teaser__image {

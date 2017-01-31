@@ -1,11 +1,10 @@
-.site-content {
+.site-page {
     max-width: 1000px;
     margin: 0 auto;
-    padding-top: 30px;
 }
 
 @include breakpoint($size:default, $inherit:medium) {
-    .site-content {
+    .site-page {
         width: 90%;
     }
 }
