@@ -24,8 +24,9 @@ src/components/sass/import
 src/components/app/vendor/lodash.build.js
 src/components/app/vendor/lodash.build.min.js
 
-# PhpStorm/Webstorm project files
+# IDEA
 .idea
+.vs
 
 # netbeans
 nbproject/private/private.properties
