@@ -1,18 +1,8 @@
 module.exports = function( grunt ) {
     var path = require( 'path' );
 
-    // Measures the time each task takes
-    require( 'time-grunt' )( grunt );
-
     // Load all grunt tasks listed in package.json and load grunt configs
     require( 'load-grunt-config' )( grunt, {
-
-        jitGrunt: {
-            jitGrunt: true,
-            staticMappings: {
-                scsslint: 'grunt-scss-lint'
-            }
-        },
 
         // Path to task.js files, defaults to grunt dir
         configPath: path.join( process.cwd(), 'grunt' ),
