@@ -7,6 +7,8 @@
                         <a class="nav-link {% if item.current -%} current {%- endif %}" href="{{ item.href }}">
                             {{ item.text }}
                         </a>
+                    {% else %}
+                        {% include imgPath + 'logo-landing.svg' %}
                     {% endif %}
                 </li>
             {% endfor %}
@@ -16,20 +18,20 @@
 
 {% set items = [
     {
-        text: 'Web',
-        href: '#projects'
-    }, {
-        text: 'Music',
-        href: '#music'
-    }, {
         text: 'Home',
         href: '#'
     }, {
-        text: 'Blog',
-        href: '#blog'
+        text: 'projects',
+        href: '#projects'
     }, {
-        text: 'Story',
-        href: '#story'
+        text: 'about',
+        href: '#about'
+    }, {
+        text: 'c vitae',
+        href: '#music'
+    }, {
+        text: 'thoughts',
+        href: '#blog'
     }
 ] %}
 

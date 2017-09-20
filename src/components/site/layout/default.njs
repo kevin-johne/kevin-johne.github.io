@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Web professional Kevin Johne</title>
+        <title>Kevin Johne - have yet a Style Guide?</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +12,6 @@
     </head>
     <body>
         <div class="site-body show-grid">
-            {% block aboveHeader %}{% endblock %}
-
             {% include modulesPath + '/header/header.njs' %}
 
             {% block content %}
@@ -21,7 +19,7 @@
                 </div>
             {% endblock %}
 
-{#            {% include modulesPath + '/contact/contact.njs' %}#}
+            {% include modulesPath + '/contact/contact.njs' %}
         </div>
 
         <script type="text/javascript" data-main="/js/app/main.js" src="/js/app/vendor/require.js"></script>
