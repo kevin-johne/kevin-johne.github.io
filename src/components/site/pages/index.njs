@@ -3,7 +3,7 @@
 
 {% extends templatePath + "default.njs" %}
 
-{% block pageTitle %}Homepage{% endblock %}
+{% block pageTitle %}Kevin Johne Web Developer{% endblock %}
 
 {% block aboveHeader %}
     {% include modulesPath + 'landing/landing.njs' %}

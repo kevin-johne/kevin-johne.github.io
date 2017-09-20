@@ -1,18 +1,6 @@
 {% import 'modules' as modules %}
 {% import 'patterns' as patterns %}
 
-{% call modules.content.default() %}
-    <h1>Welcome to My personal site</h1>
-    <p>
-        I am a young guy who is seeking for new techniques and trends in web development and design.
-        Since 2008 I have been developing software, web sites and mobile applications. My attitude to software is, that it has to be a high qualitative product,
-        doesn't matter how big the project is. When I code, the way is just as important as the result itself.
-    </p>
-    <p>
-        While working for denkwerk I worked on several projects with a big variety of needed skill sets. Which the following references showing.
-    </p>
-{% endcall %}
-
 {# STRÖER ONLINE MANAGEMENT SYSTEM #}
 {% set title = 'Ströer — Online Management System' %}
 {% set src = 'img/content/stroeer.jpg' %}
