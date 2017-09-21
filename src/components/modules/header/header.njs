@@ -8,8 +8,11 @@
                             {{ item.text }}
                         </a>
                     {% else %}
-                        {% include imgPath + 'logo-landing.svg' %}
+                        <a class="nav-link" href="{{ item.href }}">
+                            {% include imgPath + 'logo-landing.svg' %}
+                        </a>
                     {% endif %}
+
                 </li>
             {% endfor %}
         </ul>
@@ -21,14 +24,14 @@
         text: 'Home',
         href: '#'
     }, {
-        text: 'projects',
-        href: '#projects'
+        text: 'work',
+        href: '#work'
     }, {
         text: 'about',
         href: '#about'
     }, {
-        text: 'c vitae',
-        href: '#music'
+        text: 'résumé',
+        href: '#cv'
     }, {
         text: 'thoughts',
         href: '#blog'
