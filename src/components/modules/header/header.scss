@@ -2,28 +2,22 @@
     display: table-cell;
 
     width: 20%;
-    height: 100px;
 
     text-align: center;
     list-style: none;
 
-    vertical-align: middle;
-
-    .logo {
+    svg {
+        height: 100%;
         vertical-align: middle;
     }
 }
 
 .nav-link {
     position: relative;
-    display: inline-block;
-
-    height: 100px;
 
     color: $color-gray-25;
 
     font-family: $font-header;
-    line-height: 4.85em;
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -41,10 +35,10 @@
 .nav-list {
     display: table;
 
-    height: 100px;
+    height: 50px;
     width: 100%;
 
-    margin: 20px auto 120px;
+    margin: 20px auto 40px;
 }
 
 .site-header {

@@ -2,11 +2,7 @@
     $corner-width: 30px;
     position: relative;
     width: auto;
-    margin: 40px auto 80px;
-
-    &:nth-of-type(1) {
-        margin-top: 0;
-    }
+    margin: 200px auto;
 
     &:nth-of-type(even) {
         text-align: right;
