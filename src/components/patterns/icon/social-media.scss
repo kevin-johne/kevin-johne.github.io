@@ -1,0 +1,42 @@
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-gray-90;
+    margin-left: -10px;
+}
+
+.social-media__link {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    margin: 10px;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+            fill: $color-gray-25;
+        }
+    }
+
+    &:hover svg path {
+        transition: fill .3s ease-in;
+    }
+
+    &--twitter:hover svg path {
+        fill: #00c7ff;
+    }
+
+    &--soundcloud:hover svg path {
+        fill: $color-orange;
+    }
+
+    &--linkedin:hover svg path {
+        fill: #0a85ca;
+    }
+
+    &--github:hover svg path {
+        fill: purple;
+    }
+}
