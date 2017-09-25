@@ -8,30 +8,6 @@
         margin-top: 200px;
     }
 
-    &:nth-of-type(even) {
-        text-align: right;
-    }
-
-    &:nth-of-type(even) &__text {
-        padding-right: gutter();
-        left: 0;
-
-        &:before {
-            border-left-color: $color-gray-90;
-            border-right-width: 0;
-            right: -$corner-width + 1px;
-        }
-    }
-
-    &:nth-of-type(odd) &__text {
-        padding-left: gutter();
-        &:before {
-            border-right-color: $color-gray-90;
-            border-left-width: 0;
-            left: -$corner-width + 1px;
-        }
-    }
-
     &__text {
         position: absolute;
         z-index: 2;
@@ -52,19 +28,43 @@
     &__image {
         width: span(4);
     }
-}
 
+    @include breakpoint($size:large) {
+        &:nth-of-type(even) {
+            text-align: right;
+        }
+
+        &:nth-of-type(even) &__text {
+            padding-right: gutter();
+            left: 0;
+
+            &:before {
+                border-left-color: $color-gray-90;
+                border-right-width: 0;
+                right: -$corner-width + 1px;
+            }
+        }
+
+        &:nth-of-type(odd) &__text {
+            padding-left: gutter();
+            &:before {
+                border-right-color: $color-gray-90;
+                border-left-width: 0;
+                left: -$corner-width + 1px;
+            }
+        }
+    }
+
+}
 
 @include breakpoint($size:default, $inherit:medium) {
     .mod-image-text-teaser {
         width: 100%;
         margin-bottom: 20px;
 
-        .mod-image-text-teaser__text {
+        &__text {
             position: relative;
             border: 0;
-            padding-left: 0;
-            padding-right: 0;
             width: 100%;
             margin-top: 0;
             bottom: auto;
