@@ -19,7 +19,7 @@
                 </div>
             {% endblock %}
 
-            {% include modulesPath + '/contact/contact.njs' %}
+            {% include modulesPath + '/footer/footer.njs' %}
         </div>
 
         <script type="text/javascript" data-main="/js/app/main.js" src="/js/app/vendor/require.js"></script>

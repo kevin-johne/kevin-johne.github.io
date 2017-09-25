@@ -1,0 +1,36 @@
+.footer {
+    @include container();
+    padding-top: 40px;
+    margin: 0 auto 40px;
+
+    &:before {
+        content: '';
+        display: block;
+        width: span(3);
+        height: 2px;
+        background: $color-gray-75;
+    }
+
+    &__contact {
+        @include span(3);
+
+        .social-media {
+            margin-top: 1rem;
+        }
+    }
+
+    &__reading {
+        @include container();
+        @include span(3);
+        margin-right: 0;
+    }
+
+    .book__img {
+        @include span(2);
+    }
+
+    .book__text {
+        @include span(4);
+        margin-right: 0;
+    }
+}

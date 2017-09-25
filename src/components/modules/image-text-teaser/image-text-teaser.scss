@@ -2,13 +2,18 @@
     $corner-width: 30px;
     position: relative;
     width: auto;
-    margin: 200px auto;
+    margin: 0 auto;
+
+    & + & {
+        margin-top: 200px;
+    }
 
     &:nth-of-type(even) {
         text-align: right;
     }
 
     &:nth-of-type(even) &__text {
+        padding-right: gutter();
         left: 0;
 
         &:before {
@@ -19,6 +24,7 @@
     }
 
     &:nth-of-type(odd) &__text {
+        padding-left: gutter();
         &:before {
             border-right-color: $color-gray-90;
             border-left-width: 0;
@@ -29,8 +35,7 @@
     &__text {
         position: absolute;
         z-index: 2;
-        width: span(4) + gutter();
-        padding: 0 (2 * gutter()) (2 * gutter());
+        width: span(2) + gutter();
         top: 50%;
         transform: translateY(-50%);
         right: 0;
@@ -45,7 +50,7 @@
     }
 
     &__image {
-        width: span(8);
+        width: span(4);
     }
 }
 
