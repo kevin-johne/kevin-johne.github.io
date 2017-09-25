@@ -38,4 +38,7 @@
             </div>
         </div>
     </div>
+    <div class="copyright">
+        &copy; 2017 &mdash; Kevin Johne
+    </div>
 </section>

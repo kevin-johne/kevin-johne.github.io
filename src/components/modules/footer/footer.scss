@@ -20,17 +20,23 @@
     }
 
     &__reading {
-        @include container();
+        @include container(3);
         @include span(3);
         margin-right: 0;
     }
 
     .book__img {
-        @include span(2);
+        @include span(2.1 of 6);
     }
 
     .book__text {
-        @include span(4);
+        @include span(2 of 3);
         margin-right: 0;
+    }
+
+    .copyright {
+        @include span(6);
+        margin-top: 20px;
+        color: $color-gray-75;
     }
 }

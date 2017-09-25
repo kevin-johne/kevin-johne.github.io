@@ -1,9 +1,8 @@
-.social-media {
-    @include container(12);
-}
-
 .social-media__link {
-    @include span(2 of 12);
+    display: inline-block;
+    width: 40px;
+    margin-right: 10px;
+
     &:last-child {
         margin-right: 0;
     }
