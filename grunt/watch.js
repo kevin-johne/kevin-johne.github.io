@@ -48,7 +48,8 @@ module.exports = {
             '<%= srcPath %>img/**/*'
         ],
         tasks: [
-            'copy:img'
+            'copy:img',
+            'nunjuckr:development'
         ],
         options: {
             atBegin: true
