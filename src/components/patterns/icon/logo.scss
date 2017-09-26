@@ -1,41 +1,23 @@
 .logo {
-    display: inline-block;
-    height: 100%;
-    max-width: 100px;
-    margin: 0 auto;
-
     svg {
         height: 100%;
     }
 
     &:hover svg .flash {
-        stroke-width: 140px;
-        transition: all 0.3s ease 0.7s;
+        stroke: $color-gray-20;
+        stroke-width: 100%;
+
     }
 }
 
 .flash {
-    stroke: #fff;
+    stroke: $color-brand;
     stroke-width: 0;
-}
-
-.hidden {
-    stroke-width: 1px;
-    stroke: #fff5f2;
-}
-
-.border {
-    stroke-width: 4px;
-    stroke: #444;
-    fill: none;
-}
-
-.circle {
-    fill: #444;
+    transition: all 0.3s cubic-bezier(.68, .23, .92, .48);
 }
 
 .letter {
-    stroke: #444;
+    stroke: $color-gray-20;
     stroke-width: 2px;
 }
 
@@ -43,22 +25,54 @@
     stroke-width: 7px;
 }
 
-.lines-group1 {
-    stroke: #b8c5ac;
-    stroke-width: 5px;
+.kj-logo {
+    .letter {
+        animation-timing-function: cubic-bezier(.68, .23, .92, .48);
+        animation-fill-mode: forwards;
+        animation-name: draw, color-shift;
+    }
+    .k-upper,
+    .j-lower {
+        stroke-dashoffset: 60;
+        stroke-dasharray: 60;
+        animation-duration: 1s;
+    }
+
+    .k-left-upper,
+    .k-left-lower,
+    .k-lower,
+    .j-upper {
+        animation-duration: .2s;
+        animation-delay: 1s;
+    }
+
+    .k-lower,
+    .j-upper {
+        stroke-dashoffset: 22.98;
+        stroke-dasharray: 22.98;
+    }
+
+    .k-left-upper {
+        stroke-dashoffset: 21;
+        stroke-dasharray: 21;
+    }
+
+    .k-left-lower {
+        stroke-dashoffset: 9;
+        stroke-dasharray: 9;
+    }
+}
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
-.lines-group2 {
-    stroke: #7c8574;
-    stroke-width: 2px;
-}
-
-.lines-group3 {
-    stroke: #7c8574;
-    stroke-width: 15px;
-}
-
-.lines-group4 {
-    stroke: #fff;
-    stroke-width: 3px;
+@keyframes color-shift {
+    0% {
+        stroke: $color-brand;
+    }
+    100% {
+        stroke: $color-gray-20;
+    }
 }
