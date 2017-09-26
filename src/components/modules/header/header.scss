@@ -1,47 +1,83 @@
-.nav-item {
-    display: table-cell;
-
-    width: 20%;
-
-    text-align: center;
-    list-style: none;
-
-    svg {
-        height: 100%;
-        vertical-align: middle;
-    }
-}
-
-.nav-link {
-    position: relative;
-
-    color: $color-gray-25;
-
-    font-family: $font-header;
-    font-size: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:visited {
-        color: $color-gray-25;
-    }
-
-    &.current,
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.nav-list {
-    display: table;
-
-    height: 50px;
-    width: 100%;
-
-    margin: 0 auto 40px;
-}
-
 .site-header {
-    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(180deg, $color-brand 0, $color-brand 6px, transparent 0);
+
+    &__inner {
+        @include container();
+        width: 90%;
+        max-width: 1000px;
+        margin: 6px auto 0;
+        background-color: $color-white;
+        border-bottom: 1px solid $color-gray-75;
+    }
+
+    .logo {
+        width: 100px;
+        display: inline-block;
+        float: left;
+    }
+
+    .nav-list {
+        float: right;
+        margin-right: 0;
+        list-style: none;
+        margin-top: 50px;
+    }
+
+    .nav-item {
+        float: left;
+        padding-left: 20px;
+    }
+
+    .nav-link {
+        display: inline-block;
+        color: $color-gray-20;
+        position: relative;
+        font-size: 2rem;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 2px;
+            left: 50%;
+            top: 60%;
+            background-color: $color-brand;
+        }
+
+        &:hover:before {
+            width: 100%;
+            left: 0;
+            background-color: $color-gray-20;
+            transition: all .3s cubic-bezier(.68, .23, .92, .48);
+        }
+
+        &.current:before {
+            top: 120%;
+            width: 70%;
+            left: 0;
+            background-color: $color-brand;
+            transition: all .3s linear .2s;
+        }
+    }
 }
 
+@include breakpoint($size: default, $inherit: medium) {
+    .site-header {
+        .logo {
+            width: 50px;
+        }
+
+        .nav-list {
+            margin-top: 20px;
+        }
+
+        .nav-link.current:before {
+            top: 110%;
+        }
+    }
+}

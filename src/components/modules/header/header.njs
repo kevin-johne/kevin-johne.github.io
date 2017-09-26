@@ -1,39 +1,34 @@
 {% macro header( items ) %}
     <header class="site-header auto-init" data-modules="modules/header/header">
-        <ul class="nav-list nav-list-left">
-            {% for item in items %}
+        <div class="site-header__inner">
+            <a class="logo js-nav-link" href="#home">
+                {% include imgPath + 'logo-landing.svg' %}
+            </a>
+            <ul class="nav-list">
+                {% for item in items %}
                 <li class="nav-item">
-                    {% if item.text !== 'Home' %}
-                        <a class="nav-link {% if item.current -%} current {%- endif %}" href="{{ item.href }}">
-                            {{ item.text }}
-                        </a>
-                    {% else %}
-                        <a class="nav-link" href="{{ item.href }}">
-                            {% include imgPath + 'logo-landing.svg' %}
-                        </a>
-                    {% endif %}
-
+                    <a class="nav-link js-nav-link {% if item.current -%} current {%- endif %}" href="{{ item.href }}">
+                        {{ item.text }}
+                    </a>
                 </li>
-            {% endfor %}
-        </ul>
+                {% endfor %}
+            </ul>
+        </div>
     </header>
 {% endmacro %}
 
 {% set items = [
     {
-        text: 'Home',
-        href: '#'
-    }, {
-        text: 'work',
+        text: 'Work',
         href: '#work'
     }, {
-        text: 'about',
+        text: 'About',
         href: '#about'
     }, {
-        text: 'résumé',
+        text: 'Résumé',
         href: '#cv'
     }, {
-        text: 'thoughts',
+        text: 'Thoughts',
         href: '#blog'
     }
 ] %}
