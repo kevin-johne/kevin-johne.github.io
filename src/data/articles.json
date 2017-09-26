@@ -3,6 +3,7 @@
         "title": "First Game",
         "date": "09-09-2017",
         "tags": [ "unity", "game", "experience" ],
+        "previewImg": "/img/content/baraka.jpg",
         "content": [
             {
                 "type": "text",

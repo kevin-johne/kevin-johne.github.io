@@ -30,6 +30,14 @@
                         that.triggerRouteUpdate();
                     });
 
+                    route('/*/*', function(root, page) {
+                        fetcher.fetch(root + '/' + page + '.html').then(function (res) {
+                            renderer.render(that.contentContainer, res);
+                        });
+
+                        that.triggerRouteUpdate();
+                    });
+
                     route('/*', function (collection) {
                         that.root = collection;
                         fetcher.fetch(collection + '.html').then(function (res) {
@@ -39,13 +47,6 @@
                         that.triggerRouteUpdate();
                     });
 
-                    route('/projects/*', function (project) {
-                        fetcher.fetch('project/' + project + '.html').then(function (res) {
-                            renderer.render(that.contentContainer, res);
-                        });
-
-                        that.triggerRouteUpdate();
-                    });
                 },
 
                 triggerRouteUpdate: function() {

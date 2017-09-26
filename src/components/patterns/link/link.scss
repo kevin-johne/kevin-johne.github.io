@@ -3,15 +3,16 @@ a {
 }
 
 .link {
-    color: $color-orange;
+    color: $color-brand;
+    font-weight: bold;
 
     &:visited {
-        color: $color-orange;
+        color: $color-brand;
     }
 
     &:hover {
         color: $color-gray-25;
-        text-decoration: underline $color-orange;
+        text-decoration: underline $color-brand;
     }
 }
 

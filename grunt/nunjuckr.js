@@ -18,8 +18,41 @@ module.exports = function( grunt, options ) {
                 imgPath: '<%= srcPath %>img/',
                 production: true
             },
+            iterator: function( render, options ) {
+                this.files.forEach(function( sources ) {
+                    sources.src.forEach(function(file) {
+                        var ext = sources.ext || options.ext || '.html';
+                        var data = options.data;
+                        var dest = sources.dest;
+
+                        render( file, dest, ext, data );
+                    }, this);
+                }, this);
+
+                options.data.articles.forEach(function( article ) {
+                    render(
+                        options.globals.basePath + 'site/dataPage/article.njs',
+                        'dist/blog/' + article.title + '.html',
+                        options.ext,
+                        article
+                    )
+                }, this);
+
+                options.data.projects.forEach(function( project ) {
+                    render(
+                        options.globals.basePath + 'site/dataPage/project.njs',
+                        'dist/project/' + project.titleg + '.html',
+                        options.ext,
+                        project
+                    )
+                }, this);
+            },
             loader: new ComponentsLoader( options.srcPath ),
-            ext: '.html'
+            ext: '.html',
+            data: {
+                articles: grunt.file.readJSON('src/data/articles.json'),
+                projects: grunt.file.readJSON('src/data/projects.json')
+            }
         },
         production: {
             files: [

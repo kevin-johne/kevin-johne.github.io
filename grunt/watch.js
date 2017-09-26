@@ -54,6 +54,18 @@ module.exports = {
         options: {
             atBegin: true
         }
+    },
+
+    data: {
+        files: [
+            '<%= srcPath %>data/**/*'
+        ],
+        tasks: [
+            'nunjuckr:development'
+        ],
+        options: {
+            atBegin: true
+        }
     }
 
 };
