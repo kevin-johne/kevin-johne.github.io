@@ -2,9 +2,10 @@
     <div class="footer__inner">
         <div class="footer__contact">
             <h3 class="display">Contact</h3>
-            <div>
-                Do you have a style guide yet? I build a modular library for your web application. Contact me via <a class="link" href="mailto:k.johne90@web.de">e-mail</a> or social media
-            </div>
+            <p>
+                Do you have a style guide yet? I build a modular library for your web application. I'm currently available for contract work. Contact me via <a class="link" href="mailto:k.johne90@web.de">e-mail</a> or social media. <br/>
+                Thanks and see you soon.
+            </p>
             <div class="social-media">
                 <a class="social-media__link social-media__link--github"
                    href="https://www.linkedin.com/in/kevin-johne/" target="_blank"
@@ -38,9 +39,9 @@
                     <a href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">Blink &mdash; Malcolm Gladwell
                     </a>
                 </h2>
-                <div class="book__description">
+                <p class="book__description">
                     Do we need always a lot of information to make the right decision? This book is about what we can learn from just a thin slice of information.
-                </div>
+                </p>
             </div>
         </div>
         <div class="copyright">

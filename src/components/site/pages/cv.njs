@@ -2,6 +2,7 @@
 {% import 'patterns' as patterns %}
 
 {% call modules.content.default() %}
+<h1>Résumé</h1>
 <h2>Work Experience</h2>
 <p>
     2017<br/>
@@ -35,13 +36,13 @@
 </p>
 <h2>Awards</h2>
 <p>
-    2016 Red Dot Award: Communication Design<br/>
+    2016 Red Dot Award: Communication Design &mdash; Gold<br/>
     Gedore Website<br/>
     New Baraka Website
     Zwilling Brand Website
 </p>
 <p>
-    2016 IF Award<br/>
+    2016 IF Award &mdash; Gold<br/>
     New Baraka Website
 </p>
 {% endcall %}
