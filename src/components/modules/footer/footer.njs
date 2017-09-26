@@ -30,10 +30,14 @@
         </div>
         <div class="footer__reading">
             <h3 class="display">Reading Suggestion</h3>
+            <a href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">
             <img class="book__img" src="img/content/books/malcolm-gladwell-blink.jpg">
+            </a>
             <div class="book__text">
-                <div class="book__title">Blink</div>
-                <div class="book__author">Malcolm Gladwell</div>
+                <h2 class="book__title">
+                    <a href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">Blink &mdash; Malcolm Gladwell
+                    </a>
+                </h2>
                 <div class="book__description">
                     Do we need always a lot of information to make the right decision? This book is about what we can learn from just a thin slice of information.
                 </div>

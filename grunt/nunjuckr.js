@@ -18,6 +18,7 @@ module.exports = function( grunt, options ) {
                 imgPath: '<%= srcPath %>img/',
                 production: true
             },
+            autoescape: false,
             iterator: function( render, options ) {
                 this.files.forEach(function( sources ) {
                     sources.src.forEach(function(file) {
@@ -41,7 +42,7 @@ module.exports = function( grunt, options ) {
                 options.data.projects.forEach(function( project ) {
                     render(
                         options.globals.basePath + 'site/dataPage/project.njs',
-                        'dist/project/' + project.titleg + '.html',
+                        'dist/project/' + project.title + '.html',
                         options.ext,
                         project
                     )

@@ -2,11 +2,7 @@
     $corner-width: 30px;
     position: relative;
     width: auto;
-    margin: 0 auto;
-
-    & + & {
-        margin-top: 200px;
-    }
+    margin: 0 auto 200px;
 
     &__text {
         position: absolute;
@@ -28,6 +24,11 @@
     @include breakpoint($size: large) {
         &:nth-of-type(even) {
             text-align: right;
+
+            h2:before {
+                left: auto;
+                right: 0;
+            }
         }
 
         &:nth-of-type(even) &__text {

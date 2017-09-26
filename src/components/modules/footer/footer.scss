@@ -35,6 +35,10 @@
         @include span(2.1 of 6);
     }
 
+    .book__title{
+        margin-top: 0;
+    }
+
     .book__text {
         @include span(2 of 3);
         margin-right: 0;
