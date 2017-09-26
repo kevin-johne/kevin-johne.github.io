@@ -1,14 +1,20 @@
 .footer {
-    @include container();
-    padding-top: 40px;
-    margin: 0 auto 40px;
+    background-color: $color-gray-93;
+
+    &__inner {
+        @include container();
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
 
     &:before {
         content: '';
         display: block;
-        width: span(3);
-        height: 2px;
-        background: $color-gray-75;
+        width: 100%;
+        height: 3px;
+        background: $color-brand;
     }
 
     &__contact {
