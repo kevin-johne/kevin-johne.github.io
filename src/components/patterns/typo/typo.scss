@@ -1,13 +1,15 @@
-h1,
-h2 {
+h2,
+h3 {
     font-family: $font-header;
-    text-transform: uppercase;
 }
 
-h1 {
-    font-weight: 300;
-    font-size: 1.5em;
-    margin: 1.5em 0 0.6em;
+h1,
+.display {
+    font-family: $font-display;
+    color: $color-gray-20;
+    font-weight: bold;
+    font-size: 5rem;
+    margin: 1.5rem 0 3rem;
 }
 
 h1::after,
@@ -21,18 +23,19 @@ h2::before {
 }
 
 h2 {
+    color: $color-gray-20;
     font-weight: normal;
-    font-size: 1em;
+    font-size: 2rem;
     margin: 1.5em 0 0.6em;
 }
 
-.subline {
-    color: $color-gray-75;
-    font-family: $font-header;
-    font-size: 1em;
-    padding-bottom: 10px;
-    border-bottom: 1px solid $color-gray-75;
+h3 {
+    color: $color-gray-20;
+    font-weight: normal;
+    font-size: 1.6rem;
+    margin: 1.5em 0 0.6em;
 }
+
 
 p {
     line-height: 1.5em;
