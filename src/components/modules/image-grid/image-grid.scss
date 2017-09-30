@@ -1,0 +1,65 @@
+.mod-image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 120px;
+
+    @include breakpoint($size: default, $inherit: medium) {
+        margin-bottom: 60px;
+    }
+
+    .grid__cell {
+        position: relative;
+        @include span(1.5 of 6 set-gutters 0);
+        background-size: cover;
+        background-position: center;
+        perspective: 900px;
+        margin-bottom: 8px;
+        transition: filter .2s ease-out 0s;
+
+        &--filler:hover img {
+
+        }
+
+        img {
+            border-top: 2px solid $color-brand;
+            border-bottom: 2px solid $color-brand;
+            display: block;
+            filter: grayscale(0);
+            transition: .5s linear;
+            transition-property: transform, filter, opacity;
+        }
+
+        &:nth-child(5n),
+        &:nth-child(6n-4),
+        &:nth-child(7n),
+        &:nth-child(8n-4) {
+            img {
+                transform-origin: right center 0;
+                transform: rotateY(15deg);
+            }
+        }
+
+        &:nth-child(5n-4),
+        &:nth-child(6n),
+        &:nth-child(7n-4),
+        &:nth-child(8n) {
+            img {
+                transform-origin: left center 0;
+                transform: rotateY(-15deg);
+            }
+        }
+
+        &:not(.grid__cell--filler):hover {
+            filter: grayscale(0.9);
+            transition-delay: .3s;
+
+            img {
+                opacity: 0;
+                transform: rotateY(0deg);
+                transition-duration: .5s;
+            }
+        }
+
+    }
+
+}
