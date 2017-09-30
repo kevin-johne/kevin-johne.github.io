@@ -1,0 +1,18 @@
+.tags {
+    @include container();
+
+    li {
+        float: left;
+        list-style: none;
+        font-weight: bold;
+        color: $color-gray-75;
+
+        &:before {
+            content: '#';
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
