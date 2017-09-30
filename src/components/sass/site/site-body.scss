@@ -3,6 +3,10 @@
     max-width: 1000px;
     padding-top: 120px;
     margin: 0 auto;
+
+    @include breakpoint($size: default, $inherit: medium) {
+        padding-top: 60px;
+    }
 }
 
 .site-body.show-grid {

@@ -1,5 +1,5 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
-     viewBox="0 0 100 100" preserveAspectRatio="meet">
+     viewBox="0 0 100 100">
   <g class="kj-logo">
     <line class="flash" x1="50" y1="49" x2="50" y2="51"/>
     <g id="square" transform="rotate(45 50 50)">

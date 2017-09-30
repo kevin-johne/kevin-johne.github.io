@@ -58,7 +58,7 @@
 
     @include breakpoint($size: default, $inherit: medium) {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
 
         &__text {
             position: relative;
