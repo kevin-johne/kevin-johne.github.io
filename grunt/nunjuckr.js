@@ -41,8 +41,8 @@ module.exports = function( grunt, options ) {
 
                 options.data.projects.forEach(function( project ) {
                     render(
-                        options.globals.basePath + 'site/dataPage/project.njs',
-                        'dist/project/' + project.title + '.html',
+                        options.globals.basePath + 'site/dataPage/work-detail.njs',
+                        'dist/work/' + project.title + '.html',
                         options.ext,
                         project
                     )

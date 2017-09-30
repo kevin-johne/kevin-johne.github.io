@@ -31,6 +31,7 @@
                     });
 
                     route('/*/*', function(root, page) {
+                        that.root = root;
                         fetcher.fetch(root + '/' + page + '.html').then(function (res) {
                             renderer.render(that.contentContainer, res);
                         });
