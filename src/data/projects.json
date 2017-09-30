@@ -8,13 +8,25 @@
             "SCSS",
             "Java"
         ],
-        "previewImg": "img/content/stroeer.jpg",
+        "previewImg": {
+            "src": "img/content/stroeer_preview.jpg",
+            "title": "previewImg"
+        },
         "shortDescription": "Ströer OMS was my longest and most complex project. I thank denkwerk for working at this project. The frontend development was build around an huge AngularJS application. Which was the representation of an complex backend. The Interface between the FE and BE needed to be well thought through to make it scalable and robust.",
         "description": "Ströer OMS was my longest and most complex project. I thank denkwerk for working at this project. The frontend development was build around an huge AngularJS application. Which was the representation of an complex backend. The Interface between the FE and BE needed to be well thought through to make it scalable and robust.",
-        "imgages": [
-            "img/content/stroeer.jpg",
-            "img/content/stroeer.jpg",
-            "img/content/stroeer.jpg"
+        "images": [
+            {
+                "title": "test",
+                "src": "img/content/stroeer.jpg"
+            },
+            {
+                "title": "test",
+                "src": "img/content/stroeer.jpg"
+            },
+            {
+                "title": "test",
+                "src": "img/content/stroeer.jpg"
+            }
         ]
     },
     {
@@ -26,11 +38,16 @@
             "NVDA",
             "JAWS"
         ],
-        "previewImg": "img/content/condor.jpg",
+        "previewImg": {
+            "src": "img/content/condor_preview.jpg",
+            "title": "flying with condor"
+        },
         "shortDescription": "My journey with condor was a pleasant one. I had a chance to tech myself a completely new important skill. Improving their website and IBE for screenreaders. Making the product WCAG prove till level AAA. I thank denkwerk for this opportunity.",
         "description": "My journey with condor was a pleasant one. I had a chance to tech myself a completely new important skill. Improving their website and IBE for screenreaders. Making the product WCAG prove till level AAA. I thank denkwerk for this opportunity.",
-        "imgages": [
-            "img/content/condor.jpg"
+        "images": [
+            {
+                "src": "img/content/condor.jpg"
+            }
         ],
         "websiteLink": "https://www.condor.com/eu/index.jsp"
     },
@@ -43,11 +60,16 @@
             "JS",
             "Animation"
         ],
-        "previewImg": "img/content/baraka.jpg",
+        "previewImg": {
+            "src": "img/content/baraka_preview.jpg",
+            "title": "previewImg"
+        },
         "shortDescription": "We at denkwerk build A unique style of donation, and Red Dot jury saw it too. <br />Therefore New Baraka was winning three awards in the categories „Online“, „E-Commerce“ and „Social Responsibility“.",
         "description": "We at denkwerk build A unique style of donation, and Red Dot jury saw it too. <br />Therefore New Baraka was winning three awards in the categories „Online“, „E-Commerce“ and „Social Responsibility“.",
-        "imgages": [
-            "img/content/baraka.jpg"
+        "images": [
+            {
+                "src": "img/content/baraka.jpg"
+            }
         ],
         "websiteLink": "https://new-baraka.com/"
     },
@@ -60,11 +82,16 @@
             "SCSS",
             "HTML5"
         ],
-        "previewImg": "img/content/car2go.jpg",
+        "previewImg": {
+            "src": "img/content/car2go_preview.jpg",
+            "title": "previewImg"
+        },
         "shortDescription": "Car2Go instructed denkwerk of improving the usability of the sign up form, which is used in many countries all over the world including Canada, USA, Europe and China. <br />Till today the new interface is not deployed yet and I'm not sure ever will.",
         "description": "Car2Go instructed denkwerk of improving the usability of the sign up form, which is used in many countries all over the world including Canada, USA, Europe and China. <br />Till today the new interface is not deployed yet and I'm not sure ever will.",
-        "imgages": [
-            "img/content/car2go.jpg"
+        "images": [
+            {
+                "src": "img/content/car2go.jpg"
+            }
         ]
     },
     {
@@ -76,30 +103,17 @@
             "SCSS",
             "Java"
         ],
-        "previewImg": "img/content/jacques.jpg",
+        "previewImg": {
+            "src": "img/content/jacques_preview.jpg",
+            "title": "previewImg"
+        },
         "shortDescription": "In cooperation with Jacques' IT and denkwerk we added an experience of their online shop for mobile users. <br/>We took special care that all the features are applied to the mobile website.",
         "description": "In cooperation with Jacques' IT and denkwerk we added an experience of their online shop for mobile users. <br/>We took special care that all the features are applied to the mobile website.",
-        "imgages": [
-            "img/content/jacques.jpg"
+        "images": [
+            {
+                "src": "img/content/jacques.jpg"
+            }
         ]
-    },
-    {
-        "title": "Gedore B2B Shop",
-        "year": "2015",
-        "duration": "4 months",
-        "tags": [
-            "OXID",
-            "PHP",
-            "JS",
-            "SCSS"
-        ],
-        "previewImg": "img/content/gedore-shop.jpg",
-        "shortDescription": "A business to business platform for Gedore, a german brand for real tools. <br/>I was planning and building the e-commerce website with my co-workers at denkwerk.<br/>My first project as a leading person in matters of frontend, and we got it all done on time.",
-        "description": "A business to business platform for Gedore, a german brand for real tools. <br/>I was planning and building the e-commerce website with my co-workers at denkwerk.<br/>My first project as a leading person in matters of frontend, and we got it all done on time.",
-        "imgages": [
-            "img/content/gedore-shop.jpg"
-        ],
-        "websiteLink": "https://uk.gedore-shop.com/"
     },
     {
         "title": "Gedore",
@@ -111,28 +125,18 @@
             "SCSS",
             "Style Guide"
         ],
-        "previewImg": "img/content/gedore-carolus.jpg",
+        "previewImg": {
+            "src": "img/content/gedore_preview.jpg",
+            "title": "previewImg"
+        },
         "shortDescription": "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus.",
         "description": "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus.",
-        "imgages": [
-            "img/content/gedore-carolus.jpg"
+        "images": [
+            {
+                "src": "img/content/gedore-carolus.jpg"
+            }
         ],
         "websiteLink": "https://www.gedore.com/"
-    },
-    {
-        "title": "Carolus",
-        "year": "2015",
-        "duration": "1 month",
-        "tags": [
-            "Colourizing"
-        ],
-        "previewImg": "img/content/gedore-carolus.jpg",
-        "shortDescription": "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus.",
-        "description": "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus.",
-        "imgages": [
-            "img/content/gedore-carolus.jpg"
-        ],
-        "websiteLink": "https://de.carolus.de/en/"
     },
     {
         "title": "Zwilling",
@@ -145,30 +149,17 @@
             "GruntJS",
             "SCSS"
         ],
-        "previewImg": "img/content/zwilling-brands.jpg",
+        "previewImg": {
+            "src": "img/content/zwilling_preview.jpg",
+            "title": "previewImg"
+        },
         "shortDescription": "New at denkwerk and had to step right into it, well at first i build some new modules for the site.<br/>Than it turned out to get an expert in gruntJS, I analysed the current tasks, how oftern they are used, how fast they are, and what is actually needed.<br/>I reconstructed the grunt tasks for a faster and easier work.",
         "description": "New at denkwerk and had to step right into it, well at first i build some new modules for the site.<br/>Than it turned out to get an expert in gruntJS, I analysed the current tasks, how oftern they are used, how fast they are, and what is actually needed.<br/>I reconstructed the grunt tasks for a faster and easier work.",
-        "imgages": [
-            "img/content/zwilling-brands.jpg"
+        "images": [
+            {
+                "src": "img/content/zwilling-brands.jpg"
+            }
         ],
         "websiteLink": "https://www.zwilling.com"
-    },
-    {
-        "title": "Lisa Hantke",
-        "year": "2012",
-        "duration": "2 months",
-        "tags": [
-            "Design",
-            "PhotoShop",
-            "Backend",
-            "Frontend"
-        ],
-        "previewImg": "img/content/lisa-hantke.jpg",
-        "shortDescription": "This project was made for the excellent start up photographer Lisa Hantke from Germany. <br/>Setting her photos of fashion, beauty and portraits as good as possible, I chose to fill screen with her photos.<br/>Only a small navigation bar on the lower part of the site.<br/>Even now the website has changed since, it is worth to look up her work.",
-        "description": "This project was made for the excellent start up photographer Lisa Hantke from Germany. <br/>Setting her photos of fashion, beauty and portraits as good as possible, I chose to fill screen with her photos.<br/>Only a small navigation bar on the lower part of the site.<br/>Even now the website has changed since, it is worth to look up her work.",
-        "imgages": [
-            "img/content/lisa-hantke.jpg"
-        ],
-        "websiteLink": "http://www.lisahantke.de/"
     }
 ]
