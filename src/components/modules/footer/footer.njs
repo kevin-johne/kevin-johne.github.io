@@ -8,7 +8,7 @@
             </p>
             <div class="social-media">
                 <a class="social-media__link social-media__link--github"
-                   href="https://www.linkedin.com/in/kevin-johne/" target="_blank"
+                   href="https://github.com/kevin-johne" target="_blank"
                    title="look up my opensource on github">
                     {% include imgPath + '/icons/github.svg' %}
                 </a>
