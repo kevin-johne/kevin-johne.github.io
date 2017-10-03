@@ -30,7 +30,10 @@
 
     .nav-item {
         float: left;
-        padding-left: 20px;
+
+        &:not(:first-child) {
+            padding-left: 20px;
+        }
     }
 
     .nav-link {
@@ -62,6 +65,26 @@
             left: 0;
             background-color: $color-brand;
             transition: all .3s linear .2s;
+        }
+    }
+}
+
+@include breakpoint($size: default, $inherit: false) {
+    .site-header {
+        &__inner {
+            width: 100%;
+        }
+
+        .nav-item:not(:first-child) {
+            padding-left: 10px;
+        }
+
+        .nav-list {
+            margin-right: 10px;
+        }
+
+        .nav-link {
+            font-size: 1.6rem;
         }
     }
 }

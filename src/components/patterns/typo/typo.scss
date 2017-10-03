@@ -51,3 +51,10 @@ h3 {
         color: inherit;
     }
 }
+
+@include breakpoint($size: default, $inherit: medium) {
+    h1,
+    .display {
+        font-size: 3rem;
+    }
+}

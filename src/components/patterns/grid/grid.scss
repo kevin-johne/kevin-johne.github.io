@@ -1,15 +1,15 @@
 .grid {
     @include container();
+}
 
-    @for $i from 1 through 6 {
+@for $i from 1 through 6 {
 
-        .col-#{$i} {
-            @include span($i);
-            min-height: 1px;
-        }
+    .col-#{$i} {
+        @include span($i);
+        min-height: 1px;
     }
+}
 
-    .col-last {
-        margin-right: 0;
-    }
+.col-last {
+    margin-right: 0;
 }

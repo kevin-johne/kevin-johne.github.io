@@ -2,10 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 120px;
-
-    @include breakpoint($size: default, $inherit: medium) {
-        margin-bottom: 60px;
-    }
+    background-color: $color-brand;
 
     .grid__cell {
         position: relative;
@@ -16,10 +13,6 @@
         margin-bottom: 8px;
         transition: filter .2s ease-out 0s;
 
-        &--filler:hover img {
-
-        }
-
         img {
             border-top: 2px solid $color-brand;
             border-bottom: 2px solid $color-brand;
@@ -28,6 +21,10 @@
             transition: .5s linear;
             transition-property: transform, filter, opacity;
         }
+        &:nth-last-child(5) ~ * {
+            margin-bottom: 0;
+        }
+
 
         &:nth-child(5n),
         &:nth-child(6n-4),
@@ -62,4 +59,67 @@
 
     }
 
+}
+
+@include breakpoint($size: small, $inherit: medium) {
+    .mod-image-grid {
+        margin-bottom: 60px;
+
+        .grid__cell {
+            margin-bottom: 4px;
+
+            &:nth-child(5n),
+            &:nth-child(6n-4),
+            &:nth-child(7n),
+            &:nth-child(8n-4) {
+                img {
+                    transform-origin: right center 0;
+                    transform: rotateY(10deg);
+                }
+            }
+
+            &:nth-child(5n-4),
+            &:nth-child(6n),
+            &:nth-child(7n-4),
+            &:nth-child(8n) {
+                img {
+                    transform-origin: left center 0;
+                    transform: rotateY(-10deg);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint($size: default, $inherit: small) {
+    .mod-image-grid {
+
+        .grid__cell {
+            margin-bottom: 0;
+
+            &:nth-child(5n),
+            &:nth-child(6n-4),
+            &:nth-child(7n),
+            &:nth-child(8n-4) {
+                img {
+                    transform-origin: right center 0;
+                    transform: rotateY(0);
+                }
+            }
+
+            &:nth-child(5n-4),
+            &:nth-child(6n),
+            &:nth-child(7n-4),
+            &:nth-child(8n) {
+                img {
+                    transform-origin: left center 0;
+                    transform: rotateY(0);
+                }
+            }
+
+            img {
+                border: 0;
+            }
+        }
+    }
 }

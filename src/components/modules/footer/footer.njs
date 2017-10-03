@@ -3,7 +3,7 @@
         <div class="footer__contact">
             <h3 class="display">Contact</h3>
             <p>
-                Do you have a style guide yet? I build a modular library for your web application. I'm currently available for contract work. Contact me via <a class="link" href="mailto:k.johne90@web.de">e-mail</a> or social media. <br/>
+                Do you have a style guide yet? I build a modular library for your web application. I'm currently available for contract work. Contact me via <a class="link" href="mailto:{{ email }}">e-mail</a> or social media. <br/>
                 Thanks and see you soon.
             </p>
             <div class="social-media">
@@ -44,8 +44,10 @@
                 </p>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2017 &mdash; Kevin Johne
-        </div>
+        <p class="copyright">
+            design, development and content created by me with love<br/>
+            2013 &mdash; 2017 &copy; all rights reserved<br/>
+            by <a class="link" href="mailto:{{ email }}">Kevin Johne</a> &mdash; <a class="link" href="kevin-johne.github.io">kevin-johne.github.io</a>
+        </p>
     </div>
 </section>

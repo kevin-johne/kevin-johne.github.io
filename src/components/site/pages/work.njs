@@ -17,6 +17,6 @@
     {% set cols = 4 %}
     {% set fillers = cols - 1 - (projects.length - 1) % cols %}
     {% for i in range(0, fillers) %}
-        {{  modules.imageGrid.gridCell( "img/content/filler.jpg", "nothing here", "", true ) }}
+        {{  modules.imageGrid.gridCellFiller() }}
     {% endfor %}
 {% endcall %}

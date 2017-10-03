@@ -1,8 +1,11 @@
 .mod-content {
-    margin: 120px auto;
-    width: span(6);
+    @include container();
+    margin: 60px auto 120px;
 
     @include breakpoint($size: default, $inherit: medium) {
         margin: 60px auto;
+        .col-* {
+            width: 100%;
+        }
     }
 }

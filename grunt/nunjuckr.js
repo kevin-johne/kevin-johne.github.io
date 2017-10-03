@@ -16,6 +16,7 @@ module.exports = function( grunt, options ) {
                 appPath: '<%= srcPath %>components/app/',
                 srcPath: '<%= srcPath %>',
                 imgPath: '<%= srcPath %>img/',
+                email: 'k.johne90@web.de',
                 production: true
             },
             autoescape: false,
@@ -76,6 +77,7 @@ module.exports = function( grunt, options ) {
                     appPath: '<%= srcPath %>components/app/',
                     srcPath: '<%= srcPath %>',
                     imgPath: '<%= srcPath %>img/',
+                    email: 'k.johne90@web.de',
                     production: false,
                     liveReloadPort: '<%= liveReloadPort %>'
                 }
