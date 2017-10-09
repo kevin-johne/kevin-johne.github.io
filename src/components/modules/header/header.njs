@@ -27,9 +27,6 @@
     }, {
         text: 'Résumé',
         href: '#cv'
-    }, {
-        text: 'Thoughts',
-        href: '#blog'
     }
 ] %}
 

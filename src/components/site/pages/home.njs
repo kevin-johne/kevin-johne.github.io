@@ -10,7 +10,7 @@
         <img src="img/content/styleguide.svg">
         <h2>I code style guides, <br/> you will love</h2>
         <p>
-            For a long living website a style guide is of great importance. Because, all different departments in the creation pipeline of the application, are in need to talk the same language. This language is the styleguide, it is the source of truth everyone in the pipeline can rely on.
+            For a long living website a style guide is of great importance. Because all different departments in the creation pipeline of the application are in need of talking the same language. This language is the styleguide, it is the source of truth everyone in the pipeline can rely on.
         </p>
         <p>
             I develop a platform for your user experience and visual designer, backend and frontend developer as well as project manager.

@@ -12,20 +12,17 @@
             "src": "img/content/stroeer_preview.jpg",
             "title": "previewImg"
         },
-        "shortDescription": "Ströer OMS was my longest and most complex project. I thank denkwerk for working at this project. The frontend development was build around an huge AngularJS application. Which was the representation of an complex backend. The Interface between the FE and BE needed to be well thought through to make it scalable and robust.",
-        "description": "Ströer OMS was my longest and most complex project. I thank denkwerk for working at this project. The frontend development was build around an huge AngularJS application. Which was the representation of an complex backend. The Interface between the FE and BE needed to be well thought through to make it scalable and robust.",
+        "description": [
+            "Ströer OMS was my longest and most complex project. I thank denkwerk for working at this project. The frontend development was build around an huge AngularJS application. Which was the representation of an complex backend. The Interface between the FE and BE needed to be well thought through to make it scalable and robust."
+        ],
         "images": [
             {
-                "title": "test",
-                "src": "img/content/stroeer.jpg"
+                "title": "Calendar Year view",
+                "src": "img/content/project/stroeer/1.jpg"
             },
             {
-                "title": "test",
-                "src": "img/content/stroeer.jpg"
-            },
-            {
-                "title": "test",
-                "src": "img/content/stroeer.jpg"
+                "title": "Calendar Month view",
+                "src": "img/content/project/stroeer/2.jpg"
             }
         ]
     },
@@ -42,11 +39,18 @@
             "src": "img/content/condor_preview.jpg",
             "title": "flying with condor"
         },
-        "shortDescription": "My journey with condor was a pleasant one. I had a chance to tech myself a completely new important skill. Improving their website and IBE for screenreaders. Making the product WCAG prove till level AAA. I thank denkwerk for this opportunity.",
-        "description": "My journey with condor was a pleasant one. I had a chance to tech myself a completely new important skill. Improving their website and IBE for screenreaders. Making the product WCAG prove till level AAA. I thank denkwerk for this opportunity.",
+        "description": [
+            "My journey with condor was a pleasant one. I had a chance to tech myself a completely new important skill. Improving their website and IBE for screenreaders. Making the product WCAG prove till level AAA. I thank denkwerk for this opportunity."
+        ],
         "images": [
             {
-                "src": "img/content/condor.jpg"
+                "src": "img/content/project/condor/1.jpg"
+            },
+            {
+                "src": "img/content/project/condor/2.jpg"
+            },
+            {
+                "src": "img/content/project/condor/3.gif"
             }
         ],
         "websiteLink": "https://www.condor.com/eu/index.jsp"
@@ -64,11 +68,21 @@
             "src": "img/content/baraka_preview.jpg",
             "title": "previewImg"
         },
-        "shortDescription": "We at denkwerk build A unique style of donation, and Red Dot jury saw it too. <br />Therefore New Baraka was winning three awards in the categories „Online“, „E-Commerce“ and „Social Responsibility“.",
-        "description": "We at denkwerk build A unique style of donation, and Red Dot jury saw it too. <br />Therefore New Baraka was winning three awards in the categories „Online“, „E-Commerce“ and „Social Responsibility“.",
+        "description": [
+            "We at denkwerk build A unique style of donation, and Red Dot jury saw it too. <br />Therefore New Baraka was winning three awards in the categories „Online“, „E-Commerce“ and „Social Responsibility“."
+        ],
         "images": [
             {
-                "src": "img/content/baraka.jpg"
+                "src": "img/content/project/baraka/1.jpg"
+            },
+            {
+                "src": "img/content/project/baraka/2.jpg"
+            },
+            {
+                "src": "img/content/project/baraka/3.jpg"
+            },
+            {
+                "src": "img/content/project/baraka/4.jpg"
             }
         ],
         "websiteLink": "https://new-baraka.com/"
@@ -86,11 +100,12 @@
             "src": "img/content/car2go_preview.jpg",
             "title": "previewImg"
         },
-        "shortDescription": "Car2Go instructed denkwerk of improving the usability of the sign up form, which is used in many countries all over the world including Canada, USA, Europe and China. <br />Till today the new interface is not deployed yet and I'm not sure ever will.",
-        "description": "Car2Go instructed denkwerk of improving the usability of the sign up form, which is used in many countries all over the world including Canada, USA, Europe and China. <br />Till today the new interface is not deployed yet and I'm not sure ever will.",
+        "description": [
+            "Car2Go instructed denkwerk of improving the usability of the sign up form, which is used in many countries all over the world including Canada, USA, Europe and China. <br />Till today the new interface is not deployed yet and I'm not sure ever will."
+        ],
         "images": [
             {
-                "src": "img/content/car2go.jpg"
+                "src": "img/content/project/car2go/1.jpg"
             }
         ]
     },
@@ -107,11 +122,12 @@
             "src": "img/content/jacques_preview.jpg",
             "title": "previewImg"
         },
-        "shortDescription": "In cooperation with Jacques' IT and denkwerk we added an experience of their online shop for mobile users. <br/>We took special care that all the features are applied to the mobile website.",
-        "description": "In cooperation with Jacques' IT and denkwerk we added an experience of their online shop for mobile users. <br/>We took special care that all the features are applied to the mobile website.",
+        "description": [
+            "In cooperation with Jacques' IT and denkwerk we added an experience of their online shop for mobile users. <br/>We took special care that all the features are applied to the mobile website."
+        ],
         "images": [
             {
-                "src": "img/content/jacques.jpg"
+                "src": "img/content/project/jacques/1.jpg"
             }
         ]
     },
@@ -129,11 +145,21 @@
             "src": "img/content/gedore_preview.jpg",
             "title": "previewImg"
         },
-        "shortDescription": "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus.",
-        "description": "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus.",
+        "description": [
+            "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus."
+        ],
         "images": [
             {
-                "src": "img/content/gedore-carolus.jpg"
+                "src": "img/content/project/gedore/1.jpg"
+            },
+            {
+                "src": "img/content/project/gedore/2.jpg"
+            },
+            {
+                "src": "img/content/project/gedore/3.jpg"
+            },
+            {
+                "src": "img/content/project/gedore/4.jpg"
             }
         ],
         "websiteLink": "https://www.gedore.com/"
@@ -143,7 +169,7 @@
         "year": "2015",
         "duration": "3 months",
         "tags": [
-            "HTML%",
+            "HTML5",
             "JS",
             "JQuery",
             "GruntJS",
@@ -153,11 +179,12 @@
             "src": "img/content/zwilling_preview.jpg",
             "title": "previewImg"
         },
-        "shortDescription": "New at denkwerk and had to step right into it, well at first i build some new modules for the site.<br/>Than it turned out to get an expert in gruntJS, I analysed the current tasks, how oftern they are used, how fast they are, and what is actually needed.<br/>I reconstructed the grunt tasks for a faster and easier work.",
-        "description": "New at denkwerk and had to step right into it, well at first i build some new modules for the site.<br/>Than it turned out to get an expert in gruntJS, I analysed the current tasks, how oftern they are used, how fast they are, and what is actually needed.<br/>I reconstructed the grunt tasks for a faster and easier work.",
+        "description": [
+            "New at denkwerk and had to step right into it, well at first i build some new modules for the site.<br/>Than it turned out to get an expert in gruntJS, I analysed the current tasks, how oftern they are used, how fast they are, and what is actually needed.<br/>I reconstructed the grunt tasks for a faster and easier work."
+        ],
         "images": [
             {
-                "src": "img/content/zwilling-brands.jpg"
+                "src": "img/content/project/zwilling/1.jpg"
             }
         ],
         "websiteLink": "https://www.zwilling.com"
