@@ -19,25 +19,34 @@
                     route.start( true );
                 },
 
-                setRoutes: function() {
+                setRoutes: function () {
                     var that = this;
-                    route( '/', function( collection ) {
-                        that.root = 'projects';
-                        fetcher.fetch( 'projects.html' ).then( function( res ) {
-                            renderer.render( that.contentContainer, res );
-                        } );
+                    route('/', function () {
+                        that.root = '';
+                        fetcher.fetch('home.html').then(function (res) {
+                            renderer.render(that.contentContainer, res);
+                        });
 
                         that.triggerRouteUpdate();
-                    } );
+                    });
 
-                    route( '/*', function( collection ) {
+                    route('/*/*', function(root, page) {
+                        that.root = root;
+                        fetcher.fetch(root + '/' + page + '.html').then(function (res) {
+                            renderer.render(that.contentContainer, res);
+                        });
+
+                        that.triggerRouteUpdate();
+                    });
+
+                    route('/*', function (collection) {
                         that.root = collection;
-                        fetcher.fetch( collection + '.html' ).then( function( res ) {
-                            renderer.render( that.contentContainer, res );
-                        } );
+                        fetcher.fetch(collection + '.html').then(function (res) {
+                            renderer.render(that.contentContainer, res);
+                        });
 
                         that.triggerRouteUpdate();
-                    } );
+                    });
 
                 },
 
