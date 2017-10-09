@@ -4,7 +4,7 @@
         return {
             defaults: function() {
                 return {
-                    link: 'nav-link',
+                    link: 'js-nav-link',
                     activeClass: 'current'
                 };
             },
