@@ -12,48 +12,54 @@
             "src": "img/content/stroeer_preview.jpg",
             "title": "previewImg"
         },
-        "description": [
-            "Ströer OMS was my longest and most complex project. I thank denkwerk for working at this project. The frontend development was build around an huge AngularJS application. Which was the representation of an complex backend. The Interface between the FE and BE needed to be well thought through to make it scalable and robust."
+        "descriptions": [
+            "I started working on Ströer OMS in the need of a new calendar. Which is representing schedules for billboards as a yearly and monthly view. OMS is an internal management platform for maintenance of Ströer billboards. Which consist out of a complex infrastructure. Myself was working mainly on the frontend. Templates were written in Struts a Java template engine and modules on the page were written in AngularJS. Data was retrieved from an API with ajax calls. The API is managed by Struts schema which is mapped to Java methods",
+            "The app has several interactive elements: toggle events, display other months and years, showing the daily schedule and printing... Of course. After the calendar, I have been continuing working for Ströeer for platform maintenance."
         ],
         "images": [
             {
-                "title": "Calendar Year view",
-                "src": "img/content/project/stroeer/1.jpg"
+                "title": "calendar year view",
+                "src": "img/content/project/stroeer/year.jpg"
             },
             {
-                "title": "Calendar Month view",
-                "src": "img/content/project/stroeer/2.jpg"
+                "title": "calendar month view",
+                "src": "img/content/project/stroeer/month.jpg"
             }
         ]
     },
     {
         "title": "Condor",
         "year": "2016",
-        "duration": "3 months",
+        "duration": "4 months",
         "tags": [
             "ARIA",
-            "NVDA",
-            "JAWS"
+            "semantic",
+            "screen reader"
         ],
         "previewImg": {
             "src": "img/content/condor_preview.jpg",
             "title": "flying with condor"
         },
-        "description": [
-            "My journey with condor was a pleasant one. I had a chance to tech myself a completely new important skill. Improving their website and IBE for screenreaders. Making the product WCAG prove till level AAA. I thank denkwerk for this opportunity."
+        "descriptions": [
+            "My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it. Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).",
+            "Before starting of wildly improving usability, we needed a tool to measure the current state and every incremental improvement to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release and our self, used browser tools and screen readers to test our changes. A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers. And improved tags with aria attributes to describe the seat and prices.",
+            "The changes we made till here are usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to gray. The blue turned out darker and active elements needing a highlighted border. The UK and US website using the normal plus a layer for visual improvements. No worries SCSS and JS are optimized in the build for UK and US to eliminate overhead."
         ],
         "images": [
             {
-                "src": "img/content/project/condor/1.jpg"
+                "src": "img/content/project/condor/enhanced-navigation.jpg",
+                "title": "new elements for better navigation"
             },
             {
-                "src": "img/content/project/condor/2.jpg"
+                "src": "img/content/project/condor/semantic-elements.jpg",
+                "title": "semantically markup"
             },
             {
-                "src": "img/content/project/condor/3.gif"
+                "src": "img/content/project/condor/contrast-ratio.gif",
+                "title": "contrast ratio"
             }
         ],
-        "websiteLink": "https://www.condor.com/eu/index.jsp"
+        "websiteLink": "condor.com"
     },
     {
         "title": "UNESCO New Baraka",
@@ -62,21 +68,19 @@
         "tags": [
             "PHP",
             "JS",
-            "Animation"
+            "Animation",
+            "ScrollMagic"
         ],
         "previewImg": {
             "src": "img/content/baraka_preview.jpg",
             "title": "previewImg"
         },
-        "description": [
-            "We at denkwerk build A unique style of donation, and Red Dot jury saw it too. <br />Therefore New Baraka was winning three awards in the categories „Online“, „E-Commerce“ and „Social Responsibility“."
+        "descriptions": [
+            "I enjoyed developing the mobile version of the thoroughly happy and easily understandable donation platform. The website contains animated illustrations and sounds effects. The Website and Design won three Red Dot Awards in 'Online', 'E-Commerce' and 'Social Responsibility'. The lovely animations caught the interest of the magazine 'PAGE' and published an article for the 07.2016 issue."
         ],
         "images": [
             {
                 "src": "img/content/project/baraka/1.jpg"
-            },
-            {
-                "src": "img/content/project/baraka/2.jpg"
             },
             {
                 "src": "img/content/project/baraka/3.jpg"
@@ -85,7 +89,7 @@
                 "src": "img/content/project/baraka/4.jpg"
             }
         ],
-        "websiteLink": "https://new-baraka.com/"
+        "websiteLink": "new-baraka.com"
     },
     {
         "title": "Car2Go",
@@ -100,8 +104,8 @@
             "src": "img/content/car2go_preview.jpg",
             "title": "previewImg"
         },
-        "description": [
-            "Car2Go instructed denkwerk of improving the usability of the sign up form, which is used in many countries all over the world including Canada, USA, Europe and China. <br />Till today the new interface is not deployed yet and I'm not sure ever will."
+        "descriptions": [
+            "Car2Go commissioned denkwerk of improving the usability of the sign up form."
         ],
         "images": [
             {
@@ -122,31 +126,31 @@
             "src": "img/content/jacques_preview.jpg",
             "title": "previewImg"
         },
-        "description": [
-            "In cooperation with Jacques' IT and denkwerk we added an experience of their online shop for mobile users. <br/>We took special care that all the features are applied to the mobile website."
+        "descriptions": [
+            "In cooperation with Jacques' IT at denkwerk we made a mobile website of the already existing desktop website. It was a challenge for the UX team to transfer all the features of the desktop website to a mobile context. In the frontend department ware developing static templates, which got integrated by Jacques' IT in a later state. It is only possible to visit this project from a mobile phone or chrome dev tools with mobile mode on."
         ],
         "images": [
             {
                 "src": "img/content/project/jacques/1.jpg"
             }
-        ]
+        ],
+        "websiteLink": "www.jacques.de"
     },
     {
         "title": "Gedore",
         "year": "2015",
         "duration": "3 months",
         "tags": [
-            "Nunjucks",
-            "JS",
-            "SCSS",
-            "Style Guide"
+            "eCommerce",
+            "frontend",
+            "atomic"
         ],
         "previewImg": {
             "src": "img/content/gedore_preview.jpg",
             "title": "previewImg"
         },
-        "description": [
-            "Do at flexible for a fast and simple theme change. <br/> After Gedore's main brand website was done it took only a week to deploy carolus."
+        "descriptions": [
+            ""
         ],
         "images": [
             {
@@ -162,31 +166,38 @@
                 "src": "img/content/project/gedore/4.jpg"
             }
         ],
-        "websiteLink": "https://www.gedore.com/"
+        "websiteLink": "www.gedore.com"
     },
     {
         "title": "Zwilling",
         "year": "2015",
         "duration": "3 months",
         "tags": [
-            "HTML5",
-            "JS",
-            "JQuery",
-            "GruntJS",
-            "SCSS"
+            "frontend",
+            "modules",
+            "task runner"
         ],
         "previewImg": {
             "src": "img/content/zwilling_preview.jpg",
             "title": "previewImg"
         },
-        "description": [
-            "New at denkwerk and had to step right into it, well at first i build some new modules for the site.<br/>Than it turned out to get an expert in gruntJS, I analysed the current tasks, how oftern they are used, how fast they are, and what is actually needed.<br/>I reconstructed the grunt tasks for a faster and easier work."
+        "descriptions": [
+            "New at denkwerk and had to step right into development of new modules for Zwilling. Later on I was in charge of setting up grunt for requiring dev tasks. It was a multi brand project including Zwilling online shop, Zwilling, Miyabi, Demeyere and Staub brand website. I was helping out in all 5 projects to fix bugs and create new modules."
         ],
         "images": [
             {
-                "src": "img/content/project/zwilling/1.jpg"
+                "src": "img/content/project/zwilling/shop.jpg"
+            },
+            {
+                "src": "img/content/project/zwilling/miyabi.jpg"
+            },
+            {
+                "src": "img/content/project/zwilling/demeyere.jpg"
+            },
+            {
+                "src": "img/content/project/zwilling/staub.jpg"
             }
         ],
-        "websiteLink": "https://www.zwilling.com"
+        "websiteLink": "www.zwilling.com"
     }
 ]
