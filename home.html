@@ -20,7 +20,7 @@
         <img src="img/content/responsive.svg">
         <h2>I make responsive websites,<br/> your user will love</h2>
         <p>
-            My toolset includes a flexible media query library, to get your application in perfect light for every screen size. Your user should have the possibility to experience your app from his phone, tablet, watch, computer or television.
+            My tool set includes a flexible media query library, to get your application in perfect light for every screen size. Your user should have the possibility to experience your app from his phone, tablet, watch, computer or television.
         </p>
         <p>
             Already in the process of designing and developing modules, we need to think about how and which content is displayed on the devices your audience is using.
