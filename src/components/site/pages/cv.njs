@@ -45,4 +45,7 @@
     2016 IF Award<br/>
     New Baraka Website &mdash; Gold
 </p>
+<p>
+    <a href="files/resume.pdf" class="link" target="_blank">download resume</a>
+</p>
 {% endcall %}

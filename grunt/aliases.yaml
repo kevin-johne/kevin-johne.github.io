@@ -21,6 +21,7 @@ production:
         - 'requirejs:production'
         - 'copy:img'
         - 'copy:fonts'
+        - 'copy:files'
         - 'nunjuckr:production'
 
 prod:

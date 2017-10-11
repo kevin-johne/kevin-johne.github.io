@@ -24,6 +24,15 @@ module.exports = {
         dest: '<%= distPath %>img/'
     },
 
+    files: {
+        expand: true,
+        cwd: '<%= srcPath %>files/',
+        src: [
+            '**/*'
+        ],
+        dest: '<%= distPath %>files/'
+    },
+
     fonts: {
         expand: true,
         cwd: '<%= srcPath %>fonts/',
