@@ -24,7 +24,7 @@
                 </p>
             {% endfor %}
             {% if link %}
-                <a class="link" href="http://{{ link }}" target="_blank">Go to {{link}}</a>
+                <a class="link" href="http://{{ link }}" target="_blank">visit {{link}}</a>
             {% endif %}
         </div>
     </div>

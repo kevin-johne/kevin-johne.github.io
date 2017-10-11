@@ -62,81 +62,6 @@
         "websiteLink": "condor.com"
     },
     {
-        "title": "UNESCO New Baraka",
-        "year": "2016",
-        "duration": "1 month",
-        "tags": [
-            "PHP",
-            "JS",
-            "Animation",
-            "ScrollMagic"
-        ],
-        "previewImg": {
-            "src": "img/content/baraka_preview.jpg",
-            "title": "previewImg"
-        },
-        "descriptions": [
-            "I enjoyed developing the mobile version of the thoroughly happy and easily understandable donation platform. The website contains animated illustrations and sounds effects. The Website and Design won three Red Dot Awards in 'Online', 'E-Commerce' and 'Social Responsibility'. The lovely animations caught the interest of the magazine 'PAGE' and published an article for the 07.2016 issue."
-        ],
-        "images": [
-            {
-                "src": "img/content/project/baraka/1.jpg"
-            },
-            {
-                "src": "img/content/project/baraka/3.jpg"
-            },
-            {
-                "src": "img/content/project/baraka/4.jpg"
-            }
-        ],
-        "websiteLink": "new-baraka.com"
-    },
-    {
-        "title": "Car2Go",
-        "year": "2016",
-        "duration": "6 months",
-        "tags": [
-            "AngularJS",
-            "SCSS",
-            "HTML5"
-        ],
-        "previewImg": {
-            "src": "img/content/car2go_preview.jpg",
-            "title": "previewImg"
-        },
-        "descriptions": [
-            "Car2Go commissioned denkwerk of improving the usability of the sign up form."
-        ],
-        "images": [
-            {
-                "src": "img/content/project/car2go/1.jpg"
-            }
-        ]
-    },
-    {
-        "title": "Jacques' Weindepot",
-        "year": "2016",
-        "duration": "6 months",
-        "tags": [
-            "AngularJS",
-            "SCSS",
-            "Java"
-        ],
-        "previewImg": {
-            "src": "img/content/jacques_preview.jpg",
-            "title": "previewImg"
-        },
-        "descriptions": [
-            "In cooperation with Jacques' IT at denkwerk we made a mobile website of the already existing desktop website. It was a challenge for the UX team to transfer all the features of the desktop website to a mobile context. In the frontend department ware developing static templates, which got integrated by Jacques' IT in a later state. It is only possible to visit this project from a mobile phone or chrome dev tools with mobile mode on."
-        ],
-        "images": [
-            {
-                "src": "img/content/project/jacques/1.jpg"
-            }
-        ],
-        "websiteLink": "www.jacques.de"
-    },
-    {
         "title": "Gedore",
         "year": "2015",
         "duration": "3 months",
@@ -150,20 +75,26 @@
             "title": "previewImg"
         },
         "descriptions": [
-            ""
+            "Here we have three projects for the client Gedore. Everything has been freshly designed and developed. A complete redesign - topic is BOLD. Starting off with the Gedore brand site, presenting news, product catalog, interactive storefinder and many more. Behind the scene is a Typo3 CMS to serve those sites. Website are easily created as the toolbox offers 20+ modules and more global patterns. All handcrafted by denkwerk.",
+            "In the frontend department, we created a living style guide, based on the module catalog made by the UX and visual designer. This living style guide was a list of global definitions, patterns, modules, and example pages. As global definitions we specified general configuration which everything is based on later, containing i.e. font families, font sizes, colours, grid, indents, breakpoints, margins, and animation time functions. The beauty of these configurations is the possibility to alter the whole theme within seconds. That's how we created the Carolus brand site, only by changing colour, font families and other settings.",
+            "I'm very thank full to had a part of this project, my ui easter egg which is everyone using but none is noticing is at the main navigation. Which has a drop down navigation on hover, a tricky piece. The problem? Not closing the submenu by accident, because the mouse moved diagonal and hovered a another main menu entry. Usually to prevent this, developer adding a timeout. it solves the problem for fast user with a fast movement. Not only it doesn't work for slow mouse movements, as well it makes it not responsive. A mouse direction detection is used. Spanning a triangle from the current mouse position by entering a main menu point to the top left and top right corner of the submenu. If the mouse is staying it the triangle, even hovering over another main menu entry, the submenu won't close. This technique is invented by Apple and used by amazon.com at the main navigation.",
+            "And lastly the Gedore Shop, developed by three developer, and one designer. I had the role of a frontend leader."
         ],
         "images": [
             {
-                "src": "img/content/project/gedore/1.jpg"
+                "src": "img/content/project/gedore/gedore.jpg"
             },
             {
-                "src": "img/content/project/gedore/2.jpg"
+                "src": "img/content/project/gedore/carolus.jpg"
             },
             {
-                "src": "img/content/project/gedore/3.jpg"
+                "src": "img/content/project/gedore/theme.jpg"
             },
             {
-                "src": "img/content/project/gedore/4.jpg"
+                "src": "img/content/project/gedore/navigation.jpg"
+            },
+            {
+                "src": "img/content/project/gedore/shop.jpg"
             }
         ],
         "websiteLink": "www.gedore.com"
@@ -199,5 +130,80 @@
             }
         ],
         "websiteLink": "www.zwilling.com"
+    },
+    {
+        "title": "UNESCO New Baraka",
+        "year": "2016",
+        "duration": "1 month",
+        "tags": [
+            "PHP",
+            "JS",
+            "Animation",
+            "ScrollMagic"
+        ],
+        "previewImg": {
+            "src": "img/content/baraka_preview.jpg",
+            "title": "previewImg"
+        },
+        "descriptions": [
+            "I enjoyed developing the mobile version of the thoroughly happy and easily understandable donation platform. The website contains animated illustrations and sounds effects. The Website and Design won three Red Dot Awards in 'Online', 'E-Commerce' and 'Social Responsibility'. The lovely animations caught the interest of the magazine 'PAGE' and published an article for the 07.2016 issue."
+        ],
+        "images": [
+            {
+                "src": "img/content/project/baraka/1.jpg"
+            },
+            {
+                "src": "img/content/project/baraka/3.jpg"
+            },
+            {
+                "src": "img/content/project/baraka/4.jpg"
+            }
+        ],
+        "websiteLink": "new-baraka.com"
+    },
+    {
+        "title": "Jacques Weindepot",
+        "year": "2016",
+        "duration": "6 months",
+        "tags": [
+            "AngularJS",
+            "SCSS",
+            "Java"
+        ],
+        "previewImg": {
+            "src": "img/content/jacques_preview.jpg",
+            "title": "previewImg"
+        },
+        "descriptions": [
+            "In cooperation with Jacques' IT at denkwerk we made a mobile website of the already existing desktop website. It was a challenge for the UX team to transfer all the features of the desktop website to a mobile context. In the frontend department ware developing static templates, which got integrated by Jacques' IT in a later state. It is only possible to visit this project from a mobile phone or chrome dev tools with mobile mode on."
+        ],
+        "images": [
+            {
+                "src": "img/content/project/jacques/1.jpg"
+            }
+        ],
+        "websiteLink": "www.jacques.de"
+    },
+    {
+        "title": "Car2Go",
+        "year": "2016",
+        "duration": "6 months",
+        "tags": [
+            "AngularJS",
+            "SCSS",
+            "HTML5"
+        ],
+        "previewImg": {
+            "src": "img/content/car2go_preview.jpg",
+            "title": "previewImg"
+        },
+        "descriptions": [
+            "Car2Go commissioned denkwerk of improving the usability of the sign up form."
+        ],
+        "images": [
+            {
+                "src": "img/content/project/car2go/1.jpg"
+            }
+        ]
     }
 ]
