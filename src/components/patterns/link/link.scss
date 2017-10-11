@@ -3,16 +3,37 @@ a {
 }
 
 .link {
-    color: $color-brand;
+    $border: 1px;
+    color: $color-gray-20;
     font-weight: bold;
+    position: relative;
+    z-index: 1;
+    text-shadow: -$border $border $color-white,
+    0 $border $color-white,
+    $border $border $color-white;
+
+
 
     &:visited {
-        color: $color-brand;
+        color: $color-gray-20;
     }
 
-    &:hover {
-        color: $color-gray-25;
-        text-decoration: underline $color-brand;
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: -.1rem;
+        width: 30%;
+        height: 2px;
+        background-color: $color-brand;
+        transition: width .2s;
+        transition-timing-function:  ease-out;
+    }
+
+    &:hover:after {
+        width: 100%;
+        transition-timing-function:  ease-in;
     }
 }
 

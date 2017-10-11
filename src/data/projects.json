@@ -59,7 +59,9 @@
                 "title": "contrast ratio"
             }
         ],
-        "websiteLink": "condor.com"
+        "links": [
+            "condor.com"
+        ]
     },
     {
         "title": "Gedore",
@@ -97,7 +99,11 @@
                 "src": "img/content/project/gedore/shop.jpg"
             }
         ],
-        "websiteLink": "www.gedore.com"
+        "links": [
+            "gedore.com",
+            "carolus.de",
+            "de.gedore-shop.com"
+        ]
     },
     {
         "title": "Zwilling",
@@ -129,7 +135,9 @@
                 "src": "img/content/project/zwilling/staub.jpg"
             }
         ],
-        "websiteLink": "www.zwilling.com"
+        "links": [
+            "www.zwilling.com"
+        ]
     },
     {
         "title": "UNESCO New Baraka",
@@ -159,7 +167,9 @@
                 "src": "img/content/project/baraka/4.jpg"
             }
         ],
-        "websiteLink": "new-baraka.com"
+        "links": [
+            "new-baraka.com"
+        ]
     },
     {
         "title": "Jacques Weindepot",
@@ -182,7 +192,9 @@
                 "src": "img/content/project/jacques/1.jpg"
             }
         ],
-        "websiteLink": "www.jacques.de"
+        "links": [
+            "www.jacques.de"
+        ]
     },
     {
         "title": "Car2Go",

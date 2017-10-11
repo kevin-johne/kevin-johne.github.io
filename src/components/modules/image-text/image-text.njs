@@ -1,4 +1,4 @@
-{% macro default( title, tags, descriptions, images, link ) %}
+{% macro default( title, tags, descriptions, images, links ) %}
     <div class="mod-image-text">
         <div class="mod-image-text__header">
             <h1>
@@ -23,8 +23,12 @@
                     {{ description }}
                 </p>
             {% endfor %}
-            {% if link %}
-                <a class="link" href="http://{{ link }}" target="_blank">visit {{link}}</a>
+            {% if links %}
+                <div class="text__links">
+                    {% for link in links %}
+                        <a class="link" href="http://{{ link }}" target="_blank">visit {{link}}</a><br/>
+                    {% endfor %}
+                </div>
             {% endif %}
         </div>
     </div>
