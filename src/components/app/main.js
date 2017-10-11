@@ -69,12 +69,7 @@
 
             // Extend with global dependencies
         ], function( config ) {
-
-            if ( config.dev ) {
-
-                // Allow access to App object via global scope in dev mode
-                window.App = App;
-            }
+            window.App = App;
 
             App.init();
 
