@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Kevin Johne - have yet a Style Guide?</title>
+        <title>Kevin Johne - {% block pageTitle %}{% endblock %}</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,10 +15,10 @@
         <div class="site-body show-grid">
             {% include modulesPath + '/header/header.njs' %}
 
-            {% block content %}
                 <div class="site-page">
+                    {% block content %}
+                    {% endblock %}
                 </div>
-            {% endblock %}
         </div>
 
         {% include modulesPath + '/footer/footer.njs' %}

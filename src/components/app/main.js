@@ -24,13 +24,10 @@
             // Plugins
             load:               'vendor/plugins/load',
             text:               'vendor/plugins/text',
-            ScrollTo:           'vendor/plugins/ScrollToPlugin.min',
 
             // Libraries
             lodash:             'vendor/lodash',
-            soundcloud:         'vendor/soundcloud-sdk',
             scrollMagic:        'vendor/ScrollMagic',
-            TweenLite:          'vendor/TweenLite.min',
 
             route:              'vendor/amd.route',
             renderer:           'services/renderer',

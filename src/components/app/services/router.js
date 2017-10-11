@@ -23,7 +23,7 @@
                     var that = this;
                     route('/', function () {
                         that.root = '';
-                        fetcher.fetch('home.html').then(function (res) {
+                        fetcher.fetch('index.html').then(function (res) {
                             renderer.render(that.contentContainer, res);
                         });
 
