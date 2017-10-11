@@ -28,6 +28,7 @@
                         });
 
                         that.triggerRouteUpdate();
+                        that.notifyAnalitics();
                     });
 
                     route('/*/*', function(root, page) {
@@ -37,6 +38,7 @@
                         });
 
                         that.triggerRouteUpdate();
+                        that.notifyAnalitics();
                     });
 
                     route('/*', function (collection) {
@@ -46,6 +48,7 @@
                         });
 
                         that.triggerRouteUpdate();
+                        that.notifyAnalitics();
                     });
 
                 },
@@ -56,6 +59,12 @@
 
                 getRoot: function() {
                     return this.root;
+                },
+
+                notifyAnalitics: function() {
+                    if( typeof(window.ga) === 'function') {
+                        window.ga('send','pageview');
+                    }
                 }
             };
         }
