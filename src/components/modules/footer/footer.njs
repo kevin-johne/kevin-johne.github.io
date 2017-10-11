@@ -32,7 +32,7 @@
         <div class="footer__reading">
             <h3 class="display">Reading Suggestion</h3>
             <a href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">
-            <img class="book__img" src="img/content/books/malcolm-gladwell-blink.jpg">
+            <img class="book__img" data-src="img/content/books/malcolm-gladwell-blink.jpg">
             </a>
             <div class="book__text">
                 <h2 class="book__title">

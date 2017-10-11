@@ -1,3 +1,10 @@
 img {
     width: 100%;
+    opacity: 1;
+    transition: opacity .3s ease-in;
+}
+
+img[data-src] {
+    padding-bottom: 100%;
+    opacity: 0;
 }

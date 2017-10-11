@@ -10,7 +10,7 @@
                 <span>{{ tag }}</span>
             {% endfor %}
         </div>
-        <img src="{{ article.previewImg }}">
+        <img data-src="{{ article.previewImg }}">
     </div>
 {% endmacro %}
 
