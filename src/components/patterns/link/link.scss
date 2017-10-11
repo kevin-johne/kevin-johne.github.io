@@ -8,31 +8,32 @@ a {
     font-weight: bold;
     position: relative;
     z-index: 1;
-    text-shadow: -$border $border $color-white,
-    0 $border $color-white,
-    $border $border $color-white;
-
-
 
     &:visited {
+        color: $color-gray-20;
+    }
+
+    &:hover {
         color: $color-gray-20;
     }
 
     &:after {
         content: '';
         position: absolute;
+        z-index: -1;
         left: 0;
-        bottom: -.1rem;
-        width: 30%;
+        bottom: -.1em;
+        width: 100%;
         height: .1em;
         background-color: $color-brand;
-        transition: width .2s;
-        transition-timing-function:  ease-out;
+        transition-duration: .2s;
+        transition-property: width;
+        transition-timing-function: ease-out;
     }
 
     &:hover:after {
-        width: 100%;
-        transition-timing-function:  ease-in;
+        width: 30%;
+        transition-timing-function: ease-in;
     }
 }
 
