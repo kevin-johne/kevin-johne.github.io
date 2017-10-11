@@ -8,6 +8,9 @@ a {
     font-weight: bold;
     position: relative;
     z-index: 1;
+    text-shadow: -$border $border $color-white,
+    0 $border $color-white,
+    $border $border $color-white;
 
     &:visited {
         color: $color-gray-20;
