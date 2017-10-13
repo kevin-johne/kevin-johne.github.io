@@ -15,11 +15,11 @@
     <h2>Work Experience</h2>
     <p>
         2017<br/>
-        Angular JS engineer at <a class="link" href="http://www.affectv.co.uk?ref=kevin-johne.github.com">Affectv</a>
+        Angular JS engineer at <a class="link" target="_blank" href="http://www.affectv.co.uk?ref=kevin-johne.github.com">Affectv</a>
     </p>
     <p>
         2015 &mdash; 2017<br/>
-        specialist frontend developer at <a class="link"
+        specialist frontend developer at <a class="link" target="_blank"
                                             href="http://www.denkwerk.com?ref=kevin-johne.github.com">denkwerk</a>
     </p>
     <p>
@@ -28,7 +28,7 @@
     </p>
     <p>
         2011<br/>
-        intern web developer at <a class="link"
+        intern web developer at <a class="link" target="_blank"
                                    href="http://www.konsultaner.de?ref=kevin-johne.github.com">Konsultaner</a>
     </p>
     <h2>Education</h2>
