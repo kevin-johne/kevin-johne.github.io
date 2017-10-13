@@ -32,13 +32,11 @@
         <div class="footer__reading">
             <h3 class="display">Reading Suggestion</h3>
             <a href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">
-            <img class="book__img" data-src="img/content/books/malcolm-gladwell-blink.jpg">
+            <img class="book__img" alt="Book Cover" src="img/content/books/malcolm-gladwell-blink.jpg">
             </a>
             <div class="book__text">
-                <h2 class="book__title">
-                    <a href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">Blink &mdash; Malcolm Gladwell
-                    </a>
-                </h2>
+                <a class="book__title link" href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328" title="Buy Book on hive.co.uk to support local book stores"><b>Blink &mdash; Malcolm Gladwell</b>
+                </a>
                 <p class="book__description">
                     Do we need always a lot of information to make the right decision? This book is about what we can learn from just a thin slice of information.
                 </p>
@@ -47,7 +45,7 @@
         <p class="copyright">
             design, development and content created by me with love<br/>
             2013 &mdash; 2017 &copy; all rights reserved<br/>
-            by <a class="link" href="mailto:{{ email }}">Kevin Johne</a> &mdash; <a class="link" href="kevin-johne.github.io">kevin-johne.github.io</a>
+            by <a class="link" href="mailto:{{ email }}">Kevin Johne</a> &mdash; <a class="link" href="http://kevinjohne.me" title="website of Kevin Johne">kevinjohne.me</a>
         </p>
     </div>
 </section>

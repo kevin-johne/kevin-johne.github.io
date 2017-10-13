@@ -5,6 +5,10 @@
 
 {% block pageTitle %}about me{% endblock %}
 
+{% block meta %}
+<meta name="description" content="Do you want to know more about Kevin Johne and why he is doing what he does?">
+{% endblock %}
+
 {% block content %}
 
     {% call modules.content.default() %}

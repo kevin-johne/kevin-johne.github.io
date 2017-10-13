@@ -14,7 +14,7 @@
         </div>
         <div class="mod-image-text__image">
             {% for image in images %}
-                <img data-src="{{ image.src }}" title="{{ image.title }}">
+                <img src="{{ image.src }}" alt="{{ img.title }}" title="{{ image.title }}">
             {% endfor %}
         </div>
         <div class="mod-image-text__text">

@@ -5,6 +5,9 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block meta %}
+
+        {% endblock %}
 
         <link rel="image_src" href="/img/kevin_johne_screenshot.jpg">
         <link href="https://fonts.googleapis.com/css?family=Cantata+One|Playfair+Display:900|Raleway" rel="stylesheet">

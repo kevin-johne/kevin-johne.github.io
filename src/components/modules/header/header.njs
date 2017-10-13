@@ -1,7 +1,7 @@
 {% macro header( items ) %}
     <header class="site-header auto-init" data-modules="modules/header/header">
         <div class="site-header__inner">
-            <a class="logo js-nav-link" href="#index">
+            <a class="logo js-nav-link" href="index.html">
                 {% include imgPath + 'logo-landing.svg' %}
             </a>
             <ul class="nav-list">
@@ -20,13 +20,13 @@
 {% set items = [
     {
         text: 'Work',
-        href: '#work'
+        href: 'work.html'
     }, {
         text: 'About',
-        href: '#about'
+        href: 'about.html'
     }, {
         text: 'Résumé',
-        href: '#cv'
+        href: 'cv.html'
     }
 ] %}
 

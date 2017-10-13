@@ -7,13 +7,13 @@
 {% macro gridCell( img, title, link, filler ) %}
     <div class="grid__cell" style="background-image: url({{ img }})">
             <a href="{{ link }}">
-                <img data-src="{{ img }}" title="{{ title }}"/>
+                <img src="{{ img }}" alt="photo {{title}} to strength brand" title="{{ title }}"/>
         </a>
     </div>
 {% endmacro %}
 
 {% macro gridCellFiller() %}
     <div class="grid__cell grid__cell--filler">
-        <img data-src="img/content/filler.jpg">
+        <img src="img/content/filler.jpg" alt="nothing hear">
     </div>
 {% endmacro %}

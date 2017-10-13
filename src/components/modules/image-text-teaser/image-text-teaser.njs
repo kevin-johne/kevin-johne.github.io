@@ -7,10 +7,10 @@
 {% macro image( src, title, link ) %}
     {% if link %}
         <a href="{{ link }}">
-            <img class="mod-image-text-teaser__image" data-src="{{ src }}" alt="{{ title }}" title="{{ title }}"/>
+            <img class="mod-image-text-teaser__image" src="{{ src }}" alt="{{ title }}" title="{{ title }}"/>
         </a>
     {% else %}
-        <img class="mod-image-text-teaser__image" data-src="{{ src }}" alt="{{ title }}" title="{{ title }}"/>
+        <img class="mod-image-text-teaser__image" src="{{ src }}" alt="{{ title }}" title="{{ title }}"/>
     {% endif %}
 {% endmacro %}
 

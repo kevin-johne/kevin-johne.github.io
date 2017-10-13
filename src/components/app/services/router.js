@@ -21,15 +21,6 @@
 
                 setRoutes: function () {
                     var that = this;
-                    route('/', function () {
-                        that.root = '';
-                        fetcher.fetch('index.html').then(function (res) {
-                            renderer.render(that.contentContainer, res);
-                        });
-
-                        that.triggerRouteUpdate();
-                        that.notifyAnalitics();
-                    });
 
                     route('/*/*', function(root, page) {
                         that.root = root;

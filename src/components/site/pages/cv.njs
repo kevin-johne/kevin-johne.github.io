@@ -5,6 +5,10 @@
 
 {% block pageTitle %}résumé{% endblock %}
 
+{% block meta %}
+    <meta name="description" content="Recent work experience, education, and awards">
+{% endblock %}
+
 {% block content %}
     {% call modules.content.default() %}
     <h1>Résumé</h1>
