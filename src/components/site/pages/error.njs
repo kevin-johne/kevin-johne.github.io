@@ -10,6 +10,6 @@
     Upps something happened here not correct...
 
     <p>
-        better to get back on Track. The Link brings you back to the <a href="index.html">beginning</a>. A new chance :)
+        better to get back on Track. The Link brings you back to the <a href="/">beginning</a>. A new chance :)
     </p>
 {% endblock %}

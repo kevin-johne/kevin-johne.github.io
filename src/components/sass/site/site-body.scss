@@ -1,13 +1,13 @@
 .site-body {
     width: 90%;
     max-width: 1000px;
-    padding-top: 80px;
+    padding-top: 100px;
     margin: 0 auto;
 }
 
 @include breakpoint($size: default, $inherit: medium) {
     .site-body {
-        padding-top: 60px;
+        padding-top: 80px;
     }
 }
 

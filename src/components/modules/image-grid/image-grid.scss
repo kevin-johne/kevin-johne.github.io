@@ -93,6 +93,7 @@
 
 @include breakpoint($size: default, $inherit: small) {
     .mod-image-grid {
+        margin-bottom: 60px;
 
         .grid__cell {
             margin-bottom: 0;

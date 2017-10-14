@@ -9,7 +9,7 @@
 
         {% endblock %}
 
-        <link rel="image_src" href="/img/kevin_johne_screenshot.jpg">
+        <link rel="image_src" href="/img/image_src.jpg">
         <link href="https://fonts.googleapis.com/css?family=Cantata+One|Playfair+Display:900|Raleway" rel="stylesheet">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="shortcut icon" href="/img/favicon.ico" />

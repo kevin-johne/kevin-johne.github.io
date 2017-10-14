@@ -18,7 +18,7 @@
     {% endcall %}
     {% call modules.imageGrid.default() %}
     {% for project in projects %}
-        {% set link = "work/" + project.title + '.html' %}
+        {% set link = "#work/" + project.title | lower | urlencode %}
         {{ modules.imageGrid.gridCell( project.previewImg.src, project.title, link ) }}
     {% endfor %}
 

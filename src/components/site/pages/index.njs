@@ -16,7 +16,7 @@
             Available for <a class="link" href="mailto:{{ email }}">contract</a> work
         </h1>
         <section class="feature">
-            <img src="img/content/styleguide.svg" alt="living style guide">
+            <img src="/img/content/filler.jpg" data-src="img/content/styleguide.svg" alt="living style guide">
             <h2>I code living style guides, <br/> you will love</h2>
             <p>
                 For a long living website a style guide is of great importance. Because all different departments in the
@@ -29,7 +29,7 @@
             </p>
         </section>
         <section class="feature">
-            <img src="img/content/responsive.svg" alt="All sorts of devices with different screen size">
+            <img src="/img/content/filler.jpg" data-src="img/content/responsive.svg" alt="All sorts of devices with different screen size">
             <h2>I make responsive websites,<br/> your user will love</h2>
             <p>
                 My tool set includes a flexible media query library, to get your application in perfect light for every
@@ -42,7 +42,7 @@
             </p>
         </section>
         <section class="feature">
-            <img src="img/content/engineering.svg" alt="Coffee next to the computer and a engineering book">
+            <img src="/img/content/filler.jpg" data-src="img/content/engineering.svg" alt="Coffee next to the computer and a engineering book">
             <h2>I do software engineering,<br/> your business will love</h2>
             <p>
                 Are you planning a frontend application mainly written in JavaScript? Let me help you structure, define

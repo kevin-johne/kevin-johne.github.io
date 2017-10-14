@@ -1,13 +1,13 @@
 {% macro header( items ) %}
     <header class="site-header auto-init" data-modules="modules/header/header">
         <div class="site-header__inner">
-            <a class="logo js-nav-link" href="/index.html">
+            <a class="logo js-nav-link" href="#index">
                 {% include imgPath + 'logo-landing.svg' %}
             </a>
             <ul class="nav-list">
                 {% for item in items %}
                 <li class="nav-item">
-                    <a class="nav-link js-nav-link {% if item.current -%} current {%- endif %}" href="/{{ item.href }}">
+                    <a class="nav-link js-nav-link {% if item.current -%} current {%- endif %}" href="#{{ item.href }}">
                         {{ item.text }}
                     </a>
                 </li>
@@ -20,13 +20,13 @@
 {% set items = [
     {
         text: 'Work',
-        href: 'work.html'
+        href: 'work'
     }, {
         text: 'About',
-        href: 'about.html'
+        href: 'about'
     }, {
         text: 'Résumé',
-        href: 'cv.html'
+        href: 'resume'
     }
 ] %}
 

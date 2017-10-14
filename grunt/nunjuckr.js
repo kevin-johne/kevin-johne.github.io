@@ -31,19 +31,10 @@ module.exports = function( grunt, options ) {
                     }, this);
                 }, this);
 
-                options.data.articles.forEach(function( article ) {
-                    render(
-                        options.globals.basePath + 'site/dataPage/article.njs',
-                        'dist/blog/' + article.title + '.html',
-                        options.ext,
-                        article
-                    )
-                }, this);
-
                 options.data.projects.forEach(function( project ) {
                     render(
                         options.globals.basePath + 'site/dataPage/work-detail.njs',
-                        'dist/work/' + project.title + '.html',
+                        'dist/work/' + project.title.toLowerCase() + '.html',
                         options.ext,
                         project
                     )

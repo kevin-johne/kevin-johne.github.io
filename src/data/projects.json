@@ -9,8 +9,7 @@
             "Java"
         ],
         "previewImg": {
-            "src": "img/content/stroeer_preview.jpg",
-            "title": "previewImg"
+            "src": "img/content/project/preview/stroeer_preview_large.jpg"
         },
         "descriptions": [
             "I started working on Ströer OMS in the need of a new calendar. Which is representing schedules for billboards as a yearly and monthly view. OMS is an internal management platform for maintenance of Ströer billboards. Which consist out of a complex infrastructure. Myself was working mainly on the frontend. Templates were written in Struts a Java template engine and modules on the page were written in AngularJS. Data was retrieved from an API with ajax calls. The API is managed by Struts schema which is mapped to Java methods",
@@ -37,8 +36,7 @@
             "screen reader"
         ],
         "previewImg": {
-            "src": "img/content/condor_preview.jpg",
-            "title": "flying with condor"
+            "src": "img/content/project/preview/condor_preview_large.jpg"
         },
         "descriptions": [
             "My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it. Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).",
@@ -73,8 +71,7 @@
             "atomic"
         ],
         "previewImg": {
-            "src": "img/content/gedore_preview.jpg",
-            "title": "previewImg"
+            "src": "img/content/project/preview/gedore_preview_large.jpg"
         },
         "descriptions": [
             "Here we have three projects for the client Gedore. Everything has been freshly designed and developed. A complete redesign - topic is BOLD. Starting off with the Gedore brand site, presenting news, product catalog, interactive storefinder and many more. Behind the scene is a Typo3 CMS to serve those sites. Website are easily created as the toolbox offers 20+ modules and more global patterns. All handcrafted by denkwerk.",
@@ -115,8 +112,7 @@
             "task runner"
         ],
         "previewImg": {
-            "src": "img/content/zwilling_preview.jpg",
-            "title": "previewImg"
+            "src": "img/content/project/preview/zwilling_preview_large.jpg"
         },
         "descriptions": [
             "New at denkwerk and had to step right into development of new modules for Zwilling. Later on I was in charge of setting up grunt for requiring dev tasks. It was a multi brand project including Zwilling online shop, Zwilling, Miyabi, Demeyere and Staub brand website. I was helping out in all 5 projects to fix bugs and create new modules."
@@ -150,8 +146,7 @@
             "ScrollMagic"
         ],
         "previewImg": {
-            "src": "img/content/baraka_preview.jpg",
-            "title": "previewImg"
+            "src": "img/content/project/preview/baraka_preview_large.jpg"
         },
         "descriptions": [
             "I enjoyed developing the mobile version of the thoroughly happy and easily understandable donation platform. The website contains animated illustrations and sounds effects. The Website and Design won three Red Dot Awards in 'Online', 'E-Commerce' and 'Social Responsibility'. The lovely animations caught the interest of the magazine 'PAGE' and published an article for the 07.2016 issue."
@@ -181,7 +176,7 @@
             "Java"
         ],
         "previewImg": {
-            "src": "img/content/jacques_preview.jpg",
+            "src": "img/content/project/preview/jacques_preview_large.jpg",
             "title": "previewImg"
         },
         "descriptions": [
@@ -206,8 +201,7 @@
             "HTML5"
         ],
         "previewImg": {
-            "src": "img/content/car2go_preview.jpg",
-            "title": "previewImg"
+            "src": "img/content/project/preview/car2go_preview_large.jpg"
         },
         "descriptions": [
             "Car2Go commissioned denkwerk of improving the usability of the sign up form."
