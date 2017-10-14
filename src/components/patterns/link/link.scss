@@ -11,6 +11,7 @@ a {
     text-shadow: -$border $border $color-white,
     0 $border $color-white,
     $border $border $color-white;
+    white-space: nowrap;
 
     &:visited {
         color: $color-gray-20;
