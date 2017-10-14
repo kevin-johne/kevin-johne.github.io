@@ -26,7 +26,7 @@
 
         {% include modulesPath + '/footer/footer.njs' %}
 
-        <script type="text/javascript" data-main="/js/app/main.js" src="/js/app/vendor/require.js"></script>
+        <script async type="text/javascript" data-main="/js/app/main.js" src="/js/app/vendor/require.js"></script>
 
         {% if not production %}
             <script src="http://localhost:{{ liveReloadPort }}/livereload.js"></script>

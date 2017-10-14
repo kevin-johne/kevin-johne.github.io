@@ -3,7 +3,9 @@
         function( config ) {
             return {
                 fetch: function( url ) {
-                    var header;
+                    var header = {
+                        'cache-control': 'max-age=86400'
+                    };
                     if ( config.dev ) {
                         header = {
                             'cache-control': 'no-cache, no-store, must-revalidate',
