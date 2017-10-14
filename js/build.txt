@@ -17,7 +17,9 @@ load!utils/breakpoints:init
 app/vendor/polyfills/fetch.js
 app/services/fetcher.js
 app/vendor/amd.route.js
+app/services/imgloader.js
 app/services/renderer.js
 app/services/router.js
 load!services/router:init
+load!services/imgloader:init
 app/main.js
