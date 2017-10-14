@@ -54,3 +54,13 @@
         color: $color-gray-75;
     }
 }
+
+@include breakpoint($size: default, $inherit: false) {
+    .footer {
+        &__contact,
+        &__reading {
+            @include span(6);
+            margin-bottom: 50px;
+        }
+    }
+}

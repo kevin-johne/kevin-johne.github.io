@@ -1,10 +1,12 @@
 .mod-content {
     @include container();
     margin: 60px auto 120px;
+}
 
-    @include breakpoint($size: default, $inherit: medium) {
+@include breakpoint($size: default, $inherit: small) {
+    .mod-content {
         margin: 60px auto;
-        .col-* {
+        .col-3 {
             width: 100%;
         }
     }
