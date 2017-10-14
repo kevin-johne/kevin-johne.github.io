@@ -14,9 +14,7 @@
 
                 ready: function() {
                     this.setRoutes();
-
                     this.contentContainer = document.querySelector( '.site-page' );
-                    route.base('#');
                     route.start( true );
                 },
 

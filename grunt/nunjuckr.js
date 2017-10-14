@@ -68,7 +68,7 @@ module.exports = function( grunt, options ) {
                     appPath: '<%= srcPath %>components/app/',
                     srcPath: '<%= srcPath %>',
                     imgPath: '<%= srcPath %>img/',
-                    email: 'k.johne90@web.de',
+                    email: 'hello@kevinjohne.me',
                     production: false,
                     liveReloadPort: '<%= liveReloadPort %>'
                 }

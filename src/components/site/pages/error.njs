@@ -7,8 +7,10 @@
 {% endblock %}
 
 {% block content %}
-    Upps something happened here not correct...
-
+    <h1>Error 404 :(</h1>
+    <p>
+        Upps something happened here not correct...
+    </p>
     <p>
         better to get back on Track. The Link brings you back to the <a href="/">beginning</a>. A new chance :)
     </p>

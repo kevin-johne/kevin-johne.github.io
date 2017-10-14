@@ -27,12 +27,7 @@
                 },
 
                 validateRequest: function( res ) {
-                    var valid = true;
-
-                    if ( res.status != '200' ) {
-                        valid = false;
-                    }
-                    return valid;
+                    return res.status !== '404';
                 },
 
                 error: function( error ) {

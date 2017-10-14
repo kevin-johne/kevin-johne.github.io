@@ -1,6 +1,6 @@
 (function (window, define, undefined) {
-    define([],
-        function (loader) {
+    define(['services/imgloader'],
+        function (imgloader) {
             return {
                 /**
                  *
@@ -13,7 +13,7 @@
                         tempDoc.innerHTML = newContent;
                         dom.innerHTML = this.getSitePage(tempDoc).innerHTML;
                         document.title = this.getTitle(tempDoc).innerText;
-                        this.loadImages();
+                        imgloader.load();
                         window.App.loader.initModules(dom);
                     }
                 },
@@ -24,17 +24,6 @@
 
                 getTitle: function (content) {
                     return content.getElementsByTagName('title')[0];
-                },
-
-                loadImages: function () {
-                    var onLoadImage = function () {
-                        this.removeAttribute('data-src');
-                    };
-
-                    [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
-                        img.setAttribute('src', img.getAttribute('data-src'));
-                        img.onload = onLoadImage;
-                    });
                 }
             };
         }

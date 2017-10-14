@@ -62,7 +62,8 @@
         require( [
             'config',
             'load!utils/breakpoints:init',
-            'load!services/router:init'
+            'load!services/router:init',
+            'load!services/imgloader:init'
 
             // Extend with global dependencies
         ], function( config ) {
