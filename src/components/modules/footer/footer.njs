@@ -1,4 +1,4 @@
-<section class="footer">
+<footer class="footer">
     <div class="footer__inner">
         <div class="footer__contact">
             <h3 class="display">Contact</h3>
@@ -48,4 +48,4 @@
             by <a class="link" href="mailto:{{ email }}">Kevin Johne</a> &mdash; <a class="link" href="http://kevinjohne.me" title="website of Kevin Johne">kevinjohne.me</a>
         </p>
     </div>
-</section>
+</footer>
