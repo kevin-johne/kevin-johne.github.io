@@ -20,6 +20,10 @@
             filter: grayscale(0);
             transition: .5s linear;
             transition-property: transform, filter, opacity;
+
+            &[data-src] {
+                padding-bottom: 25%;
+            }
         }
         &:nth-last-child(5) ~ * {
             margin-bottom: 0;
