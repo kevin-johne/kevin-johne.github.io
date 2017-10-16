@@ -12,8 +12,9 @@
 {% block content %}
     {% call modules.content.default() %}
     <h1>Portfolio</h1>
-    <p>In the last years I've been working as a frontend developer and was lucky enough to got engaged in creative and
-        interesting projects. My work was dedicated to create living style guides, web apps, e-commerce platforms, and angular apps for international and brands.
+    <p>
+        In the last years I've been working as a frontend developer and was lucky enough to got involved in creative and
+        interesting projects. My work was dedicated to create living style guides, web apps, e-commerce platforms, and angular apps for international and German brands.
     </p>
     {% endcall %}
     {% call modules.imageGrid.default() %}

@@ -12,8 +12,9 @@
             "src": "img/content/project/preview/stroeer_preview_large.jpg"
         },
         "descriptions": [
-            "I started working on Ströer OMS in the need of a new calendar. Which is representing schedules for billboards as a yearly and monthly view. OMS is an internal management platform for maintenance of Ströer billboards. Which consist out of a complex infrastructure. Myself was working mainly on the frontend. Templates were written in Struts a Java template engine and modules on the page were written in AngularJS. Data was retrieved from an API with ajax calls. The API is managed by Struts schema which is mapped to Java methods",
-            "The app has several interactive elements: toggle events, display other months and years, showing the daily schedule and printing... Of course. After the calendar, I have been continuing working for Ströeer for platform maintenance."
+            "I started working on Ströer OMS because they were in need of a new calendar. OMS is an internal management platform for maintenance of their billboards. Which has a complex infrastructure. I was working mainly on the frontend, writing templates in Struts (Java template engine), displaying data with AngularJS, and styling with SCSS. Data was retrieved from an API with ajax calls.",
+            "The app has several interactive elements: toggle events, display other months and years, showing the daily schedule and printing.",
+            "After finishing the calendar, I have been continuing working for Ströer for platform maintenance. I soloed the frontend till couple of months later I established a team of three developer which I was leading."
         ],
         "images": [
             {
@@ -39,9 +40,11 @@
             "src": "img/content/project/preview/condor_preview_large.jpg"
         },
         "descriptions": [
-            "My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it. Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).",
-            "Before starting of wildly improving usability, we needed a tool to measure the current state and every incremental improvement to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release and our self, used browser tools and screen readers to test our changes. A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers. And improved tags with aria attributes to describe the seat and prices.",
-            "The changes we made till here are usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to gray. The blue turned out darker and active elements needing a highlighted border. The UK and US website using the normal plus a layer for visual improvements. No worries SCSS and JS are optimized in the build for UK and US to eliminate overhead."
+            "My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it.",
+            "Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).",
+            "Before making improvements in usability, we needed a tool to measure the current state and every incremental improvement we may make, to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release, and we used browser tools and screen readers to test our changes. Testing became time intensive through lag of tools.",
+            "A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers. And improved tags with aria attributes to describe the seat and prices.",
+            "The changes we made until this point were usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to dark gray, blue got darker, active elements needing a highlighted border, and many other changes to increase contrast."
         ],
         "images": [
             {
@@ -76,8 +79,8 @@
         "descriptions": [
             "Here we have three projects for the client Gedore. Everything has been freshly designed and developed. A complete redesign - topic is BOLD. Starting off with the Gedore brand site, presenting news, product catalog, interactive storefinder and many more. Behind the scene is a Typo3 CMS to serve those sites. Website are easily created as the toolbox offers 20+ modules and more global patterns. All handcrafted by denkwerk.",
             "In the frontend department, we created a living style guide, based on the module catalog made by the UX and visual designer. This living style guide was a list of global definitions, patterns, modules, and example pages. As global definitions we specified general configuration which everything is based on later, containing i.e. font families, font sizes, colours, grid, indents, breakpoints, margins, and animation time functions. The beauty of these configurations is the possibility to alter the whole theme within seconds. That's how we created the Carolus brand site, only by changing colour, font families and other settings.",
-            "I'm very thank full to had a part of this project, my ui easter egg which is everyone using but none is noticing is at the main navigation. Which has a drop down navigation on hover, a tricky piece. The problem? Not closing the submenu by accident, because the mouse moved diagonal and hovered a another main menu entry. Usually to prevent this, developer adding a timeout. it solves the problem for fast user with a fast movement. Not only it doesn't work for slow mouse movements, as well it makes it not responsive. A mouse direction detection is used. Spanning a triangle from the current mouse position by entering a main menu point to the top left and top right corner of the submenu. If the mouse is staying it the triangle, even hovering over another main menu entry, the submenu won't close. This technique is invented by Apple and used by amazon.com at the main navigation.",
-            "And lastly the Gedore Shop, developed by three developer, and one designer. I had the role of a frontend leader."
+            "I'm very thank full to had a part of these projects, my UI easter egg which is the main navigation. Which has a drop down navigation on hover, a tricky piece. The problem? Not closing the submenu accidentally by hovering over another main menu entry when the mouse is one the way to a sub menu entry diagonally placed to its parent. Preventing this is usually solved with a time out which activates on leaving a main item. it solves the problem for fast user with a fast movement. Not only it doesn't work for slow mouse movements, as well it makes it not responsive. A mouse direction detection is used. Spanning a triangle from the current mouse position by entering a main menu entry to the top left and top right corner of the submenu. If the mouse is staying it the triangle, even hovering over another main menu entry, the submenu stays open. This technique is invented by Apple and used by amazon.com at their navigation.",
+            "And lastly the Gedore shop, which is OXID and smarty templates. We created a living style guide, out of smarty modules and patterns, each can be easily included in to the page, and modified through parameters."
         ],
         "images": [
             {
@@ -115,7 +118,7 @@
             "src": "img/content/project/preview/zwilling_preview_large.jpg"
         },
         "descriptions": [
-            "New at denkwerk and had to step right into development of new modules for Zwilling. Later on I was in charge of setting up grunt for requiring dev tasks. It was a multi brand project including Zwilling online shop, Zwilling, Miyabi, Demeyere and Staub brand website. I was helping out in all 5 projects to fix bugs and create new modules."
+            "New at denkwerk and had to step right into development of new modules for Zwilling. Later on I was in charge of setting up Grunt pipelines for recurring dev tasks. It was a project including Zwilling online shop, Zwilling, Miyabi, Demeyere and Staub brand website. I was helping out in all five projects to fix bugs and create minor modules."
         ],
         "images": [
             {
@@ -149,7 +152,8 @@
             "src": "img/content/project/preview/baraka_preview_large.jpg"
         },
         "descriptions": [
-            "I enjoyed developing the mobile version of the thoroughly happy and easily understandable donation platform. The website contains animated illustrations and sounds effects. The Website and Design won three Red Dot Awards in 'Online', 'E-Commerce' and 'Social Responsibility'. The lovely animations caught the interest of the magazine 'PAGE' and published an article for the 07.2016 issue."
+            "I enjoyed developing the mobile version of the donation platform. Happy animated illustrations and sounds effects making the purpose of the product easy to understand.",
+            "The website applied for Red Dot Awards and won in 'Online', 'E-Commerce' and 'Social Responsibility'. Later the PAGE, a German magazine, which publishes articles about design, technology, and business, published an article about the platform New Baraka, it got printed in the 07.2016 issue."
         ],
         "images": [
             {
@@ -180,7 +184,7 @@
             "title": "previewImg"
         },
         "descriptions": [
-            "In cooperation with Jacques' IT at denkwerk we made a mobile website of the already existing desktop website. It was a challenge for the UX team to transfer all the features of the desktop website to a mobile context. In the frontend department ware developing static templates, which got integrated by Jacques' IT in a later state. It is only possible to visit this project from a mobile phone or chrome dev tools with mobile mode on."
+            "At denkwerk, a cooperation with Jacques' IT in making a mobile website of the already existing desktop version. The UX team encounter the challenge of rebuild desktop features for the mobile context. We as frontend developer transferred the wire-frames to static HTML, JS, and CSS. Which later Jacques' IT integrated to their shop platform."
         ],
         "images": [
             {

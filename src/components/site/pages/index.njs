@@ -24,7 +24,7 @@
                 style guide, it is the source of truth everyone in the pipeline can rely on.
             </p>
             <p>
-                I develop a platform for your user experience and visual designer, backend and frontend developer as
+                I can develop a platform for your user experience and visual designer, backend and frontend developer as
                 well as project manager.
             </p>
         </section>
@@ -37,8 +37,8 @@
                 computer or television.
             </p>
             <p>
-                Already in the process of designing and developing modules, we need to think about how and which content
-                is displayed on the devices your audience is using.
+                Already in the process of design your application, we need to think about how and which content
+                is displayed. It mainly depends on the device your audience is using the most.
             </p>
         </section>
         <section class="feature">
@@ -46,12 +46,12 @@
             <h2>I do software engineering,<br/> your business will love</h2>
             <p>
                 Are you planning a frontend application mainly written in JavaScript? Let me help you structure, define
-                core functionality or extend your modules. I have two years experience in developing with JavaScript,
+                core functionality or extend your modules. I have four years of professional experience in developing with JavaScript,
                 mainly ECMAScript v5 or using AngularJS v1.6.
             </p>
             <p>
-                During the last year I was helping Ströer and Affectv extending their internal AngularJS application.
-                Mainly to improve performance and developing new modules.
+                Recently I was helping Ströer and Affectv extending their internal AngularJS application.
+                Improving performance and developing new modules.
             </p>
         </section>
 
