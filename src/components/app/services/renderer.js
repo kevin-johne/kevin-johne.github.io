@@ -15,6 +15,7 @@
                         document.title = this.getTitle(tempDoc).innerText;
                         imgloader.load();
                         window.App.loader.initModules(dom);
+                        this.scrollToTop();
                     }
                 },
 
@@ -24,6 +25,10 @@
 
                 getTitle: function (content) {
                     return content.getElementsByTagName('title')[0];
+                },
+
+                scrollToTop: function () {
+                    window.scrollTo(0,0);
                 }
             };
         }

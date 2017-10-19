@@ -103,8 +103,8 @@
     .mod-pagination {
         @include container();
         position: relative;
-        margin-bottom: calc(120px + 10px + 2em);
-        margin-top: calc(60px + 10px + 2em);
+        margin-bottom: calc(100px + 10px + 2em);
+        margin-top: -40px;
         transform: translateX(0);
     }
 

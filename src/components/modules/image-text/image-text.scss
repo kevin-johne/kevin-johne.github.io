@@ -12,7 +12,9 @@
         @include span(4);
 
         img {
-            margin-bottom: 4.5rem;
+            &:not(:last-of-type) {
+                margin-bottom: 4.5rem;
+            }
 
             &[data-src] {
                 padding-bottom: 100%;
