@@ -1,0 +1,126 @@
+.mod-pagination {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+    &__prev {
+        text-align: right;
+        left: calc((100vw - 1000px) / 2 - 120px - 60px);
+
+        .mod-pagination__title,
+        .mod-pagination__sub-title {
+            right: 0;
+        }
+
+        &:hover {
+            .mod-pagination__img-container {
+                clip-path: polygon(55% 60%, 45% 50%, 45% 50%, 55% 40%);
+            }
+        }
+    }
+
+    &__next {
+        right: calc((100vw - 1000px) / 2 - 120px - 60px);
+
+        &:hover {
+            .mod-pagination__img-container {
+                clip-path: polygon(55% 50%, 45% 60%, 45% 40%, 55% 50%);
+            }
+        }
+    }
+
+    &__next,
+    &__prev {
+        position: absolute;
+        display: inline-block;
+        width: 120px;
+        color: $color-gray-20;
+        border: 2px solid transparent;
+
+        &:visited {
+            color: $color-gray-20;
+        }
+
+        &:hover {
+            border-color: $color-brand;
+
+            .mod-pagination__title {
+                top: calc(100% - 2rem);
+                padding: 0 5px;
+            }
+
+            .mod-pagination__sub-title,
+            img {
+                opacity: 0;
+            }
+
+            .mod-pagination__img-container {
+                border-radius: 100%;
+            }
+        }
+    }
+
+    &__sub-title {
+        position: absolute;
+        bottom: 100%;
+        padding: 5px 0;
+        color: $color-gray-75;
+    }
+
+    &__title {
+        position: absolute;
+        top: 100%;
+        font-weight: bold;
+    }
+
+    &__sub-title,
+    &__title {
+        transition: .2s ease-in;
+        transition-property: color opacity top padding;
+        padding: .5em 0;
+        display: block;
+        pointer-events: none;
+    }
+
+    &__img-container {
+        transition: .2s ease-in;
+        transition-property: clip-path;
+        display: block;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-color: $color-brand;
+    }
+
+    img {
+        transition: opacity 0s ease-in .15s;
+        display: block;
+        opacity: 1;
+    }
+}
+
+@include breakpoint($size: default, $inherit: large) {
+    .mod-pagination {
+        @include container();
+        position: relative;
+        margin-bottom: calc(120px + 10px + 2em);
+        margin-top: calc(60px + 10px + 2em);
+        transform: translateX(0);
+    }
+
+    .mod-pagination__prev,
+    .mod-pagination__next {
+        position: relative;
+        left: 0;
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .mod-pagination__prev {
+        float: left;
+    }
+
+    .mod-pagination__next {
+        float: right;
+    }
+}
