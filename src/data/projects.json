@@ -175,9 +175,9 @@
         "year": "2016",
         "duration": "6 months",
         "tags": [
-            "AngularJS",
-            "SCSS",
-            "Java"
+            "Nunjucks",
+            "static",
+            "style guide"
         ],
         "previewImg": {
             "src": "img/content/project/preview/jacques_preview_large.jpg",
