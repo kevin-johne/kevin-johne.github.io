@@ -4,7 +4,7 @@
 {% extends templatePath + "default.njs" %}
 
 {%- block pageTitle %}
-    title {%- for tag in tags -%}#{{ tag }}{% endfor -%}
+    {{ title }} {%- for tag in tags -%}#{{ tag }}{% endfor -%}
 {% endblock -%}
 
 {% block meta %}
@@ -21,4 +21,5 @@
 
 {% block content %}
     {{ modules.imageText.default( title, tags, descriptions, images, links ) }}
+    {{ modules.pagination.project(previous, next) }}
 {% endblock %}
