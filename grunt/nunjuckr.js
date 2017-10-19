@@ -1,10 +1,6 @@
-/**
- * Grunt nunjuckr plugin
- * https://github.com/denkwerk/grunt-nunjuckr
- */
-
-module.exports = function( grunt, options ) {
-    var ComponentsLoader = require( './nunjucks/components-loader.js' );
+module.exports = function (grunt, options) {
+    var ComponentsLoader = require('./nunjucks/components-loader.js');
+    var renderController = require('./nunjucks/render-controller');
 
     return {
         options: {
@@ -16,34 +12,17 @@ module.exports = function( grunt, options ) {
                 appPath: '<%= srcPath %>components/app/',
                 srcPath: '<%= srcPath %>',
                 imgPath: '<%= srcPath %>img/',
-                email: 'hello@kevinjohne.me',
                 production: true
             },
             autoescape: false,
-            iterator: function( render, options ) {
-                this.files.forEach(function( sources ) {
-                    sources.src.forEach(function(file) {
-                        var ext = sources.ext || options.ext || '.html';
-                        var data = options.data;
-                        var dest = sources.dest;
-
-                        render( file, dest, ext, data );
-                    }, this);
-                }, this);
-
-                options.data.projects.forEach(function( project ) {
-                    render(
-                        options.globals.basePath + 'site/dataPage/work-detail.njs',
-                        'dist/work/' + project.title.toLowerCase() + '.html',
-                        options.ext,
-                        project
-                    )
-                }, this);
+            iterator: function (render, options) {
+                renderController.renderDefaultPage(render, options, this.files);
+                renderController.renderProjectDetailPage(render, options);
             },
-            loader: new ComponentsLoader( options.srcPath ),
+            loader: new ComponentsLoader(options.srcPath),
             ext: '.html',
             data: {
-                articles: grunt.file.readJSON('src/data/articles.json'),
+                email: 'hello@kevinjohne.me',
                 projects: grunt.file.readJSON('src/data/projects.json')
             }
         },
@@ -68,7 +47,6 @@ module.exports = function( grunt, options ) {
                     appPath: '<%= srcPath %>components/app/',
                     srcPath: '<%= srcPath %>',
                     imgPath: '<%= srcPath %>img/',
-                    email: 'hello@kevinjohne.me',
                     production: false,
                     liveReloadPort: '<%= liveReloadPort %>'
                 }
