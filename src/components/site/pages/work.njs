@@ -11,23 +11,26 @@
 
 {% block content %}
     {% call modules.content.default() %}
-    <h1>Portfolio</h1>
-    <p>
-        In the last years I've been working as a frontend developer and was lucky enough to got involved in creative and
-        interesting projects. My work was dedicated to create living style guides, web apps, e-commerce platforms, and angular apps for international and German brands.
-    </p>
+        <h1>Portfolio</h1>
+        <section class="col-3">
+            <p>
+            In the last years I've been working as a frontend developer and was lucky enough to got involved in creative and
+            interesting projects. My work was dedicated to create living style guides, web apps, e-commerce platforms, and angular apps for international and German brands.
+            </p>
+        </section>
     {% endcall %}
-    {% call modules.imageGrid.default() %}
-    {% for project in projects %}
-        {% set link = "#work/" + project.title | lower | urlencode %}
-        {{ modules.imageGrid.gridCell( project.previewImg.src, project.title, link ) }}
-    {% endfor %}
 
-    {% set cols = 4 %}
-    {% set fillers = cols - 1 - (projects.length - 1) % cols %}
-    {% for i in range(0, fillers) %}
-        {{ modules.imageGrid.gridCellFiller() }}
-    {% endfor %}
+    {% call modules.imageGrid.default() %}
+        {% for project in projects %}
+            {% set link = "#work/" + project.title | lower | urlencode %}
+            {{ modules.imageGrid.gridCell( project.previewImg.src, project.title, link ) }}
+        {% endfor %}
+
+        {% set cols = 4 %}
+        {% set fillers = cols - 1 - (projects.length - 1) % cols %}
+        {% for i in range(0, fillers) %}
+            {{ modules.imageGrid.gridCellFiller() }}
+        {% endfor %}
     {% endcall %}
 
 {% endblock %}
