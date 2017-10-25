@@ -15,7 +15,7 @@
         <link rel="shortcut icon" href="/img/favicon.ico" />
     </head>
     <body>
-        <div class="site-body show-grid">
+        <div class="site-body">
             {% include modulesPath + '/header/header.njs' %}
 
                 <div class="site-page">
