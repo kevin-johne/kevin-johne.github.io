@@ -16,14 +16,20 @@
             "The app has several interactive elements: toggle events, display other months and years, showing the daily schedule and printing.",
             "After finishing the calendar, I have been continuing working for Ströer for platform maintenance. I soloed the frontend till couple of months later I established a team of three developer which I was leading."
         ],
-        "images": [
+        "features" : [
             {
-                "title": "calendar year view",
-                "src": "img/content/project/stroeer/year.jpg"
+                "title" : "Calendar",
+                "image": "img/content/project/stroeer/overview_2x.jpg",
+                "text": [
+                    "test"
+                ]
             },
             {
-                "title": "Report Page",
-                "src": "img/content/project/stroeer/report.jpg"
+                "title" : "Calendar",
+                "image": "img/content/project/stroeer/calendar_2x.jpg",
+                "text": [
+                    "test"
+                ]
             }
         ]
     },
@@ -79,7 +85,8 @@
         "descriptions": [
             "Here we have three projects for the client Gedore. Everything has been freshly designed and developed. A complete redesign - topic is BOLD. Starting off with the Gedore brand site, presenting news, product catalog, interactive storefinder and many more. Behind the scene is a Typo3 CMS to serve those sites. Website are easily created as the toolbox offers 20+ modules and more global patterns. All handcrafted by denkwerk.",
             "In the frontend department, we created a living style guide, based on the module catalog made by the UX and visual designer. This living style guide was a list of global definitions, patterns, modules, and example pages. As global definitions we specified general configuration which everything is based on later, containing i.e. font families, font sizes, colours, grid, indents, breakpoints, margins, and animation time functions. The beauty of these configurations is the possibility to alter the whole theme within seconds. That's how we created the Carolus brand site, only by changing colour, font families and other settings.",
-            "I'm very thank full to had a part of these projects, my UI easter egg which is the main navigation. Which has a drop down navigation on hover, a tricky piece. The problem? Not closing the submenu accidentally by hovering over another main menu entry when the mouse is one the way to a sub menu entry diagonally placed to its parent. Preventing this is usually solved with a time out which activates on leaving a main item. it solves the problem for fast user with a fast movement. Not only it doesn't work for slow mouse movements, as well it makes it not responsive. A mouse direction detection is used. Spanning a triangle from the current mouse position by entering a main menu entry to the top left and top right corner of the submenu. If the mouse is staying it the triangle, even hovering over another main menu entry, the submenu stays open. This technique is invented by Apple and used by amazon.com at their navigation.",
+            "I'm very thank full to had a part of these projects, my UI easter egg which is the main navigation. Which has a drop down navigation on hover, a tricky piece. The problem? Not closing the submenu accidentally by hovering over another main menu entry when the mouse is one the way to a sub menu entry diagonally placed to its parent. Preventing this is usually solved with a time out which activates on leaving a main item. it solves the problem for fast user with a fast movement. Not only it doesn't work for slow mouse movements, as well it makes it not responsive.",
+            "A mouse direction detection is used. Spanning a triangle from the current mouse position by entering a main menu entry to the top left and top right corner of the submenu. If the mouse is staying it the triangle, even hovering over another main menu entry, the submenu stays open. This technique is invented by Apple and used by amazon.com at their navigation.",
             "And lastly the Gedore shop, which is OXID and smarty templates. We created a living style guide, out of smarty modules and patterns, each can be easily included in to the page, and modified through parameters."
         ],
         "images": [
