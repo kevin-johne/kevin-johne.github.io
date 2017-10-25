@@ -4,7 +4,7 @@
     right: 0;
     left: 0;
     z-index: 100;
-    background: linear-gradient(180deg, $color-brand 0, $color-brand 6px, transparent 0);
+    background: linear-gradient(180deg, $color-brand 0, $color-brand 6px, transparent 0), $color-white;
 
     &__inner {
         @include container();
