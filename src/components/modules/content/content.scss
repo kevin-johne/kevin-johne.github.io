@@ -1,6 +1,18 @@
 .mod-content {
     @include container();
     margin: 60px auto 120px;
+
+    &__column {
+        column-count: 2;
+        column-gap: 50px;
+
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+
+        P:first-of-type {
+            margin-top: 0;
+        }
+    }
 }
 
 @include breakpoint($size: default, $inherit: small) {
@@ -8,6 +20,10 @@
         margin: 60px auto;
         .col-3 {
             width: 100%;
+        }
+
+        &__column {
+            column-count: 1;
         }
     }
 }
