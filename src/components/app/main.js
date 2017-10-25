@@ -23,7 +23,7 @@
 
             // Plugins
             load:               'vendor/plugins/load',
-
+            tns:                'vendor/tiny-slider',
             route:              'vendor/amd.route',
             renderer:           'services/renderer',
             fetcher:            'services/fetcher',
@@ -32,6 +32,12 @@
             //Polyfills
             fetch:              'vendor/polyfills/fetch'
 
+        },
+
+        shim: {
+            tns: {
+                exports: 'tns'
+            }
         }
     } );
 

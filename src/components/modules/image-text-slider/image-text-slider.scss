@@ -1,0 +1,103 @@
+.mod-image-text-slider {
+    height: 700px;
+
+    .tns-controls {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        &:focus {
+            outline: 0;
+        }
+
+        button {
+            @extend %button--small;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+
+    .tns-nav {
+        position: absolute;
+        right: 82px;
+        bottom: 30px;
+
+        button {
+
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: $color-gray-75;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            &.tns-nav-active {
+                background-color: $color-brand;
+            }
+        }
+    }
+
+    .tns-outer:nth-child(1) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 700px;
+        max-width: 1400px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        img {
+            height: 700px;
+            object-fit: cover;
+        }
+    }
+
+    .tns-outer:nth-child(2) {
+        position: relative;
+        padding: 20px !important;
+        width: 300px;
+        height: 400px;
+        top: 100px;
+        background-color: $color-white;
+        border-bottom: 3px solid $color-brand;
+    }
+
+    .text-slider__item {
+        h2 {
+            margin-top: 0;
+            margin-bottom: 2em;
+        }
+    }
+}
+
+@include breakpoint($size: default, $inherit: medium) {
+    .mod-image-text-slider {
+        height: auto;
+
+        .tns-outer:nth-child(1) {
+            position: relative;
+            height: auto;
+
+            img {
+                height: 400px;
+            }
+        }
+
+        .tns-outer:nth-child(2) {
+            width: 100%;
+            top: 0;
+        }
+    }
+}
