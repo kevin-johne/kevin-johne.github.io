@@ -2,33 +2,34 @@
     {
         "title": "Ströer",
         "year": "2016",
-        "duration": "6 months",
+        "duration": "9",
         "tags": [
             "AngularJS",
             "SCSS",
-            "Java"
+            "Struts",
+            "Java",
+            "Lead Frontend Developer"
         ],
         "previewImg": {
             "src": "img/content/project/preview/stroeer_preview_large.jpg"
         },
         "descriptions": [
-            "I started working on Ströer OMS because they were in need of a new calendar. OMS is an internal management platform for maintenance of their billboards. Which has a complex infrastructure. I was working mainly on the frontend, writing templates in Struts (Java template engine), displaying data with AngularJS, and styling with SCSS. Data was retrieved from an API with ajax calls.",
-            "The app has several interactive elements: toggle events, display other months and years, showing the daily schedule and printing.",
+            "I started working on Ströer OMS to develop a calendar app. OMS is an internal management platform for maintenance of their billboards. Which has a complex infrastructure. I was working mainly on the frontend, writing templates in Struts (Java template engine), displaying data with AngularJS, and styling with SCSS. Data was retrieved from an API with ajax calls.",
             "After finishing the calendar, I have been continuing working for Ströer for platform maintenance. I soloed the frontend till couple of months later I established a team of three developer which I was leading."
         ],
         "features" : [
             {
-                "title" : "Calendar",
+                "title" : "List Management",
                 "image": "img/content/project/stroeer/overview_2x.jpg",
                 "text": [
-                    "test"
+                    "OMS is a complex application with many different views for management of billboards and billboard events. Most of the views have a list of items in common. I implemented the UI for an advanced filter system including saving, loading, editing, and deleting of filter settings."
                 ]
             },
             {
                 "title" : "Calendar",
                 "image": "img/content/project/stroeer/calendar_2x.jpg",
                 "text": [
-                    "test"
+                    "The calendar is displaying management tasks of a selected billboard. The span goes from yearly to monthly for a more detailed view. Allowing users getting their daily tasks, and for the upper management a quick info about which tasks have been done in time."
                 ]
             }
         ]
@@ -36,7 +37,7 @@
     {
         "title": "Condor",
         "year": "2016",
-        "duration": "4 months",
+        "duration": "4",
         "tags": [
             "ARIA",
             "semantic",
@@ -52,18 +53,20 @@
             "A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers, and improved tags with aria attributes to describe the seat and prices.",
             "The changes we made until this point were usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to dark gray, blue got darker, active elements needing a highlighted border, and many other changes to increase contrast."
         ],
-        "images": [
+        "features" : [
             {
-                "src": "img/content/project/condor/enhanced-navigation.jpg",
-                "title": "new elements for better navigation"
+                "title" : "Helper Elements",
+                "image": "img/content/project/condor/helper-elements_2x.jpg",
+                "text": [
+                    "Extra elements helping to skip content, outlining focused elements, and buttons for closing layers. Skip links are only visible on focus."
+                ]
             },
             {
-                "src": "img/content/project/condor/semantic-elements.jpg",
-                "title": "semantically markup"
-            },
-            {
-                "src": "img/content/project/condor/contrast-ratio.gif",
-                "title": "contrast ratio"
+                "title" : "Semantic Markup",
+                "image": "img/content/project/condor/semantic-markup_2x.jpg",
+                "text": [
+                    "HTML5 provides a big range of tags to describe the visual content better. We took care that we use the right tags, and added when necessary ARIA attributes"
+                ]
             }
         ],
         "links": [
@@ -73,7 +76,7 @@
     {
         "title": "Gedore",
         "year": "2015",
-        "duration": "3 months",
+        "duration": "3",
         "tags": [
             "eCommerce",
             "frontend",
@@ -89,21 +92,27 @@
             "A mouse direction detection is used. Spanning a triangle from the current mouse position by entering a main menu entry to the top left and top right corner of the submenu. If the mouse is staying it the triangle, even hovering over another main menu entry, the submenu stays open. This technique is invented by Apple and used by amazon.com at their navigation.",
             "And lastly the Gedore shop, which is OXID and smarty templates. We created a living style guide, out of smarty modules and patterns, each can be easily included in to the page, and modified through parameters."
         ],
-        "images": [
+        "features" : [
             {
-                "src": "img/content/project/gedore/gedore.jpg"
+                "title" : "Style Guide",
+                "image": "img/content/project/gedore/styleguide_2x.jpg",
+                "text": [
+                    "Generating a living style guide using Grunt, Nunjucks, and SCSS. The output are HTML pages of general configurations, patterns, modules, and static content pages. Which were later implemented in Typo3."
+                ]
             },
             {
-                "src": "img/content/project/gedore/carolus.jpg"
+                "title" : "Variables",
+                "image": "img/content/project/gedore/theme_2x.jpg",
+                "text": [
+                    "Nunjucks and SCSS allowed us to use variables. Already in the early state, we established many variables for later configuration. When we needed to develop Carolus, this technique came very handy. A change in the configuration and we were done, except updating content."
+                ]
             },
             {
-                "src": "img/content/project/gedore/theme.jpg"
-            },
-            {
-                "src": "img/content/project/gedore/navigation.jpg"
-            },
-            {
-                "src": "img/content/project/gedore/shop.jpg"
+                "title" : "Smart Navigation",
+                "image": "img/content/project/gedore/navigation_2x.jpg",
+                "text": [
+                    "Invented by Apple to improve on OS X sub navigation. Amazon is using this technique to improve sub navigation as well. That's why I implemented this feature for Gedore on all three sites. No timeout, only protocol mouse movements to assume when to close and open a menu."
+                ]
             }
         ],
         "links": [
@@ -127,18 +136,20 @@
         "descriptions": [
             "New at denkwerk and had to step right into development of new modules for Zwilling. Later on I was in charge of setting up Grunt pipelines for recurring dev tasks. It was a project including Zwilling online shop, Zwilling, Miyabi, Demeyere and Staub brand website. I was helping out in all five projects to fix bugs and create minor modules."
         ],
-        "images": [
+        "features" : [
             {
-                "src": "img/content/project/zwilling/shop.jpg"
+                "title" : "New UI Components",
+                "image": "img/content/project/zwilling/modules_2x.jpg",
+                "text": [
+                    "As I can remember I was in charge for the show&hide pattern, longer paragraphs fading out, and a 'Read More' button added for expanding. A header module for special offers. As well as an language selector on the footer, which is used by all 5 websites."
+                ]
             },
             {
-                "src": "img/content/project/zwilling/miyabi.jpg"
-            },
-            {
-                "src": "img/content/project/zwilling/demeyere.jpg"
-            },
-            {
-                "src": "img/content/project/zwilling/staub.jpg"
+                "title" : "GruntJs Refactoring",
+                "image": "img/content/project/zwilling/task-runner_2x.jpg",
+                "text": [
+                    "Building projects, minifying code, and optimizing assets were part of thr GruntJS tasks. All described in one huge file, I took the refactoring in my hands, categorizing first tasks in frequency of use. At the end a folder hierarchy organized modified and new tasks. This improved the time of the build by 80%."
+                ]
             }
         ],
         "links": [
@@ -162,15 +173,20 @@
             "I enjoyed developing the mobile version of the donation platform. Happy animated illustrations and sounds effects making the purpose of the product easy to understand.",
             "The website applied for Red Dot Awards and won in 'Online', 'E-Commerce' and 'Social Responsibility'. Later the PAGE, a German magazine, which publishes articles about design, technology, and business, published an article about the platform New Baraka, it got printed in the 07.2016 issue."
         ],
-        "images": [
+        "features" : [
             {
-                "src": "img/content/project/baraka/1.jpg"
+                "title" : "Responsive website",
+                "image": "img/content/project/baraka/responsive_2x.jpg",
+                "text": [
+                    "We decided to make two websites, one for desktop/tablet and one for mobile. This reduced the footprint of data for the mobile website, as all the high resolutions animated images or sounds were not used for mobile. I maintained the desktop website, and developed from scratch mobile website."
+                ]
             },
             {
-                "src": "img/content/project/baraka/3.jpg"
-            },
-            {
-                "src": "img/content/project/baraka/4.jpg"
+                "title" : "The PAGE issue 07.2016",
+                "image": "img/content/project/baraka/magazine_2x.jpg",
+                "text": [
+                    "Give interview to PAGE reporter about animation technology we used to make website more alive."
+                ]
             }
         ],
         "links": [
@@ -180,11 +196,11 @@
     {
         "title": "Jacques Weindepot",
         "year": "2016",
-        "duration": "6 months",
+        "duration": "2 months",
         "tags": [
-            "Nunjucks",
-            "static",
-            "style guide"
+            "Mobile",
+            "Static",
+            "Living Style Guide"
         ],
         "previewImg": {
             "src": "img/content/project/preview/jacques_preview_large.jpg",
@@ -193,9 +209,13 @@
         "descriptions": [
             "At denkwerk, a cooperation with Jacques' IT in making a mobile website of the already existing desktop version. The UX team encounter the challenge of rebuild desktop features for the mobile context. We as frontend developer transferred the wire-frames to static HTML, JS, and CSS. Which later Jacques' IT integrated to their shop platform."
         ],
-        "images": [
+        "features" : [
             {
-                "src": "img/content/project/jacques/1.jpg"
+                "title" : "Mobile Website",
+                "image": "img/content/project/jacques/mobile_2x.jpg",
+                "text": [
+                    "Translating designs to HTML and CSS documents. All components are collected in a living style guide."
+                ]
             }
         ],
         "links": [
@@ -208,8 +228,8 @@
         "duration": "6 months",
         "tags": [
             "AngularJS",
-            "SCSS",
-            "HTML5"
+            "Mobile",
+            "Usability"
         ],
         "previewImg": {
             "src": "img/content/project/preview/car2go_preview_large.jpg"
@@ -217,9 +237,13 @@
         "descriptions": [
             "Car2Go commissioned denkwerk of improving the usability of the sign up form."
         ],
-        "images": [
+        "features" : [
             {
-                "src": "img/content/project/car2go/1.jpg"
+                "title" : "improved Usability",
+                "image": "img/content/project/car2go/mobile_2x.jpg",
+                "text": [
+                    "The car2go sign up form is an already well designed app. However, after conducting a usability test labor, some issues got reported. denkwerk took those issues in hand and we fixed them. It was done in reordering elements, shortening text, and minor design changes (pixel pushing)."
+                ]
             }
         ]
     }
