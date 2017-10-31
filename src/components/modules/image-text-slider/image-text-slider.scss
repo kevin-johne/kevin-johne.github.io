@@ -25,22 +25,19 @@
 
     .tns-nav {
         position: absolute;
-        right: 82px;
+        right: 72px;
         bottom: 30px;
 
         button {
-
-            width: 10px;
-            height: 10px;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
             border-radius: 100%;
             background-color: $color-gray-75;
+            background-clip: content-box;
 
             &:focus {
                 outline: 0;
-            }
-
-            &:not(:last-child) {
-                margin-right: 5px;
             }
 
             &.tns-nav-active {
@@ -49,7 +46,8 @@
         }
     }
 
-    .tns-outer:nth-child(1) {
+    .tns-outer:nth-child(1),
+    .image-slider:not(.tns-slider) {
         position: absolute;
         left: 0;
         right: 0;
@@ -64,7 +62,8 @@
         }
     }
 
-    .tns-outer:nth-child(2) {
+    .tns-outer:nth-child(2),
+    .text-slider:not(.tns-slider) {
         position: relative;
         padding: 20px !important;
         width: 300px;
@@ -77,7 +76,6 @@
     .text-slider__item {
         h2 {
             margin-top: 0;
-            margin-bottom: 2em;
         }
     }
 }
@@ -86,7 +84,8 @@
     .mod-image-text-slider {
         height: auto;
 
-        .tns-outer:nth-child(1) {
+        .tns-outer:nth-child(1),
+        .image-slider:not(.tns-slider) {
             position: relative;
             height: auto;
 
@@ -95,7 +94,8 @@
             }
         }
 
-        .tns-outer:nth-child(2) {
+        .tns-outer:nth-child(2),
+        .text-slider:not(.tns-slider) {
             width: 100%;
             top: 0;
         }
