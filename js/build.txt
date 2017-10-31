@@ -1,4 +1,8 @@
 
+sass/vendor/tiny-slider.css
+----------------
+sass/vendor/tiny-slider.css
+
 app/main.js
 ----------------
 app/vendor/polyfills/object.create.js

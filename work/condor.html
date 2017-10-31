@@ -17,7 +17,7 @@
         <link rel="shortcut icon" href="/img/favicon.ico" />
     </head>
     <body>
-        <div class="site-body show-grid">
+        <div class="site-body">
             
 
 
@@ -77,63 +77,90 @@
                 <div class="site-page">
                     
     
-    <div class="mod-image-text">
-        <div class="mod-image-text__header">
-            <h1>
-                Condor
-            </h1>
+    <div class="mod-content">
+        
+    <h1>
+        Condor
+    </h1>
+    
+        <ul class="tags">
             
-                <ul class="tags">
-                    
-                        <li title="tag ARIA">ARIA</li>
-                    
-                        <li title="tag semantic">semantic</li>
-                    
-                        <li title="tag screen reader">screen reader</li>
-                    
-                </ul>
+                <li title="tag ARIA">ARIA</li>
             
-        </div>
-        <div class="mod-image-text__image">
+                <li title="tag semantic">semantic</li>
             
-                <img src="/img/content/filler.jpg" data-src="/img/content/project/condor/enhanced-navigation.jpg" alt="" title="new elements for better navigation">
+                <li title="tag screen reader">screen reader</li>
             
-                <img src="/img/content/filler.jpg" data-src="/img/content/project/condor/semantic-elements.jpg" alt="" title="semantically markup">
-            
-                <img src="/img/content/filler.jpg" data-src="/img/content/project/condor/contrast-ratio.gif" alt="" title="contrast ratio">
-            
-        </div>
-        <div class="mod-image-text__text">
-            
-                <p>
-                    My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it.
+        </ul>
+    
+    <section class="mod-content__column">
+        
+            <p>
+                My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it.
+            </p>
+        
+            <p>
+                Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).
+            </p>
+        
+            <p>
+                Before making improvements in usability, we needed a tool to measure the current state and every incremental improvement we may make, to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release, and we used browser tools and screen readers to test our changes. Testing became time intensive through lag of tools.
+            </p>
+        
+            <p>
+                A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers, and improved tags with aria attributes to describe the seat and prices.
+            </p>
+        
+            <p>
+                The changes we made until this point were usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to dark gray, blue got darker, active elements needing a highlighted border, and many other changes to increase contrast.
+            </p>
+        
+    </section>
+    
+        <section>
+            <p>
+                    <a class="link" href="http://condor.com" target="_blank">
+                        visit condor.com
+                    </a><br/>
                 </p>
-            
-                <p>
-                    Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).
-                </p>
-            
-                <p>
-                    Before making improvements in usability, we needed a tool to measure the current state and every incremental improvement we may make, to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release, and we used browser tools and screen readers to test our changes. Testing became time intensive through lag of tools.
-                </p>
-            
-                <p>
-                    A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers, and improved tags with aria attributes to describe the seat and prices.
-                </p>
-            
-                <p>
-                    The changes we made until this point were usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to dark gray, blue got darker, active elements needing a highlighted border, and many other changes to increase contrast.
-                </p>
-            
-            
-                <div class="text__links">
-                    
-                        <a class="link" href="http://condor.com" target="_blank">visit condor.com</a><br/>
-                    
-                </div>
-            
-        </div>
+        </section>
+    
+    
     </div>
+
+    
+    
+        <div class="mod-image-text-slider auto-init" data-module="modules/image-text-slider/image-text-slider">
+            <div class="image-slider js-image-slider">
+                    <div class="image-slider__item">
+                        <picture>
+                            <source srcset="img/content/project/condor/helper-elements_2x.jpg"/>
+                            <img src="img/content/project/condor/helper-elements_2x.jpg"/>
+                        </picture>
+                    </div>
+                
+                    <div class="image-slider__item">
+                        <picture>
+                            <source srcset="img/content/project/condor/semantic-markup_2x.jpg"/>
+                            <img src="img/content/project/condor/semantic-markup_2x.jpg"/>
+                        </picture>
+                    </div>
+                </div>
+            <div class="text-slider js-text-slider">
+                
+                    <div class="text-slider__item">
+                        <h2>Helper Elements</h2>
+                        <p>Extra elements helping to skip content, outlining focused elements, and buttons for closing layers. Skip links are only visible on focus.</p>
+                    </div>
+                
+                    <div class="text-slider__item">
+                        <h2>Semantic Markup</h2>
+                        <p>HTML5 provides a big range of tags to describe the visual content better. We took care that we use the right tags, and added when necessary ARIA attributes</p>
+                    </div>
+                
+            </div>
+        </div>
+    
 
     
     <nav class="mod-pagination">
