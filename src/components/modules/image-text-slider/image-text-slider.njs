@@ -5,8 +5,8 @@
                 {%- for imageText in imageTextList %}
                     <div class="image-slider__item">
                         <picture>
-                            <source srcset="{{ imageText.image }}"/>
-                            <img src="{{ imageText.image }}"/>
+                            <source srcset="/{{ imageText.image }}"/>
+                            <img src="/{{ imageText.image }}"/>
                         </picture>
                     </div>
                 {% endfor -%}

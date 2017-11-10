@@ -5,7 +5,7 @@
                 <span class="mod-pagination__sub-title">prev project</span>
                 <span class="mod-pagination__title">{{ previous.title }}</span>
                 <span class="mod-pagination__img-container">
-                    <img data-src="{{ previous.previewImg.src }}" alt="{{ previous.title }}">
+                    <img data-src="/{{ previous.previewImg.src }}" alt="{{ previous.title }}">
                 </span>
             </a>
         {% endif %}
@@ -15,7 +15,7 @@
                 <span class="mod-pagination__sub-title">next project</span>
                 <span class="mod-pagination__title">{{ next.title }}</span>
                 <span class="mod-pagination__img-container">
-                    <img data-src="{{ next.previewImg.src }}" alt="{{ next.title }}">
+                    <img data-src="/{{ next.previewImg.src }}" alt="{{ next.title }}">
                 </span>
             </a>
         {% endif %}
