@@ -41,6 +41,16 @@
                         that.notifyAnalitics();
                     });
 
+                    route('/', function () {
+                        that.root = 'home';
+                        fetcher.fetch(that.root + '.html').then(function (res) {
+                            renderer.render(that.contentContainer, res);
+                        });
+
+                        that.triggerRouteUpdate();
+                        that.notifyAnalitics();
+                    })
+
                 },
 
                 triggerRouteUpdate: function() {
