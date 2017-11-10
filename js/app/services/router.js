@@ -1,1 +1,62 @@
-!function(t,e,n){"use strict";e(["fetcher","route","renderer","utils/event"],function(e,n,o,i){return{isGlobal:!0,ready:function(){this.setRoutes(),this.contentContainer=document.querySelector(".site-page"),n.start(!0)},setRoutes:function(){var t=this;n("/*/*",function(n,i){t.root=n,e.fetch(n+"/"+i+".html").then(function(e){o.render(t.contentContainer,e)}),t.triggerRouteUpdate(),t.notifyAnalitics()}),n("/*",function(n){t.root=n,e.fetch(n+".html").then(function(e){o.render(t.contentContainer,e)}),t.triggerRouteUpdate(),t.notifyAnalitics()})},triggerRouteUpdate:function(){i.trigger("route/update",[this.getRoot()])},getRoot:function(){return this.root},notifyAnalitics:function(){"function"==typeof t.ga&&t.ga("send","pageview")}}})}(this,this.define);
+( function( window, define, undefined ) {
+    'use strict';
+
+    define(
+        [
+            'fetcher',
+            'route',
+            'renderer',
+            'utils/event'
+        ],
+        function( fetcher, route, renderer, event ) {
+            return {
+                isGlobal: true,
+
+                ready: function() {
+                    this.setRoutes();
+                    this.contentContainer = document.querySelector( '.site-page' );
+                    route.start( true );
+                },
+
+                setRoutes: function () {
+                    var that = this;
+
+                    route('/*/*', function(root, page) {
+                        that.root = root;
+                        fetcher.fetch(root + '/' + page + '.html').then(function (res) {
+                            renderer.render(that.contentContainer, res);
+                        });
+
+                        that.triggerRouteUpdate();
+                        that.notifyAnalitics();
+                    });
+
+                    route('/*', function (collection) {
+                        that.root = collection;
+                        fetcher.fetch(collection + '.html').then(function (res) {
+                            renderer.render(that.contentContainer, res);
+                        });
+
+                        that.triggerRouteUpdate();
+                        that.notifyAnalitics();
+                    });
+
+                },
+
+                triggerRouteUpdate: function() {
+                    event.trigger( 'route/update', [ this.getRoot() ] );
+                },
+
+                getRoot: function() {
+                    return this.root;
+                },
+
+                notifyAnalitics: function() {
+                    if( typeof(window.ga) === 'function') {
+                        window.ga('send','pageview');
+                    }
+                }
+            };
+        }
+    );
+} )( this, this.define );

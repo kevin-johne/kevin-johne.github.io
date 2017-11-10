@@ -1,1 +1,60 @@
-!function(t,e){e(["tns","utils/event","utils/helper"],function(t,e,i){return{elements:{},defaults:function(){return{imageSlider:"js-image-slider",textSlider:"js-text-slider"}},ready:function(t,e){this.options=i.extend(this.defaults(),e),this.elements.root=t,this.setImageSlider(this.elements.root.querySelector("."+this.options.imageSlider)),this.setTextSlider(this.elements.root.querySelector("."+this.options.textSlider)),this.initSliderEvents()},setImageSlider:function(e){this.imageSlider=t({container:e,items:1,nav:!1,controls:!1,lazyload:!0,rewind:!0})},setTextSlider:function(e){this.textSlider=t({container:e,items:1,rewind:!0,controlsText:["",'<span class="icon--arrow"></span>']})},initSliderEvents:function(){var t=this,e=this.textSlider.getInfo();e.nextButton.addEventListener("click",function(){t.imageSlider.goTo("next")}),e.navContainer.addEventListener("click",function(e){var i=e.target.getAttribute("data-nav");i>=0&&t.imageSlider.goTo(i)})}}})}(this.window,this.define);
+(function (window, define) {
+    define(['tns', 'utils/event', 'utils/helper'],
+        function (tns, event, helper) {
+            return {
+                elements: {},
+
+                defaults: function () {
+                    return {
+                        imageSlider: 'js-image-slider',
+                        textSlider: 'js-text-slider'
+                    };
+                },
+
+                ready: function (element, options) {
+                    this.options = helper.extend(this.defaults(), options);
+                    this.elements.root = element;
+
+                    this.setImageSlider(this.elements.root.querySelector('.' + this.options.imageSlider));
+                    this.setTextSlider(this.elements.root.querySelector('.' + this.options.textSlider));
+
+                    this.initSliderEvents();
+                },
+
+                setImageSlider: function( container ) {
+                    this.imageSlider = tns({
+                        container: container,
+                        items: 1,
+                        nav: false, // no dots
+                        controls: false, //no arrows
+                        lazyload: true,
+                        rewind: true
+                    })
+                },
+
+                setTextSlider: function( container ) {
+                    this.textSlider = tns({
+                        container: container,
+                        items: 1,
+                        rewind: true,
+                        controlsText: ['', '<span class="icon--arrow"></span>']
+                    });
+                },
+
+                initSliderEvents: function () {
+                    var that = this;
+                    var textSliderInfo = this.textSlider.getInfo();
+                    textSliderInfo.nextButton.addEventListener( 'click', function() {
+                        that.imageSlider.goTo('next');
+                    });
+
+                    textSliderInfo.navContainer.addEventListener( 'click', function( event ) {
+                        var index = event.target.getAttribute('data-nav');
+                        if (index >= 0) {
+                            that.imageSlider.goTo(index);
+                        }
+                    });
+                }
+            };
+        });
+})(this.window, this.define);
