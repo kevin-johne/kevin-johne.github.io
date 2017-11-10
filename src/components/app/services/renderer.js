@@ -1,6 +1,6 @@
 (function (window, define, undefined) {
-    define(['services/imgloader'],
-        function (imgloader) {
+    define(['services/imgloader', 'services/url-transform'],
+        function (imgloader, urlTransform) {
             return {
                 /**
                  *
@@ -14,6 +14,7 @@
                         dom.innerHTML = this.getSitePage(tempDoc).innerHTML;
                         document.title = this.getTitle(tempDoc).innerText;
                         imgloader.load();
+                        urlTransform.transform(dom);
                         window.App.loader.initModules(dom);
                         this.scrollToTop();
                     }
