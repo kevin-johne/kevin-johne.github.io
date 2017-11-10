@@ -22,8 +22,10 @@ app/vendor/polyfills/fetch.js
 app/services/fetcher.js
 app/vendor/amd.route.js
 app/services/imgloader.js
+app/services/url-transform.js
 app/services/renderer.js
 app/services/router.js
 load!services/router:init
 load!services/imgloader:init
+load!services/url-transform:init
 app/main.js
