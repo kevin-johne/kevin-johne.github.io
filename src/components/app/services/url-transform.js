@@ -26,7 +26,7 @@
                 },
 
                 getTransformedUrl: function(url) {
-                    return '#' + url.split('.html')[0];
+                    return '#' + url.slice(1).split('.html')[0];
                 },
 
                 isExternal: function(href) {
