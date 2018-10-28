@@ -2,9 +2,11 @@
  * Grunt Sass plugin
  * https://github.com/sindresorhus/grunt-sass
  */
+const sass = require('node-sass');
 
 module.exports = {
     options: {
+        implementation: sass,
         importer: require( 'node-sass-globbing' ),
         style: 'expanded',
         require: 'susy'
