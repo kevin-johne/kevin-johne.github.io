@@ -13,6 +13,7 @@
     <section class="mod-features">
         <h1>
             Freelance Frontend Developer<br/>
+            Available for <a class="link" href="mailto:{{ email }}">contract</a> work
         </h1>
         <section class="feature">
             <img src="/img/content/styleguide.svg" alt="living style guide">
