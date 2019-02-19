@@ -1,5 +1,44 @@
 [
     {
+        "title": "Calvin Klein",
+        "year": "2019",
+        "duration": "3",
+        "tags": [
+            "React",
+            "SCSS",
+            "Webpack",
+            "Redux"
+        ],
+        "previewImg": {
+            "src": "img/content/project/preview/calvin_preview.jpg"
+        },
+        "descriptions": [
+            "A short recap of the replatforming and redesign of Calvin Klein to a new stack within 3 months. We moved the code base from JSP to React and Redux. JSP is the frontend language for a monolithic Java web application, the technology has struggles meeting the standards of a modern e-Commerce platform, especially with APIs with JSON response. Redux is perfect in handling data in a headless manner and tunnelling the information to the react components.",
+            "When the application is loaded the majority of data is in the html page attached to the window object, like store, product, navigation, and internationalisation and other cacheable data, this saves few XHR requests. After page loaded, repeatedly changing information like user info, basket, product stock is fetched asynchronously.",
+            "This was the second commercial project where I used React. I enjoy the way components are written, because the structure of the application takes a natural and extendable flow. A high priority was to make the components dummy without internal state, but merely pass down properties - following this, components stay simple and removes the need of documentation. The components are easy replaceable and maintainable.",
+            "Now you wonder where the state is stored, when components are dummy and receiving only props. Firstly we have few components which have internal state, like a toggle, etc. However we tried to store the state in Redux slices, there are approx. 10 of them. We had slices for authentication, basket, products, navigation, analytics, internationalisation, and more.",
+            "Slices are a neat way of housekeeping the state, I am a fan of keeping them flat and broad. So that the dependencies getting not deep and complex. Just thing of object spread how straight forward it is when everything is one level deep. My rule of thumb is max 2 levels deep, is it more than that it signals and increase in dependency and complexity, and it is a good idea to separate some of the data in a new slice. Another advantage is that a shallow store will not update the component as often as a store with a deep object, because the \"subscribed\" component will only \"watch\" just one value and not an whole object where the reconciliation flags an false positive of change. This means the object looks the same but it isn't as it got spread but with the same values. A shallow comparison is always faster than a holistic comparison."
+        ],
+        "features" : [
+            {
+                "title" : "redesign",
+                "image": "img/content/project/calvin-klein/overview_x2.jpg",
+                "text": [
+                    "the redesign was done through out the main shopping areas at the same time. We improved pages for the product list, product detail, shopping bag and the checkout. Other pages like account pages got a little update as they have now the new header and footer as well."
+                ]
+            },
+            {
+                "title" : "Smart Navigation",
+                "image": "img/content/project/calvin-klein/navigation_x2.jpg",
+                "text": [
+                    "We improved the navigation by reading the mouse to predict the users pattern. For example The mouse is moved over Women, and the user wants to Kids, the cursor would go above Men. We not choose the use the timeout trick because of the caveat of a slower UI. Same as for the <a class='link' href='/#work/gedore'>Gedore</a> project."
+                ]
+            }
+        ],
+        "links": [
+            "calvinklein.co.uk"
+        ]
+    },{
         "title": "Ströer",
         "year": "2016",
         "duration": "9",
@@ -32,45 +71,6 @@
                     "The calendar is displaying management tasks of a selected billboard. The span goes from yearly to monthly for a more detailed view. Allowing users getting their daily tasks, and for the upper management a quick info about which tasks have been done in time."
                 ]
             }
-        ]
-    },
-    {
-        "title": "Condor",
-        "year": "2016",
-        "duration": "4",
-        "tags": [
-            "ARIA",
-            "semantic",
-            "screen reader"
-        ],
-        "previewImg": {
-            "src": "img/content/project/preview/condor_preview_large.jpg"
-        },
-        "descriptions": [
-            "My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it.",
-            "Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).",
-            "Before making improvements in usability, we needed a tool to measure the current state and every incremental improvement we may make, to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release, and we used browser tools and screen readers to test our changes. Testing became time intensive through lag of tools.",
-            "A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers, and improved tags with aria attributes to describe the seat and prices.",
-            "The changes we made until this point were usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to dark gray, blue got darker, active elements needing a highlighted border, and many other changes to increase contrast."
-        ],
-        "features" : [
-            {
-                "title" : "Helper Elements",
-                "image": "img/content/project/condor/helper-elements_2x.jpg",
-                "text": [
-                    "Extra elements helping to skip content, outlining focused elements, and buttons for closing layers. Skip links are only visible on focus."
-                ]
-            },
-            {
-                "title" : "Semantic Markup",
-                "image": "img/content/project/condor/semantic-markup_2x.jpg",
-                "text": [
-                    "HTML5 provides a big range of tags to describe the visual content better. We took care that we use the right tags, and added when necessary ARIA attributes"
-                ]
-            }
-        ],
-        "links": [
-            "condor.com"
         ]
     },
     {
@@ -119,6 +119,45 @@
             "gedore.com",
             "carolus.de",
             "de.gedore-shop.com"
+        ]
+    },
+    {
+        "title": "Condor",
+        "year": "2016",
+        "duration": "4",
+        "tags": [
+            "ARIA",
+            "semantic",
+            "screen reader"
+        ],
+        "previewImg": {
+            "src": "img/content/project/preview/condor_preview_large.jpg"
+        },
+        "descriptions": [
+            "My journey with Condor airlines was a pleasant one. I took the chance to teach myself a new skill, many developers don't even think or know about it.",
+            "Condor part of the Thomas Cook Group is offering a service of public airline booking. In the UK and US it is a law to meet the standard of WCAG level AA for those systems. When this rule got released the booking engine and website needed to be enhanced for people with disabilities till the end of 2015(US) and 2016(UK).",
+            "Before making improvements in usability, we needed a tool to measure the current state and every incremental improvement we may make, to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release, and we used browser tools and screen readers to test our changes. Testing became time intensive through lag of tools.",
+            "A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers, and improved tags with aria attributes to describe the seat and prices.",
+            "The changes we made until this point were usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to dark gray, blue got darker, active elements needing a highlighted border, and many other changes to increase contrast."
+        ],
+        "features" : [
+            {
+                "title" : "Helper Elements",
+                "image": "img/content/project/condor/helper-elements_2x.jpg",
+                "text": [
+                    "Extra elements helping to skip content, outlining focused elements, and buttons for closing layers. Skip links are only visible on focus."
+                ]
+            },
+            {
+                "title" : "Semantic Markup",
+                "image": "img/content/project/condor/semantic-markup_2x.jpg",
+                "text": [
+                    "HTML5 provides a big range of tags to describe the visual content better. We took care that we use the right tags, and added when necessary ARIA attributes"
+                ]
+            }
+        ],
+        "links": [
+            "condor.com"
         ]
     },
     {
@@ -220,31 +259,6 @@
         ],
         "links": [
             "www.jacques.de"
-        ]
-    },
-    {
-        "title": "Car2Go",
-        "year": "2016",
-        "duration": "6 months",
-        "tags": [
-            "AngularJS",
-            "Mobile",
-            "Usability"
-        ],
-        "previewImg": {
-            "src": "img/content/project/preview/car2go_preview_large.jpg"
-        },
-        "descriptions": [
-            "Car2Go commissioned denkwerk of improving the usability of the sign up form."
-        ],
-        "features" : [
-            {
-                "title" : "improved Usability",
-                "image": "img/content/project/car2go/mobile_2x.jpg",
-                "text": [
-                    "The car2go sign up form is an already well designed app. However, after conducting a usability test labor, some issues got reported. denkwerk took those issues in hand and we fixed them. It was done in reordering elements, shortening text, and minor design changes (pixel pushing)."
-                ]
-            }
         ]
     }
 ]

@@ -14,13 +14,23 @@
     <h1>Résumé</h1>
     <h2>Work Experience</h2>
     <p>
+        2019<br/>
+        Re-platform <a class="link" target="_blank" href="http://www.calvinklein.es">Calvin Klein</a> from JSP to React
+    </p>
+    <p>
+        2018<br/>
+        Re-platform <a class="link" target="_blank" href="http://www.tommy.pl">Tommy Hilfiger</a> from JSP to React
+    </p>
+    <p>
+        late 2017<br/>
+        A/B Testing with Optimizely for Brands like <a class="link" target="_blank" href="http://www.made.com">Made</a> and <a class="link" target="_blank" href="http://www.beauybay.com">Beauty Bay</a>
+    <p>
         2017<br/>
-        Angular JS engineer at <a class="link" target="_blank" href="http://www.affectv.co.uk?ref=kevin-johne.github.com">Affectv</a>
+        Angular engineer at <a class="link" target="_blank" href="http://www.affectv.co.uk">Affectv</a>
     </p>
     <p>
         2015 &mdash; 2017<br/>
-        specialist frontend developer at <a class="link" target="_blank"
-                                            href="http://www.denkwerk.com?ref=kevin-johne.github.com">denkwerk</a>
+        specialist frontend developer at <a class="link" target="_blank" href="http://www.denkwerk.com">denkwerk</a>
     </p>
     <p>
         2012 &mdash; 2015<br/>
@@ -28,8 +38,12 @@
     </p>
     <p>
         2011<br/>
-        intern web developer at <a class="link" target="_blank"
-                                   href="http://www.konsultaner.de?ref=kevin-johne.github.com">Konsultaner</a>
+        intern web developer at <a class="link" target="_blank" href="http://www.konsultaner.de">Konsultaner</a>
+    </p>
+    <h2>Talks</h2>
+    <p>
+        2018<br>
+        <a class="link" target="_blank" href="https://youtu.be/Pkgjyn5Nw2A">Introduction to WebAssembly</a> at Salmon frontend meet up
     </p>
     <h2>Education</h2>
     <p>

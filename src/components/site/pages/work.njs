@@ -15,7 +15,7 @@
         <section class="col-3">
             <p>
             In the last years I've been working as a frontend developer and was lucky enough to got involved in creative and
-            interesting projects. My work was dedicated to create living style guides, web apps, e-commerce platforms, and angular apps for international and German brands.
+            interesting projects. My work was dedicated to create living style guides, web apps, e-commerce platforms for international brands.
             </p>
         </section>
     {% endcall %}

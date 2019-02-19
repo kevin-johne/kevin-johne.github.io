@@ -46,12 +46,10 @@
             <h2>I do software engineering,<br/> your business will love</h2>
             <p>
                 Are you planning a frontend application mainly written in JavaScript? Let me help you structure, define
-                core functionality or extend your modules. I have four years of professional experience in developing with JavaScript,
-                mainly ECMAScript v5 or using AngularJS v1.6.
+                core functionality or extend your modules. I have 6 years of professional experience in developing with JavaScript.
             </p>
             <p>
-                Recently I was helping Ströer and Affectv extending their internal AngularJS application.
-                Improving performance and developing new modules.
+                My current working dev stack boiled down to the essentials are React, Redux, vanilla JavaScript, SCSS, Webpack, Git, and WebStorm.
             </p>
         </section>
 
