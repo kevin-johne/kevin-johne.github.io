@@ -42,7 +42,7 @@
     } );
 
     define( [
-        'utils/core'
+        'old/src/components/app/utils/core'
     ], function( App ) {
 
         // Scope for load plugin

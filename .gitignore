@@ -18,11 +18,11 @@ node_modules
 artifacts
 
 # sass-globbing
-src/components/sass/import
+old/src/components/sass/import
 
 # lodash build files
-src/components/app/vendor/lodash.build.js
-src/components/app/vendor/lodash.build.min.js
+old/src/components/app/vendor/lodash.build.js
+old/src/components/app/vendor/lodash.build.min.js
 
 # IDEA
 .idea

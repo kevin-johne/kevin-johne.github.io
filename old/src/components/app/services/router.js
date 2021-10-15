@@ -3,10 +3,10 @@
 
     define(
         [
-            'fetcher',
-            'route',
-            'renderer',
-            'utils/event'
+          'old/src/components/app/services/fetcher',
+          'route',
+          'renderer',
+          'utils/event'
         ],
         function( fetcher, route, renderer, event ) {
             return {
