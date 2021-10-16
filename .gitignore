@@ -1,25 +1,8 @@
-# Logs
 logs
 *.log
-
-# Temporary files
 .DS_Store
-
-# Node modules
-node_modules
-
-# Sass cache
-.sass-cache
-
-# Grunt intermediate storage
-.grunt
-
-# Artifacts folder with generated content
-artifacts
-
 # sass-globbing
 old/src/components/sass/import
-
 # lodash build files
 old/src/components/app/vendor/lodash.build.js
 old/src/components/app/vendor/lodash.build.min.js
@@ -28,11 +11,7 @@ old/src/components/app/vendor/lodash.build.min.js
 .idea
 .vs
 
-# netbeans
-nbproject/private/private.properties
-nbproject/project.properties
-nbproject/project.xml
-nbproject/private/private.xml
+node_modules/
+.cache/
+public
 
-#dist
-dist
