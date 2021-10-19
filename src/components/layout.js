@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "../modules/header";
 import {GlobalStyle} from "../setting/global-style";
 import {breakpoint, breakpointsMap} from "../utils/breakpoints";
+import Footer from "../modules/footer";
 
 const Page = styled.div`
     width: 90%;
@@ -22,6 +23,7 @@ const Layout = ({ children }) => (
       <Page>
         {children}
       </Page>
+      <Footer/>
   </>
 )
 

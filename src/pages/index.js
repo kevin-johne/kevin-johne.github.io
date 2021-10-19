@@ -7,8 +7,7 @@ import Layout from "../components/layout";
 import {Feature, ModFeature} from "../modules/features";
 import {Img} from "../patterns/img";
 import {InlineLink} from "../patterns/link";
-
-const email = "hello@kevin-johne.me";
+import {email} from "../setting/data";
 
 const IndexPage = () => {
   return (

@@ -33,8 +33,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: ${font.header};
     }
 
-    h1,
-    .display {
+    h1 {
         font-family: ${font.display};
         color: ${colorGray20};
         font-weight: bold;

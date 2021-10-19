@@ -17,7 +17,7 @@ export const ArrowRightIcon = styled(Icon)`
 const socialMediaColors = {
   twitter: "#00c7ff",
   soundcloud: colorOrange,
-  linkedIn: "#0a85ca",
+  linkedin: "#0a85ca",
   github: "purple",
 }
 
