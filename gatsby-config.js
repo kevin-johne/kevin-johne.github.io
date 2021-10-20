@@ -1,8 +1,6 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "http://www.kevin-johne.me",
-    title: "Kevin Johne - Freelance Frontend Developer",
-    description: "Kevin Johne a freelance frontend developer. He does living style guides, responsive websites, and software engineering. Available for contract work"
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -10,6 +8,19 @@ module.exports = {
     "gatsby-plugin-svgr",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve(`./src/templates/layout.js`),
+      },
+    },
+    "gatsby-transformer-json",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./src/data/",
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

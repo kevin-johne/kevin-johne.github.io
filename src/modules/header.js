@@ -5,13 +5,13 @@ import {LogoLink, NavItem, NavLink, NavList, SiteHeader, SiteHeaderInner} from "
 const items = [
   {
     text: 'Work',
-    href: 'work'
+    href: '/work'
   }, {
     text: 'About',
-    href: 'about'
+    href: '/about'
   }, {
     text: 'Résumé',
-    href: 'resume'
+    href: '/resume'
   }
 ]
 

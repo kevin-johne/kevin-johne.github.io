@@ -14,6 +14,6 @@
 
 {% macro gridCellFiller() %}
     <div class="grid__cell grid__cell--filler">
-        <img src="/img/content/filler.jpg" data-src="img/content/filler.jpg" alt="nothing hear">
+        <img src="/img/content/filler.jpg" data-src="img/content/filler.jpg" alt="nothing here">
     </div>
 {% endmacro %}

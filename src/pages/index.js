@@ -3,15 +3,20 @@ import * as React from "react";
 import responsiveImage from "../images/content/responsive.svg";
 import styleguideImage from "../images/content/styleguide.svg";
 import engineeringImage from "../images/content/engineering.svg";
-import Layout from "../components/layout";
+import Layout from "../templates/layout";
 import {Feature, ModFeature} from "../modules/features";
 import {Img} from "../patterns/img";
 import {InlineLink} from "../patterns/link";
 import {email} from "../setting/data";
+import {Helmet} from "react-helmet";
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <>
+      <Helmet>
+        <meta name="description" content="Kevin Johne a freelance frontend developer. He does living style guides, responsive websites, and software engineering. Available for contract work"/>
+        <title>Kevin Johne - Freelance Frontend Developer</title>
+      </Helmet>
       <ModFeature>
         <h1>
           Freelance Frontend Developer<br/>
@@ -58,7 +63,7 @@ const IndexPage = () => {
         </Feature>
 
       </ModFeature>
-    </Layout>
+  </>
   )
 }
 

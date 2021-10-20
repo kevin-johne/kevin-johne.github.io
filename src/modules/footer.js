@@ -12,7 +12,7 @@ import {colorBrand, colorGray75, colorGray93} from "../setting/theme";
 import {SocialMediaLink} from "../patterns/icon";
 import {InlineLink} from "../patterns/link";
 import {Display} from "../patterns/typo";
-import {Container} from "../patterns/Flex";
+import {Container} from "../patterns/flex";
 
 const Wrapper = styled.footer`
   background-color: ${colorGray93};
