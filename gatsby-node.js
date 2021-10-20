@@ -1,12 +1,29 @@
-const projects = require("./src/data/projects.json");
+const path = require("path")
 
-exports.createPages = async ({ actions: { createPage } }) => {
+exports.createPages = async ({graphql,  actions: { createPage } }) => {
 
-  projects.forEach(project => {
+  const result = await graphql(`
+    query {
+      allProjectsJson {
+        nodes {
+          id
+          title
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
+
+  const projects = result.data.allProjectsJson.nodes
+
+  projects.forEach(( project ) => {
     createPage({
       path: `/work/${project.title.toLowerCase()}/`,
-      component: require.resolve("./src/templates/project.js"),
-      context: { project },
+      component: path.resolve(`./src/templates/project.js`),
+      context: { id: project.id },
     })
   })
 

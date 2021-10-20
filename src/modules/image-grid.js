@@ -132,7 +132,7 @@ const GridCell = styled(Link)`
 const ImageGrid = ({ items }) => {
   return (
     <Wrapper>
-      {items.map(({title, previewImg}) => {
+      {items && items.map(({title, previewImg}) => {
         return (
           <GridCell to={`/work/${title.toLowerCase()}`} src={previewImg.src.publicURL}>
               <Img alt={title} src={previewImg.src.publicURL}/>
