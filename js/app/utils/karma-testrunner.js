@@ -1,1 +1,0 @@
-!function(t,i,s,e){"use strict";i([],function(){var i=t.__karma__,e=[];for(var n in i.files)/\.spec\.js$/.test(n)&&e.push(n);s(e,function(){i.start()})})}(this,this.define,this.require);

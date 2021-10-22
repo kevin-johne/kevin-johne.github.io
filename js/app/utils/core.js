@@ -1,1 +1,0 @@
-!function(i,t,e,n,r){"use strict";t(["utils/loader"],function(i){var t={init:function(){this.loader=new i({globalScope:t,autoInitSelector:".auto-init"})}};return t})}(this,this.define,this.require,this.requirejs);

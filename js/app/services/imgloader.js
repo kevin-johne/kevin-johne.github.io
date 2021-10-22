@@ -1,1 +1,0 @@
-!function(t,i,a){"use strict";i([],function(){return{isGlobal:!0,ready:function(){this.load()},load:function(){var t=function(){this.removeAttribute("data-src"),this.classList.add("img--loaded")};[].forEach.call(document.querySelectorAll("img[data-src]"),function(i){i.setAttribute("src",i.getAttribute("data-src")),i.onload=t})}}})}(this,this.define);

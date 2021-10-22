@@ -1,1 +1,0 @@
-!function(e,t,i,n){"use strict";t(["utils/core","utils/helper"],function(e,t){var i={example:"foo"},n={DEBUG:!0,modules:[],dev:!0,set:function(e,t){i[e]=t},get:function(e){return i[e]}};return t.extend(e,{config:n}),e.config})}(this,this.define,this.require);
