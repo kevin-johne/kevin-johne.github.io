@@ -1,12 +1,12 @@
 import {Link as GatsbyLink} from "gatsby";
 import {colorBrand, colorGray20, colorGray75, colorOrange, colorTwitter, colorWhite, font} from "../setting/theme";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 const border = "2px";
 const timeFuncEaseIn = "cubic-bezier(0.7, 0, 0.3, 1)";
 
-export const InlineLink = styled(GatsbyLink)`
-  color: ${colorGray20};
+export const InlineLinkStyle = css`
+color: ${colorGray20};
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -41,6 +41,9 @@ export const InlineLink = styled(GatsbyLink)`
       width: 30%;
       transition-timing-function: ease-in;
   }
+`
+export const InlineLink = styled(GatsbyLink)`
+  ${InlineLinkStyle}
 `;
 
 const Cta = styled(InlineLink)`

@@ -1,6 +1,7 @@
 import {createGlobalStyle} from "styled-components";
 import {colorBrand, colorGray20, colorGray25, font} from "./theme";
 import {breakpoint, breakpointsMap} from "../utils/breakpoints";
+import {InlineLinkStyle} from "../patterns/link";
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -26,6 +27,10 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
       text-decoration: none;
+    }
+
+    a.link {
+      ${InlineLinkStyle}
     }
 
     h2,
