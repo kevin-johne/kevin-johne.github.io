@@ -28,6 +28,7 @@ const About = () => (
           Currently I am available for contract work. I am looking forward to be in a multidisciplinary
           environment with a great focus on web design and UX.
         </p>
+
       </Column>
     </Content>
   </>
