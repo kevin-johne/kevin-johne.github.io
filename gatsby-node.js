@@ -19,11 +19,15 @@ exports.createPages = async ({graphql,  actions: { createPage } }) => {
 
   const projects = result.data.allProjectsJson.nodes
 
-  projects.forEach(( project ) => {
+  projects.forEach(( project, index ) => {
     createPage({
       path: `/work/${project.title.toLowerCase()}/`,
       component: path.resolve(`./src/templates/project.js`),
-      context: { id: project.id },
+      context: {
+        id: project.id,
+        prevId: projects[index - 1] ? projects[index - 1].id : null,
+        nextId: projects[index + 1] ? projects[index + 1].id : null,
+      },
     })
   })
 

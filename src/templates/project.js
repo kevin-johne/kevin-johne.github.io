@@ -5,8 +5,9 @@ import Tags from "../patterns/tags";
 import {InlineLink} from "../patterns/link";
 import Slider from "../modules/slider";
 import {graphql} from "gatsby";
+import ProjectPagination from "../modules/project-pagination";
 
-const Project = ({data : {projectsJson :project}}) => {
+const Project = ({data : {current :project, next, previous}}) => {
   return (
     <>
       <Helmet>
@@ -23,13 +24,14 @@ const Project = ({data : {projectsJson :project}}) => {
         {project.links && project.links.map(link => <p><InlineLink as="a" href={`https://${link}`} target="_blank">visit {link}</InlineLink></p>)}
       </Content>
       <Slider slides={project.features}/>
+      <ProjectPagination next={next} previous={previous}/>
     </>
   )
 }
 
 export const pageQuery = graphql`
-  query project($id: String){
-    projectsJson(id: { eq: $id }) {
+  query project($id: String, $prevId: String, $nextId: String){
+    current: projectsJson(id: { eq: $id }) {
       title
       descriptions
       year
@@ -39,7 +41,27 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+      }
+    }
+    previous: projectsJson(id: { eq: $prevId}) {
+      title
+      previewImg{
+        src {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+      }
+    }
+    next: projectsJson(id: { eq: $nextId}) {
+      title
+      previewImg{
+        src {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
       }
