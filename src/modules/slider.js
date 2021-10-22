@@ -7,6 +7,7 @@ import {CssIcon} from "../patterns/icon";
 import {ButtonSmallStyle} from "../patterns/button";
 import arrow from '../images/icons/arrow-right.svg';
 import {breakpoint, breakpointsMap} from "../utils/breakpoints";
+import { tns } from 'tiny-slider/src/tiny-slider';
 
 
 const Wrapper = styled.div`
@@ -114,9 +115,7 @@ const Wrapper = styled.div`
 
 const useTinySlider = (ref, options) => {
   return useCallback(
-    async node => {
-      const { tns } = await import('tiny-slider/src/tiny-slider');
-
+    node => {
       if (node instanceof HTMLElement) {
         ref.current = tns({
           container: node,
