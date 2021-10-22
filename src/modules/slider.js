@@ -7,6 +7,7 @@ import {CssIcon} from "../patterns/icon";
 import {ButtonSmallStyle} from "../patterns/button";
 import arrow from '../images/icons/arrow-right.svg';
 import { tns } from  'tiny-slider/src/tiny-slider';
+import {breakpoint, breakpointsMap} from "../utils/breakpoints";
 
 
 const Wrapper = styled.div`
@@ -89,6 +90,26 @@ const Wrapper = styled.div`
         h2 {
             margin-top: 0;
         }
+    }
+
+    @media ${breakpoint(breakpointsMap.default, breakpointsMap.medium)} {
+      height: auto;
+
+      .tns-outer:nth-child(1),
+      .image-slider:not(.tns-slider) {
+          position: relative;
+          height: auto;
+
+          img {
+              height: 400px;
+          }
+      }
+
+      .tns-outer:nth-child(2),
+      .text-slider:not(.tns-slider) {
+          width: 100%;
+          top: 0;
+      }
     }
 `;
 

@@ -21,7 +21,7 @@ export const Column = styled.div`
       margin-top: 0;
   }
 
-  @media ${breakpoint(breakpointsMap.small, breakpointsMap.medium)} {
+  @media ${breakpoint(breakpointsMap.default, breakpointsMap.medium)} {
       column-count: 1;
   }
 `
