@@ -82,7 +82,6 @@ const GridCell = styled(Link)`
 
     @media ${breakpoint(breakpointsMap.small, breakpointsMap.medium)} {
       margin-bottom: 4px;
-
       &:nth-child(5n),
       &:nth-child(6n-4),
       &:nth-child(7n),
@@ -132,14 +131,14 @@ const GridCell = styled(Link)`
 const ImageGrid = ({ items }) => {
   return (
     <Wrapper>
-      {items && items.map(({title, previewImg}) => {
+      {items && items.map(({title, previewImg}, index) => {
         return (
-          <GridCell to={`/work/${title.toLowerCase()}`} src={previewImg.src.publicURL}>
+          <GridCell to={`/work/${title.toLowerCase()}`} src={previewImg.src.publicURL} key={index}>
               <Img alt={title} src={previewImg.src.publicURL}/>
           </GridCell>
         )})
       }
-      <GridCell filler>
+      <GridCell as="a" filler>
         <StaticImage src="../images/content/filler.jpg" alt="nothing here"/>
        </GridCell>
     </Wrapper>

@@ -19,7 +19,7 @@ const IndexPage = () => {
       <ModFeature>
         <h1>
           Freelance Frontend Developer<br/>
-          Available for <InlineLink href={`mailto:${email}`}>contract</InlineLink> work
+          Available for <InlineLink as="a" href={`mailto:${email}`}>contract</InlineLink> work
         </h1>
         <Feature>
           <Img src={styleguideImage} alt="living style guide"/>
