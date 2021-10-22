@@ -67,28 +67,28 @@ const Footer = () =>
         <Display as="h3">Contact</Display>
         <p>
           Do you have a style guide yet? I build a modular library for your web application. I'm currently available for
-          contract work. Contact me via <InlineLink className="link" to="mailto:{{ email }}">e-mail</InlineLink> or social media. <br/>
+          contract work. Contact me via <InlineLink as="a" href={`mailto:${ email }`}>e-mail</InlineLink> or social media. <br/>
         </p>
         <SocialMedia>
           <SocialMediaLink socialMedia="github"
-             to="https://github.com/kevin-johne" target="_blank"
+             href="https://github.com/kevin-johne" target="_blank"
              title="look up my opensource on github">
             <GithubLogo/>
           </SocialMediaLink>
           <SocialMediaLink socialMedia="linkedInn"
-             to="https://www.linkedin.com/in/kevin-johne/" target="_blank"
+             href="https://www.linkedin.com/in/kevin-johne/" target="_blank"
              rel="noreferrer"
              title="look up my working profile">
             <LinkedInLogo/>
           </SocialMediaLink>
           <SocialMediaLink socialMedia="twitter"
-             to="https://twitter.com/kevin_johne"
+             href="https://twitter.com/kevin_johne"
              rel="noreferrer"
              target="_blank" title="follow me on Twitter">
             <TwitterLogo/>
           </SocialMediaLink>
           <SocialMediaLink socialMedia="soundcloud"
-             to="https://soundcloud.com/aaml" target="_blank"
+             href="https://soundcloud.com/aaml" target="_blank"
              rel="noreferrer"
              title="look up my dj profile aaml">
             <SoundcloudLogo/>
@@ -113,8 +113,11 @@ const Footer = () =>
         </Container>
       </FooterColumn>
       <Copyright>
-        design, development and content created by <InlineLink to={`mailto:${email}`}>Kevin Johne</InlineLink><br/>
+        design, development and content created <br/>
+        with ♥ in London by <InlineLink as="a" href={`mailto:${email}`}>Kevin Johne</InlineLink><br/>
         2013 &mdash; 2021 &copy; all rights reserved<br/>
+        <br/>
+        <InlineLink as="a" href="https://github.com/kevin-johne/kevin-johne.github.io">Source code</InlineLink>
       </Copyright>
     </FooterInner>
   </Wrapper>;
