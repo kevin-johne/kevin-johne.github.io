@@ -36,5 +36,7 @@
     "react-helmet": "^6.1.0",
     "styled-components": "^5.3.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tiny-slider": "^2.9.3"
+  }
 }

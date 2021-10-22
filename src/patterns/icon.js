@@ -1,5 +1,6 @@
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 import {colorGray75, colorOrange} from "../setting/theme";
+import arrow from '../images/icons/arrow-right.svg';
 
 export const Icon = styled.span`
     display: inline-block;
@@ -10,8 +11,14 @@ export const Icon = styled.span`
     background-position: center;
 `;
 
-export const ArrowRightIcon = styled(Icon)`
-    background-image: url('../images/icons/arrow-right.svg');
+export const CssIcon = css`
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${arrow});
 `
 
 const socialMediaColors = {
