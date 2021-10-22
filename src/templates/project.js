@@ -19,9 +19,9 @@ const Project = ({data : {current :project, next, previous}}) => {
         <h1>{project.title}</h1>
         <Tags list={project.tags}/>
         <Column>
-          {project.descriptions && project.descriptions.map(description => <p>{description}</p>)}
+          {project.descriptions && project.descriptions.map((description, index) => <p key={index}>{description}</p>)}
         </Column>
-        {project.links && project.links.map(link => <p><InlineLink as="a" href={`https://${link}`} target="_blank">visit {link}</InlineLink></p>)}
+        {project.links && project.links.map((link, index) => <p key={index}><InlineLink as="a" href={`https://${link}`} target="_blank">visit {link}</InlineLink></p>)}
       </Content>
       <Slider slides={project.features}/>
       <ProjectPagination next={next} previous={previous}/>

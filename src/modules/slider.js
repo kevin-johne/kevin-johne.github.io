@@ -101,7 +101,7 @@ const useTinySlider = (ref, options) => {
           ...options,
         });
       }
-    }, []
+    }, [ref, options]
   )
 };
 
@@ -151,11 +151,11 @@ const Slider = ({slides}) => {
   return (
     <Wrapper>
       <div className="image-slider" ref={imageSliderRef}>
-        {slides.map(slide => {
+        {slides.map((slide, index) => {
           const image = getImage(slide.image);
 
           return (
-            <div className="image-slider__item">
+            <div className="image-slider__item" key={index}>
               <GatsbyImage alt={slide.title} image={image}/>
             </div>
             )
@@ -163,8 +163,8 @@ const Slider = ({slides}) => {
 
       </div>
       <div className="text-slider" ref={textSliderRef}>
-        {slides.map(slide => (
-          <div className="text-slider__item">
+        {slides.map((slide, index) => (
+          <div className="text-slider__item" key={index}>
             <h2>{slide.title}</h2>
             <p dangerouslySetInnerHTML={{__html: slide.text}}/>
           </div>

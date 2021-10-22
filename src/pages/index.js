@@ -3,7 +3,6 @@ import * as React from "react";
 import responsiveImage from "../images/content/responsive.svg";
 import styleguideImage from "../images/content/styleguide.svg";
 import engineeringImage from "../images/content/engineering.svg";
-import Layout from "../templates/layout";
 import {Feature, ModFeature} from "../modules/features";
 import {Img} from "../patterns/img";
 import {InlineLink} from "../patterns/link";

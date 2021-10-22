@@ -67,28 +67,28 @@ const Footer = () =>
         <Display as="h3">Contact</Display>
         <p>
           Do you have a style guide yet? I build a modular library for your web application. I'm currently available for
-          contract work. Contact me via <InlineLink className="link" href="mailto:{{ email }}">e-mail</InlineLink> or social media. <br/>
+          contract work. Contact me via <InlineLink className="link" to="mailto:{{ email }}">e-mail</InlineLink> or social media. <br/>
         </p>
         <SocialMedia>
           <SocialMediaLink socialMedia="github"
-             href="https://github.com/kevin-johne" target="_blank"
+             to="https://github.com/kevin-johne" target="_blank"
              title="look up my opensource on github">
             <GithubLogo/>
           </SocialMediaLink>
           <SocialMediaLink socialMedia="linkedInn"
-             href="https://www.linkedin.com/in/kevin-johne/" target="_blank"
+             to="https://www.linkedin.com/in/kevin-johne/" target="_blank"
              rel="noreferrer"
              title="look up my working profile">
             <LinkedInLogo/>
           </SocialMediaLink>
           <SocialMediaLink socialMedia="twitter"
-             href="https://twitter.com/kevin_johne"
+             to="https://twitter.com/kevin_johne"
              rel="noreferrer"
              target="_blank" title="follow me on Twitter">
             <TwitterLogo/>
           </SocialMediaLink>
           <SocialMediaLink socialMedia="soundcloud"
-             href="https://soundcloud.com/aaml" target="_blank"
+             to="https://soundcloud.com/aaml" target="_blank"
              rel="noreferrer"
              title="look up my dj profile aaml">
             <SoundcloudLogo/>
@@ -98,11 +98,11 @@ const Footer = () =>
       <FooterColumn>
         <Display as="h3">Reading Suggestion</Display>
         <Container>
-          <BookImage href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">
+          <BookImage as="a" href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">
             <StaticImage alt="Book Cover" src="../images/content/books/malcolm-gladwell-blink.jpg"/>
           </BookImage>
           <div>
-            <InlineLink to="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328"
+            <InlineLink as="a" href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328"
                title="Buy Book on hive.co.uk to support local book stores"><b>Blink &mdash; Malcolm Gladwell</b>
             </InlineLink>
             <p>
@@ -113,7 +113,7 @@ const Footer = () =>
         </Container>
       </FooterColumn>
       <Copyright>
-        design, development and content created by <InlineLink href={`mailto:${email}`}>Kevin Johne</InlineLink><br/>
+        design, development and content created by <InlineLink to={`mailto:${email}`}>Kevin Johne</InlineLink><br/>
         2013 &mdash; 2021 &copy; all rights reserved<br/>
       </Copyright>
     </FooterInner>

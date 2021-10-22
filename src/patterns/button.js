@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components"
-import {colorBrand, colorGray75} from "../setting/theme";
+import {colorBrand} from "../setting/theme";
 
 export const Button = styled.button`
   background: none;
