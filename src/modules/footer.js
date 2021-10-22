@@ -75,7 +75,7 @@ const Footer = () =>
              title="look up my opensource on github">
             <GithubLogo/>
           </SocialMediaLink>
-          <SocialMediaLink socialMedia="linkedInn"
+          <SocialMediaLink socialMedia="linkedin"
              href="https://www.linkedin.com/in/kevin-johne/" target="_blank"
              rel="noreferrer"
              title="look up my working profile">
