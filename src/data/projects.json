@@ -31,7 +31,7 @@
                 "title" : "Smart Navigation",
                 "image": "../images/content/project/calvin-klein/navigation_x2.jpg",
                 "text": [
-                    "We improved the navigation by reading the mouse to predict the users pattern. For example The mouse is moved over Women, and the user wants to Kids, the cursor would go above Men. We not choose the use the timeout trick because of the caveat of a slower UI. Same as for the <a class='link' href='/#work/gedore'>Gedore</a> project."
+                    "We improved the navigation by reading the mouse to predict the users pattern. For example The mouse is moved over Women, and the user wants to Kids, the cursor would go above Men. We not choose the use the timeout trick because of the caveat of a slower UI. Same as for the <a class='link' href='/work/gedore/'>Gedore</a> project."
                 ]
             }
         ],
