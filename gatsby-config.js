@@ -49,12 +49,18 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "G-8LTX8KS2R3",
-        head: false,
-        anonymize: true
+          trackingIds: [
+          "G-561ZT1XFWB",
+          "GTM-K2NKQSH"
+          ],
+          pluginConfig: {
+            // Puts tracking script in the head instead of the body
+            head: false,
+            anonymize: true
+          },
       },
-    },
+    }
   ],
 };
