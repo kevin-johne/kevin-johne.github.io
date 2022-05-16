@@ -47,6 +47,14 @@ module.exports = {
         ],
         display: 'swap'
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-8LTX8KS2R3",
+        head: false,
+        anonymize: true
+      },
+    },
   ],
 };
