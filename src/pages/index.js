@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import responsiveImage from "../images/content/responsive.svg";
-import styleguideImage from "../images/content/styleguide.svg";
-import engineeringImage from "../images/content/engineering.svg";
+import {ReactComponent as ResponsiveImage} from "../images/content/responsive.svg";
+import {ReactComponent as StyleguideImage} from "../images/content/styleguide.svg";
+import EngineeringImage from "../images/content/engineering.svg.jsx";
 import {Feature, ModFeature} from "../modules/features";
 import {Img} from "../patterns/img";
 import {InlineLink} from "../patterns/link";
-import {email} from "../setting/data";
+import {email, available} from "../setting/data";
 import {Helmet} from "react-helmet";
 
 const IndexPage = () => {
@@ -19,10 +19,13 @@ const IndexPage = () => {
       <ModFeature>
         <h1>
           Freelance Frontend Developer<br/>
-          Available for <InlineLink as="a" href={`mailto:${email}`}>contract</InlineLink> work
+          {(available == true) ?
+            <>available for <InlineLink as="a" href={`mailto:${email}`}>contract</InlineLink> work</>
+            : <></>
+          }
         </h1>
         <Feature>
-          <Img src={styleguideImage} alt="living style guide"/>
+          <StyleguideImage title="living style guide"/>
           <h2>I code living style guides, <br/> you will love</h2>
           <p>
             For a long living website a style guide is of great importance. Because all different departments in the
@@ -35,7 +38,7 @@ const IndexPage = () => {
           </p>
         </Feature>
         <Feature>
-          <Img src={responsiveImage} alt="All sorts of devices with different screen size"/>
+          <ResponsiveImage title="All sorts of devices with different screen size"/>
           <h2>I make responsive websites,<br/> your user will love</h2>
           <p>
             My tool set includes a flexible media query library, to get your application in perfect light for every
@@ -48,7 +51,7 @@ const IndexPage = () => {
           </p>
         </Feature>
         <Feature>
-          <Img src={engineeringImage} alt="Coffee next to the computer and a engineering book"/>
+          <EngineeringImage title="Coffee next to the computer and a engineering book"/>
           <h2>I do software engineering,<br/> your business will love</h2>
           <p>
             Are you planning a frontend application mainly written in JavaScript? Let me help you structure, define

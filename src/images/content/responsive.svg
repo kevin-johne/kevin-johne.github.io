@@ -39,7 +39,7 @@
     <path d="M192.15 535.82c-4.86 0-4.77-1.5-4.77-1.5v10.34s-.15-.7 4.64-.7c.6-2.3.74-5.86.13-8.14z" fill="#fff" stroke="#000" stroke-width=".33"/>
     <path fill="#15ff9d" d="M278.3 590h.2v.84h-.2z"/>
     <rect ry="0" y="535.36" x="175" height="8.21" width="8.47" fill="none" stroke="#15ff9d" stroke-width="1.32"/>
-    <path d="M181.88 537.13V542h-5z" fill="#15ff9d" fill-opacity=".94"/>
+    <path d="M181.88 537.13V542h-5z" fill="#15ff9d"/>
     <path fill="none" stroke="#15ff9d" stroke-width="1.32" d="M50.56 632.26h3.62v.1h-3.62zm7.4 0h3.63v.1h-3.7zm7.42 0H69v.1h-3.62z"/>
     <path fill="none" stroke="#15ff9d" stroke-width="1.3" d="M30.7 649.36h2.78v.14H30.7z"/>
     <rect ry="0" y="653.2" x="30.79" height="10.64" width="15.67" fill="none" stroke="#15ff9d" stroke-width="1.32"/>
