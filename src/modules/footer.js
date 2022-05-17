@@ -12,7 +12,6 @@ import {colorBrand, colorGray75, colorGray93} from "../setting/theme";
 import {SocialMediaLink} from "../patterns/icon";
 import {InlineLink} from "../patterns/link";
 import {Display} from "../patterns/typo";
-import {Container} from "../patterns/flex";
 
 const Wrapper = styled.footer`
   background-color: ${colorGray93};
@@ -66,8 +65,7 @@ const Footer = () =>
       <FooterColumn>
         <Display as="h3">Contact</Display>
         <p>
-          Do you have a style guide yet? I build a modular library for your web application. I'm currently available for
-          contract work. Contact me via <InlineLink as="a" href={`mailto:${ email }`}>e-mail</InlineLink> or social media. <br/>
+          If you are looking for a frontend developer to transform your ideas to well rounded user experiences. Then please contact me via <InlineLink as="a" href={`mailto:${ email }`}>e-mail</InlineLink> or social media. I would like to help.
         </p>
         <SocialMedia>
           <SocialMediaLink socialMedia="github"
@@ -96,26 +94,11 @@ const Footer = () =>
         </SocialMedia>
       </FooterColumn>
       <FooterColumn>
-        <Display as="h3">Reading Suggestion</Display>
-        <Container>
-          <BookImage as="a" href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328">
-            <StaticImage alt="Book Cover" src="../images/content/books/malcolm-gladwell-blink.jpg"/>
-          </BookImage>
-          <div>
-            <InlineLink as="a" href="https://www.hive.co.uk/Product/Malcolm-Gladwell/Blink--The-Power-of-Thinking-Without-Thinking/356328"
-               title="Buy Book on hive.co.uk to support local book stores"><b>Blink &mdash; Malcolm Gladwell</b>
-            </InlineLink>
-            <p>
-              Do we need always a lot of information to make the right decision? This book is about what we can learn from
-              just a thin slice of information.
-            </p>
-          </div>
-        </Container>
       </FooterColumn>
       <Copyright>
         design, development and content created <br/>
         with ♥ in London by <InlineLink as="a" href={`mailto:${email}`}>Kevin Johne</InlineLink><br/>
-        2013 &mdash; 2021 &copy; all rights reserved<br/>
+        2013 &mdash; 2022 &copy; all rights reserved<br/>
         <br/>
         <InlineLink as="a" href="https://github.com/kevin-johne/kevin-johne.github.io">Source code</InlineLink>
       </Copyright>
