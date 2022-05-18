@@ -13,3 +13,15 @@ export const Display = styled.span`
     font-size: 3rem;
   }
 `
+
+export const underline = styled`
+  ::before {
+    content: '';
+    position: absolute;
+    top: 110%;
+    width: 70%;
+    height: 2px;
+    background-color: ${colorBrand};
+    background-clip: content-box;
+  }
+`

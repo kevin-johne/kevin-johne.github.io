@@ -164,7 +164,7 @@ const SvgComponent = (props) => (
         d="M20.27 127.8c31.18-17.74-14.55-19.85 0-51.6"
         fill="transparent"
         stroke="#13ff9d"
-        stroke-dasharray="10.58 1.32"
+        strokeDasharray="10.58 1.32"
       />
     </g>
     <path
@@ -222,7 +222,7 @@ const SvgComponent = (props) => (
         fill="transparent"
         stroke="#14ff9d"
         strokeLinejoin="bevel"
-        stroke-dasharray="10.58 1.32"
+        strokeDasharray="10.58 1.32"
       />
     </g>
     <motion.path

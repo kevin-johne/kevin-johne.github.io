@@ -5,13 +5,16 @@ import {InlineLinkStyle} from "../patterns/link";
 
 export const GlobalStyle = createGlobalStyle`
     * {
-        padding: 0;
-        margin: 0;
         box-sizing: border-box;
     }
 
     html {
         font-size: 10px;
+    }
+
+    html, body { 
+        padding: 0;
+        margin: 0;
     }
 
     body {
@@ -58,16 +61,6 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: normal;
         font-size: 2rem;
         margin: 1.5em 0 0.6em;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 110%;
-            width: 70%;
-            height: 2px;
-            background-color: ${colorBrand};
-            background-clip: content-box;
-        }
     }
 
     h3 {
