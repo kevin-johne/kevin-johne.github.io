@@ -8,7 +8,7 @@ export const breakpointsMap = {
 
 export const breakpoint = (
   size = 0,
-  inherit = true,
+  inheritBreakpoint = 0,
   selector = 'min-width',
   map = breakpointsMap,
   additionalQuery = '',
@@ -19,12 +19,7 @@ export const breakpoint = (
     query = `(${selector}: ${size}px)`;
   }
 
-  if(inherit !== true) {
-    let inheritBreakpoint = size;
-
-    if(inherit) {
-      inheritBreakpoint = inherit;
-    }
+  if(inheritBreakpoint > 0) {
 
     let breakpoints = Object.values(map);
     let nextBreakpointKey = breakpoints.indexOf(inheritBreakpoint) +1;
@@ -47,7 +42,7 @@ export const breakpoint = (
     query += additionalQuery;
   }
 
-  if (query === "" || (size === 0 && inherit === true && additionalQuery === "")) {
+  if (query === "" || (size === 0 && inheritBreakpoint === 0 && additionalQuery === "")) {
     return;
   }
 

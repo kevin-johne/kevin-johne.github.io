@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {colorGray20, font} from "../setting/theme";
+import {colorBrand, colorGray20, font} from "../setting/theme";
 import {breakpoint, breakpointsMap} from "../utils/breakpoints";
 
 export const Display = styled.span`
@@ -14,7 +14,7 @@ export const Display = styled.span`
   }
 `
 
-export const underline = styled`
+export const Underline = styled.span`
   ::before {
     content: '';
     position: absolute;

@@ -13,7 +13,7 @@ const IndexPage = () => {
         />
         <title>Kevin Johne - Freelance Frontend Developer</title>
       </Helmet>
-      <Teaser title="Freelance Frontend Developer" subtitle="More thant 10 years of experience developing software for E-Commerce and task focused management applications."/>
+      <Teaser title="Freelance Frontend Developer" subtitle="More than 10 years of experience developing successful eCommerce and business critical applications"/>
     </>
   );
 };

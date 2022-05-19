@@ -2,6 +2,7 @@ import {Helmet} from "react-helmet";
 import {Content} from "../modules/content";
 import React from "react";
 import resumeFile from "../files/resume.pdf";
+import { Underline } from "../patterns/typo";
 
 const Resume = () => {
   return (
@@ -13,7 +14,7 @@ const Resume = () => {
       </Helmet>
       <Content>
         <h1>Résumé</h1>
-        <h2>Work Experience</h2>
+        <h2><Underline>Work Experience</Underline></h2>
         <p>
           2019 - 2021<br/>
           Maintaining and shifting a angularJS application to react, without downtime.
@@ -54,7 +55,7 @@ const Resume = () => {
           intern web developer at <a className="link" target="_blank"
                                      href="http://www.konsultaner.de">Konsultaner</a>
         </p>
-        <h2>Talks</h2>
+        <h2><Underline>Talks</Underline></h2>
         <p>
           2018<br/>
           <a className="link" target="_blank" href="https://youtu.be/Pkgjyn5Nw2A">Introduction to WebAssembly</a> at
@@ -73,7 +74,7 @@ const Resume = () => {
           2006 &mdash; 2009<br/>
           technical assistant for computer science
         </p>
-        <h2>Awards</h2>
+        <h2><Underline>Awards</Underline></h2>
         <p>
           2016 Red Dot Award: Communication Design<br/>
           Gedore Website &mdash; Gold<br/>
