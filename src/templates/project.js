@@ -36,6 +36,7 @@ export const pageQuery = graphql`
       descriptions
       year
       tags
+      links
       features {
         text
         title
