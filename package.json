@@ -40,6 +40,8 @@
   },
   "devDependencies": {
     "framer-motion": "^6.3.3",
+    "lodash": "^4.17.21",
+    "react-use": "^17.4.0",
     "tiny-slider": "^2.9.3"
   }
 }
