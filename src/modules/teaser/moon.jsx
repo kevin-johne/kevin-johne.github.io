@@ -67,8 +67,12 @@ export const Moon = ({ children, radius, diagonal, startPosition, canvas }) => {
 
     const centerX = x - moonSize / 2;
     const centerY = y - moonSize / 2;
-    objectRef.current.style.transform = `translateY(${centerY}px) translateX(${centerX}px) scale(${scaleFactor})`;
-    objectRef.current.style.zIndex = `${switchCircle}`;
+    
+    if(objectRef.current) {
+      objectRef.current.style.transform = `translateY(${centerY}px) translateX(${centerX}px) scale(${scaleFactor})`;
+      objectRef.current.style.zIndex = `${switchCircle}`;
+    }
+
     oldX = x;
 
     if (ctx) {
