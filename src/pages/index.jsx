@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Teaser } from "../modules/teaser";
+import { Teaser } from "../modules/teaser/teaser";
 import { Helmet } from "react-helmet";
 
 const IndexPage = () => {
