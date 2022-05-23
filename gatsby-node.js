@@ -22,7 +22,7 @@ exports.createPages = async ({graphql,  actions: { createPage } }) => {
   projects.forEach(( project, index ) => {
     createPage({
       path: `/work/${project.title.toLowerCase()}/`,
-      component: path.resolve(`./src/templates/project.js`),
+      component: path.resolve(`./src/templates/project.jsx`),
       context: {
         id: project.id,
         prevId: projects[index - 1] ? projects[index - 1].id : null,
