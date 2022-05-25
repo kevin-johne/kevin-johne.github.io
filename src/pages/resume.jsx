@@ -4,12 +4,16 @@ import React from "react";
 import resumeFile from "../files/resume.pdf";
 import { Underline } from "../patterns/typo";
 import styled from "styled-components";
+import { breakpoint, breakpointsMap } from "../utils/breakpoints";
 
 const Sections = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 20px;
   margin-bottom: 40px;
+  grid-gap: 20px;
+
+  @media ${breakpoint(breakpointsMap.medium)} {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
 
   ul {
     margin: 0;
