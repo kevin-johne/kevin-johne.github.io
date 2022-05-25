@@ -16,6 +16,8 @@ const MoonWrapper = styled.div`
   width: ${moonSize}px;
   background-color: #f2f2f2;
   border-radius: 100%;
+  transform: scale(0);
+  user-select: none;
 
   img {
     position: absolute;

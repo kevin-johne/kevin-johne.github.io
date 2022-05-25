@@ -75,6 +75,7 @@ const Canvas = styled.canvas`
 
 const Globe = styled.div`
   position: absolute;
+  pointer-events: none;
   width: 80%;
   height: 70%;
   top: 0;
