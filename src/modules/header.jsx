@@ -54,7 +54,7 @@ const SiteHeaderInner = styled.div`
   padding-top: 6px;
   border-bottom: 1px solid ${colorGray75};
 
-  @media ${breakpoint(breakpointsMap.default)} {
+  @media ${breakpoint(breakpointsMap.default, breakpointsMap.small)} {
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
