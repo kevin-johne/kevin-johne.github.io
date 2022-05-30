@@ -47,7 +47,9 @@ const Resume = () => {
         <title>Kevin Johne - Resumé</title>
       </Helmet>
       <Content>
-        <Feature>
+        <Feature reverse>
+          <ProfilePicture src={Me} />
+
           <div>
             <h1>Hello I&#8217;m Kevin Johne</h1>
             <p>
@@ -71,7 +73,6 @@ const Resume = () => {
               </a>
           </div>
 
-          <ProfilePicture src={Me} />
         </Feature>
 
         <h2>
