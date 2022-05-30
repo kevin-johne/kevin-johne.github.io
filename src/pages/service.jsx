@@ -7,40 +7,21 @@ import { Feature } from "../modules/features";
 import React from "react";
 import { Underline } from "../patterns/typo";
 
-const About = () => (
+export default () => (
   <>
     <Helmet>
-      <meta name="description" content="About me" />
-      <title>Kevin Johne - About</title>
+      <meta name="description" content="Service, Software Engineering, Frontend Development, Style Guides, Consultancy" />
+      <title>Kevin Johne - Service</title>
     </Helmet>
     <Content>
-      <h1>
-        Hej Hej, <br />
-        I&#8217;m Kevin Johne
-      </h1>
-      <Column>
-        <p>
-          a frontend engineer with a Bachelor of Science degree in Computer
-          Science from the West Saxony University of Applied Science in Zwickau,
-          Germany. Currently living in London, United Kingdom.
-        </p>
-        <p>
-          During my past projects I found my pleasure in coding style guides. I
-          believe in long living software and a well defined style guide is a
-          important key. I follow the principle of patterns, modules, and pages.
-          A collection where developers, designers, project managers pick from,
-          to create new content.
-        </p>
-        <p>
-          Currently I am available for contract work. I am looking forward to be
-          in a multidisciplinary environment with a great focus on web design
-          and UX.
-        </p>
-      </Column>
-    </Content>
+      <h1>What I can do for you</h1>
     <Feature>
       <EngineeringImage title="Coffee next to the computer and a engineering book" />
-      <h2><Underline>Software Engineering &mdash; scaling, tested and clean</Underline></h2>
+      <h2>
+        <Underline>
+          Software Engineering &mdash; scaling, tested and clean
+        </Underline>
+      </h2>
       <div>
         <p>
           Are you planning a frontend or backend application by using the power
@@ -98,7 +79,9 @@ const About = () => (
     </Feature>
     <Feature>
       <ResponsiveImage title="All sorts of devices with different screen size" />
-      <h2><Underline>Modern web &mdash; desktop, mobile and offline</Underline></h2>
+      <h2>
+        <Underline>Modern web &mdash; desktop, mobile and offline</Underline>
+      </h2>
       <div>
         <p>
           The modern web goes further then responsiveness. What happens when you
@@ -129,7 +112,8 @@ const About = () => (
         </p>
       </div>
     </Feature>
+    </Content>
+    
   </>
 );
 
-export default About;

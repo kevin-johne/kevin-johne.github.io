@@ -10,8 +10,8 @@ const items = [
     text: 'Work',
     href: '/work'
   }, {
-    text: 'About',
-    href: '/about'
+    text: 'Service',
+    href: '/service'
   }, {
     text: 'Résumé',
     href: '/resume'

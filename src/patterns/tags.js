@@ -4,6 +4,7 @@ import {colorGray75} from "../setting/theme";
 
 const Wrapper = styled.ul`
   display: flex;
+  padding: 0;
 `;
 
 const Tag = styled.li`

@@ -1,10 +1,13 @@
 import { Helmet } from "react-helmet";
-import { Content } from "../modules/content";
+import { Column, Content } from "../modules/content";
 import React from "react";
 import resumeFile from "../files/resume.pdf";
 import { Underline } from "../patterns/typo";
 import styled from "styled-components";
 import { breakpoint, breakpointsMap } from "../utils/breakpoints";
+import Me from "../images/content/me.jpg";
+
+import { Feature } from "../modules/features";
 
 const Sections = styled.div`
   display: grid;
@@ -27,6 +30,12 @@ const NoListStyle = styled.ul`
   list-style: none;
 `;
 
+const ProfilePicture = styled.img`
+  width: 100%;
+  border-radius: 100%;
+  padding: 20px;
+`
+
 const Resume = () => {
   return (
     <>
@@ -38,10 +47,32 @@ const Resume = () => {
         <title>Kevin Johne - Resumé</title>
       </Helmet>
       <Content>
-        <a href={resumeFile} className="link" target="_blank">
-          Download Résumé
-        </a>
-        <h1>Résumé</h1>
+        <Feature>
+          <div>
+            <h1>Hello I&#8217;m Kevin Johne</h1>
+            <p>
+              a frontend engineer with a Bachelor of Science degree in Computer
+              Science from the West Saxony University of Applied Science in
+              Zwickau, Germany. Currently living in London, United Kingdom.
+            </p>
+            <p>
+              I am a quality driven and focused frontend engineer with more than
+              10 years of experience efficiently using web technologies to
+              develop complex web applications for international brands. Clients
+              and colleagues enjoy collaborating with me to build award winning
+              websites and applications. I have a keen eye for design and always
+              go the extra mile to craft a better experience. I am a specialist
+              in JavaScript with an extensive knowledge in full stack
+              development. I apply fundamental knowledge and new tools to craft
+              a unique and modern experience.
+            </p>
+            <a href={resumeFile} className="link" target="_blank">
+                Download Résumé
+              </a>
+          </div>
+
+          <ProfilePicture src={Me} />
+        </Feature>
 
         <h2>
           <Underline>Work Experience</Underline>
