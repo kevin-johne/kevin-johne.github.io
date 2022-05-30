@@ -12,6 +12,7 @@ import {colorBrand, colorGray75, colorGray93} from "../setting/theme";
 import {SocialMediaLink} from "../patterns/icon";
 import {InlineLink} from "../patterns/link";
 import {Display} from "../patterns/typo";
+import { breakpoint, breakpointsMap } from "../utils/breakpoints";
 
 const Wrapper = styled.footer`
   background-color: ${colorGray93};
@@ -36,7 +37,9 @@ const FooterInner = styled.div`
 `
 
 const FooterColumn = styled.div`
-  flex: 1 1 calc(50% - 40px);
+  @media ${breakpoint(breakpointsMap.medium)} {
+    flex: 1 1 calc(50% - 40px);
+  }
 `
 
 const SocialMedia = styled.div`
