@@ -9,9 +9,9 @@ const IndexPage = () => {
       <Helmet>
         <meta
           name="description"
-          content="Kevin Johne a freelance frontend developer. He does living style guides, responsive websites, and software engineering. Available for contract work"
+          content="Kevin Guy a freelance frontend developer. He does living style guides, responsive websites, and software engineering. Available for contract work"
         />
-        <title>Kevin Johne - Freelance Frontend Engineer</title>
+        <title>Kevin Guy - Freelance Frontend Engineer</title>
       </Helmet>
       <Teaser title="Freelance Frontend Engineer" subtitle="More than 10 years of experience developing successful eCommerce and business critical applications"/>
     </>

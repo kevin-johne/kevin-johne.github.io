@@ -8,8 +8,8 @@ const Work = ({data}) => {
   return (
     <>
       <Helmet>
-        <meta name="description" content="Style guides, e-commerce, web apps, and angular apps are the kind Kevin Johne has experience with. His portfolio is displaying recently finished projects as a frontend developer."/>
-        <title>Kevin Johne - portfolio</title>
+        <meta name="description" content="Style guides, e-commerce, web apps, and angular apps are the kind Kevin Guy has experience with. His portfolio is displaying recently finished projects as a frontend developer."/>
+        <title>Kevin Guy - portfolio</title>
       </Helmet>
       <Content>
         <h1>Portfolio</h1>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "http://www.kevin-johne.me",
+    siteUrl: "http://www.kevin-guy.co.uk",
   },
   plugins: [
     "gatsby-plugin-styled-components",

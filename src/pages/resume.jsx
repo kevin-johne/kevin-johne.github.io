@@ -34,7 +34,7 @@ const ProfilePicture = styled.img`
   width: 100%;
   border-radius: 100%;
   padding: 20px;
-`
+`;
 
 const Resume = () => {
   return (
@@ -44,14 +44,14 @@ const Resume = () => {
           name="description"
           content="Recent work experience, education, and awards. CV, Résumé"
         />
-        <title>Kevin Johne - Resumé</title>
+        <title>Kevin Guy - Resumé</title>
       </Helmet>
       <Content>
         <Feature reverse>
           <ProfilePicture src={Me} />
 
           <div>
-            <h1>Hello I&#8217;m Kevin Johne</h1>
+            <h1>Hello I&#8217;m Kevin Guy</h1>
             <p>
               a frontend engineer with a Bachelor of Science degree in Computer
               Science from the West Saxony University of Applied Science in
@@ -69,10 +69,9 @@ const Resume = () => {
               a unique and modern experience.
             </p>
             <a href={resumeFile} className="link" target="_blank">
-                Download Résumé
-              </a>
+              Download Résumé
+            </a>
           </div>
-
         </Feature>
 
         <h2>
@@ -80,7 +79,26 @@ const Resume = () => {
         </h2>
         <Sections>
           <div>
-            <h3>Nov 21 &mdash; Apr 22: DocMorris</h3>
+            <h3>Jun 22 &mdash; Feb 23: Veolia UK (Contract)</h3>
+            <ul>
+              <li>Greenfield project to create the one stop platform for all customers</li>
+              <li>
+                Full stack development using JavaScript, Sass, Twig, PHP for
+                Drupal 9 monolithic stack
+              </li>
+              <li>Adding a frontend build with Webpack to CD/CI process</li>
+              <li>
+                Integrating several third-party communication tools and adhere
+                visually to the pattern system
+              </li>
+              <li>
+                Created a new pattern and isolated components system in Drupal 9
+                for reusability, scaling, maintenance and better performance
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Nov 21 &mdash; Apr 22: DocMorris (Contract)</h3>
             <ul>
               <li>Full stack development using React, Twig and Drupal 9</li>
               <li>Set up deployment strategy, CD, CI and webpack build</li>
@@ -136,7 +154,7 @@ const Resume = () => {
             </ul>
           </div>
           <div>
-            <h3>Dec 17 &mdash; Feb 19: Salmon</h3>
+            <h3>Dec 17 &mdash; Feb 19: Salmon (Contract)</h3>
             <ul>
               <li>
                 Redesign of Tommy Hilfiger eCommerce -{" "}

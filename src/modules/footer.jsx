@@ -77,7 +77,7 @@ const Footer = () =>
             <GithubLogo/>
           </SocialMediaLink>
           <SocialMediaLink socialMedia="linkedin"
-             href="https://www.linkedin.com/in/kevin-johne/" target="_blank"
+             href="https://www.linkedin.com/in/kevin-guy-frontend-engineer/" target="_blank"
              rel="noreferrer"
              title="look up my working profile">
             <LinkedInLogo/>
@@ -100,7 +100,7 @@ const Footer = () =>
       </FooterColumn>
       <Copyright>
         design, development and content created <br/>
-        with ♥ in London by <InlineLink as="a" href={`mailto:${email}`}>Kevin Johne</InlineLink><br/>
+        with ♥ in London by <InlineLink as="a" href={`mailto:${email}`}>Kevin Guy</InlineLink><br/>
         2013 &mdash; 2022 &copy; all rights reserved<br/>
         <br/>
         <InlineLink as="a" href="https://github.com/kevin-johne/kevin-johne.github.io">Source code</InlineLink>

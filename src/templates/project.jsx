@@ -12,7 +12,7 @@ const Project = ({data : {current :project, next, previous}}) => {
     <>
       <Helmet>
         <meta name="description" content={project.title} />
-        <title>Kevin Johne - portfolio - {project.title}</title>
+        <title>Kevin Guy - portfolio - {project.title}</title>
       </Helmet>
 
       <Content>

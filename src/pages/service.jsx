@@ -11,7 +11,7 @@ export default () => (
   <>
     <Helmet>
       <meta name="description" content="Service, Software Engineering, Frontend Development, Style Guides, Consultancy" />
-      <title>Kevin Johne - Service</title>
+      <title>Kevin Guy - Service</title>
     </Helmet>
     <Content>
       <h1>What I can do for you</h1>
