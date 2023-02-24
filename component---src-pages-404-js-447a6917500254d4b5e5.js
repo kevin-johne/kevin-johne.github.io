@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkkevin_johne=self.webpackChunkkevin_johne||[]).push([[883],{429:function(e,n,t){t.r(n);var r=t(7294),a=t(6778);n.default=function(){return r.createElement(r.Fragment,null,r.createElement("h1",null,"Error 404 :("),r.createElement("p",null,"Upps something happened here not correctly..."),r.createElement("p",null,"better get back on track, back to ",r.createElement(a.Un,{to:"/"},"homepage")," and another chance :)"))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-447a6917500254d4b5e5.js.map
