@@ -35,6 +35,7 @@ color: ${colorGray20};
       transition-duration: .2s;
       transition-property: width;
       transition-timing-function: ease-out;
+      pointer-events: none;
   }
 
   &:hover:after {

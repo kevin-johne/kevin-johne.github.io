@@ -31,7 +31,7 @@ const Project = ({data : {current :project, next, previous}}) => {
 
 export const pageQuery = graphql`
   query project($id: String, $prevId: String, $nextId: String){
-    current: projectsJson(id: { eq: $id }) {
+    current: projectsJson(id: { eq: $id }, show: {eq: true}) {
       title
       descriptions
       year
@@ -47,24 +47,18 @@ export const pageQuery = graphql`
         }
       }
     }
-    previous: projectsJson(id: { eq: $prevId}) {
+    previous: projectsJson(id: { eq: $prevId}, show: {eq: true}) {
       title
-      previewImg{
-        src {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED)
-          }
-        }
+      path
+      logo {
+        publicURL
       }
     }
-    next: projectsJson(id: { eq: $nextId}) {
+    next: projectsJson(id: { eq: $nextId}, show: {eq: true}) {
       title
-      previewImg{
-        src {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED)
-          }
-        }
+      path
+      logo {
+        publicURL
       }
     }
   }

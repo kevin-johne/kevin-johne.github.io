@@ -15,11 +15,14 @@ export const Display = styled.span`
 `
 
 export const Underline = styled.span`
+  position: relative;
+
   ::before {
     content: '';
     position: absolute;
     top: 110%;
-    width: 70%;
+    min-width: 70%;
+    width: calc(100% - 30px);
     height: 2px;
     background-color: ${colorBrand};
     background-clip: content-box;

@@ -102,7 +102,6 @@ const Wrapper = styled.div`
       display: block;
       opacity: 1;
   }
-}
 `
 
 const PaginationButton = ({direction, link, title, image}) => {
@@ -123,8 +122,8 @@ const PaginationButton = ({direction, link, title, image}) => {
 const ProjectPagination = ({previous, next}) => {
   return (
   <Wrapper>
-    {previous && <PaginationButton title={previous.title} direction={"previous"} image={getImage(previous.previewImg.src)} link={`/work/${ previous.title.toLowerCase()}`}/>}
-    {next && <PaginationButton title={next.title} direction={"next"} image={getImage(next.previewImg.src)} link={`/work/${ next.title.toLowerCase()}`}/>}
+    {previous && <PaginationButton title={previous.title} direction={"previous"} image={getImage(previous.logo)} link={`/work/${ previous.path.toLowerCase()}`}/>}
+    {next && <PaginationButton title={next.title} direction={"next"} image={getImage(next.logo)} link={`/work/${ next.path.toLowerCase()}`}/>}
   </Wrapper>
 )}
 

@@ -29,10 +29,13 @@ export const Feature = styled.section`
       margin-bottom: 80px;
     }
 
-    svg {
-      display: block;
+    > :first-child {
       margin: 0 auto 20px;
       width: 60%;
+    }
+
+    > svg:first-child, > img:first-child {
+      display: block;
     }
   }
 
@@ -42,7 +45,7 @@ export const Feature = styled.section`
 
     grid-gap: 0 20px;
 
-    svg {
+    > :first-child {
       grid-column: 2;
       grid-row: 1 / span 10;
       width: 100%;
@@ -54,7 +57,7 @@ export const Feature = styled.section`
       !!props.reverse &&
       `
         grid-template-columns: 1fr 1.5fr;
-        svg {
+        > :first-child {
           grid-column: 1;
         }
       `}
