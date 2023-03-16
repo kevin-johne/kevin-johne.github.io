@@ -21,45 +21,62 @@ const Work = ({ data }) => {
         <Column columns="1" width="40%">
           <p>
             Being a software developer for more than 10 years I had exposure to
-            many different programming languages and industries. What started by
-            writing scripts in Basic and Pascal to buy domains and look up
-            namespaces, became Widgets and Applets in Java and PHP during
-            University, and in the end my career building websites and
-            applications using too many frameworks and libraries to mention
-            here. This page gives you an overview of the most recent projects
-            I've worked on.
+            many different programming languages and industries, developing all
+            sorts of websites and applications.
           </p>
           <p>
-            I build small branding pages, high traffic and optimised E-Commerce
-            sites, and well tested, functional, and scalable business
-            applications.
+            The journey started for me by writing scripts in Pascal to buy
+            domains and look up namespaces. during my time at University
+            manifested knowledge in OOP, TDD using Java and PHP. Then found my
+            long lasting pleasure with human and computer interactions and
+            became a frontend developer.
+          </p>
+          <p>
+            I have build small branding pages, high traffic eCommerce shops, and
+            business applications. The following projects should give you a good
+            overview.
           </p>
         </Column>
       </Content>
       <Content>
-        <Feature reverse>
-          <ImageGrid items={data.applications.nodes} />
+        <Feature>
+          <div>
+            <ImageGrid items={data.applications.nodes} />
+          </div>
           <h2>
             <Underline>Applications</Underline>
           </h2>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
-          id incidunt non reprehenderit quibusdam dolore quasi corporis.
-          Repellat eum rerum beatae porro consectetur? Esse quia consectetur
-          illum assumenda quisquam facilis.
+          <p>
+            Here are some of my applications I worked on using different
+            frontend stacks depending on the project from AngularJS to React.
+            The systems on my portfolio including a OMS (Organisation Management System) for Ströer,
+            a CMS (Content Management System) called Skylark at Ostmodern, and a B2B/B2C Portal for Veolia. 
+          </p>
+          <p>
+            I transformed business requirements, in to clean maintainable code,
+            well tested user behaviours and scalable architecture, that made the
+            clients more efficient in their daily tasks and offered new business opportunities.
+          </p>
         </Feature>
 
-        <Feature>
-        <ImageGrid items={data.websites.nodes} />
-
+        <Feature reverse>
+          <div>
+            <ImageGrid items={data.websites.nodes} />
+          </div>
           <div>
             <h2>
               <Underline>Websites</Underline>
             </h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
-              minima dolore eius totam provident commodi corporis assumenda
-              voluptatum, reiciendis, veritatis aut, ea beatae cumque eaque
-              officia voluptate amet porro? Repellendus.
+              Websites are usually less complex compared to application, hence
+              are faster to develop and need less time input. When working for
+              an agency it is possible to work on several websites
+              simultaneously, as you can see of the time at Salmon and Denkwerk.
+            </p>
+            <p>
+              As I not just like to write good software, but as well have a good
+              eye for design, building sometimes a new website instead of an
+              application is refreshing.
             </p>
           </div>
         </Feature>

@@ -31,11 +31,20 @@ export const Feature = styled.section`
 
     > :first-child {
       margin: 0 auto 20px;
-      width: 60%;
+      width: 100%;
     }
 
     > svg:first-child, > img:first-child {
       display: block;
+    }
+  }
+
+  @media ${breakpoint(breakpointsMap.default, breakpointsMap.small)} {
+    display: flex;
+    flex-direction: column;
+
+    > :first-child {
+      order: 1;
     }
   }
 
@@ -48,7 +57,6 @@ export const Feature = styled.section`
     > :first-child {
       grid-column: 2;
       grid-row: 1 / span 10;
-      width: 100%;
       margin-bottom: 20px;
       padding: 0 20px;
     }

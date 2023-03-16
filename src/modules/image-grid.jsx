@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(160px , 1fr));
   gap: 30px;
   margin-bottom: 60px;
 
@@ -47,14 +47,6 @@ const GridCell = styled(Link)`
     color: white;
     font-weight: bold;
     font-size: 20px;
-  }
-
-  @media ${breakpoint(breakpointsMap.small, breakpointsMap.medium)} {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media ${breakpoint(breakpointsMap.default, breakpointsMap.small)} {
-    grid-template-columns: 1fr;
   }
 `;
 

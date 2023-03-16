@@ -25,5 +25,6 @@ export const Column = styled.div`
 
   @media ${breakpoint(breakpointsMap.default, breakpointsMap.medium)} {
       column-count: 1;
+      width: 100%;
   }
 `
