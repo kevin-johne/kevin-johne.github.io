@@ -17,31 +17,20 @@
       "Cypress"
     ],
     "descriptions": [
-      "Ostmodern is a multi media digital agency and it has this CMS called \"Skylark\". The CMS manages digital content and its meta data, it does not declare how the UI looks like, but provides data through an API to build bespoke frontends.",
-      "I was part of a small team maintaining and developing new features for the frontend of Skylark. The frontend was build using the framework AngularJs, Sass, Jasmine and Gulp.",
-      "The interesting part of the frontend was that it was driven by configuration file, because each client had a custom interface for the CMS and its own instance. We provided a basic layout and a good pool of components to use.",
-      "Depending on the configuration certain fields will be displayed in a certain style, these were configured to meet the customers object models.",
-      "Configurations files are plain JSON file matching a schema, we build a CLI to generate those JSON files for us, their were usually manually edited which lead to many issue.",
-      "As the platform was build on an older version of AngularJS we migrated it to a React stack, using Redux, React Testing Library and Webpack. There were few core concepts we had to migrate to a different model, Navigation, Components, State and Services.",
-      "We started by touching the lowest Components which are the bottom of the dependencies tree and working up that tree until bigger junks where now react.",
-      "Services in Angular are presenting usually a singeleton to represent data or some utility functions. The utility functions was simple by extracting it to plain functions. When it was a singelton keeping data, this was put in to Redux. The Service was using Redux and the plain function.",
-      "The migration moved the Jasmine to Jest was simple as the interface is very similar, and we improved test coverage further by using React Testing Library to test the state and interface."
+      "Ostmodern is a multi-media digital agency and it has an CMS called \"Skylark\". This platform was used by F1, BBC, Sky, Rakuten to manage their video content and allow users streaming that content.",
+"The CMS manages meta data and licences for digital content. It is basically the main gateway to connect a complex video platform to different services, from analytics, scheduling to video upload. In order to access this gateway a rich API is provided to the customers, so that they can fetch a set of video stream URL and its meta data.",
+"On top of that API is a frontend, which provided a portal and an user interface for content creators and editors. And here my part starts, as I was the lead frontend developer for the user interface, managing a small team.",
+"The interesting part of the frontend was that it was driven by configuration files, because each client had its own instance of Skylark, own database, own server, etc. etc. But we had only one frontend code base to satisfy different client requirements. In order to show different components and layouts for each customer a configuration defined what to show, in which order and how to query that data.",
+"Configurations files are a plain JSON describing detailed which fields should be displayed and how they are related. Naturally to keep the error rate low a schema is checking that those files are correctly written. Those long JSON files were created and maintained manually, this was a nightmare, hence we developed a CLI to generate configurations.",
+"The frontend was developed using an older version of AngularJS, we migrated it to a React stack, using Redux, React Testing Library and Webpack. There were few core concepts which are different between React and Angular that we had to apply different migration strategies for different models, for example: navigation, components, state and services.",
+"We started by touching the lowest AngularJS components which are the bottom of the dependencies tree and working up that tree until bigger junks where React components.",
+"The biggest difference between Angular and React are dependency management. Angular is using dependency injection, where react is using just imports. In order to not break Angular we had to make wrappers so that things can be loaded via dependency injection, but as well as being imported for React.",
+"Services in Angular are presenting usually a singleton to represent data or some utility functions (Factories). Factories were easily replaced by extracting the functions in to pure functions. When it was a singleton representing data, we created a slice in Redux with actions and reducers.",
+"Another part was updating the testing plans, moving away from Jasmine and using Jest instead, this was simple as the tests are written in a similar manner. The nice thing was with Jest that we could use React Testing Library for early UI tests.",
+"Working for 2 years on Skylark I developed many different features. Video upload was one of my favourite works as it allowed users of the CMS to upload multiple videos into their video content hosts like MUX or Bitmovin using an UI instead of the API. You could easily upload files which are many gigabytes big, as it was handling retries, pause and continue, and even go temporarily offline during the process.",
+"I truly enjoyed working on Skylark and looking forward to find similar projects."
     ],
-    "features": [
-      {
-        "title": "Configuration Driven",
-        "text": [
-          "JSON file represents how to use the API and how to display data in the UI."
-        ],
-        "image": "../images/content/project/skylark/dashboard_2x.jpg"
-      },
-      {
-        "title": "Miagrating to React",
-        "text": [
-          "Modern stack migrating from AngularJS, Jasmine, Gulp to React, Redux, Jest, Webpack."
-        ]
-      }
-    ],
+    "features": [],
     "links": ["skylarkplatform.com"],
     "show": true
   },

@@ -49,13 +49,14 @@ const Work = ({ data }) => {
           <p>
             Here are some of my applications I worked on using different
             frontend stacks depending on the project from AngularJS to React.
-            The systems on my portfolio including a OMS (Organisation Management System) for Ströer,
-            a CMS (Content Management System) called Skylark at Ostmodern, and a B2B/B2C Portal for Veolia. 
+            The systems on my portfolio including a B2B/B2C Portal for Veolia, a
+            CMS called Skylark at Ostmodern, and a n OMS for Ströer.
           </p>
           <p>
             I transformed business requirements, in to clean maintainable code,
             well tested user behaviours and scalable architecture, that made the
-            clients more efficient in their daily tasks and offered new business opportunities.
+            clients more efficient in their daily tasks and offered new business
+            opportunities.
           </p>
         </Feature>
 
