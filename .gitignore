@@ -13,7 +13,9 @@ old/src/components/app/vendor/lodash.build.min.js
 
 node_modules/
 .cache/
-public
+
+public/**/*
+!public/CNAME
 
 .env
 
