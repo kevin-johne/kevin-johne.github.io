@@ -50,16 +50,10 @@ export const pageQuery = graphql`
     previous: projectsJson(id: { eq: $prevId}, show: {eq: true}) {
       title
       path
-      logo {
-        publicURL
-      }
     }
     next: projectsJson(id: { eq: $nextId}, show: {eq: true}) {
       title
       path
-      logo {
-        publicURL
-      }
     }
   }
 `
