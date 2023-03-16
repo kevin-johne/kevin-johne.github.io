@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 16.668749 14.287499"
+   height="14.287499mm"
+   width="16.668749mm">
+  <defs
+     id="defs2">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       x1="45"
+       y1="26.702636"
+       x2="45"
+       y2="44.85547"
+       id="linearGradient-1">
+      <stop
+         stop-color="#226EFF"
+         offset="0%"
+         id="stop12" />
+      <stop
+         stop-color="#0D5AF1"
+         offset="100%"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       x1="36"
+       y1="45"
+       x2="27"
+       y2="54"
+       id="linearGradient-2">
+      <stop
+         stop-color="#000000"
+         stop-opacity="0"
+         offset="0%"
+         id="stop17" />
+      <stop
+         stop-color="#000000"
+         offset="100%"
+         id="stop19" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-71.949129,-59.290774)"
+     id="layer1">
+    <g
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+       transform="matrix(0.26458333,0,0,0.26458333,71.949129,59.290774)"
+       id="_Foundations/Logos/Skylark-Logo-H-Text">
+      <g
+         id="Group-Copy">
+        <path
+           style="fill:#0d5af1"
+           d="M 0,54 C 0,44.158163 7.8983809,36.161363 17.702333,36.002411 L 18,36 h 45 c 0,9.841837 -7.898381,17.838637 -17.702333,17.997589 L 45,54 Z"
+           id="Path" />
+        <path
+           style="fill:url(#linearGradient-1)"
+           d="M 44.997024,35.669331 C 44.820684,25.880662 36.830792,18 27,18 v 0 h 18 c 9.94125,0 18,8.05875 18,18 l -0.0024,0.297667 C 62.840226,46.00358 55.00099,53.841842 45.294696,53.997636 L 45,54 V 36 Z"
+           id="Combined-Shape" />
+        <path
+           style="fill:#0e1825;fill-rule:nonzero"
+           d="m 27,18 c 9.94125,0 18,8.05875 18,18 H 27 C 17.05875,36 9,27.94125 9,18 L 9.00298,17.669331 C 9.1793157,7.8806616 17.169208,0 27,0 v 0 h 36 c 0,9.94125 -8.05875,18 -18,18 v 0 z"
+           id="path27" />
+        <polygon
+           style="opacity:0.3;fill:url(#linearGradient-2)"
+           id="Rectangle-Copy-2"
+           transform="rotate(180,36,45)"
+           points="45,54 27,54 27,36 " />
+      </g>
+    </g>
+  </g>
+</svg>
