@@ -5,8 +5,9 @@
   "description": "Kevin Guy",
   "author": "Kevin Guy",
   "engines": {
-    "node": "16"
+    "node": "16.x"
   },
+  "engineStrict": true,
   "keywords": [
     "gatsby"
   ],
