@@ -4,6 +4,9 @@
   "private": true,
   "description": "Kevin Guy",
   "author": "Kevin Guy",
+  "engines": {
+    "node": "16"
+  },
   "keywords": [
     "gatsby"
   ],

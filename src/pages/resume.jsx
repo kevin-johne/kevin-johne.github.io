@@ -79,111 +79,145 @@ const Resume = () => {
         </h2>
         <Sections>
           <div>
-            <h3>Jun 22 &mdash; Feb 23: Veolia UK (Contract)</h3>
+            <h3>May 23 &mdash; May 24: DoorFeed (Contract)</h3>
+            <p>
+              Modernised property tech portal with a new in-house UI library.
+              Streamlined workflows for internal team by addressing new features
+              which obsolete external sheets and tools. Built a revolutionary
+              tenancy platform which automates the tenancy progress at scale
+            </p>
             <ul>
-              <li>Greenfield project to create the one stop platform for all customers</li>
               <li>
-                Full stack development using JavaScript, Sass, Twig, PHP for
-                Drupal 9 monolithic stack
-              </li>
-              <li>Adding a frontend build with Webpack to CD/CI process</li>
-              <li>
-                Integrating several third-party communication tools and adhere
-                visually to the pattern system
+                <b>
+                  Automate operations for rental applications and tenant
+                  management
+                </b>
+                , automating the progress from marketing, book viewings through
+                to the final check-in.
               </li>
               <li>
-                Created a new pattern and isolated components system in Drupal 9
-                for reusability, scaling, maintenance and better performance
+                <b>New project management tools</b>, by developing a custom
+                gantt chart for internal team to organize renovation projects
+              </li>
+              <li>
+                <b>Reworked UI and UX for scale</b>, by introducing a grid to
+                align content, refining existing code into reusable components,
+                pixel perfect design implementation, and picking better tools
+                which provide options to build good user interface.
+              </li>
+              <li>
+                <b>Improved code quality and product stability</b>, by using
+                TypeScript generics, Zod schemas, and type-safe SQL queries.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Jun 22 &mdash; Feb 23: Veolia UK (Contract)</h3>
+            <p>
+              Developed from the ground up a new frontend application which is
+              the one stop application for all business to business customers.
+            </p>
+            <ul>
+              <li>
+                <b>Reduced customer service enquiry time drastically</b>, by
+                promoting guidance to self-help, and developing an interactive
+                chatbot to collect additional enquiry information before agent
+                is required
+              </li>
+              <li>
+                <b>Sped up development and consistency of UI</b>, by creating a
+                reusable component library and configurable design system
+              </li>
+              <li>
+                <b>Automated deployments with feedback</b>, by replacing the
+                manual deployments with a CD process using Webpack, Blt, GitHub
+                and Acquia pipelines
               </li>
             </ul>
           </div>
           <div>
             <h3>Nov 21 &mdash; Apr 22: DocMorris (Contract)</h3>
+            <p>
+              Frontend ownership of DocMorris Care and transforming it into a
+              well performing web application.
+            </p>
             <ul>
-              <li>Full stack development using React, Twig and Drupal 9</li>
-              <li>Set up deployment strategy, CD, CI and webpack build</li>
               <li>
-                Migrated a ridged bespoke framework to a standardized frontend
-                stack, providing long-term support and flexibility
+                <b>Improved ease of development</b>, by introducing code
+                management for multiple zip files into mono-repo, webpack
+                builds, CD/CI, and migrating an undocumented custom framework
+                into native solutions
               </li>
               <li>
-                Optimized page speed of{" "}
-                <a
-                  className="link"
-                  href="http://www.docmorriscare.com"
-                  target="_blank"
-                >
-                  docmorriscare.com
-                </a>{" "}
-                from ca 20 to ca 90 (Google Page Speed Score)
+                <b>Optimized Google Page Speed from 20 to 90</b>, by using the
+                library techniques of Drupal 9, reducing JS, optimizing images
+                and writing a module to insert critical CSS
+              </li>
+              <li>
+                <b>Provided automated migration solution</b>, by exporting
+                dynamic content into static assets, copying to eCommerce
+                platform and loading via style isolating Web Component
+              </li>
+              <li>
+                <b>Halved hosting costs</b>, by offloading rendering to clients
+                using Drupal Headless and React
               </li>
             </ul>
           </div>
           <div>
             <h3>Apr 19 &mdash; Apr 21: Ostmodern</h3>
+            <p>
+              Frontend ownership of B2B2C SaaS CMS used by products with 1M+
+              users for 1-Tier entertainment and sport businesses{" "}
+              <a
+                className="link"
+                href="http://www.skylarkplatform.com"
+                target="_blank"
+              >
+                skylark.com
+              </a>
+            </p>
             <ul>
               <li>
-                Frontend direction of the flag ship product Skylark, a VOD, and
-                Live Media CMS with superior scheduling system -{" "}
-                <a
-                  className="link"
-                  href="http://www.skylarkplatform.com"
-                  target="_blank"
-                >
-                  skylark.com
-                </a>
+                Led 3 frontend developers and{" "}
+                <b>improved developer retention</b>, by building a good
+                relationship and strong support
               </li>
               <li>
-                Transformed Skylark from AngularJS to React without disruptions
-              </li>
-              <li>Code and functional test coverage using Jest and Cypress</li>
-              <li>
-                Configuration driven code base to allow for bespoke client
-                requirements
+                <b>Established product improvements</b> by guidelines, technical
+                road map, best practices and pitched to business
               </li>
               <li>
-                Optimised tools and workflow for efficient development and error
-                resistant deployments
+                <b>Successfully migrated stack</b> from AngularJS, Gulp,
+                Jasmine, Selenium to React, Redux, TS, Webpack, Jest, RTL,
+                Cypress, whilst maintaining service-level agreement of 99.9%,
+                and reduced feature development from 2 months to 2 weeks
               </li>
               <li>
-                Managed a team of 4 frontend developers, provided fortnightly
-                one and ones, career plan and continues support to grow
-                personally and professional
+                <b>Developed integrated multimedia uploader</b>, taking
+                integration of video streaming services from 20 weeks to 3 weeks
               </li>
-              <li>Organized and lead interviews for frontend developers</li>
             </ul>
           </div>
           <div>
             <h3>Dec 17 &mdash; Feb 19: Salmon (Contract)</h3>
+            <p>
+              Led a team for a luxury fashion brand with close client relations
+              to redesign and rebuilt eCommerce platforms with LCP &#60; 1s.
+            </p>
             <ul>
               <li>
-                Redesign of Tommy Hilfiger eCommerce -{" "}
-                <a
-                  className="link"
-                  href="http://www.tommyhilfiger.com"
-                  target="_blank"
-                >
-                  tommyhilfiger.com
-                </a>
+                <b>Increased yearly revenue</b> of luxury fashion brand, by
+                improving web vitals through rebuilding eCommerce platform using
+                React, Redux, Webpack
               </li>
               <li>
-                Rebuilding from scratch Calvin Klein eCommerce using React,
-                Redux, Webpack and WebSphere Headless -{" "}
-                <a
-                  className="link"
-                  href="http://www.calvinklein.com"
-                  target="_blank"
-                >
-                  calvinklein.com
-                </a>
-              </li>
-              <li>Focus on page loading optimisation and mobile performance</li>
-              <li>
-                Cooperated with other developers, designers, and product owners
+                <b>Mentored junior developers</b> using pair programming and
+                code reviews
               </li>
               <li>
-                Certified as an Optimizely developer and wrote A/B tests for
-                several Clients
+                <b>Improved user retention</b> using A/B testing tool Optimizely
+                for various clients
               </li>
             </ul>
           </div>
