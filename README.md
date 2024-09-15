@@ -1,3 +1,5 @@
-# Kevin Guy's Homepage
+# Personal Portfolio
 
-the source code of my website is visible on the src branch
+Welcome to my personal repository for hosting the portfolio on github pages.
+
+The main code will find on the main branch.
