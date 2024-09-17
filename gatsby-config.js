@@ -19,6 +19,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         path: "./src/data/",
+        name: "data",
       },
     },
     {
@@ -40,27 +41,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          'Cantata One',
-          'Playfair Display\:900',
-          'Raleway'
-        ],
-        display: 'swap'
-      }
+        fonts: ["Cantata One", "Playfair Display:900", "Raleway"],
+        display: "swap",
+      },
     },
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
-          trackingIds: [
-          "G-561ZT1XFWB",
-          "GTM-K2NKQSH"
-          ],
-          pluginConfig: {
-            // Puts tracking script in the head instead of the body
-            head: false,
-            anonymize: true
-          },
+        trackingIds: ["G-561ZT1XFWB", "GTM-K2NKQSH"],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          anonymize: true,
+        },
       },
-    }
+    },
   ],
 };

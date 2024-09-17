@@ -1,7 +1,6 @@
-const path = require("path")
+const path = require("path");
 
-exports.createPages = async ({graphql,  actions: { createPage } }) => {
-
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const result = await graphql(`
     query {
       allProjectsJson {
@@ -11,15 +10,15 @@ exports.createPages = async ({graphql,  actions: { createPage } }) => {
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
 
-  const projects = result.data.allProjectsJson.nodes
+  const projects = result.data.allProjectsJson.nodes;
 
-  projects.forEach(( project, index ) => {
+  projects.forEach((project, index) => {
     createPage({
       path: `/work/${project.path.toLowerCase()}/`,
       component: path.resolve(`./src/templates/project.jsx`),
@@ -28,13 +27,34 @@ exports.createPages = async ({graphql,  actions: { createPage } }) => {
         prevId: projects[index - 1] ? projects[index - 1].id : null,
         nextId: projects[index + 1] ? projects[index + 1].id : null,
       },
-    })
-  })
+    });
+  });
+};
 
-}
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+
+    type Image {
+      title: String
+    }
+    type Link {
+      text: String
+      href: String
+    }
+
+    type ProjectsJsonBlocks implements Node {
+      type: String!
+      content: [String]
+      image: Image
+      links: [Link]
+    }
+  `;
+  createTypes(typeDefs);
+};
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === 'build-html') {
+  if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
@@ -47,4 +67,3 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     });
   }
 };
-
