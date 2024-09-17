@@ -2,12 +2,13 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Content } from "../modules/content";
 import Tags from "../patterns/tags";
-import Slider from "../modules/slider";
 import { graphql } from "gatsby";
 import ProjectPagination from "../modules/project-pagination";
 import Block from "../modules/blocks/block";
 
-const Project = ({ data: { current: project, next, previous } }) => {
+export default function Project({
+  data: { current: project, next, previous },
+}) {
   return (
     <>
       <Helmet>
@@ -24,11 +25,11 @@ const Project = ({ data: { current: project, next, previous } }) => {
             <Block key={index} {...block} />
           ))}
       </Content>
-      <Slider slides={project.features} />
+      {/* <Slider slides={project.features} /> */}
       <ProjectPagination next={next} previous={previous} />
     </>
   );
-};
+}
 
 export const pageQuery = graphql`
   query project($id: String, $prevId: String, $nextId: String) {
@@ -62,5 +63,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export default Project;

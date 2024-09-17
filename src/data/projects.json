@@ -32,18 +32,7 @@
           "Another part was updating the testing plans, moving away from Jasmine and using Jest instead, this was simple as the tests are written in a similar manner. The nice thing was with Jest that we could use React Testing Library for early UI tests.",
           "Working for 2 years on Skylark I developed many different features. Video upload was one of my favourite works as it allowed users of the CMS to upload multiple videos into their video content hosts like MUX or Bitmovin using an UI instead of the API. You could easily upload files which are many gigabytes big, as it was handling retries, pause and continue, and even go temporarily offline during the process.",
           "I truly enjoyed working on Skylark and looking forward to find similar projects."
-        ],
-        "image": null,
-        "links": null
-      },
-      {
-        "type": "image",
-        "image": {
-          "src": "../images/content/project/calvin-klein/overview_x2.jpg",
-          "title": "Skylark CMS"
-        },
-        "content": null,
-        "links": null
+        ]
       },
       {
         "type": "links",
@@ -75,9 +64,7 @@
           "This was the second commercial project where I used React. I enjoy the way components are written, because the structure of the application takes a natural and extendable flow. A high priority was to make the components dummy without internal state, but merely pass down properties - following this, components stay simple and removes the need of documentation. The components are easy replaceable and maintainable.",
           "Now you wonder where the state is stored, when components are dummy and receiving only props. Firstly we have few components which have internal state, like a toggle, etc. However we tried to store the state in Redux slices, there are approx. 10 of them. We had slices for authentication, basket, products, navigation, analytics, internationalisation, and more.",
           "Slices are a neat way of housekeeping the state, I am a fan of keeping them flat and broad. So that the dependencies getting not deep and complex. Just thing of object spread how straight forward it is when everything is one level deep. My rule of thumb is max 2 levels deep, is it more than that it signals and increase in dependency and complexity, and it is a good idea to separate some of the data in a new slice. Another advantage is that a shallow store will not update the component as often as a store with a deep object, because the \"subscribed\" component will only \"watch\" just one value and not an whole object where the reconciliation flags an false positive of change. This means the object looks the same but it isn't as it got spread but with the same values. A shallow comparison is always faster than a holistic comparison."
-        ],
-        "image": null,
-        "links": null
+        ]
       },
       {
         "type": "description",
@@ -132,9 +119,7 @@
         "content": [
           "I started working on Ströer OMS to develop a calendar app. OMS is an internal management platform for maintenance of their billboards. Which has a complex infrastructure. I was working mainly on the frontend, writing templates in Struts (Java template engine), displaying data with AngularJS, and styling with SCSS. Data was retrieved from an API with ajax calls.",
           "After finishing the calendar, I have been continuing working for Ströer for platform maintenance. I soloed the frontend till couple of months later I established a team of three developer which I was leading."
-        ],
-        "image": null,
-        "links": null
+        ]
       },
       {
         "type": "description",
@@ -183,9 +168,7 @@
           "Before making improvements in usability, we needed a tool to measure the current state and every incremental improvement we may make, to reach the goal as fast as possible. We asked a third party service to provide us with reports after every major release, and we used browser tools and screen readers to test our changes. Testing became time intensive through lag of tools.",
           "A big part of the changes had been made in the use of correct context tags, i.e. using buttons instead of links for submitting forms, or ordering headlines h3 cannot come before h2. We added new elements, i.e. skip links and close buttons for layers, and improved tags with aria attributes to describe the seat and prices.",
           "The changes we made until this point were usability improvements for screen-readers, other people with a visual disability and using normal screens seeing mostly fewer colours. The visual designer needed to come up with a new high contrast theme. green changed to orange, white text on coloured background changed to dark gray, blue got darker, active elements needing a highlighted border, and many other changes to increase contrast."
-        ],
-        "image": null,
-        "links": null
+        ]
       },
       {
         "type": "description",
@@ -234,9 +217,13 @@
           "I'm very thank full to had a part of these projects, my UI easter egg which is the main navigation. Which has a drop down navigation on hover, a tricky piece. The problem? Not closing the submenu accidentally by hovering over another main menu entry when the mouse is one the way to a sub menu entry diagonally placed to its parent. Preventing this is usually solved with a time out which activates on leaving a main item. it solves the problem for fast user with a fast movement. Not only it doesn't work for slow mouse movements, as well it makes it not responsive.",
           "A mouse direction detection is used. Spanning a triangle from the current mouse position by entering a main menu entry to the top left and top right corner of the submenu. If the mouse is staying it the triangle, even hovering over another main menu entry, the submenu stays open. This technique is invented by Apple and used by amazon.com at their navigation.",
           "And lastly the Gedore shop, which is OXID and smarty templates. We created a living style guide, out of smarty modules and patterns, each can be easily included in to the page, and modified through parameters."
-        ],
-        "image": null,
-        "links": null
+        ]
+      },
+      {
+        "type": "description",
+        "content": [
+          "Generating a living style guide using Grunt, Nunjucks, and SCSS. The output are HTML pages of general configurations, patterns, modules, and static content pages. Which were later implemented in Typo3."
+        ]
       },
       {
         "type": "image",
@@ -248,7 +235,7 @@
       {
         "type": "description",
         "content": [
-          "Generating a living style guide using Grunt, Nunjucks, and SCSS. The output are HTML pages of general configurations, patterns, modules, and static content pages. Which were later implemented in Typo3."
+          "Nunjucks and SCSS allowed us to use variables. Already in the early state, we established many variables for later configuration. When we needed to develop Carolus, this technique came very handy. A change in the configuration and we were done, except updating content."
         ]
       },
       {
@@ -261,7 +248,7 @@
       {
         "type": "description",
         "content": [
-          "Nunjucks and SCSS allowed us to use variables. Already in the early state, we established many variables for later configuration. When we needed to develop Carolus, this technique came very handy. A change in the configuration and we were done, except updating content."
+          "Invented by Apple to improve on OS X sub navigation. Amazon is using this technique to improve sub navigation as well. That's why I implemented this feature for Gedore on all three sites. No timeout, only protocol mouse movements to assume when to close and open a menu."
         ]
       },
       {
@@ -299,9 +286,7 @@
         "type": "description",
         "content": [
           "New at denkwerk and had to step right into development of new modules for Zwilling. Later on I was in charge of setting up Grunt pipelines for recurring dev tasks. It was a project including Zwilling online shop, Zwilling, Miyabi, Demeyere and Staub brand website. I was helping out in all five projects to fix bugs and create minor modules."
-        ],
-        "image": null,
-        "links": null
+        ]
       },
       {
         "type": "description",

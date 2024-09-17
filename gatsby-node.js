@@ -42,12 +42,15 @@ exports.createSchemaCustomization = ({ actions }) => {
       text: String
       href: String
     }
-
+    type Spacer {
+      spacerSize: String
+    }
     type ProjectsJsonBlocks implements Node {
       type: String!
       content: [String]
       image: Image
       links: [Link]
+      spacerSize: Spacer
     }
   `;
   createTypes(typeDefs);
