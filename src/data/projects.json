@@ -30,9 +30,20 @@
           "The biggest difference between Angular and React are dependency management. Angular is using dependency injection, where react is using just imports. In order to not break Angular we had to make wrappers so that things can be loaded via dependency injection, but as well as being imported for React.",
           "Services in Angular are presenting usually a singleton to represent data or some utility functions (Factories). Factories were easily replaced by extracting the functions in to pure functions. When it was a singleton representing data, we created a slice in Redux with actions and reducers.",
           "Another part was updating the testing plans, moving away from Jasmine and using Jest instead, this was simple as the tests are written in a similar manner. The nice thing was with Jest that we could use React Testing Library for early UI tests.",
-          "Working for 2 years on Skylark I developed many different features. Video upload was one of my favourite works as it allowed users of the CMS to upload multiple videos into their video content hosts like MUX or Bitmovin using an UI instead of the API. You could easily upload files which are many gigabytes big, as it was handling retries, pause and continue, and even go temporarily offline during the process.",
+          "Working for 2 years on Skylark I developed many different features. Video upload was one of my favourite works as it allowed users of the CMS to upload multiple videos into their video content providers like MUX or Bitmovin, using an UI instead of the API. You could easily upload files which are many gigabytes big, as it was handling retries, pause and continue, and even go temporarily offline during the process.",
           "I truly enjoyed working on Skylark and looking forward to find similar projects."
         ]
+      },
+      {
+        "type": "contentImage",
+        "title": "Skylark Dashboard",
+        "content": [
+          "The Skylark Dashboard is a very powerful tool to manage your video content and its meta data. It is a single page application, which is built with React and Redux. The CMS is the backbone of applications with 100k user per day."
+        ],
+        "image": {
+          "title": "Skylark",
+          "src": "../images/content/project/skylark/dashboard.png"
+        }
       },
       {
         "type": "links",
@@ -67,30 +78,26 @@
         ]
       },
       {
-        "type": "description",
+        "type": "contentImage",
+        "title": "Redesign",
         "content": [
           "The redesign was done through out the main shopping areas at the same time. We improved pages for the product list, product detail, shopping bag and the checkout. Other pages like account pages got a little update as they have now the new header and footer as well."
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
-          "title": "redesign",
+          "title": "Redesign",
           "src": "../images/content/project/calvin-klein/overview_x2.jpg"
         }
       },
       {
-        "type": "description",
-        "content": [
-          "The redesign was done through out the main shopping areas at the same time. We improved pages for the product list, product detail, shopping bag and the checkout. Other pages like account pages got a little update as they have now the new header and footer as well."
-        ]
-      },
-      {
-        "type": "image",
+        "type": "contentImage",
+        "title": "Smart Navigation",
         "image": {
           "title": "Smart Navigation",
           "src": "../images/content/project/calvin-klein/navigation_x2.jpg"
-        }
+        },
+        "content": [
+          "Remember the frustration when going from main menu to sub menu but activate a different submenu because the mouse is going over another main menu link. I love to use the technique where tracking the mouse direction to predict if a menu should open. No more frustration and the menu feels super natural!"
+        ]
       },
       {
         "type": "links",
@@ -122,30 +129,26 @@
         ]
       },
       {
-        "type": "description",
+        "type": "contentImage",
+        "title": "List Management",
+        "image": {
+          "title": "List Management",
+          "src": "../images/content/project/stroeer/overview_2x.jpg"
+        },
         "content": [
           "OMS is a complex application with many different views for management of billboards and billboard events. Most of the views have a list of items in common. I implemented the UI for an advanced filter system including saving, loading, editing, and deleting of filter settings."
         ]
       },
       {
-        "type": "image",
-        "image": {
-          "title": "List Management",
-          "src": "../images/content/project/stroeer/overview_2x.jpg"
-        }
-      },
-      {
-        "type": "description",
-        "content": [
-          "The calendar is displaying management tasks of a selected billboard. The span goes from yearly to monthly for a more detailed view. Allowing users getting their daily tasks, and for the upper management a quick info about which tasks have been done in time."
-        ]
-      },
-      {
-        "type": "image",
+        "type": "contentImage",
+        "title": "Calendar",
         "image": {
           "title": "Calendar",
           "src": "../images/content/project/stroeer/calendar_2x.jpg"
-        }
+        },
+        "content": [
+          "The calendar is displaying management tasks of a selected billboard. The span goes from yearly to monthly for a more detailed view. Allowing users getting their daily tasks, and for the upper management a quick info about which tasks have been done in time."
+        ]
       }
     ],
     "show": true
@@ -171,26 +174,21 @@
         ]
       },
       {
-        "type": "description",
+        "type": "contentImage",
+        "title": "Helper Elements",
         "content": [
           "Extra elements helping to skip content, outlining focused elements, and buttons for closing layers. Skip links are only visible on focus."
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
           "title": "Helper Elements",
           "src": "../images/content/project/condor/helper-elements_2x.jpg"
         }
       },
       {
-        "type": "description",
+        "type": "contentImage",
         "content": [
           "HTML5 provides a big range of tags to describe the visual content better. We took care that we use the right tags, and added when necessary ARIA attributes"
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
           "title": "Semantic Markup",
           "src": "../images/content/project/condor/semantic-markup_2x.jpg"
@@ -220,26 +218,21 @@
         ]
       },
       {
-        "type": "description",
+        "type": "contentImage",
         "content": [
           "Generating a living style guide using Grunt, Nunjucks, and SCSS. The output are HTML pages of general configurations, patterns, modules, and static content pages. Which were later implemented in Typo3."
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
           "title": "Style Guide",
           "src": "../images/content/project/gedore/styleguide_2x.jpg"
         }
       },
       {
-        "type": "description",
+        "type": "contentImage",
+        "title": "Variables",
         "content": [
           "Nunjucks and SCSS allowed us to use variables. Already in the early state, we established many variables for later configuration. When we needed to develop Carolus, this technique came very handy. A change in the configuration and we were done, except updating content."
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
           "title": "Variables",
           "src": "../images/content/project/gedore/theme_2x.jpg"
@@ -247,12 +240,10 @@
       },
       {
         "type": "description",
+        "title": "Smart Navigation",
         "content": [
           "Invented by Apple to improve on OS X sub navigation. Amazon is using this technique to improve sub navigation as well. That's why I implemented this feature for Gedore on all three sites. No timeout, only protocol mouse movements to assume when to close and open a menu."
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
           "title": "Smart Navigation",
           "src": "../images/content/project/gedore/navigation_2x.jpg"
@@ -289,26 +280,22 @@
         ]
       },
       {
-        "type": "description",
+        "type": "contentImage",
+        "title": "New UI Components",
         "content": [
           "As I can remember I was in charge for the show&hide pattern, longer paragraphs fading out, and a 'Read More' button added for expanding. A header module for special offers. As well as an language selector on the footer, which is used by all 5 websites."
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
           "title": "New UI Components",
           "src": "../images/content/project/zwilling/modules_2x.jpg"
         }
       },
       {
-        "type": "description",
+        "type": "contentImage",
+        "title": "GruntJs Refactoring",
         "content": [
           "Building projects, minifying code, and optimizing assets were part of thr GruntJS tasks. All described in one huge file, I took the refactoring in my hands, categorizing first tasks in frequency of use. At the end a folder hierarchy organized modified and new tasks. This improved the time of the build by 80%."
-        ]
-      },
-      {
-        "type": "image",
+        ],
         "image": {
           "title": "GruntJs Refactoring",
           "src": "../images/content/project/zwilling/task-runner_2x.jpg"

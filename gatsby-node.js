@@ -48,6 +48,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type ProjectsJsonBlocks implements Node {
       type: String!
       content: [String]
+      title: String
       image: Image
       links: [Link]
       spacerSize: Spacer

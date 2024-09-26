@@ -40,6 +40,7 @@ export const pageQuery = graphql`
       blocks {
         type
         content
+        title
         image {
           src {
             childImageSharp {

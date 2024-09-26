@@ -1,15 +1,17 @@
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import React from "react";
 
-export type ImageProps = {
+export type BlockImageProps = {
   type: "image";
-  image: {
-    src: ImageDataLike;
-    alt: string;
-  };
+  image: ImageProps;
+} & ImageProps;
+
+export type ImageProps = {
+  src: ImageDataLike;
+  alt: string;
 };
 
-export default function Image({ image: { src, alt } }: ImageProps) {
+export default function Image({ src, alt }: ImageProps) {
   const image = getImage(src);
   if (!image) {
     return null;

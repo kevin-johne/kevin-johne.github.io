@@ -2,10 +2,15 @@ import React from "react";
 import { Column } from "../content";
 import Spacer from "./spacer";
 
-export type DescriptionProps = {
+export type BlockDescriptionProps = {
   type: "description";
+} & DescriptionProps;
+
+type SpacerSize = "sx" | "s" | "m" | "l" | "xl";
+
+export type DescriptionProps = {
   content: string[];
-  spacerSize: "sx" | "s" | "m" | "l" | "xl";
+  spacerSize?: SpacerSize;
 };
 export default function Description({
   content,
