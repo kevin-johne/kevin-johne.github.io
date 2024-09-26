@@ -94,7 +94,7 @@ const Moons = [
   // { icon: DocMorris, title: "DocMorris", link: "/work/docmorris" },
   { icon: Condor, title: "Condor Airlines", link: "/work/condor" },
   { icon: Stroer, title: "Stroer", link: "/work/stroeer" },
-  { icon: Tommy, title: "Tommy Hilfiger", link: "/work/tommy" },
+  { icon: Tommy, title: "Tommy Hilfiger", link: "/work/calvin-klein" },
   { icon: Calvin, title: "Calvin Klein", link: "/work/calvin-klein" },
   { icon: Skylark, title: "Skylark", link: "/work/skylark" },
 ];
