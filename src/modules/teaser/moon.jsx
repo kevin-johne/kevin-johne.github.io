@@ -2,6 +2,7 @@ import { useAnimationFrame } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { colorBrand } from "../../setting/theme";
+import { last } from "lodash";
 
 const moonSize = 40;
 const targetFrames = 40;
@@ -28,13 +29,22 @@ const MoonWrapper = styled.div`
   }
 `;
 
-export const Moon = ({ children, radius, diagonal, startPosition, canvas }) => {
+export const Moon = ({
+  children,
+  radius,
+  diagonal,
+  startPosition,
+  canvas,
+  shouldStop: shouldPause,
+}) => {
   const objectRef = useRef(null);
   const [ctx, setCtx] = useState(null);
   const startPositionRad = (startPosition * Math.PI) / 180;
-  let switchCircle = 1;
-  let oldX = 0;
-  let startTime;
+  const switchCircle = useRef(1);
+  const oldX = useRef(0);
+  const startTime = useRef(undefined);
+  const animationTime = useRef(0);
+  let lastAnimationFrame = 0;
 
   useEffect(() => {
     if (canvas) {
@@ -48,18 +58,38 @@ export const Moon = ({ children, radius, diagonal, startPosition, canvas }) => {
     }
   }, [ctx]);
 
+  useEffect(() => {
+    if (!objectRef.current) return;
+    const mouseenter = () => {
+      if (shouldPause.current === null) return;
+      shouldPause.current = true;
+    };
+    const mouseleave = () => {
+      if (shouldPause.current === null) return;
+      shouldPause.current = false;
+    };
+
+    objectRef.current.addEventListener("mouseenter", mouseenter);
+    objectRef.current.addEventListener("mouseleave", mouseleave);
+
+    return () => {
+      objectRef.current.removeEventListener("mouseenter", mouseenter);
+      objectRef.current.removeEventListener("mouseleave", mouseleave);
+    };
+  }, [objectRef]);
+
   const calculateLogoPosition = (time) => {
     const x = Math.sin(time / 1000 + startPositionRad) * radius * diagonal;
-    if (x <= oldX) {
-      switchCircle = -1;
+    if (x <= oldX.current) {
+      switchCircle.current = -1;
     }
 
-    if (x >= oldX) {
-      switchCircle = 1;
+    if (x >= oldX.current) {
+      switchCircle.current = 1;
     }
 
     const y =
-      switchCircle *
+      switchCircle.current *
         Math.sqrt(Math.pow(radius, 2) - Math.pow(x / diagonal, 2)) -
       x / diagonal;
 
@@ -69,13 +99,13 @@ export const Moon = ({ children, radius, diagonal, startPosition, canvas }) => {
 
     const centerX = x - moonSize / 2;
     const centerY = y - moonSize / 2;
-    
-    if(objectRef.current) {
+
+    if (objectRef.current) {
       objectRef.current.style.transform = `translateY(${centerY}px) translateX(${centerX}px) scale(${scaleFactor})`;
       objectRef.current.style.zIndex = `${switchCircle}`;
     }
 
-    oldX = x;
+    oldX.current = x;
 
     if (ctx) {
       ctx.fillRect(
@@ -88,14 +118,22 @@ export const Moon = ({ children, radius, diagonal, startPosition, canvas }) => {
   };
 
   useAnimationFrame((time) => {
-    if (startTime === undefined) {
-      startTime = time;
+    // require delta, so that the delta is only added to the time should animation continue
+    const delta = time - lastAnimationFrame;
+    lastAnimationFrame = time;
+
+    if (startTime.current === undefined) {
+      startTime.current = time;
     }
-    if (time - startTime <= oneOffASecond) {
+
+    // frames are too fast or animation is paused
+    if (time - startTime.current <= oneOffASecond || shouldPause.current) {
       return;
     }
 
-    calculateLogoPosition((startTime - time) * speed);
+    animationTime.current = animationTime.current + delta;
+
+    calculateLogoPosition((startTime.current - animationTime.current) * speed);
   });
 
   return <MoonWrapper ref={objectRef}>{children}</MoonWrapper>;

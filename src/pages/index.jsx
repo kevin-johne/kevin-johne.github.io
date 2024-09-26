@@ -9,11 +9,14 @@ const IndexPage = () => {
       <Helmet>
         <meta
           name="description"
-          content="Kevin Guy a freelance frontend developer. He does living style guides, responsive websites, and software engineering. Available for contract work"
+          content="Kevin Guy a Full-Stack Engineer. Application development, Living style guides, and joyful UI development."
         />
-        <title>Kevin Guy - Freelance Frontend Engineer</title>
+        <title>Kevin Guy - Full-Stack Engineer</title>
       </Helmet>
-      <Teaser title="Freelance Frontend Engineer" subtitle="More than 10 years of experience developing successful eCommerce and business critical applications"/>
+      <Teaser
+        title="Full-Stack Engineer"
+        subtitle="More than 10 years of experience developing eCommerce and complex business applications"
+      />
     </>
   );
 };

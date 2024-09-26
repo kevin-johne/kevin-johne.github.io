@@ -38,7 +38,7 @@ const TeaserContent = styled.div`
   @media ${breakpoint(breakpointsMap.default, breakpointsMap.small)} {
     margin-bottom: 50px;
 
-    h1 {  
+    h1 {
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -75,7 +75,7 @@ const Canvas = styled.canvas`
 
 const Globe = styled.div`
   position: absolute;
-  pointer-events: none;
+
   width: 80%;
   height: 70%;
   top: 0;
@@ -87,9 +87,19 @@ const Globe = styled.div`
   }
 `;
 
+const Moons = [
+  // { icon: DoorFeed, title: "DoorFeed", link: "/work/doorfeed" },
+  { icon: DocMorris, title: "DocMorris", link: "/work/docmorris" },
+  { icon: Skylark, title: "Skylark", link: "/work/skylark" },
+  { icon: Tommy, title: "Tommy", link: "/work/tommy" },
+  { icon: Calvin, title: "Calvin", link: "/work/calvin" },
+  { icon: Stroer, title: "Stroer", link: "/work/stroer" },
+  { icon: Condor, title: "Condor", link: "/work/condor" },
+];
 export const Teaser = ({ title, subtitle }) => {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
+  const isHover = useRef(false);
   const [radius, setRadius] = useState(0);
   const [diagonal, setDiagonal] = useState(2);
 
@@ -136,48 +146,20 @@ export const Teaser = ({ title, subtitle }) => {
 
       <Globe ref={wrapperRef}>
         <Canvas ref={canvasRef}></Canvas>
-        <Moon
-          radius={radius}
-          diagonal={diagonal}
-          startPosition="135"
-        >
-          <img src={DocMorris} />
-        </Moon>
-        <Moon
-          radius={radius}
-          diagonal={diagonal}
-          startPosition="180"
-        >
-          <img src={Skylark} />
-        </Moon>
-        <Moon
-          radius={radius}
-          diagonal={diagonal}
-          startPosition="225"
-        >
-          <img src={Tommy} />
-        </Moon> 
-        <Moon
-          radius={radius}
-          diagonal={diagonal}
-          startPosition="270"
-        >
-          <img src={Calvin} />
-        </Moon>
-        <Moon
-          radius={radius}
-          diagonal={diagonal}
-          startPosition="315"
-        >
-          <img src={Stroer} />
-        </Moon>
-        <Moon
-          radius={radius}
-          diagonal={diagonal}
-          startPosition="360"
-        >
-          <img src={Condor} />
-        </Moon>
+        {Moons.map((moon, index) => (
+          <Moon
+            key={index}
+            radius={radius}
+            diagonal={diagonal}
+            startPosition={360 - index * 45}
+            title={moon.title}
+            shouldStop={isHover}
+          >
+            <a href={moon.link}>
+              <img src={moon.icon} />
+            </a>
+          </Moon>
+        ))}
       </Globe>
     </Wrapper>
   );
