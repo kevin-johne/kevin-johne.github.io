@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Img } from "../patterns/img";
 import { breakpoint, breakpointsMap } from "../utils/breakpoints";
-import { hextToRgba } from "../utils/color";
+import { hexToRgba } from "../utils/color";
 import { Link } from "gatsby";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px , 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 30px;
   margin-bottom: 60px;
 
@@ -19,12 +19,12 @@ const Wrapper = styled.div`
 const GridCell = styled(Link)`
   position: relative;
   background-color: ${(props) => props.brandColor};
-  box-shadow: 0px 4px 16px ${(props) => hextToRgba(props.brandColor, 0.25)};
+  box-shadow: 0px 4px 16px ${(props) => hexToRgba(props.brandColor, 0.25)};
   padding-top: 100%;
   transition: box-shadow 0.3s;
 
   &:hover {
-    box-shadow: 0px 10px 32px ${(props) => hextToRgba(props.brandColor, 0.7)};
+    box-shadow: 0px 10px 32px ${(props) => hexToRgba(props.brandColor, 0.7)};
   }
 
   div {
@@ -66,7 +66,6 @@ const ImageGrid = ({ items }) => {
                 <Img alt={title} src={logo.publicURL} />
                 <p>{title}</p>
               </div>
-              
             </GridCell>
           );
         })}

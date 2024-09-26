@@ -22,6 +22,8 @@ const Wrapper = styled.div`
 `;
 
 const TeaserContent = styled.div`
+  z-index: 1;
+
   h1 {
     font-size: 24px;
     margin: 0 0 20px;
@@ -89,12 +91,12 @@ const Globe = styled.div`
 
 const Moons = [
   // { icon: DoorFeed, title: "DoorFeed", link: "/work/doorfeed" },
-  { icon: DocMorris, title: "DocMorris", link: "/work/docmorris" },
+  // { icon: DocMorris, title: "DocMorris", link: "/work/docmorris" },
+  { icon: Condor, title: "Condor Airlines", link: "/work/condor" },
+  { icon: Stroer, title: "Stroer", link: "/work/stroeer" },
+  { icon: Tommy, title: "Tommy Hilfiger", link: "/work/tommy" },
+  { icon: Calvin, title: "Calvin Klein", link: "/work/calvin-klein" },
   { icon: Skylark, title: "Skylark", link: "/work/skylark" },
-  { icon: Tommy, title: "Tommy", link: "/work/tommy" },
-  { icon: Calvin, title: "Calvin", link: "/work/calvin" },
-  { icon: Stroer, title: "Stroer", link: "/work/stroer" },
-  { icon: Condor, title: "Condor", link: "/work/condor" },
 ];
 export const Teaser = ({ title, subtitle }) => {
   const canvasRef = useRef(null);
@@ -151,14 +153,12 @@ export const Teaser = ({ title, subtitle }) => {
             key={index}
             radius={radius}
             diagonal={diagonal}
-            startPosition={360 - index * 45}
+            startPosition={300 - index * 45}
             title={moon.title}
             shouldStop={isHover}
-          >
-            <a href={moon.link}>
-              <img src={moon.icon} />
-            </a>
-          </Moon>
+            link={moon.link}
+            icon={moon.icon}
+          />
         ))}
       </Globe>
     </Wrapper>

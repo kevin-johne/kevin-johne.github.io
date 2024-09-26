@@ -1,8 +1,7 @@
 import { useAnimationFrame } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import { colorBrand } from "../../setting/theme";
-import { last } from "lodash";
+import { colorBrand, colorGray93 } from "../../setting/theme";
 
 const moonSize = 40;
 const targetFrames = 40;
@@ -10,12 +9,14 @@ const oneOffASecond = (1 / targetFrames) * 1000;
 const speed = 0.3;
 
 const MoonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   height: ${moonSize}px;
   width: ${moonSize}px;
-  background-color: #f2f2f2;
+  background-color: ${colorGray93};
   border-radius: 100%;
   transform: scale(0);
   user-select: none;
@@ -29,8 +30,23 @@ const MoonWrapper = styled.div`
   }
 `;
 
+const MoonTitle = styled.div`
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 6px;
+  padding: 2px;
+  white-space: nowrap;
+  background-color: ${colorGray93};
+  border-radius: 2px;
+`;
+
 export const Moon = ({
-  children,
+  title,
+  link,
+  icon,
   radius,
   diagonal,
   startPosition,
@@ -136,5 +152,12 @@ export const Moon = ({
     calculateLogoPosition((startTime.current - animationTime.current) * speed);
   });
 
-  return <MoonWrapper ref={objectRef}>{children}</MoonWrapper>;
+  return (
+    <MoonWrapper ref={objectRef}>
+      <a href={link}>
+        <img src={icon} alt={title} />
+      </a>
+      <MoonTitle>{title}</MoonTitle>
+    </MoonWrapper>
+  );
 };
