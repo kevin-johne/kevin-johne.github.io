@@ -11,7 +11,5 @@ export const colorWhite = "#fff";
 export const font = {
   copy: "'Raleway', sans-serif",
   header: "'Cantata One', serif",
-  display: "'Playfair Display', serif"
-}
-
-
+  display: "'Playfair Display', serif",
+};

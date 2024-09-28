@@ -1,5 +1,32 @@
 [
   {
+    "path": "doorfeed",
+    "title": "DoorFeed",
+    "year": "2024",
+    "duration": "12",
+    "type": "application",
+    "brandColor": "#080c28",
+    "logo": "../images/icons/doorfeed-white.svg",
+    "alternativeLogo": "../images/icons/doorfeed.svg",
+    "tags": [
+      "NextJS",
+      "TypeScript",
+      "React",
+      "React-Query",
+      "Kysely",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "blocks": [
+      {
+        "type": "description",
+        "content": ["Text coming soon"]
+      }
+    ],
+    "show": true
+  },
+  {
     "path": "skylark",
     "title": "Skylark",
     "year": "2020",
@@ -7,6 +34,7 @@
     "type": "application",
     "brandColor": "#227aff",
     "logo": "../images/icons/skylark-white.svg",
+    "alternativeLogo": "../images/icons/skylark.svg",
     "tags": [
       "CMS",
       "AngularJS",
@@ -63,6 +91,7 @@
     "brandColor": "#000",
     "year": "2019",
     "logo": "../images/icons/calvin-klein-white.svg",
+    "alternativeLogo": "../images/icons/calvin-klein.svg",
     "duration": "3",
     "type": "website",
     "tags": ["React", "SCSS", "Webpack", "Redux"],
@@ -117,6 +146,7 @@
     "year": "2016",
     "brandColor": "#ff5a10",
     "logo": "../images/icons/stroer-white.svg",
+    "alternativeLogo": "../images/icons/stroer.svg",
     "type": "application",
     "duration": "9",
     "tags": ["AngularJS", "SCSS", "Struts", "Java", "Lead Frontend Developer"],
@@ -155,11 +185,12 @@
   },
   {
     "path": "condor",
-    "title": "Condor",
+    "title": "Condor Airline",
     "year": "2016",
     "type": "website",
     "brandColor": "#ffb800",
     "logo": "../images/icons/condor-white.svg",
+    "alternativeLogo": "../images/icons/condor.svg",
     "duration": "4",
     "tags": ["ARIA", "semantic", "screen reader"],
     "blocks": [
@@ -204,6 +235,7 @@
     "duration": "3",
     "brandColor": "#1c4587",
     "logo": "../images/icons/gedore-white.svg",
+    "alternativeLogo": "../images/icons/gedore.svg",
     "type": "website",
     "tags": ["eCommerce", "frontend", "atomic"],
     "blocks": [
@@ -270,6 +302,7 @@
     "type": "website",
     "brandColor": "#ec121e",
     "logo": "../images/icons/zwilling-white.svg",
+    "alternativeLogo": "../images/icons/zwilling.svg",
     "duration": "3 months",
     "tags": ["frontend", "modules", "task runner"],
     "blocks": [
